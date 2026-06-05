@@ -64,13 +64,6 @@ namespace FINAL_PROJECT
             {
                 MessageBox.Show("Username atau Password salah!");
             }
-            {
-                Dashboard dashboard = new Dashboard();
-
-                dashboard.Show();
-
-                this.Hide();
-            }
         }
     }
 }

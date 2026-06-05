@@ -51,7 +51,7 @@
             panelLeft.Dock = DockStyle.Left;
             panelLeft.Location = new Point(0, 0);
             panelLeft.Name = "panelLeft";
-            panelLeft.Size = new Size(507, 475);
+            panelLeft.Size = new Size(507, 641);
             panelLeft.TabIndex = 0;
             panelLeft.Paint += panel1_Paint;
             // 
@@ -77,7 +77,7 @@
             panelRight.Dock = DockStyle.Fill;
             panelRight.Location = new Point(507, 0);
             panelRight.Name = "panelRight";
-            panelRight.Size = new Size(540, 475);
+            panelRight.Size = new Size(1029, 641);
             panelRight.TabIndex = 1;
             panelRight.Paint += panel2_Paint;
             // 
@@ -85,7 +85,7 @@
             // 
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(226, 320);
+            button1.Location = new Point(531, 466);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 6;
@@ -97,7 +97,7 @@
             // 
             icon_Mata.BackgroundImage = Properties.Resources.eye_close;
             icon_Mata.BackgroundImageLayout = ImageLayout.Zoom;
-            icon_Mata.Location = new Point(344, 279);
+            icon_Mata.Location = new Point(649, 425);
             icon_Mata.Name = "icon_Mata";
             icon_Mata.Size = new Size(28, 23);
             icon_Mata.TabIndex = 5;
@@ -106,7 +106,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(203, 275);
+            txtPassword.Location = new Point(508, 421);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Password";
             txtPassword.Size = new Size(141, 27);
@@ -115,7 +115,7 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(203, 224);
+            txtUsername.Location = new Point(508, 370);
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderText = "Username";
             txtUsername.Size = new Size(141, 27);
@@ -124,7 +124,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(133, 178);
+            label2.Location = new Point(438, 324);
             label2.Name = "label2";
             label2.Size = new Size(293, 20);
             label2.TabIndex = 2;
@@ -134,7 +134,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 11F);
-            label1.Location = new Point(239, 154);
+            label1.Location = new Point(544, 300);
             label1.Name = "label1";
             label1.Size = new Size(72, 24);
             label1.TabIndex = 1;
@@ -144,7 +144,7 @@
             // 
             logoSpark.BackgroundImage = Properties.Resources.logo;
             logoSpark.BackgroundImageLayout = ImageLayout.Zoom;
-            logoSpark.Location = new Point(203, 22);
+            logoSpark.Location = new Point(508, 168);
             logoSpark.Name = "logoSpark";
             logoSpark.Size = new Size(141, 128);
             logoSpark.TabIndex = 0;
@@ -154,11 +154,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1047, 475);
+            ClientSize = new Size(1536, 641);
             Controls.Add(panelRight);
             Controls.Add(panelLeft);
             Margin = new Padding(2);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "login";
             Load += Form1_Load;
             panelLeft.ResumeLayout(false);
