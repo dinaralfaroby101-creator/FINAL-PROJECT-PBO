@@ -1,4 +1,5 @@
 ﻿using FINAL_PROJECT.Database;
+using FINAL_PROJECT.Models;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,13 @@ namespace FINAL_PROJECT
         {
             using (var conn = DatabaseHelper.Instance.GetConnection())
             {
-                string query = "SELECT * FROM parking_slot ORDER BY id";
+                string query = @"
+                SELECT
+                    id_slot,
+                    kode_slot,
+                    status_slot
+                FROM slot_parkir
+                ORDER BY kode_slot";
 
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, conn);
 
@@ -64,16 +71,16 @@ namespace FINAL_PROJECT
             using (var conn = DatabaseHelper.Instance.GetConnection())
             {
                 string totalQuery =
-                    "SELECT COUNT(*) FROM parking_slot";
+                    "SELECT COUNT(*) FROM slot_parkir";
 
                 string kosongQuery =
-                    "SELECT COUNT(*) FROM parking_slot WHERE status='Kosong'";
+                    "SELECT COUNT(*) FROM slot_parkir WHERE status_slot='kosong'";
 
                 string terisiQuery =
-                    "SELECT COUNT(*) FROM parking_slot WHERE status='Terisi'";
+                    "SELECT COUNT(*) FROM slot_parkir WHERE status_slot='terisi'";
 
                 string maintenanceQuery =
-                    "SELECT COUNT(*) FROM parking_slot WHERE status='Maintenance'";
+                    "SELECT COUNT(*) FROM slot_parkir WHERE status_slot='maintenance'";
 
                 label6.Text =
                     new NpgsqlCommand(totalQuery, conn)
@@ -199,9 +206,13 @@ namespace FINAL_PROJECT
             using (var conn = DatabaseHelper.Instance.GetConnection())
             {
                 string query =
-                @"SELECT *
-          FROM parking_slot
-          WHERE kode_slot ILIKE @search";
+                @"SELECT
+            id_slot,
+            kode_slot,
+            status_slot
+          FROM slot_parkir
+          WHERE kode_slot ILIKE @search
+          ORDER BY kode_slot";
 
                 NpgsqlDataAdapter da =
                     new NpgsqlDataAdapter(query, conn);
@@ -215,6 +226,9 @@ namespace FINAL_PROJECT
                 da.Fill(dt);
 
                 dataGridView1.DataSource = dt;
+
+                dataGridView1.AutoSizeColumnsMode =
+                    DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
 
@@ -232,8 +246,8 @@ namespace FINAL_PROJECT
 
             int id =
                 Convert.ToInt32(
-                    dataGridView1.Rows[e.RowIndex]
-                    .Cells["id"].Value);
+                dataGridView1.Rows[e.RowIndex]
+    .           Cells["id_slot"].Value);
 
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
             {
@@ -248,33 +262,31 @@ namespace FINAL_PROJECT
 
         private void DeleteData(int id)
         {
-            using (var conn1 = DatabaseHelper.Instance.GetConnection())
-            {
-                DialogResult result =
+            DialogResult result =
                 MessageBox.Show(
                 "Hapus data ini ?",
                 "Konfirmasi",
                 MessageBoxButtons.YesNo);
 
-                if (result == DialogResult.No)
-                    return;
+            if (result == DialogResult.No)
+                return;
 
-                using (var conn = DatabaseHelper.Instance.GetConnection())
+            using (var conn = DatabaseHelper.Instance.GetConnection())
+            {
+                string query =
+                    @"DELETE FROM slot_parkir
+              WHERE id_slot=@id";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
                 {
-                    string query =
-                        "DELETE FROM parking_slot WHERE id=@id";
+                    cmd.Parameters.AddWithValue("@id", id);
 
-                    using (var cmd = new NpgsqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@id", id);
-
-                        cmd.ExecuteNonQuery();
-                    }
+                    cmd.ExecuteNonQuery();
                 }
-
-                LoadParkingData();
-                UpdateStatistic();
             }
+
+            LoadParkingData();
+            UpdateStatistic();
         }
 
         private void EditData(int id)
@@ -282,6 +294,7 @@ namespace FINAL_PROJECT
             MessageBox.Show("Edit Data ID : " + id);
         }
 
+        
         private string GetArea(string kodeSlot)
         {
             if (kodeSlot.StartsWith("A"))

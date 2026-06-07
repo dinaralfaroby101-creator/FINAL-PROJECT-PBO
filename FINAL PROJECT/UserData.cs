@@ -204,5 +204,82 @@ namespace FINAL_PROJECT
                 dgvUser.DataSource = dt;
             }
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UpdateStatistic()
+        {
+            using (var conn = DatabaseHelper.Instance.GetConnection())
+            {
+                string total =
+                    "SELECT COUNT(*) FROM users";
+
+                string admin =
+                    "SELECT COUNT(*) FROM users WHERE role='Admin'";
+
+                string petugas =
+                    "SELECT COUNT(*) FROM users WHERE role='Petugas'";
+
+                string aktif =
+                    "SELECT COUNT(*) FROM users WHERE status='Aktif'";
+
+                lblJumlahUser.Text =
+                    new NpgsqlCommand(total, conn)
+                    .ExecuteScalar().ToString();
+
+                lblJumlahAdmin.Text =
+                    new NpgsqlCommand(admin, conn)
+                    .ExecuteScalar().ToString();
+
+                lblJumlahPetugas.Text =
+                    new NpgsqlCommand(petugas, conn)
+                    .ExecuteScalar().ToString();
+
+                lblJumlahUserAktif.Text =
+                    new NpgsqlCommand(aktif, conn)
+                    .ExecuteScalar().ToString();
+            }
+        }
+
+        private void btnTambahUser_Click(object sender, EventArgs e)
+        {
+            InputUser_ form = new InputUser_();
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadUserData();
+                UpdateStatistic();
+            }
+        }
+
+        private void txtSearch_TextChanged(
+        object sender,
+        EventArgs e)
+        {
+            using (var conn =
+                DatabaseHelper.Instance.GetConnection())
+            {
+                string query =
+                @"SELECT *
+          FROM users
+          WHERE username ILIKE @search";
+
+                NpgsqlDataAdapter da =
+                    new NpgsqlDataAdapter(query, conn);
+
+                da.SelectCommand.Parameters.AddWithValue(
+                    "@search",
+                    "%" + txtCariUsername.Text + "%");
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                dgvUser.DataSource = dt;
+            }
+        }
     }
 }
