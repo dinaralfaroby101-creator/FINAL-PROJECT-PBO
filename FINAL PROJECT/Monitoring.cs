@@ -20,48 +20,60 @@ namespace FINAL_PROJECT
         }
         private void LoadMonitoring()
         {
-            flowMotor.Controls.Clear();
-            flowMobil.Controls.Clear();
-            flowBus.Controls.Clear();
-
             try
             {
                 using var conn =
-                DatabaseHelper.Instance.GetConnection();
+                    DatabaseHelper.Instance.GetConnection();
 
                 string query =
-                "SELECT * FROM v_monitoring_slot";
+                    "SELECT * FROM v_monitoring_slot";
 
                 using var cmd =
-                new NpgsqlCommand(query, conn);
+                    new NpgsqlCommand(query, conn);
 
                 using var rd =
-                cmd.ExecuteReader();
+                    cmd.ExecuteReader();
+
+                panel11.Controls.Clear();
+                panel10.Controls.Clear();
+                panelBus.Controls.Clear();
 
                 while (rd.Read())
                 {
-                    ParkingSlot slot =
-                    new ParkingSlot();
+                    Label lbl = new Label();
+
+                    lbl.AutoSize = false;
+                    lbl.Width = 100;
+                    lbl.Height = 40;
+
+                    lbl.Text =
+                        rd["kode_slot"].ToString();
+
+                    lbl.TextAlign =
+                        ContentAlignment.MiddleCenter;
 
                     bool occupied =
-                    rd["status"].ToString() == "terisi";
+                        rd["status"].ToString()?.ToLower() == "terisi";
 
-                    slot.SetStatus(occupied);
+                    lbl.BackColor =
+                        occupied
+                        ? Color.Red
+                        : Color.LightGreen;
 
                     string jenis =
-                    rd["jenis_kendaraan"]?.ToString();
+                        rd["jenis_kendaraan"]?.ToString()?.ToLower();
 
                     if (jenis == "motor")
                     {
-                        flowMotor.Controls.Add(slot);
+                        panel11.Controls.Add(lbl);
                     }
                     else if (jenis == "mobil")
                     {
-                        flowMobil.Controls.Add(slot);
+                        panel10.Controls.Add(lbl);
                     }
                     else if (jenis == "bus")
                     {
-                        flowBus.Controls.Add(slot);
+                        panelBus.Controls.Add(lbl);
                     }
                 }
             }
@@ -70,47 +82,6 @@ namespace FINAL_PROJECT
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void LoadGridMonitoring()
-        {
-            try
-            {
-                using var conn =
-                DatabaseHelper.Instance.GetConnection();
-
-                string query = @"
-        SELECT
-            kode_slot AS ""Kode Slot"",
-            status AS ""Status"",
-            jenis_kendaraan AS ""Kendaraan"",
-            plat_nomor AS ""Plat Nomor"",
-            ROUND(
-                durasi_menit_sekarang::numeric,
-                0
-            ) AS ""Durasi"",
-            nama_petugas AS ""Petugas""
-        FROM v_monitoring_slot
-        ORDER BY kode_slot";
-
-                using var da =
-                new NpgsqlDataAdapter(query, conn);
-
-                DataTable dt =
-                new DataTable();
-
-                da.Fill(dt);
-
-                dgvMonitoring.DataSource = dt;
-
-                dgvMonitoring.AutoSizeColumnsMode =
-                DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             History history = new History();
@@ -158,6 +129,41 @@ namespace FINAL_PROJECT
             FinanceReport finance = new FinanceReport();
             finance.Show();
             this.Hide();
+        }
+
+        private void LoadGridMonitoring()
+        {
+            try
+            {
+                using var conn =
+                    DatabaseHelper.Instance.GetConnection();
+
+                string query =
+                @"SELECT
+                kode_slot,
+                status,
+                jenis_kendaraan,
+                plat_nomor,
+                waktu_masuk
+                FROM parking_slot 
+                ORDER BY kode_slot";
+
+                using var da =
+                    new NpgsqlDataAdapter(query, conn);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                dgvMonitoring.DataSource = dt;
+
+                dgvMonitoring.AutoSizeColumnsMode =
+                    DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Monitoring_Load(object sender, EventArgs e)

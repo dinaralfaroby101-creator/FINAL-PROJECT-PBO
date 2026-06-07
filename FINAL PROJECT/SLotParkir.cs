@@ -40,7 +40,6 @@ namespace FINAL_PROJECT
         {
 
         }
-
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
             try
@@ -48,12 +47,28 @@ namespace FINAL_PROJECT
                 using (var conn = DatabaseHelper.Instance.GetConnection())
                 {
                     string query =
-                    "INSERT INTO slot_parkir(kode_slot) VALUES(@kode)";
+                        @"INSERT INTO slot_parkir
+                        (
+                            kode_slot,
+                            status_slot
+                        )
+                        VALUES
+                        (
+                            @kode,
+                            @status::status_slot_enum
+                        )";
 
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@kode", txtKode.Text);
+                        cmd.Parameters.AddWithValue(
+                             "@kode",
+                             txtKode.Text);
 
+                        cmd.Parameters.AddWithValue(
+                            "@status",
+                            cmbStatus.Text.ToLower());
+
+                        // INI YANG KURANG
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -67,6 +82,8 @@ namespace FINAL_PROJECT
             {
                 MessageBox.Show(ex.Message);
             }
+
+            
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
