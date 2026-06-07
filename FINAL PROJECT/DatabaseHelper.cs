@@ -8,9 +8,9 @@ namespace FINAL_PROJECT.Database   // sesuaikan nama project kamu
         // ── Ganti sesuai PostgreSQL kamu ──
         private const string Host = "localhost";
         private const int Port = 5432;
-        private const string Database = "PROJECT PSQL";
+        private const string Database = "project-akhir";
         private const string Username = "postgres";
-        private const string Password = "rega2124";   // ganti ini
+        private const string Password = "gymtio2402";   // ganti ini
         // ──────────────────────────────────
 
         public static string ConnectionString =>

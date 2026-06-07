@@ -65,6 +65,11 @@ namespace FINAL_PROJECT
                 MessageBox.Show("Username atau Password salah!");
             }
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

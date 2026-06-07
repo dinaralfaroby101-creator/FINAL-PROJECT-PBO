@@ -157,5 +157,10 @@ namespace FINAL_PROJECT
                 this.Hide();
             }
         }
+
+        private void lblDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
