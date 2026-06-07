@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panelSidebar = new Panel();
             button1 = new Button();
             btnFinanceReport = new Button();
@@ -39,8 +41,29 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             btnDashboard = new Button();
+            label1 = new Label();
+            label3 = new Label();
+            panelContent = new Panel();
+            dgvHistory = new DataGridView();
+            Kode = new DataGridViewTextBoxColumn();
+            area = new DataGridViewTextBoxColumn();
+            jenis = new DataGridViewTextBoxColumn();
+            petugas = new DataGridViewTextBoxColumn();
+            masuk = new DataGridViewTextBoxColumn();
+            keluar = new DataGridViewTextBoxColumn();
+            durasi = new DataGridViewTextBoxColumn();
+            biaya = new DataGridViewTextBoxColumn();
+            metode = new DataGridViewTextBoxColumn();
+            status = new DataGridViewTextBoxColumn();
+            txtSearch = new TextBox();
+            cbJenis = new ComboBox();
+            cbPetugas = new ComboBox();
+            dateTimePicker2 = new DateTimePicker();
+            dtMasuk = new DateTimePicker();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panelContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvHistory).BeginInit();
             SuspendLayout();
             // 
             // panelSidebar
@@ -167,19 +190,201 @@
             btnDashboard.UseVisualStyleBackColor = false;
             btnDashboard.Click += btnDashboard_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(297, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(163, 54);
+            label1.TabIndex = 26;
+            label1.Text = "History";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(297, 63);
+            label3.Name = "label3";
+            label3.Size = new Size(163, 23);
+            label3.TabIndex = 27;
+            label3.Text = "Dashboard / History";
+            // 
+            // panelContent
+            // 
+            panelContent.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panelContent.BackColor = Color.White;
+            panelContent.Controls.Add(dgvHistory);
+            panelContent.Controls.Add(txtSearch);
+            panelContent.Controls.Add(cbJenis);
+            panelContent.Controls.Add(cbPetugas);
+            panelContent.Controls.Add(dateTimePicker2);
+            panelContent.Controls.Add(dtMasuk);
+            panelContent.Location = new Point(280, 90);
+            panelContent.Margin = new Padding(240, 110, 3, 3);
+            panelContent.Name = "panelContent";
+            panelContent.Size = new Size(1253, 551);
+            panelContent.TabIndex = 28;
+            // 
+            // dgvHistory
+            // 
+            dgvHistory.AllowUserToAddRows = false;
+            dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHistory.BackgroundColor = Color.White;
+            dgvHistory.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHistory.Columns.AddRange(new DataGridViewColumn[] { Kode, area, jenis, petugas, masuk, keluar, durasi, biaya, metode, status });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvHistory.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvHistory.Location = new Point(17, 76);
+            dgvHistory.Name = "dgvHistory";
+            dgvHistory.RowHeadersVisible = false;
+            dgvHistory.RowHeadersWidth = 51;
+            dgvHistory.RowTemplate.Height = 45;
+            dgvHistory.Size = new Size(1227, 472);
+            dgvHistory.TabIndex = 5;
+            dgvHistory.CellContentClick += dgvHistory_CellContentClick;
+            // 
+            // Kode
+            // 
+            Kode.HeaderText = "Kode Transaction";
+            Kode.MinimumWidth = 6;
+            Kode.Name = "Kode";
+            // 
+            // area
+            // 
+            area.HeaderText = "Area";
+            area.MinimumWidth = 6;
+            area.Name = "area";
+            // 
+            // jenis
+            // 
+            jenis.HeaderText = "Jenis Kendaraan";
+            jenis.MinimumWidth = 6;
+            jenis.Name = "jenis";
+            // 
+            // petugas
+            // 
+            petugas.HeaderText = "ID petugas";
+            petugas.MinimumWidth = 6;
+            petugas.Name = "petugas";
+            // 
+            // masuk
+            // 
+            masuk.HeaderText = "Masuk";
+            masuk.MinimumWidth = 6;
+            masuk.Name = "masuk";
+            // 
+            // keluar
+            // 
+            keluar.HeaderText = "Keluar";
+            keluar.MinimumWidth = 6;
+            keluar.Name = "keluar";
+            // 
+            // durasi
+            // 
+            durasi.HeaderText = "Durasi";
+            durasi.MinimumWidth = 6;
+            durasi.Name = "durasi";
+            // 
+            // biaya
+            // 
+            biaya.HeaderText = "Biaya";
+            biaya.MinimumWidth = 6;
+            biaya.Name = "biaya";
+            // 
+            // metode
+            // 
+            metode.HeaderText = "Metode";
+            metode.MinimumWidth = 6;
+            metode.Name = "metode";
+            // 
+            // status
+            // 
+            status.HeaderText = "Status";
+            status.MinimumWidth = 6;
+            status.Name = "status";
+            // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(678, 25);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Cari Kode Transaksi";
+            txtSearch.Size = new Size(250, 27);
+            txtSearch.TabIndex = 4;
+            // 
+            // cbJenis
+            // 
+            cbJenis.FormattingEnabled = true;
+            cbJenis.Items.AddRange(new object[] { "Semua Jenis", "Motor", "Mobil", "Bus" });
+            cbJenis.Location = new Point(396, 24);
+            cbJenis.Name = "cbJenis";
+            cbJenis.Size = new Size(180, 28);
+            cbJenis.TabIndex = 3;
+            // 
+            // cbPetugas
+            // 
+            cbPetugas.FormattingEnabled = true;
+            cbPetugas.Items.AddRange(new object[] { "Semua Petugas", "Admin", "Petugas 1", "Petugas 2" });
+            cbPetugas.Location = new Point(210, 24);
+            cbPetugas.Name = "cbPetugas";
+            cbPetugas.Size = new Size(180, 28);
+            cbPetugas.TabIndex = 2;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(17, 43);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(160, 27);
+            dateTimePicker2.TabIndex = 1;
+            // 
+            // dtMasuk
+            // 
+            dtMasuk.AccessibleDescription = "waktu";
+            dtMasuk.AccessibleName = "waktu masuk";
+            dtMasuk.CustomFormat = "";
+            dtMasuk.Format = DateTimePickerFormat.Short;
+            dtMasuk.Location = new Point(17, 10);
+            dtMasuk.Name = "dtMasuk";
+            dtMasuk.Size = new Size(160, 27);
+            dtMasuk.TabIndex = 0;
+            // 
             // History
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1536, 641);
+            Controls.Add(panelContent);
+            Controls.Add(label3);
+            Controls.Add(label1);
             Controls.Add(panelSidebar);
             Name = "History";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "History";
+            Load += History_Load;
             panelSidebar.ResumeLayout(false);
             panelSidebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panelContent.ResumeLayout(false);
+            panelContent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvHistory).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -195,5 +400,24 @@
         private Label label2;
         private PictureBox pictureBox1;
         private Button btnDashboard;
+        private Label label1;
+        private Label label3;
+        private Panel panelContent;
+        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtMasuk;
+        private ComboBox cbPetugas;
+        private TextBox txtSearch;
+        private ComboBox cbJenis;
+        private DataGridView dgvHistory;
+        private DataGridViewTextBoxColumn Kode;
+        private DataGridViewTextBoxColumn area;
+        private DataGridViewTextBoxColumn jenis;
+        private DataGridViewTextBoxColumn petugas;
+        private DataGridViewTextBoxColumn masuk;
+        private DataGridViewTextBoxColumn keluar;
+        private DataGridViewTextBoxColumn durasi;
+        private DataGridViewTextBoxColumn biaya;
+        private DataGridViewTextBoxColumn metode;
+        private DataGridViewTextBoxColumn status;
     }
 }

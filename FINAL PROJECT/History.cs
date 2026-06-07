@@ -65,5 +65,39 @@ namespace FINAL_PROJECT
             monitor.Show();
             this.Hide();
         }
+
+        private void History_Load(object sender, EventArgs e)
+        {
+            dgvHistory.Rows.Add(
+                "c1921AC",
+                "C",
+                "Motor",
+                "789180",
+                "15.00",
+                "16.00",
+                "1 jam",
+                "Rp3000",
+                "QRIS",
+                "✔"
+            );
+
+            dgvHistory.Rows.Add(
+                "b1920AC",
+                "B",
+                "Mobil",
+                "789180",
+                "15.30",
+                "18.00",
+                "2 jam",
+                "Rp12000",
+                "QRIS",
+                "✔"
+            );
+        }
+
+        private void dgvHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

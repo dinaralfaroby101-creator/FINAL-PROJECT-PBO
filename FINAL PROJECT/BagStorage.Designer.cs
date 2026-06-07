@@ -417,6 +417,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = SystemColors.AppWorkspace;
             panel1.Controls.Add(panel9loker);
             panel1.Controls.Add(panel10loker);
             panel1.Controls.Add(panel11loker);
@@ -436,6 +437,7 @@
             // 
             // panel9loker
             // 
+            panel9loker.BackColor = Color.Red;
             panel9loker.Location = new Point(17, 187);
             panel9loker.Name = "panel9loker";
             panel9loker.Size = new Size(98, 73);
@@ -443,6 +445,7 @@
             // 
             // panel10loker
             // 
+            panel10loker.BackColor = Color.Red;
             panel10loker.Location = new Point(131, 187);
             panel10loker.Name = "panel10loker";
             panel10loker.Size = new Size(98, 73);
@@ -450,6 +453,7 @@
             // 
             // panel11loker
             // 
+            panel11loker.BackColor = Color.Red;
             panel11loker.Location = new Point(245, 187);
             panel11loker.Name = "panel11loker";
             panel11loker.Size = new Size(98, 73);
@@ -457,6 +461,7 @@
             // 
             // panel12loker
             // 
+            panel12loker.BackColor = Color.Yellow;
             panel12loker.Location = new Point(359, 187);
             panel12loker.Name = "panel12loker";
             panel12loker.Size = new Size(98, 73);
@@ -464,6 +469,7 @@
             // 
             // panel8loker
             // 
+            panel8loker.BackColor = Color.Yellow;
             panel8loker.Location = new Point(359, 99);
             panel8loker.Name = "panel8loker";
             panel8loker.Size = new Size(98, 73);
@@ -471,6 +477,7 @@
             // 
             // panel7loker
             // 
+            panel7loker.BackColor = Color.Yellow;
             panel7loker.Location = new Point(245, 99);
             panel7loker.Name = "panel7loker";
             panel7loker.Size = new Size(98, 73);
@@ -478,6 +485,7 @@
             // 
             // panel66loker
             // 
+            panel66loker.BackColor = Color.Yellow;
             panel66loker.Location = new Point(131, 99);
             panel66loker.Name = "panel66loker";
             panel66loker.Size = new Size(98, 73);
@@ -485,6 +493,7 @@
             // 
             // panel5loker
             // 
+            panel5loker.BackColor = Color.Red;
             panel5loker.Location = new Point(17, 99);
             panel5loker.Name = "panel5loker";
             panel5loker.Size = new Size(98, 73);
@@ -492,6 +501,7 @@
             // 
             // panel4loker
             // 
+            panel4loker.BackColor = Color.Yellow;
             panel4loker.Location = new Point(359, 11);
             panel4loker.Name = "panel4loker";
             panel4loker.Size = new Size(98, 73);
@@ -499,6 +509,7 @@
             // 
             // panel3loker
             // 
+            panel3loker.BackColor = Color.Yellow;
             panel3loker.Location = new Point(245, 11);
             panel3loker.Name = "panel3loker";
             panel3loker.Size = new Size(98, 73);
@@ -506,6 +517,7 @@
             // 
             // panel8panel2loker
             // 
+            panel8panel2loker.BackColor = Color.Red;
             panel8panel2loker.Location = new Point(131, 11);
             panel8panel2loker.Name = "panel8panel2loker";
             panel8panel2loker.Size = new Size(98, 73);
@@ -513,6 +525,7 @@
             // 
             // panel1loker
             // 
+            panel1loker.BackColor = Color.Yellow;
             panel1loker.Location = new Point(17, 11);
             panel1loker.Name = "panel1loker";
             panel1loker.Size = new Size(98, 73);
