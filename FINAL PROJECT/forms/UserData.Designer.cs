@@ -1,4 +1,4 @@
-﻿namespace FINAL_PROJECT
+﻿namespace FINAL_PROJECT.forms
 {
     partial class UserData
     {
@@ -63,7 +63,7 @@
             panel2 = new Panel();
             btnTambahUser = new Button();
             cbxUser = new ComboBox();
-            comboBox2 = new ComboBox();
+            cbxStatus = new ComboBox();
             panel7 = new Panel();
             dgvUser = new DataGridView();
             databaseHelperBindingSource = new BindingSource(components);
@@ -463,7 +463,7 @@
             // cbxUser
             // 
             cbxUser.FormattingEnabled = true;
-            cbxUser.Items.AddRange(new object[] { "Semua User", "Admin", "Petugas" });
+            cbxUser.Items.AddRange(new object[] { "Semua User", "admin", "petugas" });
             cbxUser.Location = new Point(754, 309);
             cbxUser.Margin = new Padding(4);
             cbxUser.Name = "cbxUser";
@@ -472,16 +472,16 @@
             cbxUser.Text = "Semua User";
             cbxUser.SelectedIndexChanged += cbxUser_SelectedIndexChanged;
             // 
-            // comboBox2
+            // cbxStatus
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Semua Status", "Online", "Offline" });
-            comboBox2.Location = new Point(1019, 309);
-            comboBox2.Margin = new Padding(4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(188, 33);
-            comboBox2.TabIndex = 28;
-            comboBox2.Text = "Semua Status";
+            cbxStatus.FormattingEnabled = true;
+            cbxStatus.Items.AddRange(new object[] { "Semua Status", "Online", "Offline" });
+            cbxStatus.Location = new Point(1019, 309);
+            cbxStatus.Margin = new Padding(4);
+            cbxStatus.Name = "cbxStatus";
+            cbxStatus.Size = new Size(188, 33);
+            cbxStatus.TabIndex = 28;
+            cbxStatus.Text = "Semua Status";
             // 
             // panel7
             // 
@@ -494,7 +494,7 @@
             // 
             // dgvUser
             // 
-            dgvUser.AutoGenerateColumns = false;
+            dgvUser.AutoGenerateColumns = true;
             dgvUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUser.DataSource = databaseHelperBindingSource;
             dgvUser.Location = new Point(5, 4);
@@ -552,7 +552,7 @@
             ClientSize = new Size(1920, 801);
             Controls.Add(panelUSername);
             Controls.Add(panel7);
-            Controls.Add(comboBox2);
+            Controls.Add(cbxStatus);
             Controls.Add(cbxUser);
             Controls.Add(btnTambahUser);
             Controls.Add(panel2);
@@ -624,7 +624,7 @@
         private Panel panel2;
         private Button btnTambahUser;
         private ComboBox cbxUser;
-        private ComboBox comboBox2;
+        private ComboBox cbxStatus;
         private Panel panel7;
         private DataGridView dgvUser;
         private BindingSource databaseHelperBindingSource;

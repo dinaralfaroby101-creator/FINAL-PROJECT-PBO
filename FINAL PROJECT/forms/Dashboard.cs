@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FINAL_PROJECT
+namespace FINAL_PROJECT.forms
 {
     public partial class Dashboard : Form
     {
@@ -151,7 +151,7 @@ namespace FINAL_PROJECT
 
             if (result == DialogResult.Yes)
             {
-                Form1 login = new Form1();
+                login login = new login();
                 login.Show();
 
                 this.Hide();

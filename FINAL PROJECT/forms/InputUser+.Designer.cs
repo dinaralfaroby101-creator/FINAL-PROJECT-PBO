@@ -1,4 +1,4 @@
-﻿namespace FINAL_PROJECT
+﻿namespace FINAL_PROJECT.forms
 {
     partial class InputUser_
     {
@@ -44,7 +44,7 @@
             // cmbRole
             // 
             cmbRole.FormattingEnabled = true;
-            cmbRole.Items.AddRange(new object[] { "Admin", "Petugas" });
+            cmbRole.Items.AddRange(new object[] { "admin", "petugas" });
             cmbRole.Location = new Point(966, 385);
             cmbRole.Margin = new Padding(4, 5, 4, 5);
             cmbRole.Name = "cmbRole";

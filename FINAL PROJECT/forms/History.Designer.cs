@@ -1,4 +1,4 @@
-﻿namespace FINAL_PROJECT
+﻿namespace FINAL_PROJECT.forms
 {
     partial class History
     {

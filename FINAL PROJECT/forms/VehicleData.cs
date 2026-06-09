@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FINAL_PROJECT
+namespace FINAL_PROJECT.forms
 {
     public partial class VehicleData : Form
     {

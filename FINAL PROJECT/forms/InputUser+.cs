@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using Npgsql;
 using FINAL_PROJECT.Database;
 
-namespace FINAL_PROJECT
+namespace FINAL_PROJECT.forms
+
 {
     public partial class InputUser_ : Form
     {
@@ -50,44 +51,66 @@ namespace FINAL_PROJECT
             {
                 using (var conn = DatabaseHelper.Instance.GetConnection())
                 {
-                    string query =
-                    @"INSERT INTO users
+                    string query = @"
+            INSERT INTO users
             (
-                fullname,
                 username,
-                password,
+                password_akun,
+                nama_lengkap,
                 role,
-                status
+                status_user
             )
             VALUES
             (
-                @fullname,
                 @username,
                 @password,
-                @role,
-                @status
+                @nama,
+                @role::role_user_enum,
+                @status::status_user_enum
             )";
 
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@fullname", txtNamaUser.Text);
-                        cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                        cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-                        cmd.Parameters.AddWithValue("@role", cmbRole.Text);
-                        cmd.Parameters.AddWithValue("@status", "Tidak Aktif");
+                        cmd.Parameters.AddWithValue("@username",
+                                                    txtUsername.Text);
+                        cmd.Parameters.AddWithValue("@username",
+                            txtUsername.Text);
 
+                        cmd.Parameters.AddWithValue("@password",
+                            txtPassword.Text);
+
+                        cmd.Parameters.AddWithValue("@nama",
+                            txtNamaUser.Text);
+
+                        cmd.Parameters.AddWithValue("@role",
+                            cmbRole.Text.ToLower());
+
+                        cmd.Parameters.AddWithValue("@status",
+                            "Offline");
+
+
+                        MessageBox.Show(
+    "cmbRole.Text = [" + cmbRole.Text + "]"
+);
+                        MessageBox.Show(
+    "Lower = [" + cmbRole.Text.ToLower() + "]"
+);
                         cmd.ExecuteNonQuery();
+
                     }
                 }
 
                 MessageBox.Show("User berhasil ditambahkan");
+
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.ToString());
+
+
             }
         }
 

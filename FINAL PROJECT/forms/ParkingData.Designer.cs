@@ -1,4 +1,4 @@
-﻿namespace FINAL_PROJECT
+﻿namespace FINAL_PROJECT.forms
 {
     partial class ParkingData
     {
@@ -42,6 +42,7 @@
             btnDashboard = new Button();
             panel1 = new Panel();
             panel7 = new Panel();
+            dataGridView1 = new DataGridView();
             panelHeader = new Panel();
             label32 = new Label();
             pictureBox2 = new PictureBox();
@@ -77,11 +78,11 @@
             label13 = new Label();
             pictureBox5 = new PictureBox();
             npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
-            dataGridView1 = new DataGridView();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panel1.SuspendLayout();
             panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelSearch.SuspendLayout();
@@ -95,7 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panelSidebar
@@ -259,6 +259,17 @@
             panel7.Size = new Size(1236, 360);
             panel7.TabIndex = 7;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(1236, 360);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // panelHeader
             // 
             panelHeader.Controls.Add(label32);
@@ -353,6 +364,7 @@
             label17.Size = new Size(232, 86);
             label17.TabIndex = 11;
             label17.TextAlign = ContentAlignment.TopCenter;
+            label17.Click += label17_Click;
             // 
             // label2
             // 
@@ -653,17 +665,6 @@
             npgsqlDataAdapter1.SelectCommand = null;
             npgsqlDataAdapter1.UpdateCommand = null;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1236, 360);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
             // ParkingData
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -682,6 +683,7 @@
             ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
             panel1.ResumeLayout(false);
             panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -701,7 +703,6 @@
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 

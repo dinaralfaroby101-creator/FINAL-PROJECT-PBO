@@ -1,6 +1,7 @@
-﻿namespace FINAL_PROJECT
+﻿namespace FINAL_PROJECT.forms
+
 {
-    partial class Form1
+    partial class login
     {
         /// <summary>
         ///  Required designer variable.

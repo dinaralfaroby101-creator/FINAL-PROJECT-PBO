@@ -1,10 +1,10 @@
 using FINAL_PROJECT.Database;   // bukan SPARK.Database
 
-namespace FINAL_PROJECT
+namespace FINAL_PROJECT.forms
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        public login()
         {
             InitializeComponent();
         }

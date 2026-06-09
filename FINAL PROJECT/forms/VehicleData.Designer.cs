@@ -1,4 +1,4 @@
-﻿namespace FINAL_PROJECT
+﻿namespace FINAL_PROJECT.forms
 {
     partial class VehicleData
     {
@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehicleData));
             panelSidebar = new Panel();
+            btnVehicleEntry = new Button();
+            btnVehicleExit = new Button();
+            btnVehicleData = new Button();
             btnLogOut = new Button();
             btnHistoryPetugas = new Button();
             btnMonitoringPetugas = new Button();
             lblSPpetugas = new Label();
             picLogo = new PictureBox();
             btnDashboardPetugas = new Button();
-            btnVehicleData = new Button();
-            btnVehicleExit = new Button();
-            btnVehicleEntry = new Button();
             label32 = new Label();
             lblNamaPetugas = new Label();
             panelSearch = new Panel();
@@ -178,6 +178,37 @@
             panelSidebar.Size = new Size(350, 801);
             panelSidebar.TabIndex = 1;
             // 
+            // btnVehicleEntry
+            // 
+            btnVehicleEntry.Location = new Point(81, 273);
+            btnVehicleEntry.Margin = new Padding(4);
+            btnVehicleEntry.Name = "btnVehicleEntry";
+            btnVehicleEntry.Size = new Size(229, 49);
+            btnVehicleEntry.TabIndex = 16;
+            btnVehicleEntry.Text = "Vehicle Entry";
+            btnVehicleEntry.UseVisualStyleBackColor = true;
+            // 
+            // btnVehicleExit
+            // 
+            btnVehicleExit.Location = new Point(81, 335);
+            btnVehicleExit.Margin = new Padding(4);
+            btnVehicleExit.Name = "btnVehicleExit";
+            btnVehicleExit.Size = new Size(229, 46);
+            btnVehicleExit.TabIndex = 15;
+            btnVehicleExit.Text = "Vehicle Exit";
+            btnVehicleExit.UseVisualStyleBackColor = true;
+            // 
+            // btnVehicleData
+            // 
+            btnVehicleData.BackColor = Color.DeepSkyBlue;
+            btnVehicleData.Location = new Point(35, 199);
+            btnVehicleData.Margin = new Padding(4);
+            btnVehicleData.Name = "btnVehicleData";
+            btnVehicleData.Size = new Size(275, 62);
+            btnVehicleData.TabIndex = 13;
+            btnVehicleData.Text = "Vehicle Data";
+            btnVehicleData.UseVisualStyleBackColor = false;
+            // 
             // btnLogOut
             // 
             btnLogOut.Location = new Point(35, 610);
@@ -234,7 +265,7 @@
             // 
             // btnDashboardPetugas
             // 
-            btnDashboardPetugas.BackColor = Color.DeepSkyBlue;
+            btnDashboardPetugas.BackColor = Color.White;
             btnDashboardPetugas.Location = new Point(35, 112);
             btnDashboardPetugas.Margin = new Padding(4);
             btnDashboardPetugas.Name = "btnDashboardPetugas";
@@ -242,36 +273,6 @@
             btnDashboardPetugas.TabIndex = 1;
             btnDashboardPetugas.Text = "Dashboard";
             btnDashboardPetugas.UseVisualStyleBackColor = false;
-            // 
-            // btnVehicleData
-            // 
-            btnVehicleData.Location = new Point(35, 199);
-            btnVehicleData.Margin = new Padding(4);
-            btnVehicleData.Name = "btnVehicleData";
-            btnVehicleData.Size = new Size(275, 62);
-            btnVehicleData.TabIndex = 13;
-            btnVehicleData.Text = "Vehicle Data";
-            btnVehicleData.UseVisualStyleBackColor = true;
-            // 
-            // btnVehicleExit
-            // 
-            btnVehicleExit.Location = new Point(81, 335);
-            btnVehicleExit.Margin = new Padding(4);
-            btnVehicleExit.Name = "btnVehicleExit";
-            btnVehicleExit.Size = new Size(229, 46);
-            btnVehicleExit.TabIndex = 15;
-            btnVehicleExit.Text = "Vehicle Exit";
-            btnVehicleExit.UseVisualStyleBackColor = true;
-            // 
-            // btnVehicleEntry
-            // 
-            btnVehicleEntry.Location = new Point(81, 273);
-            btnVehicleEntry.Margin = new Padding(4);
-            btnVehicleEntry.Name = "btnVehicleEntry";
-            btnVehicleEntry.Size = new Size(229, 49);
-            btnVehicleEntry.TabIndex = 16;
-            btnVehicleEntry.Text = "Vehicle Entry";
-            btnVehicleEntry.UseVisualStyleBackColor = true;
             // 
             // label32
             // 

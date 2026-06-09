@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FINAL_PROJECT
+namespace FINAL_PROJECT.forms
 {
-    public partial class History : Form
+    public partial class FinanceReport : Form
     {
-        public History()
+        public FinanceReport()
         {
             InitializeComponent();
         }
@@ -21,13 +21,6 @@ namespace FINAL_PROJECT
         {
             FinanceReport finance = new FinanceReport();
             finance.Show();
-            this.Hide();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            History history = new History();
-            history.Show();
             this.Hide();
         }
 
@@ -66,36 +59,24 @@ namespace FINAL_PROJECT
             this.Hide();
         }
 
-        private void History_Load(object sender, EventArgs e)
+        private void btnHistory_Click(object sender, EventArgs e)
         {
-            dgvHistory.Rows.Add(
-                "c1921AC",
-                "C",
-                "Motor",
-                "789180",
-                "15.00",
-                "16.00",
-                "1 jam",
-                "Rp3000",
-                "QRIS",
-                "✔"
-            );
-
-            dgvHistory.Rows.Add(
-                "b1920AC",
-                "B",
-                "Mobil",
-                "789180",
-                "15.30",
-                "18.00",
-                "2 jam",
-                "Rp12000",
-                "QRIS",
-                "✔"
-            );
+            History history = new History();
+            history.Show();
+            this.Hide();
         }
 
-        private void dgvHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FinanceReport_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelConten_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PanelPendapatan_Paint(object sender, PaintEventArgs e)
         {
 
         }
