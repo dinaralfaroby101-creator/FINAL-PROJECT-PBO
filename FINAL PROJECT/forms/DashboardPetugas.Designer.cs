@@ -1,6 +1,6 @@
 ﻿namespace FINAL_PROJECT.forms
 {
-    partial class VehicleData
+    partial class DashboardPetugas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehicleData));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardPetugas));
             panelSidebar = new Panel();
-            btnVehicleEntry = new Button();
-            btnVehicleExit = new Button();
-            btnVehicleData = new Button();
             btnLogOut = new Button();
             btnHistoryPetugas = new Button();
             btnMonitoringPetugas = new Button();
-            lblSPpetugas = new Label();
+            btnVehicleData = new Button();
+            label1 = new Label();
             picLogo = new PictureBox();
-            btnDashboardPetugas = new Button();
-            label32 = new Label();
-            lblNamaPetugas = new Label();
+            btnDashboard = new Button();
+            panelContent = new Panel();
+            panel1 = new Panel();
+            pictureBox7 = new PictureBox();
+            label4 = new Label();
             panelSearch = new Panel();
             pictureBox2 = new PictureBox();
             txtSearch = new TextBox();
-            label3 = new Label();
             PanelMonitoring = new Panel();
             panelParking = new Panel();
             panel11 = new Panel();
@@ -133,9 +132,12 @@
             pictureBox6 = new PictureBox();
             pictureBox1 = new PictureBox();
             label2 = new Label();
-            lblVehicleData = new Label();
+            lblDashboard = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
+            panelContent.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             PanelMonitoring.SuspendLayout();
@@ -162,102 +164,76 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
-            panelSidebar.Controls.Add(btnVehicleEntry);
-            panelSidebar.Controls.Add(btnVehicleExit);
-            panelSidebar.Controls.Add(btnVehicleData);
             panelSidebar.Controls.Add(btnLogOut);
             panelSidebar.Controls.Add(btnHistoryPetugas);
             panelSidebar.Controls.Add(btnMonitoringPetugas);
-            panelSidebar.Controls.Add(lblSPpetugas);
+            panelSidebar.Controls.Add(btnVehicleData);
+            panelSidebar.Controls.Add(label1);
             panelSidebar.Controls.Add(picLogo);
-            panelSidebar.Controls.Add(btnDashboardPetugas);
+            panelSidebar.Controls.Add(btnDashboard);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 0);
             panelSidebar.Margin = new Padding(4);
             panelSidebar.Name = "panelSidebar";
             panelSidebar.Size = new Size(350, 801);
-            panelSidebar.TabIndex = 1;
-            panelSidebar.Paint += this.panelSidebar_Paint;
-            // 
-            // btnVehicleEntry
-            // 
-            btnVehicleEntry.Location = new Point(81, 273);
-            btnVehicleEntry.Margin = new Padding(4);
-            btnVehicleEntry.Name = "btnVehicleEntry";
-            btnVehicleEntry.Size = new Size(229, 49);
-            btnVehicleEntry.TabIndex = 16;
-            btnVehicleEntry.Text = "Vehicle Entry";
-            btnVehicleEntry.UseVisualStyleBackColor = true;
-            btnVehicleEntry.Click += this.btnVehicleEntry_Click;
-            // 
-            // btnVehicleExit
-            // 
-            btnVehicleExit.Location = new Point(81, 335);
-            btnVehicleExit.Margin = new Padding(4);
-            btnVehicleExit.Name = "btnVehicleExit";
-            btnVehicleExit.Size = new Size(229, 46);
-            btnVehicleExit.TabIndex = 15;
-            btnVehicleExit.Text = "Vehicle Exit";
-            btnVehicleExit.UseVisualStyleBackColor = true;
-            btnVehicleExit.Click += this.btnVehicleExit_Click;
-            // 
-            // btnVehicleData
-            // 
-            btnVehicleData.BackColor = Color.DeepSkyBlue;
-            btnVehicleData.Location = new Point(35, 199);
-            btnVehicleData.Margin = new Padding(4);
-            btnVehicleData.Name = "btnVehicleData";
-            btnVehicleData.Size = new Size(275, 62);
-            btnVehicleData.TabIndex = 13;
-            btnVehicleData.Text = "Vehicle Data";
-            btnVehicleData.UseVisualStyleBackColor = false;
-            btnVehicleData.Click += this.btnVehicleData_Click;
+            panelSidebar.TabIndex = 0;
             // 
             // btnLogOut
             // 
-            btnLogOut.Location = new Point(35, 610);
+            btnLogOut.Location = new Point(35, 636);
             btnLogOut.Margin = new Padding(4);
             btnLogOut.Name = "btnLogOut";
             btnLogOut.Size = new Size(275, 62);
-            btnLogOut.TabIndex = 12;
+            btnLogOut.TabIndex = 13;
             btnLogOut.Text = "Log Out";
             btnLogOut.UseVisualStyleBackColor = true;
-            btnLogOut.Click += this.btnLogOut_Click;
+            btnLogOut.Click += btnLogOut_Click_1;
             // 
             // btnHistoryPetugas
             // 
-            btnHistoryPetugas.Location = new Point(35, 499);
+            btnHistoryPetugas.Location = new Point(35, 406);
             btnHistoryPetugas.Margin = new Padding(4);
             btnHistoryPetugas.Name = "btnHistoryPetugas";
             btnHistoryPetugas.Size = new Size(275, 62);
-            btnHistoryPetugas.TabIndex = 10;
+            btnHistoryPetugas.TabIndex = 16;
             btnHistoryPetugas.Text = "History";
             btnHistoryPetugas.UseVisualStyleBackColor = true;
-            btnHistoryPetugas.Click += this.btnHistoryPetugas_Click;
             // 
             // btnMonitoringPetugas
             // 
-            btnMonitoringPetugas.Location = new Point(35, 407);
+            btnMonitoringPetugas.Location = new Point(35, 307);
             btnMonitoringPetugas.Margin = new Padding(4);
             btnMonitoringPetugas.Name = "btnMonitoringPetugas";
             btnMonitoringPetugas.Size = new Size(275, 62);
-            btnMonitoringPetugas.TabIndex = 9;
+            btnMonitoringPetugas.TabIndex = 15;
             btnMonitoringPetugas.Text = "Monitoring";
             btnMonitoringPetugas.UseVisualStyleBackColor = true;
-            btnMonitoringPetugas.Click += btnMonitoringPetugas_Click;
             // 
-            // lblSPpetugas
+            // btnVehicleData
             // 
-            lblSPpetugas.AutoSize = true;
-            lblSPpetugas.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSPpetugas.ForeColor = Color.White;
-            lblSPpetugas.Location = new Point(81, 15);
-            lblSPpetugas.Margin = new Padding(4, 0, 4, 0);
-            lblSPpetugas.Name = "lblSPpetugas";
-            lblSPpetugas.Size = new Size(243, 76);
-            lblSPpetugas.TabIndex = 0;
-            lblSPpetugas.Text = "SMART PARKING\r\nPETUGAS";
-            lblSPpetugas.TextAlign = ContentAlignment.TopCenter;
+            btnVehicleData.BackColor = Color.White;
+            btnVehicleData.Location = new Point(35, 209);
+            btnVehicleData.Margin = new Padding(4);
+            btnVehicleData.Name = "btnVehicleData";
+            btnVehicleData.Size = new Size(275, 62);
+            btnVehicleData.TabIndex = 14;
+            btnVehicleData.Text = "Vehicle Data";
+            btnVehicleData.UseVisualStyleBackColor = false;
+            btnVehicleData.Click += btnVehicleData_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(81, 15);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(243, 76);
+            label1.TabIndex = 0;
+            label1.Text = "SMART PARKING\r\nPETUGAS";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            label1.Click += label1_Click;
             // 
             // picLogo
             // 
@@ -270,39 +246,66 @@
             picLogo.TabIndex = 5;
             picLogo.TabStop = false;
             // 
-            // btnDashboardPetugas
+            // btnDashboard
             // 
-            btnDashboardPetugas.BackColor = Color.White;
-            btnDashboardPetugas.Location = new Point(35, 112);
-            btnDashboardPetugas.Margin = new Padding(4);
-            btnDashboardPetugas.Name = "btnDashboardPetugas";
-            btnDashboardPetugas.Size = new Size(275, 62);
-            btnDashboardPetugas.TabIndex = 1;
-            btnDashboardPetugas.Text = "Dashboard";
-            btnDashboardPetugas.UseVisualStyleBackColor = false;
+            btnDashboard.BackColor = Color.DeepSkyBlue;
+            btnDashboard.Location = new Point(35, 112);
+            btnDashboard.Margin = new Padding(4);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(275, 62);
+            btnDashboard.TabIndex = 1;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += button1_Click;
             // 
-            // label32
+            // panelContent
             // 
-            label32.AutoSize = true;
-            label32.BackColor = Color.Transparent;
-            label32.Location = new Point(1772, 50);
-            label32.Margin = new Padding(4, 0, 4, 0);
-            label32.Name = "label32";
-            label32.Size = new Size(116, 25);
-            label32.TabIndex = 19;
-            label32.Text = "Ahmad Dani ";
+            panelContent.BackColor = Color.Transparent;
+            panelContent.Controls.Add(panel1);
+            panelContent.Controls.Add(panelSearch);
+            panelContent.Controls.Add(PanelMonitoring);
+            panelContent.Controls.Add(flowLayoutPanel1);
+            panelContent.Controls.Add(pictureBox1);
+            panelContent.Controls.Add(label2);
+            panelContent.Controls.Add(lblDashboard);
+            panelContent.Dock = DockStyle.Fill;
+            panelContent.Location = new Point(350, 0);
+            panelContent.Margin = new Padding(4);
+            panelContent.Name = "panelContent";
+            panelContent.Size = new Size(1570, 801);
+            panelContent.TabIndex = 1;
             // 
-            // lblNamaPetugas
+            // panel1
             // 
-            lblNamaPetugas.AutoSize = true;
-            lblNamaPetugas.BackColor = Color.Transparent;
-            lblNamaPetugas.Location = new Point(1772, 25);
-            lblNamaPetugas.Margin = new Padding(4, 0, 4, 0);
-            lblNamaPetugas.Name = "lblNamaPetugas";
-            lblNamaPetugas.Size = new Size(74, 25);
-            lblNamaPetugas.TabIndex = 18;
-            lblNamaPetugas.Text = "Petugas";
-            lblNamaPetugas.Click += label4_Click;
+            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Center;
+            panel1.Controls.Add(pictureBox7);
+            panel1.Controls.Add(label4);
+            panel1.ImeMode = ImeMode.Off;
+            panel1.Location = new Point(1366, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(182, 77);
+            panel1.TabIndex = 11;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(3, 12);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(50, 50);
+            pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox7.TabIndex = 12;
+            pictureBox7.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(59, 13);
+            label4.Name = "label4";
+            label4.Size = new Size(111, 50);
+            label4.TabIndex = 8;
+            label4.Text = "Admin\r\nAhmad Dani\r\n";
             // 
             // panelSearch
             // 
@@ -311,11 +314,11 @@
             panelSearch.BorderStyle = BorderStyle.FixedSingle;
             panelSearch.Controls.Add(pictureBox2);
             panelSearch.Controls.Add(txtSearch);
-            panelSearch.Location = new Point(1257, 21);
+            panelSearch.Location = new Point(904, 22);
             panelSearch.Margin = new Padding(4);
             panelSearch.Name = "panelSearch";
             panelSearch.Size = new Size(312, 50);
-            panelSearch.TabIndex = 17;
+            panelSearch.TabIndex = 8;
             // 
             // pictureBox2
             // 
@@ -340,26 +343,16 @@
             txtSearch.TabIndex = 3;
             txtSearch.Text = "Cari Data Parkir";
             // 
-            // label3
-            // 
-            label3.Image = (Image)resources.GetObject("label3.Image");
-            label3.Location = new Point(1684, 10);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(232, 86);
-            label3.TabIndex = 16;
-            label3.TextAlign = ContentAlignment.TopCenter;
-            // 
             // PanelMonitoring
             // 
             PanelMonitoring.Controls.Add(panelParking);
             PanelMonitoring.Controls.Add(PanelArea);
             PanelMonitoring.ForeColor = Color.White;
-            PanelMonitoring.Location = new Point(438, 278);
+            PanelMonitoring.Location = new Point(85, 279);
             PanelMonitoring.Margin = new Padding(4);
             PanelMonitoring.Name = "PanelMonitoring";
             PanelMonitoring.Size = new Size(1375, 438);
-            PanelMonitoring.TabIndex = 15;
+            PanelMonitoring.TabIndex = 6;
             // 
             // panelParking
             // 
@@ -372,6 +365,7 @@
             panelParking.Name = "panelParking";
             panelParking.Size = new Size(840, 350);
             panelParking.TabIndex = 1;
+            panelParking.Paint += panelParking_Paint;
             // 
             // panel11
             // 
@@ -549,6 +543,7 @@
             panel27.Name = "panel27";
             panel27.Size = new Size(59, 38);
             panel27.TabIndex = 0;
+            panel27.Paint += panel27_Paint;
             // 
             // panel10
             // 
@@ -655,6 +650,7 @@
             panel13.Name = "panel13";
             panel13.Size = new Size(95, 66);
             panel13.TabIndex = 2;
+            panel13.Paint += panel13_Paint;
             // 
             // panel12
             // 
@@ -940,6 +936,7 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(400, 100);
             panel6.TabIndex = 1;
+            panel6.Paint += panel6_Paint;
             // 
             // label21
             // 
@@ -962,6 +959,7 @@
             label20.Size = new Size(67, 21);
             label20.TabIndex = 4;
             label20.Text = "Terisi 30";
+            label20.Click += label20_Click;
             // 
             // progressBar1
             // 
@@ -1009,11 +1007,11 @@
             flowLayoutPanel1.Controls.Add(panel3);
             flowLayoutPanel1.Controls.Add(panel4);
             flowLayoutPanel1.Controls.Add(panel5);
-            flowLayoutPanel1.Location = new Point(513, 111);
+            flowLayoutPanel1.Location = new Point(160, 112);
             flowLayoutPanel1.Margin = new Padding(4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(1234, 159);
-            flowLayoutPanel1.TabIndex = 14;
+            flowLayoutPanel1.TabIndex = 5;
             // 
             // panel2
             // 
@@ -1048,6 +1046,7 @@
             label6.Size = new Size(32, 38);
             label6.TabIndex = 2;
             label6.Text = "3";
+            label6.Click += label6_Click;
             // 
             // label5
             // 
@@ -1069,6 +1068,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // panel3
             // 
@@ -1124,6 +1124,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // panel4
             // 
@@ -1179,6 +1180,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // panel5
             // 
@@ -1234,61 +1236,60 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 0;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1627, 23);
+            pictureBox1.Location = new Point(1274, 24);
             pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(50, 46);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 13;
+            pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(361, 64);
+            label2.Location = new Point(8, 65);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(308, 25);
-            label2.TabIndex = 12;
+            label2.TabIndex = 1;
             label2.Text = "Selamat Datang di Dasboard Petugas";
-            label2.Click += label2_Click;
             // 
-            // lblVehicleData
+            // lblDashboard
             // 
-            lblVehicleData.AutoSize = true;
-            lblVehicleData.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblVehicleData.Location = new Point(353, 14);
-            lblVehicleData.Margin = new Padding(4, 0, 4, 0);
-            lblVehicleData.Name = "lblVehicleData";
-            lblVehicleData.Size = new Size(257, 54);
-            lblVehicleData.TabIndex = 11;
-            lblVehicleData.Text = "Vehicle Data";
+            lblDashboard.AutoSize = true;
+            lblDashboard.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDashboard.Location = new Point(0, 15);
+            lblDashboard.Margin = new Padding(4, 0, 4, 0);
+            lblDashboard.Name = "lblDashboard";
+            lblDashboard.Size = new Size(272, 54);
+            lblDashboard.TabIndex = 0;
+            lblDashboard.Text = "DASHBOARD";
+            lblDashboard.Click += lblDashboard_Click;
             // 
-            // VehicleData
+            // DashboardPetugas
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1920, 801);
-            Controls.Add(label32);
-            Controls.Add(lblNamaPetugas);
-            Controls.Add(panelSearch);
-            Controls.Add(label3);
-            Controls.Add(PanelMonitoring);
-            Controls.Add(flowLayoutPanel1);
-            Controls.Add(pictureBox1);
-            Controls.Add(label2);
-            Controls.Add(lblVehicleData);
+            Controls.Add(panelContent);
             Controls.Add(panelSidebar);
-            Name = "VehicleData";
-            Text = "VehicleData";
-            Load += VehicleData_Load;
+            Margin = new Padding(4);
+            Name = "DashboardPetugas";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Dashboard";
             panelSidebar.ResumeLayout(false);
             panelSidebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
+            panelContent.ResumeLayout(false);
+            panelContent.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panelSearch.ResumeLayout(false);
             panelSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -1319,92 +1320,18 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Panel panelSidebar;
-        private Button btnLogOut;
-        private Button btnHistoryPetugas;
-        private Button btnMonitoringPetugas;
-        private Label lblSPpetugas;
+        private Button btnDashboard;
+        private Panel panelContent;
+        private Label label1;
         private PictureBox picLogo;
-        private Button btnDashboardPetugas;
-        private Button btnVehicleEntry;
-        private Button btnVehicleExit;
-        private Button btnVehicleData;
-        private Label label32;
-        private Label lblNamaPetugas;
-        private Panel panelSearch;
-        private PictureBox pictureBox2;
-        private TextBox txtSearch;
-        private Label label3;
-        private Panel PanelMonitoring;
-        private Panel panelParking;
-        private Panel panel11;
-        private Panel panel44;
-        private Panel panel43;
-        private Panel panel42;
-        private Panel panel41;
-        private Panel panel40;
-        private Panel panel39;
-        private Panel panel38;
-        private Panel panel37;
-        private Panel panel36;
-        private Panel panel35;
-        private Panel panel34;
-        private Panel panel33;
-        private Panel panel32;
-        private Panel panel31;
-        private Panel panel30;
-        private Panel panel29;
-        private Panel panel28;
-        private Panel panel27;
-        private Panel panel10;
-        private Panel panel26;
-        private Panel panel25;
-        private Panel panel24;
-        private Panel panel23;
-        private Panel panel18;
-        private Panel panel17;
-        private Panel panel16;
-        private Panel panel15;
-        private Panel panel14;
-        private Panel panel13;
-        private Panel panel12;
-        private Panel panel9;
-        private Panel panelBus;
-        private Panel panel22;
-        private Panel panel21;
-        private Panel panel20;
-        private Panel panel19;
-        private Panel SlotBus4;
-        private Panel Slotbus3;
-        private Panel SlotBus2;
-        private Panel SlotBus1;
-        private Panel PanelArea;
-        private Panel panel8;
-        private Label label27;
-        private Label label28;
-        private ProgressBar progressBar3;
-        private Label label29;
-        private Label label30;
-        private Label label31;
-        private Panel panel7;
-        private Label label22;
-        private Label label23;
-        private ProgressBar progressBar2;
-        private Label label24;
-        private Label label25;
-        private Label label26;
-        private Panel panel6;
-        private Label label21;
-        private Label label20;
-        private ProgressBar progressBar1;
-        private Label label19;
-        private Label label18;
-        private Label label17;
+        private Label lblDashboard;
+        private Label label2;
+        private PictureBox pictureBox1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel2;
         private Label label7;
@@ -1426,8 +1353,80 @@
         private Label label15;
         private Label label16;
         private PictureBox pictureBox6;
-        private PictureBox pictureBox1;
-        private Label label2;
-        private Label lblVehicleData;
+        private Panel PanelMonitoring;
+        private Panel PanelArea;
+        private Panel panel6;
+        private Label label18;
+        private Label label17;
+        private Label label21;
+        private Label label20;
+        private ProgressBar progressBar1;
+        private Label label19;
+        private Panel panel8;
+        private Label label27;
+        private Label label28;
+        private ProgressBar progressBar3;
+        private Label label29;
+        private Label label30;
+        private Label label31;
+        private Panel panel7;
+        private Label label22;
+        private Label label23;
+        private ProgressBar progressBar2;
+        private Label label24;
+        private Label label25;
+        private Label label26;
+        private Panel panelParking;
+        private Panel panelBus;
+        private Panel panel11;
+        private Panel panel10;
+        private Panel SlotBus4;
+        private Panel Slotbus3;
+        private Panel SlotBus2;
+        private Panel SlotBus1;
+        private Panel panel18;
+        private Panel panel17;
+        private Panel panel16;
+        private Panel panel15;
+        private Panel panel14;
+        private Panel panel13;
+        private Panel panel12;
+        private Panel panel9;
+        private Panel panel27;
+        private Panel panel26;
+        private Panel panel25;
+        private Panel panel24;
+        private Panel panel23;
+        private Panel panel22;
+        private Panel panel21;
+        private Panel panel20;
+        private Panel panel19;
+        private Panel panel44;
+        private Panel panel43;
+        private Panel panel42;
+        private Panel panel41;
+        private Panel panel40;
+        private Panel panel39;
+        private Panel panel38;
+        private Panel panel37;
+        private Panel panel36;
+        private Panel panel35;
+        private Panel panel34;
+        private Panel panel33;
+        private Panel panel32;
+        private Panel panel31;
+        private Panel panel30;
+        private Panel panel29;
+        private Panel panel28;
+        private PictureBox pictureBox2;
+        private Panel panelSearch;
+        private TextBox txtSearch;
+        private Panel panel1;
+        private Label label4;
+        private PictureBox pictureBox7;
+        private Button btnVehicleData;
+        private Button btnMonitoringPetugas;
+        private Button btnHistoryPetugas;
+        private Button btnLogOut;
     }
 }

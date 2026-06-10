@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             panelLeft = new Panel();
             pictureBox1 = new PictureBox();
             panelRight = new Panel();
@@ -48,10 +49,11 @@
             // 
             // panelLeft
             // 
+            panelLeft.BackgroundImage = (Image)resources.GetObject("panelLeft.BackgroundImage");
             panelLeft.Controls.Add(pictureBox1);
             panelLeft.Dock = DockStyle.Left;
             panelLeft.Location = new Point(0, 0);
-            panelLeft.Margin = new Padding(4, 4, 4, 4);
+            panelLeft.Margin = new Padding(4);
             panelLeft.Name = "panelLeft";
             panelLeft.Size = new Size(634, 801);
             panelLeft.TabIndex = 0;
@@ -59,10 +61,11 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = Properties.Resources.logoSP;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(212, 192);
-            pictureBox1.Margin = new Padding(4, 4, 4, 4);
+            pictureBox1.Location = new Point(241, 322);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(151, 160);
             pictureBox1.TabIndex = 0;
@@ -70,6 +73,8 @@
             // 
             // panelRight
             // 
+            panelRight.BackColor = Color.Transparent;
+            panelRight.BackgroundImage = (Image)resources.GetObject("panelRight.BackgroundImage");
             panelRight.Controls.Add(button1);
             panelRight.Controls.Add(icon_Mata);
             panelRight.Controls.Add(txtPassword);
@@ -79,7 +84,7 @@
             panelRight.Controls.Add(logoSpark);
             panelRight.Dock = DockStyle.Fill;
             panelRight.Location = new Point(634, 0);
-            panelRight.Margin = new Padding(4, 4, 4, 4);
+            panelRight.Margin = new Padding(4);
             panelRight.Name = "panelRight";
             panelRight.Size = new Size(1286, 801);
             panelRight.TabIndex = 1;
@@ -88,9 +93,9 @@
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Location = new Point(664, 582);
-            button1.Margin = new Padding(4, 4, 4, 4);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(118, 36);
             button1.TabIndex = 6;
@@ -103,7 +108,7 @@
             icon_Mata.BackgroundImage = Properties.Resources.eye_close;
             icon_Mata.BackgroundImageLayout = ImageLayout.Zoom;
             icon_Mata.Location = new Point(811, 531);
-            icon_Mata.Margin = new Padding(4, 4, 4, 4);
+            icon_Mata.Margin = new Padding(4);
             icon_Mata.Name = "icon_Mata";
             icon_Mata.Size = new Size(35, 29);
             icon_Mata.TabIndex = 5;
@@ -113,7 +118,7 @@
             // txtPassword
             // 
             txtPassword.Location = new Point(635, 526);
-            txtPassword.Margin = new Padding(4, 4, 4, 4);
+            txtPassword.Margin = new Padding(4);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Password";
             txtPassword.Size = new Size(175, 31);
@@ -123,7 +128,7 @@
             // txtUsername
             // 
             txtUsername.Location = new Point(635, 462);
-            txtUsername.Margin = new Padding(4, 4, 4, 4);
+            txtUsername.Margin = new Padding(4);
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderText = "Username";
             txtUsername.Size = new Size(175, 31);
@@ -133,6 +138,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.ForeColor = Color.White;
             label2.Location = new Point(548, 405);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
@@ -144,6 +150,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 11F);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(680, 375);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
@@ -155,14 +162,14 @@
             // 
             logoSpark.BackgroundImage = Properties.Resources.logo;
             logoSpark.BackgroundImageLayout = ImageLayout.Zoom;
-            logoSpark.Location = new Point(635, 210);
-            logoSpark.Margin = new Padding(4, 4, 4, 4);
+            logoSpark.Location = new Point(635, 211);
+            logoSpark.Margin = new Padding(4);
             logoSpark.Name = "logoSpark";
             logoSpark.Size = new Size(176, 160);
             logoSpark.TabIndex = 0;
             logoSpark.TabStop = false;
             // 
-            // Form1
+            // login
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -170,7 +177,7 @@
             Controls.Add(panelRight);
             Controls.Add(panelLeft);
             Margin = new Padding(2);
-            Name = "Form1";
+            Name = "login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "login";
             Load += Form1_Load;

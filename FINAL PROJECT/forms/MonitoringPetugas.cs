@@ -13,9 +13,9 @@ using Npgsql;
 namespace FINAL_PROJECT.forms
 
 {
-    public partial class Monitoring : Form
+    public partial class MonitoringPetugas : Form
     {
-        public Monitoring()
+        public MonitoringPetugas()
         {
             InitializeComponent();
         }
@@ -189,7 +189,13 @@ namespace FINAL_PROJECT.forms
 
         }
 
-       
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            LoadMonitoring();
+            LoadGridMonitoring();
+
+            LoadStatistic();
+        }
 
         private void PanelMonitoring_Paint(object sender, PaintEventArgs e)
         {

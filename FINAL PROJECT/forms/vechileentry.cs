@@ -21,5 +21,32 @@ namespace FINAL_PROJECT.forms
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void dtpMasuk_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblKodeSlot_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPlatNomor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vechileentry_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

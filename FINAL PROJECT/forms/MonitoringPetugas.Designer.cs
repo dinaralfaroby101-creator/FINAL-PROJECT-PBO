@@ -1,6 +1,6 @@
 ﻿namespace FINAL_PROJECT.forms
 {
-    partial class Monitoring
+    partial class MonitoringPetugas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panelSidebar = new Panel();
             button1 = new Button();
             btnFinanceReport = new Button();
@@ -147,6 +148,7 @@
             SlotBus2 = new Panel();
             SlotBus1 = new Panel();
             dgvMonitoring = new DataGridView();
+            timer1 = new System.Windows.Forms.Timer(components);
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -1395,6 +1397,12 @@
             dgvMonitoring.Size = new Size(1232, 320);
             dgvMonitoring.TabIndex = 3;
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 3000;
+            timer1.Tick += timer1_Tick;
+            // 
             // Monitoring
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -1442,6 +1450,7 @@
         private Button btnDashboard;
         private Panel panel1;
         private DataGridView dgvMonitoring;
+        private System.Windows.Forms.Timer timer1;
         private Panel panelParking;
         private Panel panel11;
         private Panel panel44;

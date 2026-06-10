@@ -60,6 +60,18 @@ namespace FINAL_PROJECT.forms
                 dashboard.Show();
                 this.Hide();
             }
+            else if (txtUsername.Text == "petugas1" && txtPassword.Text == "123")
+            {
+                DashboardPetugas dashboardpetugas = new DashboardPetugas();
+                dashboardpetugas.Show();
+                this.Hide();
+            }
+            else if (txtUsername.Text == "petugas2" && txtPassword.Text == "123")
+            {
+                vechileentry Entry = new vechileentry();
+                Entry.Show();
+                this.Hide();
+            }
             else
             {
                 MessageBox.Show("Username atau Password salah!");

@@ -31,5 +31,40 @@ namespace FINAL_PROJECT.forms
         {
 
         }
+
+        private void btnMonitoringPetugas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelSidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnVehicleEntry_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVehicleExit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVehicleData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHistoryPetugas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

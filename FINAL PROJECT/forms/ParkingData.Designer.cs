@@ -44,13 +44,10 @@
             panel7 = new Panel();
             dataGridView1 = new DataGridView();
             panelHeader = new Panel();
-            label32 = new Label();
             pictureBox2 = new PictureBox();
-            label4 = new Label();
             panelSearch = new Panel();
             pictureBox1 = new PictureBox();
             txtSearch = new TextBox();
-            label17 = new Label();
             label2 = new Label();
             label3 = new Label();
             comboBox2 = new ComboBox();
@@ -78,6 +75,9 @@
             label13 = new Label();
             pictureBox5 = new PictureBox();
             npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
+            panel8 = new Panel();
+            pictureBox7 = new PictureBox();
+            label4 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panel1.SuspendLayout();
@@ -96,6 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // panelSidebar
@@ -272,11 +274,9 @@
             // 
             // panelHeader
             // 
-            panelHeader.Controls.Add(label32);
+            panelHeader.Controls.Add(panel8);
             panelHeader.Controls.Add(pictureBox2);
-            panelHeader.Controls.Add(label4);
             panelHeader.Controls.Add(panelSearch);
-            panelHeader.Controls.Add(label17);
             panelHeader.Controls.Add(label2);
             panelHeader.Controls.Add(label3);
             panelHeader.Dock = DockStyle.Top;
@@ -285,17 +285,6 @@
             panelHeader.Name = "panelHeader";
             panelHeader.Size = new Size(1549, 100);
             panelHeader.TabIndex = 6;
-            // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.BackColor = Color.Transparent;
-            label32.Location = new Point(1400, 45);
-            label32.Margin = new Padding(4, 0, 4, 0);
-            label32.Name = "label32";
-            label32.Size = new Size(116, 25);
-            label32.TabIndex = 13;
-            label32.Text = "Ahmad Dani ";
             // 
             // pictureBox2
             // 
@@ -307,17 +296,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Location = new Point(1400, 20);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(65, 25);
-            label4.TabIndex = 12;
-            label4.Text = "Admin";
             // 
             // panelSearch
             // 
@@ -354,17 +332,6 @@
             txtSearch.Size = new Size(225, 28);
             txtSearch.TabIndex = 3;
             txtSearch.Text = "Cari Data Parkir";
-            // 
-            // label17
-            // 
-            label17.Image = (Image)resources.GetObject("label17.Image");
-            label17.Location = new Point(1312, 5);
-            label17.Margin = new Padding(4, 0, 4, 0);
-            label17.Name = "label17";
-            label17.Size = new Size(232, 86);
-            label17.TabIndex = 11;
-            label17.TextAlign = ContentAlignment.TopCenter;
-            label17.Click += label17_Click;
             // 
             // label2
             // 
@@ -665,6 +632,40 @@
             npgsqlDataAdapter1.SelectCommand = null;
             npgsqlDataAdapter1.UpdateCommand = null;
             // 
+            // panel8
+            // 
+            panel8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel8.BackgroundImage = (Image)resources.GetObject("panel8.BackgroundImage");
+            panel8.BackgroundImageLayout = ImageLayout.Center;
+            panel8.Controls.Add(pictureBox7);
+            panel8.Controls.Add(label4);
+            panel8.ImeMode = ImeMode.Off;
+            panel8.Location = new Point(1364, 11);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(182, 77);
+            panel8.TabIndex = 12;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = Color.Transparent;
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(3, 12);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(50, 50);
+            pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox7.TabIndex = 12;
+            pictureBox7.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Location = new Point(59, 13);
+            label4.Name = "label4";
+            label4.Size = new Size(111, 50);
+            label4.TabIndex = 8;
+            label4.Text = "Admin\r\nAhmad Dani\r\n";
+            // 
             // ParkingData
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -703,6 +704,9 @@
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
         }
 
@@ -751,11 +755,11 @@
         private Panel panelSearch;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private Label label32;
-        private Label label4;
-        private Label label17;
         private Panel panel7;
         private DataGridView dataGridView1;
         private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
+        private Panel panel8;
+        private PictureBox pictureBox7;
+        private Label label4;
     }
 }
