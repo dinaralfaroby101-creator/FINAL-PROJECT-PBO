@@ -68,28 +68,28 @@
             label1 = new Label();
             panel5 = new Panel();
             panel6 = new Panel();
-            lblSemuaUser = new Label();
-            lblJumlahUser = new Label();
-            lblTotalUser = new Label();
+            lblPendapatanHarian = new Label();
+            lblpendapatan = new Label();
             pictureBox8 = new PictureBox();
             panel7 = new Panel();
             lblSemuaAdmin = new Label();
             lblJumlahAdmin = new Label();
-            lblTotalAdmin = new Label();
+            lbltransaksi = new Label();
             pictureBox9 = new PictureBox();
             panel9 = new Panel();
-            lblJumlahPetugas = new Label();
-            lblTotalPetugas = new Label();
+            lblRatarataTransaksi = new Label();
+            lblrata = new Label();
             pictureBox11 = new PictureBox();
             panelChartPendapatan = new Panel();
             panelChartMetode = new Panel();
             panel8 = new Panel();
             label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
+            lblJumlahKendaraan = new Label();
+            lblkendaraan = new Label();
             pictureBox10 = new PictureBox();
             panelChartKendaraan = new Panel();
             panel11 = new Panel();
+            cboFilterMetode = new ComboBox();
             label19 = new Label();
             label18 = new Label();
             label17 = new Label();
@@ -103,11 +103,8 @@
             label9 = new Label();
             lblJumlahEwallet = new Label();
             panel12 = new Panel();
-            label20 = new Label();
-            label21 = new Label();
-            label22 = new Label();
-            label23 = new Label();
-            label24 = new Label();
+            cboFilterKendaraan = new ComboBox();
+            lblTotalKendaraan = new Label();
             label25 = new Label();
             lblJumlahMobil = new Label();
             label27 = new Label();
@@ -116,8 +113,6 @@
             label30 = new Label();
             lblJumlahMotor = new Label();
             cboFilterDBatang = new ComboBox();
-            cboFilterMetode = new ComboBox();
-            cboFilterKendaraan = new ComboBox();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -553,9 +548,8 @@
             // panel6
             // 
             panel6.BackColor = Color.White;
-            panel6.Controls.Add(lblSemuaUser);
-            panel6.Controls.Add(lblJumlahUser);
-            panel6.Controls.Add(lblTotalUser);
+            panel6.Controls.Add(lblPendapatanHarian);
+            panel6.Controls.Add(lblpendapatan);
             panel6.Controls.Add(pictureBox8);
             panel6.Location = new Point(1, 4);
             panel6.Margin = new Padding(4);
@@ -563,36 +557,26 @@
             panel6.Size = new Size(300, 150);
             panel6.TabIndex = 5;
             // 
-            // lblSemuaUser
+            // lblPendapatanHarian
             // 
-            lblSemuaUser.AutoSize = true;
-            lblSemuaUser.Location = new Point(115, 94);
-            lblSemuaUser.Margin = new Padding(4, 0, 4, 0);
-            lblSemuaUser.Name = "lblSemuaUser";
-            lblSemuaUser.Size = new Size(106, 25);
-            lblSemuaUser.TabIndex = 3;
-            lblSemuaUser.Text = "Semua User";
+            lblPendapatanHarian.AutoSize = true;
+            lblPendapatanHarian.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPendapatanHarian.Location = new Point(120, 55);
+            lblPendapatanHarian.Margin = new Padding(4, 0, 4, 0);
+            lblPendapatanHarian.Name = "lblPendapatanHarian";
+            lblPendapatanHarian.Size = new Size(62, 38);
+            lblPendapatanHarian.TabIndex = 2;
+            lblPendapatanHarian.Text = "135";
             // 
-            // lblJumlahUser
+            // lblpendapatan
             // 
-            lblJumlahUser.AutoSize = true;
-            lblJumlahUser.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahUser.Location = new Point(120, 55);
-            lblJumlahUser.Margin = new Padding(4, 0, 4, 0);
-            lblJumlahUser.Name = "lblJumlahUser";
-            lblJumlahUser.Size = new Size(62, 38);
-            lblJumlahUser.TabIndex = 2;
-            lblJumlahUser.Text = "135";
-            // 
-            // lblTotalUser
-            // 
-            lblTotalUser.AutoSize = true;
-            lblTotalUser.Location = new Point(115, 29);
-            lblTotalUser.Margin = new Padding(4, 0, 4, 0);
-            lblTotalUser.Name = "lblTotalUser";
-            lblTotalUser.Size = new Size(89, 25);
-            lblTotalUser.TabIndex = 1;
-            lblTotalUser.Text = "Total User";
+            lblpendapatan.AutoSize = true;
+            lblpendapatan.Location = new Point(115, 29);
+            lblpendapatan.Margin = new Padding(4, 0, 4, 0);
+            lblpendapatan.Name = "lblpendapatan";
+            lblpendapatan.Size = new Size(163, 25);
+            lblpendapatan.TabIndex = 1;
+            lblpendapatan.Text = "Pendapatan hari Ini";
             // 
             // pictureBox8
             // 
@@ -610,7 +594,7 @@
             panel7.BackColor = Color.White;
             panel7.Controls.Add(lblSemuaAdmin);
             panel7.Controls.Add(lblJumlahAdmin);
-            panel7.Controls.Add(lblTotalAdmin);
+            panel7.Controls.Add(lbltransaksi);
             panel7.Controls.Add(pictureBox9);
             panel7.Location = new Point(309, 4);
             panel7.Margin = new Padding(4);
@@ -638,15 +622,15 @@
             lblJumlahAdmin.TabIndex = 2;
             lblJumlahAdmin.Text = "4";
             // 
-            // lblTotalAdmin
+            // lbltransaksi
             // 
-            lblTotalAdmin.AutoSize = true;
-            lblTotalAdmin.Location = new Point(115, 29);
-            lblTotalAdmin.Margin = new Padding(4, 0, 4, 0);
-            lblTotalAdmin.Name = "lblTotalAdmin";
-            lblTotalAdmin.Size = new Size(65, 25);
-            lblTotalAdmin.TabIndex = 1;
-            lblTotalAdmin.Text = "Admin";
+            lbltransaksi.AutoSize = true;
+            lbltransaksi.Location = new Point(115, 29);
+            lbltransaksi.Margin = new Padding(4, 0, 4, 0);
+            lbltransaksi.Name = "lbltransaksi";
+            lbltransaksi.Size = new Size(124, 25);
+            lbltransaksi.TabIndex = 1;
+            lbltransaksi.Text = "Total Transaksi";
             // 
             // pictureBox9
             // 
@@ -662,8 +646,8 @@
             // panel9
             // 
             panel9.BackColor = Color.White;
-            panel9.Controls.Add(lblJumlahPetugas);
-            panel9.Controls.Add(lblTotalPetugas);
+            panel9.Controls.Add(lblRatarataTransaksi);
+            panel9.Controls.Add(lblrata);
             panel9.Controls.Add(pictureBox11);
             panel9.Location = new Point(617, 1);
             panel9.Margin = new Padding(4);
@@ -671,26 +655,26 @@
             panel9.Size = new Size(300, 150);
             panel9.TabIndex = 7;
             // 
-            // lblJumlahPetugas
+            // lblRatarataTransaksi
             // 
-            lblJumlahPetugas.AutoSize = true;
-            lblJumlahPetugas.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahPetugas.Location = new Point(120, 55);
-            lblJumlahPetugas.Margin = new Padding(4, 0, 4, 0);
-            lblJumlahPetugas.Name = "lblJumlahPetugas";
-            lblJumlahPetugas.Size = new Size(47, 38);
-            lblJumlahPetugas.TabIndex = 2;
-            lblJumlahPetugas.Text = "85";
+            lblRatarataTransaksi.AutoSize = true;
+            lblRatarataTransaksi.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRatarataTransaksi.Location = new Point(120, 55);
+            lblRatarataTransaksi.Margin = new Padding(4, 0, 4, 0);
+            lblRatarataTransaksi.Name = "lblRatarataTransaksi";
+            lblRatarataTransaksi.Size = new Size(47, 38);
+            lblRatarataTransaksi.TabIndex = 2;
+            lblRatarataTransaksi.Text = "85";
             // 
-            // lblTotalPetugas
+            // lblrata
             // 
-            lblTotalPetugas.AutoSize = true;
-            lblTotalPetugas.Location = new Point(115, 29);
-            lblTotalPetugas.Margin = new Padding(4, 0, 4, 0);
-            lblTotalPetugas.Name = "lblTotalPetugas";
-            lblTotalPetugas.Size = new Size(74, 25);
-            lblTotalPetugas.TabIndex = 1;
-            lblTotalPetugas.Text = "Petugas";
+            lblrata.AutoSize = true;
+            lblrata.Location = new Point(115, 29);
+            lblrata.Margin = new Padding(4, 0, 4, 0);
+            lblrata.Name = "lblrata";
+            lblrata.Size = new Size(159, 25);
+            lblrata.TabIndex = 1;
+            lblrata.Text = "Rata-rata Transaksi";
             // 
             // pictureBox11
             // 
@@ -722,8 +706,8 @@
             // 
             panel8.BackColor = Color.White;
             panel8.Controls.Add(label5);
-            panel8.Controls.Add(label6);
-            panel8.Controls.Add(label7);
+            panel8.Controls.Add(lblJumlahKendaraan);
+            panel8.Controls.Add(lblkendaraan);
             panel8.Controls.Add(pictureBox10);
             panel8.Location = new Point(1316, 40);
             panel8.Margin = new Padding(4);
@@ -740,26 +724,26 @@
             label5.Size = new Size(0, 25);
             label5.TabIndex = 3;
             // 
-            // label6
+            // lblJumlahKendaraan
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(120, 55);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(32, 38);
-            label6.TabIndex = 2;
-            label6.Text = "4";
+            lblJumlahKendaraan.AutoSize = true;
+            lblJumlahKendaraan.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblJumlahKendaraan.Location = new Point(120, 55);
+            lblJumlahKendaraan.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahKendaraan.Name = "lblJumlahKendaraan";
+            lblJumlahKendaraan.Size = new Size(32, 38);
+            lblJumlahKendaraan.TabIndex = 2;
+            lblJumlahKendaraan.Text = "4";
             // 
-            // label7
+            // lblkendaraan
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(115, 29);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(65, 25);
-            label7.TabIndex = 1;
-            label7.Text = "Admin";
+            lblkendaraan.AutoSize = true;
+            lblkendaraan.Location = new Point(115, 29);
+            lblkendaraan.Margin = new Padding(4, 0, 4, 0);
+            lblkendaraan.Name = "lblkendaraan";
+            lblkendaraan.Size = new Size(137, 25);
+            lblkendaraan.TabIndex = 1;
+            lblkendaraan.Text = "Total Kendaraan";
             // 
             // pictureBox10
             // 
@@ -781,6 +765,7 @@
             // 
             // panel11
             // 
+            panel11.BackColor = Color.PaleTurquoise;
             panel11.Controls.Add(cboFilterMetode);
             panel11.Controls.Add(label19);
             panel11.Controls.Add(label18);
@@ -798,6 +783,18 @@
             panel11.Name = "panel11";
             panel11.Size = new Size(418, 219);
             panel11.TabIndex = 32;
+            // 
+            // cboFilterMetode
+            // 
+            cboFilterMetode.FormattingEnabled = true;
+            cboFilterMetode.Items.AddRange(new object[] { "7 Hari", "1 Bulan", "3 Bulan" });
+            cboFilterMetode.Location = new Point(226, 7);
+            cboFilterMetode.Margin = new Padding(4);
+            cboFilterMetode.Name = "cboFilterMetode";
+            cboFilterMetode.Size = new Size(188, 33);
+            cboFilterMetode.TabIndex = 35;
+            cboFilterMetode.Text = "7 Hari";
+            cboFilterMetode.SelectedIndexChanged += cboFilterMetode_SelectedIndexChanged_1;
             // 
             // label19
             // 
@@ -930,12 +927,9 @@
             // 
             // panel12
             // 
+            panel12.BackColor = Color.PaleTurquoise;
             panel12.Controls.Add(cboFilterKendaraan);
-            panel12.Controls.Add(label20);
-            panel12.Controls.Add(label21);
-            panel12.Controls.Add(label22);
-            panel12.Controls.Add(label23);
-            panel12.Controls.Add(label24);
+            panel12.Controls.Add(lblTotalKendaraan);
             panel12.Controls.Add(label25);
             panel12.Controls.Add(lblJumlahMobil);
             panel12.Controls.Add(label27);
@@ -948,60 +942,28 @@
             panel12.Size = new Size(418, 219);
             panel12.TabIndex = 33;
             // 
-            // label20
+            // cboFilterKendaraan
             // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label20.Location = new Point(199, 111);
-            label20.Margin = new Padding(4, 0, 4, 0);
-            label20.Name = "label20";
-            label20.Size = new Size(56, 38);
-            label20.TabIndex = 13;
-            label20.Text = "Rp.";
+            cboFilterKendaraan.FormattingEnabled = true;
+            cboFilterKendaraan.Items.AddRange(new object[] { "7 Hari", "1 Bulan", "3 Bulan" });
+            cboFilterKendaraan.Location = new Point(226, 6);
+            cboFilterKendaraan.Margin = new Padding(4);
+            cboFilterKendaraan.Name = "cboFilterKendaraan";
+            cboFilterKendaraan.Size = new Size(188, 33);
+            cboFilterKendaraan.TabIndex = 36;
+            cboFilterKendaraan.Text = "7 Hari";
+            cboFilterKendaraan.SelectedIndexChanged += cboFilterKendaraan_SelectedIndexChanged_1;
             // 
-            // label21
+            // lblTotalKendaraan
             // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label21.Location = new Point(7, 173);
-            label21.Margin = new Padding(4, 0, 4, 0);
-            label21.Name = "label21";
-            label21.Size = new Size(56, 38);
-            label21.TabIndex = 12;
-            label21.Text = "Rp.";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label22.Location = new Point(7, 106);
-            label22.Margin = new Padding(4, 0, 4, 0);
-            label22.Name = "label22";
-            label22.Size = new Size(56, 38);
-            label22.TabIndex = 11;
-            label22.Text = "Rp.";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label23.Location = new Point(7, 36);
-            label23.Margin = new Padding(4, 0, 4, 0);
-            label23.Name = "label23";
-            label23.Size = new Size(56, 38);
-            label23.TabIndex = 10;
-            label23.Text = "Rp.";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label24.Location = new Point(258, 111);
-            label24.Margin = new Padding(4, 0, 4, 0);
-            label24.Name = "label24";
-            label24.Size = new Size(122, 38);
-            label24.TabIndex = 9;
-            label24.Text = "8550000";
+            lblTotalKendaraan.AutoSize = true;
+            lblTotalKendaraan.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotalKendaraan.Location = new Point(239, 115);
+            lblTotalKendaraan.Margin = new Padding(4, 0, 4, 0);
+            lblTotalKendaraan.Name = "lblTotalKendaraan";
+            lblTotalKendaraan.Size = new Size(122, 38);
+            lblTotalKendaraan.TabIndex = 9;
+            lblTotalKendaraan.Text = "8550000";
             // 
             // label25
             // 
@@ -1017,7 +979,7 @@
             // 
             lblJumlahMobil.AutoSize = true;
             lblJumlahMobil.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahMobil.Location = new Point(64, 106);
+            lblJumlahMobil.Location = new Point(19, 104);
             lblJumlahMobil.Margin = new Padding(4, 0, 4, 0);
             lblJumlahMobil.Name = "lblJumlahMobil";
             lblJumlahMobil.Size = new Size(77, 38);
@@ -1030,15 +992,15 @@
             label27.Location = new Point(19, 79);
             label27.Margin = new Padding(4, 0, 4, 0);
             label27.Name = "label27";
-            label27.Size = new Size(55, 25);
+            label27.Size = new Size(58, 25);
             label27.TabIndex = 6;
-            label27.Text = "Debit";
+            label27.Text = "Mobil";
             // 
             // lblJumlahBus
             // 
             lblJumlahBus.AutoSize = true;
             lblJumlahBus.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahBus.Location = new Point(64, 36);
+            lblJumlahBus.Location = new Point(24, 36);
             lblJumlahBus.Margin = new Padding(4, 0, 4, 0);
             lblJumlahBus.Name = "lblJumlahBus";
             lblJumlahBus.Size = new Size(92, 38);
@@ -1051,9 +1013,9 @@
             label29.Location = new Point(19, 7);
             label29.Margin = new Padding(4, 0, 4, 0);
             label29.Name = "label29";
-            label29.Size = new Size(44, 25);
+            label29.Size = new Size(40, 25);
             label29.TabIndex = 4;
-            label29.Text = "Qris";
+            label29.Text = "Bus";
             // 
             // label30
             // 
@@ -1061,15 +1023,15 @@
             label30.Location = new Point(20, 148);
             label30.Margin = new Padding(4, 0, 4, 0);
             label30.Name = "label30";
-            label30.Size = new Size(76, 25);
+            label30.Size = new Size(62, 25);
             label30.TabIndex = 3;
-            label30.Text = "E-Wallet";
+            label30.Text = "Motor";
             // 
             // lblJumlahMotor
             // 
             lblJumlahMotor.AutoSize = true;
             lblJumlahMotor.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahMotor.Location = new Point(64, 173);
+            lblJumlahMotor.Location = new Point(19, 173);
             lblJumlahMotor.Margin = new Padding(4, 0, 4, 0);
             lblJumlahMotor.Name = "lblJumlahMotor";
             lblJumlahMotor.Size = new Size(77, 38);
@@ -1085,29 +1047,8 @@
             cboFilterDBatang.Name = "cboFilterDBatang";
             cboFilterDBatang.Size = new Size(188, 33);
             cboFilterDBatang.TabIndex = 34;
-            cboFilterDBatang.Text = "Semua Area";
-            // 
-            // cboFilterMetode
-            // 
-            cboFilterMetode.FormattingEnabled = true;
-            cboFilterMetode.Items.AddRange(new object[] { "7 Hari", "1 Bulan", "3 Bulan" });
-            cboFilterMetode.Location = new Point(226, 7);
-            cboFilterMetode.Margin = new Padding(4);
-            cboFilterMetode.Name = "cboFilterMetode";
-            cboFilterMetode.Size = new Size(188, 33);
-            cboFilterMetode.TabIndex = 35;
-            cboFilterMetode.Text = "Semua Area";
-            // 
-            // cboFilterKendaraan
-            // 
-            cboFilterKendaraan.FormattingEnabled = true;
-            cboFilterKendaraan.Items.AddRange(new object[] { "7 Hari", "1 Bulan", "3 Bulan" });
-            cboFilterKendaraan.Location = new Point(226, 6);
-            cboFilterKendaraan.Margin = new Padding(4);
-            cboFilterKendaraan.Name = "cboFilterKendaraan";
-            cboFilterKendaraan.Size = new Size(188, 33);
-            cboFilterKendaraan.TabIndex = 36;
-            cboFilterKendaraan.Text = "Semua Area";
+            cboFilterDBatang.Text = "7 Hari";
+            cboFilterDBatang.SelectedIndexChanged += cboFilterDBatang_SelectedIndexChanged_1;
             // 
             // FinanceReport
             // 
@@ -1207,25 +1148,25 @@
         private Label label4;
         private Panel panel5;
         private Panel panel6;
-        private Label lblSemuaUser;
-        private Label lblJumlahUser;
+        private Label lblpendapatan;
+        private Label lblPendapatanHarian;
         private Label lblTotalUser;
         private PictureBox pictureBox8;
         private Panel panel7;
         private Label lblSemuaAdmin;
         private Label lblJumlahAdmin;
-        private Label lblTotalAdmin;
+        private Label lbltransaksi;
         private PictureBox pictureBox9;
         private Panel panel9;
-        private Label lblJumlahPetugas;
-        private Label lblTotalPetugas;
+        private Label lblRatarataTransaksi;
+        private Label lblrata;
         private PictureBox pictureBox11;
         private Panel panelChartPendapatan;
         private Panel panelChartMetode;
         private Panel panel8;
         private Label label5;
-        private Label label6;
-        private Label label7;
+        private Label lblJumlahKendaraan;
+        private Label lblkendaraan;
         private PictureBox pictureBox10;
         private Panel panelChartKendaraan;
         private Panel panel11;
@@ -1242,11 +1183,7 @@
         private Label label17;
         private Label label16;
         private Panel panel12;
-        private Label label20;
-        private Label label21;
-        private Label label22;
-        private Label label23;
-        private Label label24;
+        private Label lblTotalKendaraan;
         private Label label25;
         private Label lblJumlahMobil;
         private Label label27;

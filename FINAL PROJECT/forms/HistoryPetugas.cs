@@ -34,8 +34,8 @@ namespace FINAL_PROJECT.forms
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Dashboard dash = new Dashboard();
-            dash.Show();
+            DashboardPetugas dashp = new DashboardPetugas();
+            dashp.Show();
             this.Hide();
         }
 
@@ -62,8 +62,8 @@ namespace FINAL_PROJECT.forms
 
         private void btnMonitoring_Click(object sender, EventArgs e)
         {
-            Monitoring monitor = new Monitoring();
-            monitor.Show();
+            MonitoringPetugas monitorp = new MonitoringPetugas();
+            monitorp.Show();
             this.Hide();
         }
 
@@ -99,6 +99,30 @@ namespace FINAL_PROJECT.forms
         private void dgvHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnVehicleData_Click(object sender, EventArgs e)
+        {
+            VehicleData vd = new VehicleData();
+            vd.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Yakin ingin logout?",
+                "Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                login login = new login();
+                login.Show();
+
+                this.Hide();
+            }
         }
     }
 }

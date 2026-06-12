@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FINAL_PROJECT.forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,6 +41,20 @@ namespace FINAL_PROJECT
         private void lblPetugasTitle_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVehicleEntry_Click(object sender, EventArgs e)
+        {
+            vechileentry vde = new vechileentry();
+            vde.Show();
+            this.Hide();
+        }
+
+        private void btnVehicleData_Click(object sender, EventArgs e)
+        {
+            VehicleData vd = new VehicleData();
+            vd.Show();
+            this.Hide();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using FINAL_PROJECT.Database;
+﻿using FINAL_PROJECT.Data;
 using Npgsql;
 using System;
 using System.Data;
@@ -310,6 +310,11 @@ namespace FINAL_PROJECT.forms
         }
 
         private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

@@ -198,6 +198,7 @@
             btnHistoryPetugas.TabIndex = 16;
             btnHistoryPetugas.Text = "History";
             btnHistoryPetugas.UseVisualStyleBackColor = true;
+            btnHistoryPetugas.Click += btnHistoryPetugas_Click;
             // 
             // btnMonitoringPetugas
             // 
@@ -208,6 +209,7 @@
             btnMonitoringPetugas.TabIndex = 15;
             btnMonitoringPetugas.Text = "Monitoring";
             btnMonitoringPetugas.UseVisualStyleBackColor = true;
+            btnMonitoringPetugas.Click += btnMonitoringPetugas_Click;
             // 
             // btnVehicleData
             // 

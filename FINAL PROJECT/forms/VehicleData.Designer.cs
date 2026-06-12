@@ -134,6 +134,7 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             lblVehicleData = new Label();
+            flowLayoutPanel2 = new FlowLayoutPanel();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panelSearch.SuspendLayout();
@@ -157,6 +158,7 @@
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // panelSidebar
@@ -177,7 +179,7 @@
             panelSidebar.Name = "panelSidebar";
             panelSidebar.Size = new Size(350, 801);
             panelSidebar.TabIndex = 1;
-            panelSidebar.Paint += this.panelSidebar_Paint;
+            panelSidebar.Paint += panelSidebar_Paint;
             // 
             // btnVehicleEntry
             // 
@@ -188,7 +190,7 @@
             btnVehicleEntry.TabIndex = 16;
             btnVehicleEntry.Text = "Vehicle Entry";
             btnVehicleEntry.UseVisualStyleBackColor = true;
-            btnVehicleEntry.Click += this.btnVehicleEntry_Click;
+            btnVehicleEntry.Click += btnVehicleEntry_Click;
             // 
             // btnVehicleExit
             // 
@@ -199,7 +201,7 @@
             btnVehicleExit.TabIndex = 15;
             btnVehicleExit.Text = "Vehicle Exit";
             btnVehicleExit.UseVisualStyleBackColor = true;
-            btnVehicleExit.Click += this.btnVehicleExit_Click;
+            btnVehicleExit.Click += btnVehicleExit_Click;
             // 
             // btnVehicleData
             // 
@@ -211,7 +213,7 @@
             btnVehicleData.TabIndex = 13;
             btnVehicleData.Text = "Vehicle Data";
             btnVehicleData.UseVisualStyleBackColor = false;
-            btnVehicleData.Click += this.btnVehicleData_Click;
+            btnVehicleData.Click += btnVehicleData_Click;
             // 
             // btnLogOut
             // 
@@ -222,7 +224,7 @@
             btnLogOut.TabIndex = 12;
             btnLogOut.Text = "Log Out";
             btnLogOut.UseVisualStyleBackColor = true;
-            btnLogOut.Click += this.btnLogOut_Click;
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // btnHistoryPetugas
             // 
@@ -233,7 +235,7 @@
             btnHistoryPetugas.TabIndex = 10;
             btnHistoryPetugas.Text = "History";
             btnHistoryPetugas.UseVisualStyleBackColor = true;
-            btnHistoryPetugas.Click += this.btnHistoryPetugas_Click;
+            btnHistoryPetugas.Click += btnHistoryPetugas_Click;
             // 
             // btnMonitoringPetugas
             // 
@@ -280,6 +282,7 @@
             btnDashboardPetugas.TabIndex = 1;
             btnDashboardPetugas.Text = "Dashboard";
             btnDashboardPetugas.UseVisualStyleBackColor = false;
+            btnDashboardPetugas.Click += btnDashboardPetugas_Click;
             // 
             // label32
             // 
@@ -353,12 +356,11 @@
             // PanelMonitoring
             // 
             PanelMonitoring.Controls.Add(panelParking);
-            PanelMonitoring.Controls.Add(PanelArea);
             PanelMonitoring.ForeColor = Color.White;
-            PanelMonitoring.Location = new Point(438, 278);
+            PanelMonitoring.Location = new Point(385, 100);
             PanelMonitoring.Margin = new Padding(4);
             PanelMonitoring.Name = "PanelMonitoring";
-            PanelMonitoring.Size = new Size(1375, 438);
+            PanelMonitoring.Size = new Size(846, 352);
             PanelMonitoring.TabIndex = 15;
             // 
             // panelParking
@@ -367,7 +369,7 @@
             panelParking.Controls.Add(panel11);
             panelParking.Controls.Add(panel10);
             panelParking.Controls.Add(panelBus);
-            panelParking.Location = new Point(501, 36);
+            panelParking.Location = new Point(0, 4);
             panelParking.Margin = new Padding(4);
             panelParking.Name = "panelParking";
             panelParking.Size = new Size(840, 350);
@@ -769,11 +771,12 @@
             PanelArea.Controls.Add(panel7);
             PanelArea.Controls.Add(panel6);
             PanelArea.ForeColor = SystemColors.ActiveBorder;
-            PanelArea.Location = new Point(40, 36);
+            PanelArea.Location = new Point(4, 4);
             PanelArea.Margin = new Padding(4);
             PanelArea.Name = "PanelArea";
-            PanelArea.Size = new Size(438, 350);
+            PanelArea.Size = new Size(444, 658);
             PanelArea.TabIndex = 0;
+            PanelArea.Paint += PanelArea_Paint;
             // 
             // panel8
             // 
@@ -783,10 +786,10 @@
             panel8.Controls.Add(label29);
             panel8.Controls.Add(label30);
             panel8.Controls.Add(label31);
-            panel8.Location = new Point(20, 235);
+            panel8.Location = new Point(20, 484);
             panel8.Margin = new Padding(4);
             panel8.Name = "panel8";
-            panel8.Size = new Size(400, 100);
+            panel8.Size = new Size(400, 146);
             panel8.TabIndex = 6;
             // 
             // label27
@@ -859,10 +862,10 @@
             panel7.Controls.Add(label24);
             panel7.Controls.Add(label25);
             panel7.Controls.Add(label26);
-            panel7.Location = new Point(20, 121);
+            panel7.Location = new Point(20, 254);
             panel7.Margin = new Padding(4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(400, 100);
+            panel7.Size = new Size(400, 146);
             panel7.TabIndex = 6;
             // 
             // label22
@@ -935,10 +938,10 @@
             panel6.Controls.Add(label19);
             panel6.Controls.Add(label18);
             panel6.Controls.Add(label17);
-            panel6.Location = new Point(20, 8);
+            panel6.Location = new Point(20, 39);
             panel6.Margin = new Padding(4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(400, 100);
+            panel6.Size = new Size(400, 147);
             panel6.TabIndex = 1;
             // 
             // label21
@@ -1007,12 +1010,12 @@
             // 
             flowLayoutPanel1.Controls.Add(panel2);
             flowLayoutPanel1.Controls.Add(panel3);
-            flowLayoutPanel1.Controls.Add(panel4);
             flowLayoutPanel1.Controls.Add(panel5);
-            flowLayoutPanel1.Location = new Point(513, 111);
+            flowLayoutPanel1.Controls.Add(panel4);
+            flowLayoutPanel1.Location = new Point(482, 465);
             flowLayoutPanel1.Margin = new Padding(4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1234, 159);
+            flowLayoutPanel1.Size = new Size(618, 323);
             flowLayoutPanel1.TabIndex = 14;
             // 
             // panel2
@@ -1132,7 +1135,7 @@
             panel4.Controls.Add(label12);
             panel4.Controls.Add(label13);
             panel4.Controls.Add(pictureBox5);
-            panel4.Location = new Point(620, 4);
+            panel4.Location = new Point(312, 162);
             panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
             panel4.Size = new Size(300, 150);
@@ -1187,7 +1190,7 @@
             panel5.Controls.Add(label15);
             panel5.Controls.Add(label16);
             panel5.Controls.Add(pictureBox6);
-            panel5.Location = new Point(928, 4);
+            panel5.Location = new Point(4, 162);
             panel5.Margin = new Padding(4);
             panel5.Name = "panel5";
             panel5.Size = new Size(300, 150);
@@ -1268,11 +1271,20 @@
             lblVehicleData.TabIndex = 11;
             lblVehicleData.Text = "Vehicle Data";
             // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Controls.Add(PanelArea);
+            flowLayoutPanel2.Location = new Point(1319, 100);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(448, 662);
+            flowLayoutPanel2.TabIndex = 20;
+            // 
             // VehicleData
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1920, 801);
+            Controls.Add(flowLayoutPanel2);
             Controls.Add(label32);
             Controls.Add(lblNamaPetugas);
             Controls.Add(panelSearch);
@@ -1284,6 +1296,7 @@
             Controls.Add(lblVehicleData);
             Controls.Add(panelSidebar);
             Name = "VehicleData";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "VehicleData";
             Load += VehicleData_Load;
             panelSidebar.ResumeLayout(false);
@@ -1318,6 +1331,7 @@
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            flowLayoutPanel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1429,5 +1443,6 @@
         private PictureBox pictureBox1;
         private Label label2;
         private Label lblVehicleData;
+        private FlowLayoutPanel flowLayoutPanel2;
     }
 }

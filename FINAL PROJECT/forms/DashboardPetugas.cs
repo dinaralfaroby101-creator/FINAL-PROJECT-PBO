@@ -186,5 +186,19 @@ namespace FINAL_PROJECT.forms
                 this.Hide();
             }
         }
+
+        private void btnMonitoringPetugas_Click(object sender, EventArgs e)
+        {
+            MonitoringPetugas monitorp = new MonitoringPetugas();
+            monitorp.Show();
+            this.Hide();
+        }
+
+        private void btnHistoryPetugas_Click(object sender, EventArgs e)
+        {
+            HistoryPetugas historyp = new HistoryPetugas();
+            historyp.Show();
+            this.Hide();
+        }
     }
 }

@@ -1,4 +1,6 @@
-namespace FINAL_PROJECT.forms
+using FINAL_PROJECT.forms;
+
+namespace FINAL_PROJECT.Models
 
 {
     internal static class Program

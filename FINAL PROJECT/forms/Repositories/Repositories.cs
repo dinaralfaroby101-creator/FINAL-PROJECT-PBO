@@ -8,9 +8,9 @@ using System;
 using System.Collections.Generic;
 using Npgsql;
 using FINAL_PROJECT.Models;
-using FINAL_PROJECT.Database;
+using FINAL_PROJECT.Data;
 
-namespace FINAL_PROJECT.Repositories
+namespace FINAL_PROJECT.forms.Repositories
 {
     // ============================================================
     //  USER REPOSITORY

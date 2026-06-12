@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FINAL_PROJECT.Data;
+using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -162,5 +164,246 @@ namespace FINAL_PROJECT.forms
         {
 
         }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadJumlahArea()
+        {
+            using var conn = DatabaseHelper.Instance.GetConnection();
+
+            string sql = @"
+    SELECT COUNT(DISTINCT LEFT(kode_slot,1))
+    FROM slot_parkir";
+
+            using var cmd = new NpgsqlCommand(sql, conn);
+
+            lblParkingArea.Text =
+                cmd.ExecuteScalar().ToString();
+        }
+
+        private void LoadTotalSlot()
+        {
+            using var conn = DatabaseHelper.Instance.GetConnection();
+
+            string sql =
+                "SELECT COUNT(*) FROM slot_parkir";
+
+            using var cmd =
+                new NpgsqlCommand(sql, conn);
+
+            lblTotalSlot.Text =
+                cmd.ExecuteScalar().ToString();
+        }
+
+        private void LoadSlotTerisi()
+        {
+            using var conn =
+                DatabaseHelper.Instance.GetConnection();
+
+            string sql = @"
+    SELECT COUNT(*)
+    FROM slot_parkir
+    WHERE status_slot='terisi'";
+
+            using var cmd =
+                new NpgsqlCommand(sql, conn);
+
+            lblTerisi.Text =
+                cmd.ExecuteScalar().ToString();
+        }
+
+        private void LoadSlotKosong()
+        {
+            using var conn =
+                DatabaseHelper.Instance.GetConnection();
+
+            string sql = @"
+    SELECT COUNT(*)
+    FROM slot_parkir
+    WHERE status_slot='kosong'";
+
+            using var cmd =
+                new NpgsqlCommand(sql, conn);
+
+            lblTersedia.Text =
+                cmd.ExecuteScalar().ToString();
+        }
+
+
+
+
+        private void LoadAreaA()
+        {
+            using var conn =
+                DatabaseHelper.Instance.GetConnection();
+
+            string sql = @"
+    SELECT
+        COUNT(*) total,
+        COUNT(*) FILTER
+        (WHERE status_slot='terisi') terisi
+    FROM slot_parkir
+    WHERE kode_slot LIKE 'A-%'";
+
+            using var cmd =
+                new NpgsqlCommand(sql, conn);
+
+            using var rd =
+                cmd.ExecuteReader();
+
+            if (rd.Read())
+            {
+                int total =
+                    Convert.ToInt32(rd["total"]);
+
+                int terisi =
+                    Convert.ToInt32(rd["terisi"]);
+
+                int kosong =
+                    total - terisi;
+
+                int persen =
+                    total == 0 ? 0 :
+                    (terisi * 100) / total;
+
+                progressBarA.Maximum = total;
+                progressBarA.Value = terisi;
+
+                lblPersenA.Text =
+                    persen + "%";
+
+                lblSlotA.Text =
+                    "Slot " + total;
+
+                lblTerisiA.Text =
+                    "Terisi " + terisi;
+
+                lblTersediaA.Text =
+                    "Tersedia " + kosong;
+            }
+        }
+
+        private void LoadAreaB()
+        {
+            using var conn =
+                DatabaseHelper.Instance.GetConnection();
+
+            string sql = @"
+    SELECT
+        COUNT(*) total,
+        COUNT(*) FILTER
+        (WHERE status_slot='terisi') terisi
+    FROM slot_parkir
+    WHERE kode_slot LIKE 'B-%'";
+
+            using var cmd =
+                new NpgsqlCommand(sql, conn);
+
+            using var rd =
+                cmd.ExecuteReader();
+
+            if (rd.Read())
+            {
+                int total =
+                    Convert.ToInt32(rd["total"]);
+
+                int terisi =
+                    Convert.ToInt32(rd["terisi"]);
+
+                int kosong =
+                    total - terisi;
+
+                int persen =
+                    total == 0 ? 0 :
+                    (terisi * 100) / total;
+
+                progressBarB.Maximum = total;
+                progressBarB.Value = terisi;
+
+                lblPersenB.Text =
+                    persen + "%";
+
+                lblSlotB.Text =
+                    "Slot " + total;
+
+                lblTerisiB.Text =
+                    "Terisi " + terisi;
+
+                lblTersediaB.Text =
+                    "Tersedia " + kosong;
+            }
+        }
+
+        private void LoadAreaC()
+        {
+            using var conn =
+                DatabaseHelper.Instance.GetConnection();
+
+            string sql = @"
+    SELECT
+        COUNT(*) total,
+        COUNT(*) FILTER
+        (WHERE status_slot='terisi') terisi
+    FROM slot_parkir
+    WHERE kode_slot LIKE 'C-%'";
+
+            using var cmd =
+                new NpgsqlCommand(sql, conn);
+
+            using var rd =
+                cmd.ExecuteReader();
+
+            if (rd.Read())
+            {
+                int total =
+                    Convert.ToInt32(rd["total"]);
+
+                int terisi =
+                    Convert.ToInt32(rd["terisi"]);
+
+                int kosong =
+                    total - terisi;
+
+                int persen =
+                    total == 0 ? 0 :
+                    (terisi * 100) / total;
+
+                progressBarC.Maximum = total;
+                progressBarC.Value = terisi;
+
+                lblPersenC.Text =
+                    persen + "%";
+
+                lblSlotC.Text =
+                    "Slot " + total;
+
+                lblTerisiC.Text =
+                    "Terisi " + terisi;
+
+                lblTersediaC.Text =
+                    "Tersedia " + kosong;
+            }
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            LoadJumlahArea();
+
+            LoadTotalSlot();
+
+            LoadSlotTerisi();
+
+            LoadSlotKosong();
+
+            LoadAreaA();
+
+            LoadAreaB();
+
+            LoadAreaC();
+        }
+
     }
 }

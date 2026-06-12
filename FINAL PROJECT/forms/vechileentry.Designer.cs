@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             panelSidebar = new Panel();
             btnVehicleEntry = new Button();
             btnVehicleExit = new Button();
@@ -44,7 +43,6 @@
             txtMerkKendaraan = new TextBox();
             cboAreaParkir = new ComboBox();
             dtpMasuk = new DateTimePicker();
-            timer1 = new System.Windows.Forms.Timer(components);
             txtIdPetugas = new TextBox();
             txtCatatan = new TextBox();
             lblPlat = new Label();
@@ -101,6 +99,7 @@
             btnVehicleExit.TabIndex = 15;
             btnVehicleExit.Text = "Vehicle Exit";
             btnVehicleExit.UseVisualStyleBackColor = true;
+            btnVehicleExit.Click += btnVehicleExit_Click;
             // 
             // btnVehicleData
             // 
@@ -112,6 +111,7 @@
             btnVehicleData.TabIndex = 13;
             btnVehicleData.Text = "Vehicle Data";
             btnVehicleData.UseVisualStyleBackColor = false;
+            btnVehicleData.Click += btnVehicleData_Click;
             // 
             // btnLogOut
             // 
@@ -381,6 +381,7 @@
             Controls.Add(txtPlatNomor);
             Controls.Add(panelSidebar);
             Name = "vechileentry";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "vechileentry";
             Load += vechileentry_Load;
             panelSidebar.ResumeLayout(false);
@@ -408,7 +409,6 @@
         private TextBox txtMerkKendaraan;
         private ComboBox cboAreaParkir;
         private DateTimePicker dtpMasuk;
-        private System.Windows.Forms.Timer timer1;
         private TextBox txtIdPetugas;
         private TextBox txtCatatan;
         private Label lblPlat;

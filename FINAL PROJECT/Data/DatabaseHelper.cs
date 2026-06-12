@@ -1,7 +1,7 @@
 ﻿using System;
 using Npgsql;
 
-namespace FINAL_PROJECT.Database   // sesuaikan nama project kamu
+namespace FINAL_PROJECT.Data   // sesuaikan nama project kamu
 {
     public class DatabaseHelper
     {

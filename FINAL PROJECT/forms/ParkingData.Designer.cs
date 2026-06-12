@@ -44,6 +44,9 @@
             panel7 = new Panel();
             dataGridView1 = new DataGridView();
             panelHeader = new Panel();
+            panel8 = new Panel();
+            pictureBox7 = new PictureBox();
+            label4 = new Label();
             pictureBox2 = new PictureBox();
             panelSearch = new Panel();
             pictureBox1 = new PictureBox();
@@ -75,15 +78,14 @@
             label13 = new Label();
             pictureBox5 = new PictureBox();
             npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
-            panel8 = new Panel();
-            pictureBox7 = new PictureBox();
-            label4 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelHeader.SuspendLayout();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -96,8 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // panelSidebar
@@ -286,6 +286,40 @@
             panelHeader.Size = new Size(1549, 100);
             panelHeader.TabIndex = 6;
             // 
+            // panel8
+            // 
+            panel8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel8.BackgroundImage = (Image)resources.GetObject("panel8.BackgroundImage");
+            panel8.BackgroundImageLayout = ImageLayout.Center;
+            panel8.Controls.Add(pictureBox7);
+            panel8.Controls.Add(label4);
+            panel8.ImeMode = ImeMode.Off;
+            panel8.Location = new Point(1364, 11);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(182, 77);
+            panel8.TabIndex = 12;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = Color.Transparent;
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(3, 12);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(50, 50);
+            pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox7.TabIndex = 12;
+            pictureBox7.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Location = new Point(59, 13);
+            label4.Name = "label4";
+            label4.Size = new Size(111, 50);
+            label4.TabIndex = 8;
+            label4.Text = "Admin\r\nAhmad Dani\r\n";
+            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -438,6 +472,7 @@
             label6.Size = new Size(62, 38);
             label6.TabIndex = 2;
             label6.Text = "135";
+            label6.Click += label6_Click;
             // 
             // label5
             // 
@@ -632,40 +667,6 @@
             npgsqlDataAdapter1.SelectCommand = null;
             npgsqlDataAdapter1.UpdateCommand = null;
             // 
-            // panel8
-            // 
-            panel8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel8.BackgroundImage = (Image)resources.GetObject("panel8.BackgroundImage");
-            panel8.BackgroundImageLayout = ImageLayout.Center;
-            panel8.Controls.Add(pictureBox7);
-            panel8.Controls.Add(label4);
-            panel8.ImeMode = ImeMode.Off;
-            panel8.Location = new Point(1364, 11);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(182, 77);
-            panel8.TabIndex = 12;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.BackColor = Color.Transparent;
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(3, 12);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(50, 50);
-            pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox7.TabIndex = 12;
-            pictureBox7.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Location = new Point(59, 13);
-            label4.Name = "label4";
-            label4.Size = new Size(111, 50);
-            label4.TabIndex = 8;
-            label4.Text = "Admin\r\nAhmad Dani\r\n";
-            // 
             // ParkingData
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -687,6 +688,9 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelSearch.ResumeLayout(false);
             panelSearch.PerformLayout();
@@ -704,9 +708,6 @@
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
         }
 

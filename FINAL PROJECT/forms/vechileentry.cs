@@ -48,5 +48,19 @@ namespace FINAL_PROJECT.forms
         {
 
         }
+
+        private void btnVehicleData_Click(object sender, EventArgs e)
+        {
+            VehicleData vd = new VehicleData();
+            vd.Show();
+            this.Hide();
+        }
+
+        private void btnVehicleExit_Click(object sender, EventArgs e)
+        {
+            vehicleexit vdx = new vehicleexit();
+            vdx.Show();
+            this.Hide();
+        }
     }
 }

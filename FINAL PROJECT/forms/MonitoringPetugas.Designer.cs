@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             panelSidebar = new Panel();
+            btnVehicleData = new Button();
             button1 = new Button();
-            btnFinanceReport = new Button();
             btnHistory = new Button();
             btnMonitoring = new Button();
-            btnBagStorage = new Button();
-            btnUserData = new Button();
-            btnParkingdata = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             btnDashboard = new Button();
@@ -148,7 +144,6 @@
             SlotBus2 = new Panel();
             SlotBus1 = new Panel();
             dgvMonitoring = new DataGridView();
-            timer1 = new System.Windows.Forms.Timer(components);
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -168,13 +163,10 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(btnVehicleData);
             panelSidebar.Controls.Add(button1);
-            panelSidebar.Controls.Add(btnFinanceReport);
             panelSidebar.Controls.Add(btnHistory);
             panelSidebar.Controls.Add(btnMonitoring);
-            panelSidebar.Controls.Add(btnBagStorage);
-            panelSidebar.Controls.Add(btnUserData);
-            panelSidebar.Controls.Add(btnParkingdata);
             panelSidebar.Controls.Add(label2);
             panelSidebar.Controls.Add(pictureBox1);
             panelSidebar.Controls.Add(btnDashboard);
@@ -185,6 +177,18 @@
             panelSidebar.Size = new Size(350, 801);
             panelSidebar.TabIndex = 25;
             // 
+            // btnVehicleData
+            // 
+            btnVehicleData.BackColor = Color.White;
+            btnVehicleData.Location = new Point(35, 210);
+            btnVehicleData.Margin = new Padding(4);
+            btnVehicleData.Name = "btnVehicleData";
+            btnVehicleData.Size = new Size(275, 62);
+            btnVehicleData.TabIndex = 14;
+            btnVehicleData.Text = "Vehicle Data";
+            btnVehicleData.UseVisualStyleBackColor = false;
+            btnVehicleData.Click += btnVehicleData_Click;
+            // 
             // button1
             // 
             button1.Location = new Point(35, 602);
@@ -194,21 +198,11 @@
             button1.TabIndex = 12;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // btnFinanceReport
-            // 
-            btnFinanceReport.Location = new Point(35, 532);
-            btnFinanceReport.Margin = new Padding(4);
-            btnFinanceReport.Name = "btnFinanceReport";
-            btnFinanceReport.Size = new Size(275, 62);
-            btnFinanceReport.TabIndex = 11;
-            btnFinanceReport.Text = "Finance Report";
-            btnFinanceReport.UseVisualStyleBackColor = true;
-            btnFinanceReport.Click += btnFinanceReport_Click;
+            button1.Click += button1_Click;
             // 
             // btnHistory
             // 
-            btnHistory.Location = new Point(35, 462);
+            btnHistory.Location = new Point(35, 408);
             btnHistory.Margin = new Padding(4);
             btnHistory.Name = "btnHistory";
             btnHistory.Size = new Size(275, 62);
@@ -220,7 +214,7 @@
             // btnMonitoring
             // 
             btnMonitoring.BackColor = Color.DeepSkyBlue;
-            btnMonitoring.Location = new Point(35, 392);
+            btnMonitoring.Location = new Point(35, 310);
             btnMonitoring.Margin = new Padding(4);
             btnMonitoring.Name = "btnMonitoring";
             btnMonitoring.Size = new Size(275, 62);
@@ -228,41 +222,6 @@
             btnMonitoring.Text = "Monitoring";
             btnMonitoring.UseVisualStyleBackColor = false;
             btnMonitoring.Click += button4_Click;
-            // 
-            // btnBagStorage
-            // 
-            btnBagStorage.BackColor = Color.White;
-            btnBagStorage.Location = new Point(35, 322);
-            btnBagStorage.Margin = new Padding(4);
-            btnBagStorage.Name = "btnBagStorage";
-            btnBagStorage.Size = new Size(275, 62);
-            btnBagStorage.TabIndex = 8;
-            btnBagStorage.Text = "Bag Storage";
-            btnBagStorage.UseVisualStyleBackColor = false;
-            btnBagStorage.Click += btnBagStorage_Click;
-            // 
-            // btnUserData
-            // 
-            btnUserData.BackColor = Color.White;
-            btnUserData.Location = new Point(35, 252);
-            btnUserData.Margin = new Padding(4);
-            btnUserData.Name = "btnUserData";
-            btnUserData.Size = new Size(275, 62);
-            btnUserData.TabIndex = 7;
-            btnUserData.Text = "User Data";
-            btnUserData.UseVisualStyleBackColor = false;
-            btnUserData.Click += btnUserData_Click;
-            // 
-            // btnParkingdata
-            // 
-            btnParkingdata.Location = new Point(35, 182);
-            btnParkingdata.Margin = new Padding(4);
-            btnParkingdata.Name = "btnParkingdata";
-            btnParkingdata.Size = new Size(275, 62);
-            btnParkingdata.TabIndex = 6;
-            btnParkingdata.Text = "Parking Data";
-            btnParkingdata.UseVisualStyleBackColor = true;
-            btnParkingdata.Click += btnParkingdata_Click;
             // 
             // label2
             // 
@@ -1397,13 +1356,7 @@
             dgvMonitoring.Size = new Size(1232, 320);
             dgvMonitoring.TabIndex = 3;
             // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 3000;
-            timer1.Tick += timer1_Tick;
-            // 
-            // Monitoring
+            // MonitoringPetugas
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -1411,7 +1364,7 @@
             Controls.Add(panel1);
             Controls.Add(panelSidebar);
             Margin = new Padding(4);
-            Name = "Monitoring";
+            Name = "MonitoringPetugas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Monitoring";
             Load += Monitoring_Load;
@@ -1439,18 +1392,13 @@
 
         private Panel panelSidebar;
         private Button button1;
-        private Button btnFinanceReport;
         private Button btnHistory;
         private Button btnMonitoring;
-        private Button btnBagStorage;
-        private Button btnUserData;
-        private Button btnParkingdata;
         private Label label2;
         private PictureBox pictureBox1;
         private Button btnDashboard;
         private Panel panel1;
         private DataGridView dgvMonitoring;
-        private System.Windows.Forms.Timer timer1;
         private Panel panelParking;
         private Panel panel11;
         private Panel panel44;
@@ -1557,5 +1505,6 @@
         private Label label19;
         private Label label21;
         private Label label20;
+        private Button btnVehicleData;
     }
 }

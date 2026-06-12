@@ -6,10 +6,10 @@
 
 using System;
 using BCrypt.Net;
+using FINAL_PROJECT.forms.Repositories;
 using FINAL_PROJECT.Models;
-using FINAL_PROJECT.Repositories;
 
-namespace SPARK.Services
+namespace FINAL_PROJECT.services
 {
     public class AuthService
     {

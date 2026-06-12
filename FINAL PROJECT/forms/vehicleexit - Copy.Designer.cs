@@ -92,6 +92,7 @@
             btnVehicleEntry.TabIndex = 16;
             btnVehicleEntry.Text = "Vehicle Entry";
             btnVehicleEntry.UseVisualStyleBackColor = false;
+            btnVehicleEntry.Click += btnVehicleEntry_Click;
             // 
             // btnVehicleExit
             // 
@@ -114,6 +115,7 @@
             btnVehicleData.TabIndex = 13;
             btnVehicleData.Text = "Vehicle Data";
             btnVehicleData.UseVisualStyleBackColor = false;
+            btnVehicleData.Click += btnVehicleData_Click;
             // 
             // btnLogOut
             // 
@@ -387,6 +389,7 @@
             Controls.Add(lblIdKendaraan);
             Controls.Add(panelSidebar);
             Name = "vehicleexit";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "vehicleexit";
             Load += vehicleexit_Load;
             panelSidebar.ResumeLayout(false);

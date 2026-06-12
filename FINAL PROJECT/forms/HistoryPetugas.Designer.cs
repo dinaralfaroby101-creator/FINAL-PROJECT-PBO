@@ -31,13 +31,10 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panelSidebar = new Panel();
+            btnVehicleData = new Button();
             button1 = new Button();
-            btnFinanceReport = new Button();
             btnHistory = new Button();
             btnMonitoring = new Button();
-            btnBagStorage = new Button();
-            btnUserData = new Button();
-            btnParkingData = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             btnDashboard = new Button();
@@ -69,47 +66,50 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(btnVehicleData);
             panelSidebar.Controls.Add(button1);
-            panelSidebar.Controls.Add(btnFinanceReport);
             panelSidebar.Controls.Add(btnHistory);
             panelSidebar.Controls.Add(btnMonitoring);
-            panelSidebar.Controls.Add(btnBagStorage);
-            panelSidebar.Controls.Add(btnUserData);
-            panelSidebar.Controls.Add(btnParkingData);
             panelSidebar.Controls.Add(label2);
             panelSidebar.Controls.Add(pictureBox1);
             panelSidebar.Controls.Add(btnDashboard);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 0);
+            panelSidebar.Margin = new Padding(4);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(280, 641);
+            panelSidebar.Size = new Size(350, 801);
             panelSidebar.TabIndex = 25;
+            // 
+            // btnVehicleData
+            // 
+            btnVehicleData.BackColor = Color.White;
+            btnVehicleData.Location = new Point(35, 207);
+            btnVehicleData.Margin = new Padding(4);
+            btnVehicleData.Name = "btnVehicleData";
+            btnVehicleData.Size = new Size(275, 62);
+            btnVehicleData.TabIndex = 14;
+            btnVehicleData.Text = "Vehicle Data";
+            btnVehicleData.UseVisualStyleBackColor = false;
+            btnVehicleData.Click += btnVehicleData_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(28, 482);
+            button1.Location = new Point(35, 602);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
-            button1.Size = new Size(220, 50);
+            button1.Size = new Size(275, 62);
             button1.TabIndex = 12;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // btnFinanceReport
-            // 
-            btnFinanceReport.Location = new Point(28, 426);
-            btnFinanceReport.Name = "btnFinanceReport";
-            btnFinanceReport.Size = new Size(220, 50);
-            btnFinanceReport.TabIndex = 11;
-            btnFinanceReport.Text = "Finance Report";
-            btnFinanceReport.UseVisualStyleBackColor = true;
-            btnFinanceReport.Click += button2_Click;
+            button1.Click += button1_Click;
             // 
             // btnHistory
             // 
             btnHistory.BackColor = Color.DeepSkyBlue;
-            btnHistory.Location = new Point(28, 370);
+            btnHistory.Location = new Point(35, 394);
+            btnHistory.Margin = new Padding(4);
             btnHistory.Name = "btnHistory";
-            btnHistory.Size = new Size(220, 50);
+            btnHistory.Size = new Size(275, 62);
             btnHistory.TabIndex = 10;
             btnHistory.Text = "History";
             btnHistory.UseVisualStyleBackColor = false;
@@ -117,54 +117,24 @@
             // 
             // btnMonitoring
             // 
-            btnMonitoring.Location = new Point(28, 314);
+            btnMonitoring.Location = new Point(35, 301);
+            btnMonitoring.Margin = new Padding(4);
             btnMonitoring.Name = "btnMonitoring";
-            btnMonitoring.Size = new Size(220, 50);
+            btnMonitoring.Size = new Size(275, 62);
             btnMonitoring.TabIndex = 9;
             btnMonitoring.Text = "Monitoring";
             btnMonitoring.UseVisualStyleBackColor = true;
             btnMonitoring.Click += btnMonitoring_Click;
-            // 
-            // btnBagStorage
-            // 
-            btnBagStorage.BackColor = Color.White;
-            btnBagStorage.Location = new Point(28, 258);
-            btnBagStorage.Name = "btnBagStorage";
-            btnBagStorage.Size = new Size(220, 50);
-            btnBagStorage.TabIndex = 8;
-            btnBagStorage.Text = "Bag Storage";
-            btnBagStorage.UseVisualStyleBackColor = false;
-            btnBagStorage.Click += btnBagStorage_Click;
-            // 
-            // btnUserData
-            // 
-            btnUserData.BackColor = Color.White;
-            btnUserData.Location = new Point(28, 202);
-            btnUserData.Name = "btnUserData";
-            btnUserData.Size = new Size(220, 50);
-            btnUserData.TabIndex = 7;
-            btnUserData.Text = "User Data";
-            btnUserData.UseVisualStyleBackColor = false;
-            btnUserData.Click += btnUserData_Click;
-            // 
-            // btnParkingData
-            // 
-            btnParkingData.Location = new Point(28, 146);
-            btnParkingData.Name = "btnParkingData";
-            btnParkingData.Size = new Size(220, 50);
-            btnParkingData.TabIndex = 6;
-            btnParkingData.Text = "Parking Data";
-            btnParkingData.UseVisualStyleBackColor = true;
-            btnParkingData.Click += btnParkingData_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(65, 12);
+            label2.Location = new Point(81, 15);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(199, 62);
+            label2.Size = new Size(243, 76);
             label2.TabIndex = 0;
             label2.Text = "SMART PARKING\r\nADMIN";
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -172,9 +142,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo;
-            pictureBox1.Location = new Point(5, 12);
+            pictureBox1.Location = new Point(6, 15);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(64, 62);
+            pictureBox1.Size = new Size(80, 78);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -182,9 +153,10 @@
             // btnDashboard
             // 
             btnDashboard.BackColor = Color.White;
-            btnDashboard.Location = new Point(28, 90);
+            btnDashboard.Location = new Point(35, 112);
+            btnDashboard.Margin = new Padding(4);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(220, 50);
+            btnDashboard.Size = new Size(275, 62);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
@@ -194,9 +166,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(297, 9);
+            label1.Location = new Point(371, 11);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(163, 54);
+            label1.Size = new Size(195, 65);
             label1.TabIndex = 26;
             label1.Text = "History";
             // 
@@ -204,9 +177,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(297, 63);
+            label3.Location = new Point(371, 79);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(163, 23);
+            label3.Size = new Size(199, 30);
             label3.TabIndex = 27;
             label3.Text = "Dashboard / History";
             // 
@@ -220,10 +194,10 @@
             panelContent.Controls.Add(cbPetugas);
             panelContent.Controls.Add(dateTimePicker2);
             panelContent.Controls.Add(dtMasuk);
-            panelContent.Location = new Point(280, 90);
-            panelContent.Margin = new Padding(240, 110, 3, 3);
+            panelContent.Location = new Point(350, 112);
+            panelContent.Margin = new Padding(300, 138, 4, 4);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(1253, 551);
+            panelContent.Size = new Size(1566, 689);
             panelContent.TabIndex = 28;
             // 
             // dgvHistory
@@ -250,12 +224,13 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvHistory.DefaultCellStyle = dataGridViewCellStyle2;
-            dgvHistory.Location = new Point(17, 76);
+            dgvHistory.Location = new Point(21, 95);
+            dgvHistory.Margin = new Padding(4);
             dgvHistory.Name = "dgvHistory";
             dgvHistory.RowHeadersVisible = false;
             dgvHistory.RowHeadersWidth = 51;
             dgvHistory.RowTemplate.Height = 45;
-            dgvHistory.Size = new Size(1227, 472);
+            dgvHistory.Size = new Size(1534, 590);
             dgvHistory.TabIndex = 5;
             dgvHistory.CellContentClick += dgvHistory_CellContentClick;
             // 
@@ -321,36 +296,40 @@
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(678, 25);
+            txtSearch.Location = new Point(848, 31);
+            txtSearch.Margin = new Padding(4);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Cari Kode Transaksi";
-            txtSearch.Size = new Size(250, 27);
+            txtSearch.Size = new Size(312, 31);
             txtSearch.TabIndex = 4;
             // 
             // cbJenis
             // 
             cbJenis.FormattingEnabled = true;
             cbJenis.Items.AddRange(new object[] { "Semua Jenis", "Motor", "Mobil", "Bus" });
-            cbJenis.Location = new Point(396, 24);
+            cbJenis.Location = new Point(495, 30);
+            cbJenis.Margin = new Padding(4);
             cbJenis.Name = "cbJenis";
-            cbJenis.Size = new Size(180, 28);
+            cbJenis.Size = new Size(224, 33);
             cbJenis.TabIndex = 3;
             // 
             // cbPetugas
             // 
             cbPetugas.FormattingEnabled = true;
             cbPetugas.Items.AddRange(new object[] { "Semua Petugas", "Admin", "Petugas 1", "Petugas 2" });
-            cbPetugas.Location = new Point(210, 24);
+            cbPetugas.Location = new Point(262, 30);
+            cbPetugas.Margin = new Padding(4);
             cbPetugas.Name = "cbPetugas";
-            cbPetugas.Size = new Size(180, 28);
+            cbPetugas.Size = new Size(224, 33);
             cbPetugas.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
             dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(17, 43);
+            dateTimePicker2.Location = new Point(21, 54);
+            dateTimePicker2.Margin = new Padding(4);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(160, 27);
+            dateTimePicker2.Size = new Size(199, 31);
             dateTimePicker2.TabIndex = 1;
             // 
             // dtMasuk
@@ -359,21 +338,23 @@
             dtMasuk.AccessibleName = "waktu masuk";
             dtMasuk.CustomFormat = "";
             dtMasuk.Format = DateTimePickerFormat.Short;
-            dtMasuk.Location = new Point(17, 10);
+            dtMasuk.Location = new Point(21, 12);
+            dtMasuk.Margin = new Padding(4);
             dtMasuk.Name = "dtMasuk";
-            dtMasuk.Size = new Size(160, 27);
+            dtMasuk.Size = new Size(199, 31);
             dtMasuk.TabIndex = 0;
             // 
-            // History
+            // HistoryPetugas
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1536, 641);
+            ClientSize = new Size(1920, 801);
             Controls.Add(panelContent);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(panelSidebar);
-            Name = "History";
+            Margin = new Padding(4);
+            Name = "HistoryPetugas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "History";
             Load += History_Load;
@@ -391,12 +372,8 @@
 
         private Panel panelSidebar;
         private Button button1;
-        private Button btnFinanceReport;
         private Button btnHistory;
         private Button btnMonitoring;
-        private Button btnBagStorage;
-        private Button btnUserData;
-        private Button btnParkingData;
         private Label label2;
         private PictureBox pictureBox1;
         private Button btnDashboard;
@@ -419,5 +396,6 @@
         private DataGridViewTextBoxColumn biaya;
         private DataGridViewTextBoxColumn metode;
         private DataGridViewTextBoxColumn status;
+        private Button btnVehicleData;
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FINAL_PROJECT.Database;
+using FINAL_PROJECT.Data;
 using Npgsql;
 
 namespace FINAL_PROJECT.forms
@@ -88,8 +88,8 @@ namespace FINAL_PROJECT.forms
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            History history = new History();
-            history.Show();
+            HistoryPetugas historyp = new HistoryPetugas();
+            historyp.Show();
             this.Hide();
         }
 
@@ -102,8 +102,8 @@ namespace FINAL_PROJECT.forms
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Dashboard dash = new Dashboard();
-            dash.Show();
+            DashboardPetugas dashp = new DashboardPetugas();
+            dashp.Show();
             this.Hide();
         }
 
@@ -351,6 +351,30 @@ namespace FINAL_PROJECT.forms
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnVehicleData_Click(object sender, EventArgs e)
+        {
+            VehicleData vd = new VehicleData();
+            vd.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Yakin ingin logout?",
+                "Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                login login = new login();
+                login.Show();
+
+                this.Hide();
+            }
         }
     }
 

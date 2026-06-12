@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FINAL_PROJECT.Database;
+using FINAL_PROJECT.Data;
 using Npgsql;
 
 namespace FINAL_PROJECT.forms

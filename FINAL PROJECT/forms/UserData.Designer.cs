@@ -1,4 +1,6 @@
-﻿namespace FINAL_PROJECT.forms
+﻿using FINAL_PROJECT.Data;
+
+namespace FINAL_PROJECT.forms
 {
     partial class UserData
     {
@@ -507,7 +509,7 @@
             // 
             // databaseHelperBindingSource
             // 
-            databaseHelperBindingSource.DataSource = typeof(Database.DatabaseHelper);
+            databaseHelperBindingSource.DataSource = typeof(DatabaseHelper);
             // 
             // panelUSername
             // 

@@ -1,4 +1,5 @@
-using FINAL_PROJECT.Database;   // bukan SPARK.Database
+using FINAL_PROJECT.Data;
+using Npgsql;// bukan SPARK.Database
 
 namespace FINAL_PROJECT.forms
 {
@@ -54,27 +55,112 @@ namespace FINAL_PROJECT.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "admin" && txtPassword.Text == "123")
+            try
             {
-                Dashboard dashboard = new Dashboard();
-                dashboard.Show();
-                this.Hide();
+                using var conn =
+                    DatabaseHelper.Instance.GetConnection();
+
+                string sql = @"
+        SELECT
+            role,
+            nama_lengkap
+        FROM users
+        WHERE username = @username
+        AND password_akun = @password";
+
+                using var cmd =
+                    new NpgsqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue(
+                    "@username",
+                    txtUsername.Text.Trim());
+
+                cmd.Parameters.AddWithValue(
+                    "@password",
+                    txtPassword.Text.Trim());
+
+                using var reader =
+                    cmd.ExecuteReader();
+
+                if (!reader.Read())
+                {
+                    MessageBox.Show(
+                        "Username atau Password salah!",
+                        "Login",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
+                    return;
+                }
+
+                string role =
+                    reader["role"].ToString();
+
+                string nama =
+                    reader["nama_lengkap"].ToString();
+
+                reader.Close();
+
+                // Update Last Login
+                string updateLogin = @"
+        UPDATE users
+        SET last_login = NOW()
+        WHERE username = @username";
+
+                using var cmdUpdate =
+                    new NpgsqlCommand(updateLogin, conn);
+
+                cmdUpdate.Parameters.AddWithValue(
+                    "@username",
+                    txtUsername.Text.Trim());
+
+                cmdUpdate.ExecuteNonQuery();
+
+                // Update Status User
+                string updateStatus = @"
+        UPDATE users
+        SET status_user = 'Active'
+        WHERE username = @username";
+
+                using var cmdStatus =
+                    new NpgsqlCommand(updateStatus, conn);
+
+                cmdStatus.Parameters.AddWithValue(
+                    "@username",
+                    txtUsername.Text.Trim());
+
+                cmdStatus.ExecuteNonQuery();
+
+                // Login sesuai role
+                if (role == "admin")
+                {
+                    Dashboard dashboard =
+                        new Dashboard();
+
+                    dashboard.Show();
+                    this.Hide();
+                }
+                else if (role == "petugas")
+                {
+                    DashboardPetugas petugas =
+                        new DashboardPetugas();
+
+                    petugas.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Role tidak dikenali!");
+                }
             }
-            else if (txtUsername.Text == "petugas1" && txtPassword.Text == "123")
+            catch (Exception ex)
             {
-                DashboardPetugas dashboardpetugas = new DashboardPetugas();
-                dashboardpetugas.Show();
-                this.Hide();
-            }
-            else if (txtUsername.Text == "petugas2" && txtPassword.Text == "123")
-            {
-                vechileentry Entry = new vechileentry();
-                Entry.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Username atau Password salah!");
+                MessageBox.Show(
+                    ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
