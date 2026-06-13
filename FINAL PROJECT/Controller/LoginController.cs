@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FINAL_PROJECT.Models;
+using FINAL_PROJECT.Services;
 
-namespace FINAL_PROJECT.Controller
+namespace FINAL_PROJECT.Controllers
 {
-    internal class LoginController
+    public class LoginController
     {
+        private readonly AuthService _authService;
+
+        public LoginController()
+        {
+            _authService = new AuthService();
+        }
+
+        public User Login(
+            string username,
+            string password)
+        {
+            return _authService.Login(
+                username,
+                password);
+        }
     }
 }

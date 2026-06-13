@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace FINAL_PROJECT.Models
 {
-    internal class User
+    public abstract class User
     {
+        public int IdUser { get; set; }
+
+        public string Username { get; set; }
+
+        public string PasswordAkun { get; set; }
+
+        public string NamaLengkap { get; set; }
+
+        public string StatusUser { get; set; }
+
+        public DateTime? LastLogin { get; set; }
+
+        public abstract string GetRole();
     }
 }

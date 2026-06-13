@@ -1,5 +1,7 @@
 using FINAL_PROJECT.Data;
-using Npgsql;// bukan SPARK.Database
+using Npgsql;
+using FINAL_PROJECT.Controllers;
+using FINAL_PROJECT.Models;
 
 namespace FINAL_PROJECT.forms
 {
@@ -57,32 +59,15 @@ namespace FINAL_PROJECT.forms
         {
             try
             {
-                using var conn =
-                    DatabaseHelper.Instance.GetConnection();
+                LoginController controller =
+                    new LoginController();
 
-                string sql = @"
-        SELECT
-            role,
-            nama_lengkap
-        FROM users
-        WHERE username = @username
-        AND password_akun = @password";
+                User user =
+                    controller.Login(
+                        txtUsername.Text.Trim(),
+                        txtPassword.Text.Trim());
 
-                using var cmd =
-                    new NpgsqlCommand(sql, conn);
-
-                cmd.Parameters.AddWithValue(
-                    "@username",
-                    txtUsername.Text.Trim());
-
-                cmd.Parameters.AddWithValue(
-                    "@password",
-                    txtPassword.Text.Trim());
-
-                using var reader =
-                    cmd.ExecuteReader();
-
-                if (!reader.Read())
+                if (user == null)
                 {
                     MessageBox.Show(
                         "Username atau Password salah!",
@@ -93,46 +78,7 @@ namespace FINAL_PROJECT.forms
                     return;
                 }
 
-                string role =
-                    reader["role"].ToString();
-
-                string nama =
-                    reader["nama_lengkap"].ToString();
-
-                reader.Close();
-
-                // Update Last Login
-                string updateLogin = @"
-        UPDATE users
-        SET last_login = NOW()
-        WHERE username = @username";
-
-                using var cmdUpdate =
-                    new NpgsqlCommand(updateLogin, conn);
-
-                cmdUpdate.Parameters.AddWithValue(
-                    "@username",
-                    txtUsername.Text.Trim());
-
-                cmdUpdate.ExecuteNonQuery();
-
-                // Update Status User
-                string updateStatus = @"
-        UPDATE users
-        SET status_user = 'Active'
-        WHERE username = @username";
-
-                using var cmdStatus =
-                    new NpgsqlCommand(updateStatus, conn);
-
-                cmdStatus.Parameters.AddWithValue(
-                    "@username",
-                    txtUsername.Text.Trim());
-
-                cmdStatus.ExecuteNonQuery();
-
-                // Login sesuai role
-                if (role == "admin")
+                if (user is Admin)
                 {
                     Dashboard dashboard =
                         new Dashboard();
@@ -140,7 +86,7 @@ namespace FINAL_PROJECT.forms
                     dashboard.Show();
                     this.Hide();
                 }
-                else if (role == "petugas")
+                else if (user is Petugas)
                 {
                     DashboardPetugas petugas =
                         new DashboardPetugas();
@@ -148,19 +94,10 @@ namespace FINAL_PROJECT.forms
                     petugas.Show();
                     this.Hide();
                 }
-                else
-                {
-                    MessageBox.Show(
-                        "Role tidak dikenali!");
-                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    ex.Message,
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 

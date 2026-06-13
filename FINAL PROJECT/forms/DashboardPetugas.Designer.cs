@@ -89,45 +89,45 @@
             SlotBus1 = new Panel();
             PanelArea = new Panel();
             panel8 = new Panel();
-            label27 = new Label();
-            label28 = new Label();
-            progressBar3 = new ProgressBar();
-            label29 = new Label();
-            label30 = new Label();
+            lblTersediaC = new Label();
+            lblTerisiC = new Label();
+            progressBarC = new ProgressBar();
+            lblPersenC = new Label();
+            lblSlotC = new Label();
             label31 = new Label();
             panel7 = new Panel();
-            label22 = new Label();
-            label23 = new Label();
-            progressBar2 = new ProgressBar();
-            label24 = new Label();
-            label25 = new Label();
+            lblTersediaB = new Label();
+            lblTerisiB = new Label();
+            progressBarB = new ProgressBar();
+            lblPersenB = new Label();
+            lblSlotB = new Label();
             label26 = new Label();
             panel6 = new Panel();
-            label21 = new Label();
-            label20 = new Label();
-            progressBar1 = new ProgressBar();
-            label19 = new Label();
-            label18 = new Label();
+            lblTersediaA = new Label();
+            lblTerisiA = new Label();
+            progressBarA = new ProgressBar();
+            lblPersenA = new Label();
+            lblSlotA = new Label();
             label17 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel2 = new Panel();
             label7 = new Label();
-            label6 = new Label();
+            lblParkingArea = new Label();
             label5 = new Label();
             pictureBox3 = new PictureBox();
             panel3 = new Panel();
             label8 = new Label();
-            label9 = new Label();
+            lblTotalSlot = new Label();
             label10 = new Label();
             pictureBox4 = new PictureBox();
             panel4 = new Panel();
             label11 = new Label();
-            label12 = new Label();
+            lblTerisi = new Label();
             label13 = new Label();
             pictureBox5 = new PictureBox();
             panel5 = new Panel();
             label14 = new Label();
-            label15 = new Label();
+            lblTersedia = new Label();
             label16 = new Label();
             pictureBox6 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -775,11 +775,11 @@
             // 
             // panel8
             // 
-            panel8.Controls.Add(label27);
-            panel8.Controls.Add(label28);
-            panel8.Controls.Add(progressBar3);
-            panel8.Controls.Add(label29);
-            panel8.Controls.Add(label30);
+            panel8.Controls.Add(lblTersediaC);
+            panel8.Controls.Add(lblTerisiC);
+            panel8.Controls.Add(progressBarC);
+            panel8.Controls.Add(lblPersenC);
+            panel8.Controls.Add(lblSlotC);
             panel8.Controls.Add(label31);
             panel8.Location = new Point(20, 235);
             panel8.Margin = new Padding(4);
@@ -787,57 +787,58 @@
             panel8.Size = new Size(400, 100);
             panel8.TabIndex = 6;
             // 
-            // label27
+            // lblTersediaC
             // 
-            label27.AutoSize = true;
-            label27.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label27.Location = new Point(235, 74);
-            label27.Margin = new Padding(4, 0, 4, 0);
-            label27.Name = "label27";
-            label27.Size = new Size(88, 21);
-            label27.TabIndex = 5;
-            label27.Text = "Tersedia 35";
+            lblTersediaC.AutoSize = true;
+            lblTersediaC.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTersediaC.Location = new Point(235, 74);
+            lblTersediaC.Margin = new Padding(4, 0, 4, 0);
+            lblTersediaC.Name = "lblTersediaC";
+            lblTersediaC.Size = new Size(88, 21);
+            lblTersediaC.TabIndex = 5;
+            lblTersediaC.Text = "Tersedia 35";
             // 
-            // label28
+            // lblTerisiC
             // 
-            label28.AutoSize = true;
-            label28.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label28.Location = new Point(11, 72);
-            label28.Margin = new Padding(4, 0, 4, 0);
-            label28.Name = "label28";
-            label28.Size = new Size(67, 21);
-            label28.TabIndex = 4;
-            label28.Text = "Terisi 30";
+            lblTerisiC.AutoSize = true;
+            lblTerisiC.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTerisiC.Location = new Point(11, 72);
+            lblTerisiC.Margin = new Padding(4, 0, 4, 0);
+            lblTerisiC.Name = "lblTerisiC";
+            lblTerisiC.Size = new Size(67, 21);
+            lblTerisiC.TabIndex = 4;
+            lblTerisiC.Text = "Terisi 30";
             // 
-            // progressBar3
+            // progressBarC
             // 
-            progressBar3.Location = new Point(18, 56);
-            progressBar3.Margin = new Padding(4);
-            progressBar3.Name = "progressBar3";
-            progressBar3.Size = new Size(312, 12);
-            progressBar3.TabIndex = 3;
-            progressBar3.Value = 67;
+            progressBarC.Location = new Point(18, 56);
+            progressBarC.Margin = new Padding(4);
+            progressBarC.Name = "progressBarC";
+            progressBarC.Size = new Size(312, 12);
+            progressBarC.TabIndex = 3;
+            progressBarC.Value = 67;
             // 
-            // label29
+            // lblPersenC
             // 
-            label29.AutoSize = true;
-            label29.Location = new Point(346, 8);
-            label29.Margin = new Padding(4, 0, 4, 0);
-            label29.Name = "label29";
-            label29.Size = new Size(47, 25);
-            label29.TabIndex = 2;
-            label29.Text = "67%";
+            lblPersenC.AutoSize = true;
+            lblPersenC.Location = new Point(346, 8);
+            lblPersenC.Margin = new Padding(4, 0, 4, 0);
+            lblPersenC.Name = "lblPersenC";
+            lblPersenC.Size = new Size(47, 25);
+            lblPersenC.TabIndex = 2;
+            lblPersenC.Text = "67%";
+            lblPersenC.Click += DashboardPetugas_Load;
             // 
-            // label30
+            // lblSlotC
             // 
-            label30.AutoSize = true;
-            label30.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label30.Location = new Point(14, 31);
-            label30.Margin = new Padding(4, 0, 4, 0);
-            label30.Name = "label30";
-            label30.Size = new Size(55, 20);
-            label30.TabIndex = 1;
-            label30.Text = "Slot 45";
+            lblSlotC.AutoSize = true;
+            lblSlotC.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSlotC.Location = new Point(14, 31);
+            lblSlotC.Margin = new Padding(4, 0, 4, 0);
+            lblSlotC.Name = "lblSlotC";
+            lblSlotC.Size = new Size(55, 20);
+            lblSlotC.TabIndex = 1;
+            lblSlotC.Text = "Slot 45";
             // 
             // label31
             // 
@@ -851,11 +852,11 @@
             // 
             // panel7
             // 
-            panel7.Controls.Add(label22);
-            panel7.Controls.Add(label23);
-            panel7.Controls.Add(progressBar2);
-            panel7.Controls.Add(label24);
-            panel7.Controls.Add(label25);
+            panel7.Controls.Add(lblTersediaB);
+            panel7.Controls.Add(lblTerisiB);
+            panel7.Controls.Add(progressBarB);
+            panel7.Controls.Add(lblPersenB);
+            panel7.Controls.Add(lblSlotB);
             panel7.Controls.Add(label26);
             panel7.Location = new Point(20, 121);
             panel7.Margin = new Padding(4);
@@ -863,57 +864,57 @@
             panel7.Size = new Size(400, 100);
             panel7.TabIndex = 6;
             // 
-            // label22
+            // lblTersediaB
             // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label22.Location = new Point(231, 74);
-            label22.Margin = new Padding(4, 0, 4, 0);
-            label22.Name = "label22";
-            label22.Size = new Size(88, 21);
-            label22.TabIndex = 5;
-            label22.Text = "Tersedia 35";
+            lblTersediaB.AutoSize = true;
+            lblTersediaB.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTersediaB.Location = new Point(231, 74);
+            lblTersediaB.Margin = new Padding(4, 0, 4, 0);
+            lblTersediaB.Name = "lblTersediaB";
+            lblTersediaB.Size = new Size(88, 21);
+            lblTersediaB.TabIndex = 5;
+            lblTersediaB.Text = "Tersedia 35";
             // 
-            // label23
+            // lblTerisiB
             // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label23.Location = new Point(11, 72);
-            label23.Margin = new Padding(4, 0, 4, 0);
-            label23.Name = "label23";
-            label23.Size = new Size(67, 21);
-            label23.TabIndex = 4;
-            label23.Text = "Terisi 30";
+            lblTerisiB.AutoSize = true;
+            lblTerisiB.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTerisiB.Location = new Point(11, 72);
+            lblTerisiB.Margin = new Padding(4, 0, 4, 0);
+            lblTerisiB.Name = "lblTerisiB";
+            lblTerisiB.Size = new Size(67, 21);
+            lblTerisiB.TabIndex = 4;
+            lblTerisiB.Text = "Terisi 30";
             // 
-            // progressBar2
+            // progressBarB
             // 
-            progressBar2.Location = new Point(18, 56);
-            progressBar2.Margin = new Padding(4);
-            progressBar2.Name = "progressBar2";
-            progressBar2.Size = new Size(312, 12);
-            progressBar2.TabIndex = 3;
-            progressBar2.Value = 67;
+            progressBarB.Location = new Point(18, 56);
+            progressBarB.Margin = new Padding(4);
+            progressBarB.Name = "progressBarB";
+            progressBarB.Size = new Size(312, 12);
+            progressBarB.TabIndex = 3;
+            progressBarB.Value = 67;
             // 
-            // label24
+            // lblPersenB
             // 
-            label24.AutoSize = true;
-            label24.Location = new Point(346, 8);
-            label24.Margin = new Padding(4, 0, 4, 0);
-            label24.Name = "label24";
-            label24.Size = new Size(47, 25);
-            label24.TabIndex = 2;
-            label24.Text = "67%";
+            lblPersenB.AutoSize = true;
+            lblPersenB.Location = new Point(346, 8);
+            lblPersenB.Margin = new Padding(4, 0, 4, 0);
+            lblPersenB.Name = "lblPersenB";
+            lblPersenB.Size = new Size(47, 25);
+            lblPersenB.TabIndex = 2;
+            lblPersenB.Text = "67%";
             // 
-            // label25
+            // lblSlotB
             // 
-            label25.AutoSize = true;
-            label25.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label25.Location = new Point(14, 31);
-            label25.Margin = new Padding(4, 0, 4, 0);
-            label25.Name = "label25";
-            label25.Size = new Size(55, 20);
-            label25.TabIndex = 1;
-            label25.Text = "Slot 45";
+            lblSlotB.AutoSize = true;
+            lblSlotB.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSlotB.Location = new Point(14, 31);
+            lblSlotB.Margin = new Padding(4, 0, 4, 0);
+            lblSlotB.Name = "lblSlotB";
+            lblSlotB.Size = new Size(55, 20);
+            lblSlotB.TabIndex = 1;
+            lblSlotB.Text = "Slot 45";
             // 
             // label26
             // 
@@ -927,11 +928,11 @@
             // 
             // panel6
             // 
-            panel6.Controls.Add(label21);
-            panel6.Controls.Add(label20);
-            panel6.Controls.Add(progressBar1);
-            panel6.Controls.Add(label19);
-            panel6.Controls.Add(label18);
+            panel6.Controls.Add(lblTersediaA);
+            panel6.Controls.Add(lblTerisiA);
+            panel6.Controls.Add(progressBarA);
+            panel6.Controls.Add(lblPersenA);
+            panel6.Controls.Add(lblSlotA);
             panel6.Controls.Add(label17);
             panel6.Location = new Point(20, 8);
             panel6.Margin = new Padding(4);
@@ -940,58 +941,58 @@
             panel6.TabIndex = 1;
             panel6.Paint += panel6_Paint;
             // 
-            // label21
+            // lblTersediaA
             // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label21.Location = new Point(231, 74);
-            label21.Margin = new Padding(4, 0, 4, 0);
-            label21.Name = "label21";
-            label21.Size = new Size(88, 21);
-            label21.TabIndex = 5;
-            label21.Text = "Tersedia 35";
+            lblTersediaA.AutoSize = true;
+            lblTersediaA.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTersediaA.Location = new Point(231, 74);
+            lblTersediaA.Margin = new Padding(4, 0, 4, 0);
+            lblTersediaA.Name = "lblTersediaA";
+            lblTersediaA.Size = new Size(88, 21);
+            lblTersediaA.TabIndex = 5;
+            lblTersediaA.Text = "Tersedia 35";
             // 
-            // label20
+            // lblTerisiA
             // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label20.Location = new Point(11, 72);
-            label20.Margin = new Padding(4, 0, 4, 0);
-            label20.Name = "label20";
-            label20.Size = new Size(67, 21);
-            label20.TabIndex = 4;
-            label20.Text = "Terisi 30";
-            label20.Click += label20_Click;
+            lblTerisiA.AutoSize = true;
+            lblTerisiA.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTerisiA.Location = new Point(11, 72);
+            lblTerisiA.Margin = new Padding(4, 0, 4, 0);
+            lblTerisiA.Name = "lblTerisiA";
+            lblTerisiA.Size = new Size(67, 21);
+            lblTerisiA.TabIndex = 4;
+            lblTerisiA.Text = "Terisi 30";
+            lblTerisiA.Click += label20_Click;
             // 
-            // progressBar1
+            // progressBarA
             // 
-            progressBar1.Location = new Point(18, 56);
-            progressBar1.Margin = new Padding(4);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(312, 12);
-            progressBar1.TabIndex = 3;
-            progressBar1.Value = 67;
+            progressBarA.Location = new Point(18, 56);
+            progressBarA.Margin = new Padding(4);
+            progressBarA.Name = "progressBarA";
+            progressBarA.Size = new Size(312, 12);
+            progressBarA.TabIndex = 3;
+            progressBarA.Value = 67;
             // 
-            // label19
+            // lblPersenA
             // 
-            label19.AutoSize = true;
-            label19.Location = new Point(346, 8);
-            label19.Margin = new Padding(4, 0, 4, 0);
-            label19.Name = "label19";
-            label19.Size = new Size(47, 25);
-            label19.TabIndex = 2;
-            label19.Text = "67%";
+            lblPersenA.AutoSize = true;
+            lblPersenA.Location = new Point(346, 8);
+            lblPersenA.Margin = new Padding(4, 0, 4, 0);
+            lblPersenA.Name = "lblPersenA";
+            lblPersenA.Size = new Size(47, 25);
+            lblPersenA.TabIndex = 2;
+            lblPersenA.Text = "67%";
             // 
-            // label18
+            // lblSlotA
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(14, 31);
-            label18.Margin = new Padding(4, 0, 4, 0);
-            label18.Name = "label18";
-            label18.Size = new Size(55, 20);
-            label18.TabIndex = 1;
-            label18.Text = "Slot 45";
+            lblSlotA.AutoSize = true;
+            lblSlotA.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSlotA.Location = new Point(14, 31);
+            lblSlotA.Margin = new Padding(4, 0, 4, 0);
+            lblSlotA.Name = "lblSlotA";
+            lblSlotA.Size = new Size(55, 20);
+            lblSlotA.TabIndex = 1;
+            lblSlotA.Text = "Slot 45";
             // 
             // label17
             // 
@@ -1019,7 +1020,7 @@
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(label7);
-            panel2.Controls.Add(label6);
+            panel2.Controls.Add(lblParkingArea);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(pictureBox3);
             panel2.Location = new Point(4, 4);
@@ -1038,17 +1039,17 @@
             label7.TabIndex = 3;
             label7.Text = "Bus, Car, \r\nMotorCycle\r\n";
             // 
-            // label6
+            // lblParkingArea
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(120, 55);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(32, 38);
-            label6.TabIndex = 2;
-            label6.Text = "3";
-            label6.Click += label6_Click;
+            lblParkingArea.AutoSize = true;
+            lblParkingArea.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblParkingArea.Location = new Point(120, 55);
+            lblParkingArea.Margin = new Padding(4, 0, 4, 0);
+            lblParkingArea.Name = "lblParkingArea";
+            lblParkingArea.Size = new Size(32, 38);
+            lblParkingArea.TabIndex = 2;
+            lblParkingArea.Text = "3";
+            lblParkingArea.Click += label6_Click;
             // 
             // label5
             // 
@@ -1076,7 +1077,7 @@
             // 
             panel3.BackColor = Color.White;
             panel3.Controls.Add(label8);
-            panel3.Controls.Add(label9);
+            panel3.Controls.Add(lblTotalSlot);
             panel3.Controls.Add(label10);
             panel3.Controls.Add(pictureBox4);
             panel3.Location = new Point(312, 4);
@@ -1095,16 +1096,16 @@
             label8.TabIndex = 3;
             label8.Text = "Total Slot";
             // 
-            // label9
+            // lblTotalSlot
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(120, 55);
-            label9.Margin = new Padding(4, 0, 4, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(62, 38);
-            label9.TabIndex = 2;
-            label9.Text = "135";
+            lblTotalSlot.AutoSize = true;
+            lblTotalSlot.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotalSlot.Location = new Point(120, 55);
+            lblTotalSlot.Margin = new Padding(4, 0, 4, 0);
+            lblTotalSlot.Name = "lblTotalSlot";
+            lblTotalSlot.Size = new Size(62, 38);
+            lblTotalSlot.TabIndex = 2;
+            lblTotalSlot.Text = "135";
             // 
             // label10
             // 
@@ -1132,7 +1133,7 @@
             // 
             panel4.BackColor = Color.White;
             panel4.Controls.Add(label11);
-            panel4.Controls.Add(label12);
+            panel4.Controls.Add(lblTerisi);
             panel4.Controls.Add(label13);
             panel4.Controls.Add(pictureBox5);
             panel4.Location = new Point(620, 4);
@@ -1151,16 +1152,16 @@
             label11.TabIndex = 3;
             label11.Text = "Total Slot Tersedia";
             // 
-            // label12
+            // lblTerisi
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(120, 55);
-            label12.Margin = new Padding(4, 0, 4, 0);
-            label12.Name = "label12";
-            label12.Size = new Size(47, 38);
-            label12.TabIndex = 2;
-            label12.Text = "50";
+            lblTerisi.AutoSize = true;
+            lblTerisi.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTerisi.Location = new Point(120, 55);
+            lblTerisi.Margin = new Padding(4, 0, 4, 0);
+            lblTerisi.Name = "lblTerisi";
+            lblTerisi.Size = new Size(47, 38);
+            lblTerisi.TabIndex = 2;
+            lblTerisi.Text = "50";
             // 
             // label13
             // 
@@ -1188,7 +1189,7 @@
             // 
             panel5.BackColor = Color.White;
             panel5.Controls.Add(label14);
-            panel5.Controls.Add(label15);
+            panel5.Controls.Add(lblTersedia);
             panel5.Controls.Add(label16);
             panel5.Controls.Add(pictureBox6);
             panel5.Location = new Point(928, 4);
@@ -1207,16 +1208,16 @@
             label14.TabIndex = 3;
             label14.Text = "Total Slot Terisi";
             // 
-            // label15
+            // lblTersedia
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.Location = new Point(120, 55);
-            label15.Margin = new Padding(4, 0, 4, 0);
-            label15.Name = "label15";
-            label15.Size = new Size(47, 38);
-            label15.TabIndex = 2;
-            label15.Text = "90";
+            lblTersedia.AutoSize = true;
+            lblTersedia.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTersedia.Location = new Point(120, 55);
+            lblTersedia.Margin = new Padding(4, 0, 4, 0);
+            lblTersedia.Name = "lblTersedia";
+            lblTersedia.Size = new Size(47, 38);
+            lblTersedia.TabIndex = 2;
+            lblTersedia.Text = "90";
             // 
             // label16
             // 
@@ -1337,46 +1338,46 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel2;
         private Label label7;
-        private Label label6;
+        private Label lblParkingArea;
         private Label label5;
         private PictureBox pictureBox3;
         private Panel panel3;
         private Label label8;
-        private Label label9;
+        private Label lblTotalSlot;
         private Label label10;
         private PictureBox pictureBox4;
         private Panel panel4;
         private Label label11;
-        private Label label12;
+        private Label lblTerisi;
         private Label label13;
         private PictureBox pictureBox5;
         private Panel panel5;
         private Label label14;
-        private Label label15;
+        private Label lblTersedia;
         private Label label16;
         private PictureBox pictureBox6;
         private Panel PanelMonitoring;
         private Panel PanelArea;
         private Panel panel6;
-        private Label label18;
+        private Label lblSlotA;
         private Label label17;
-        private Label label21;
-        private Label label20;
-        private ProgressBar progressBar1;
-        private Label label19;
+        private Label lblTersediaA;
+        private Label lblTerisiA;
+        private ProgressBar progressBarA;
+        private Label lblPersenA;
         private Panel panel8;
-        private Label label27;
-        private Label label28;
-        private ProgressBar progressBar3;
-        private Label label29;
-        private Label label30;
+        private Label lblTersediaC;
+        private Label lblTerisiC;
+        private ProgressBar progressBarC;
+        private Label lblPersenC;
+        private Label lblSlotC;
         private Label label31;
         private Panel panel7;
-        private Label label22;
-        private Label label23;
-        private ProgressBar progressBar2;
-        private Label label24;
-        private Label label25;
+        private Label lblTersediaB;
+        private Label lblTerisiB;
+        private ProgressBar progressBarB;
+        private Label lblPersenB;
+        private Label lblSlotB;
         private Label label26;
         private Panel panelParking;
         private Panel panelBus;

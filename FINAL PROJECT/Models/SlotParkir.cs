@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace FINAL_PROJECT.Models
 {
-    internal class Vehicle
+    public class SlotParkir
     {
+        public int IdSlot { get; set; }
+
+        public string KodeSlot { get; set; }
+
+        public string StatusSlot { get; set; }
     }
 }

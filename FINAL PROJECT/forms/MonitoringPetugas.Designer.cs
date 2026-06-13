@@ -258,28 +258,7 @@
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
             btnDashboard.Click += btnDashboard_Click;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.WhiteSmoke;
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(panelParking);
-            panel1.Controls.Add(dgvMonitoring);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(350, 0);
-            panel1.Margin = new Padding(4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1570, 801);
-            panel1.TabIndex = 26;
-            panel1.Paint += panel1_Paint;
+           
             // 
             // panel2
             // 

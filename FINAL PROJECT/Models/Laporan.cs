@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace FINAL_PROJECT.Models
 {
-    public class Admin : User
+    public class Laporan
     {
-        public override string GetRole()
-        {
-            return "admin";
-        }
+
     }
 }

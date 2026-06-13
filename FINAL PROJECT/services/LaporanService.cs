@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FINAL_PROJECT.forms.Repositories
+namespace FINAL_PROJECT.services
 {
-    internal class TransactionRepository
+    internal class LaporanService
     {
     }
 }

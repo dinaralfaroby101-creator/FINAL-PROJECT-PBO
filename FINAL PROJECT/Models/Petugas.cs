@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FINAL_PROJECT.Models
 {
-    internal class Petugas
+    public class Petugas : User
     {
+        public override string GetRole()
+        {
+            return "petugas";
+        }
     }
 }

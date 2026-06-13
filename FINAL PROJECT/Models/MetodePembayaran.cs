@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace FINAL_PROJECT.Models
 {
-    public class Admin : User
+    internal class MetodePembayaran
     {
-        public override string GetRole()
-        {
-            return "admin";
-        }
     }
 }

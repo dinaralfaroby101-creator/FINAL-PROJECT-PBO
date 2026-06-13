@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FINAL_PROJECT.Models
+namespace FINAL_PROJECT.Repositories
 {
-    internal class ParkingSlots
+    internal class PenitipanService
     {
     }
 }

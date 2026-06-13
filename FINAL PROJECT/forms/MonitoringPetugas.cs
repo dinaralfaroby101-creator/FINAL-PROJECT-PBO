@@ -95,9 +95,7 @@ namespace FINAL_PROJECT.forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Monitoring monitor = new Monitoring();
-            monitor.Show();
-            this.Hide();
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -149,8 +147,7 @@ namespace FINAL_PROJECT.forms
             jenis_kendaraan AS ""Jenis Kendaraan"",
             plat_nomor AS ""Plat Nomor"",
             waktu_masuk AS ""Waktu Masuk"",
-            nama_petugas AS ""Petugas"",
-            status_user AS ""Status Petugas""
+            nama_petugas AS ""Petugas""
         FROM v_monitoring_slot
         ORDER BY kode_slot";
 

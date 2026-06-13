@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FINAL_PROJECT.Models
 {
-    internal class ParkingTransaction
+    internal class Penitipan
     {
     }
 }

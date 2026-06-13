@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FINAL_PROJECT.Controllers;
 
 namespace FINAL_PROJECT.forms
 {
@@ -15,6 +16,7 @@ namespace FINAL_PROJECT.forms
         public DashboardPetugas()
         {
             InitializeComponent();
+            this.Load += DashboardPetugas_Load;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -141,6 +143,15 @@ namespace FINAL_PROJECT.forms
             this.Hide();
         }
 
+        private void btnVehicleData_Click(object sender, EventArgs e)
+        {
+            VehicleData vehicle =
+                new VehicleData();
+
+            vehicle.Show();
+            this.Hide();
+        }
+
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
@@ -161,13 +172,6 @@ namespace FINAL_PROJECT.forms
         private void lblDashboard_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnVehicleData_Click(object sender, EventArgs e)
-        {
-            VehicleData vehicle = new VehicleData();
-            vehicle.Show();
-            this.Hide();
         }
 
         private void btnLogOut_Click_1(object sender, EventArgs e)
@@ -199,6 +203,115 @@ namespace FINAL_PROJECT.forms
             HistoryPetugas historyp = new HistoryPetugas();
             historyp.Show();
             this.Hide();
+        }
+
+
+        private void LoadDashboard()
+        {
+            DashboardController controller =
+                new DashboardController();
+
+            var data =
+                controller.GetDashboardSummary();
+
+            lblParkingArea.Text =
+                data.TotalArea.ToString();
+
+            lblTotalSlot.Text =
+                data.TotalSlot.ToString();
+
+            lblTerisi.Text =
+                data.SlotTerisi.ToString();
+
+            lblTersedia.Text =
+                data.SlotKosong.ToString();
+        }
+
+        private void LoadArea()
+        {
+            DashboardController controller =
+                new DashboardController();
+
+            var areaA =
+                controller.GetAreaSummary("A");
+
+            var areaB =
+                controller.GetAreaSummary("B");
+
+            var areaC =
+                controller.GetAreaSummary("C");
+
+            // AREA A
+
+            progressBarA.Maximum =
+                areaA.TotalSlot;
+
+            progressBarA.Value =
+                areaA.Terisi;
+
+            lblSlotA.Text =
+                "Slot " + areaA.TotalSlot;
+
+            lblTerisiA.Text =
+                "Terisi " + areaA.Terisi;
+
+            lblTersediaA.Text =
+                "Tersedia " + areaA.Kosong;
+
+            lblPersenA.Text =
+                areaA.Persentase + "%";
+
+
+            // AREA B
+
+            progressBarB.Maximum =
+                areaB.TotalSlot;
+
+            progressBarB.Value =
+                areaB.Terisi;
+
+            lblSlotB.Text =
+                "Slot " + areaB.TotalSlot;
+
+            lblTerisiB.Text =
+                "Terisi " + areaB.Terisi;
+
+            lblTersediaB.Text =
+                "Tersedia " + areaB.Kosong;
+
+            lblPersenB.Text =
+                areaB.Persentase + "%";
+
+
+            // AREA C
+
+            progressBarC.Maximum =
+                areaC.TotalSlot;
+
+            progressBarC.Value =
+                areaC.Terisi;
+
+            lblSlotC.Text =
+                "Slot " + areaC.TotalSlot;
+
+            lblTerisiC.Text =
+                "Terisi " + areaC.Terisi;
+
+            lblTersediaC.Text =
+                "Tersedia " + areaC.Kosong;
+
+            lblPersenC.Text =
+                areaC.Persentase + "%";
+        }
+
+
+        private void DashboardPetugas_Load(
+    object sender,
+    EventArgs e)
+        {
+           
+        LoadDashboard();
+            LoadArea();
         }
     }
 }
