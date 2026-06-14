@@ -1,26 +1,25 @@
 ﻿using FINAL_PROJECT.Models;
-using FINAL_PROJECT.Services;
+using FINAL_PROJECT.Repositories;
 
-namespace FINAL_PROJECT.Controllers
+namespace FINAL_PROJECT.Services
 {
-    public class PenitipanController
+    public class PenitipanService
     {
         private readonly
-            PenitipanService
-            _service =
-            new PenitipanService();
+            PenitipanRepository
+            _repository =
+            new PenitipanRepository();
 
         public List<PenitipanModel>
             GetAll()
         {
-            return _service.GetAll();
+            return _repository.GetAll();
         }
-
 
         public PenitipanStatisticModel
     GetStatistic()
         {
-            return _service
+            return _repository
                 .GetStatistic();
         }
 
@@ -28,7 +27,7 @@ namespace FINAL_PROJECT.Controllers
         public List<PenitipanModel>
     Search(string keyword)
         {
-            return _service
+            return _repository
                 .Search(keyword);
         }
 
@@ -36,9 +35,10 @@ namespace FINAL_PROJECT.Controllers
         public List<PenitipanModel>
     GetHistory()
         {
-            return _service
+            return _repository
                 .GetHistory();
         }
+
 
 
         public void TambahPenitipan(
@@ -47,7 +47,7 @@ namespace FINAL_PROJECT.Controllers
     string pemilik,
     int jumlah)
         {
-            _service.TambahPenitipan(
+            _repository.TambahPenitipan(
                 namaBarang,
                 kategori,
                 pemilik,
@@ -55,18 +55,21 @@ namespace FINAL_PROJECT.Controllers
         }
 
 
+
+
         public void AmbilBarang(
     int idPenitipan)
         {
-            _service.AmbilBarang(
+            _repository.AmbilBarang(
                 idPenitipan);
         }
+
 
 
         public void DeletePenitipan(
     int idPenitipan)
         {
-            _service.DeletePenitipan(
+            _repository.DeletePenitipan(
                 idPenitipan);
         }
     }

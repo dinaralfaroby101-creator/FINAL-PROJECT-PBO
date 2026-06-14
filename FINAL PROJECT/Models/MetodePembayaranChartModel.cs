@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FINAL_PROJECT.Models
 {
-    internal class Penitipan
+    public class MetodePembayaranChartModel
     {
+        public string NamaMetode { get; set; }
+
+        public decimal Total { get; set; }
     }
 }

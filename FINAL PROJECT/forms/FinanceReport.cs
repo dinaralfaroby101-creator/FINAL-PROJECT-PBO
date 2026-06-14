@@ -1,4 +1,5 @@
-﻿using FINAL_PROJECT.Data;
+﻿using FINAL_PROJECT.Controllers;
+using FINAL_PROJECT.Data;
 using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.WinForms;
@@ -17,33 +18,19 @@ using System.Windows.Forms;
 
 
 
+
 namespace FINAL_PROJECT.forms
 {
 
     public partial class FinanceReport : Form
+
     {
         public FinanceReport()
         {
             InitializeComponent();
         }
 
-        private int GetJumlahHari(string filter)
-        {
-            switch (filter)
-            {
-                case "7 Hari":
-                    return 7;
-
-                case "1 Bulan":
-                    return 30;
-
-                case "3 Bulan":
-                    return 90;
-
-                default:
-                    return 7;
-            }
-        }
+        
         private void button2_Click(object sender, EventArgs e)
         {
             FinanceReport finance = new FinanceReport();
@@ -116,10 +103,7 @@ namespace FINAL_PROJECT.forms
             cboFilterKendaraan.SelectedIndex = 0;
 
             // Card Statistik
-            LoadPendapatanHariIni();
-            LoadTotalTransaksi();
-            LoadRataRataTransaksi();
-            LoadTotalKendaraan();
+            LoadStatistic();
 
             // Chart Pendapatan
             BuatChartPendapatan(7);
@@ -148,67 +132,80 @@ namespace FINAL_PROJECT.forms
 
         }
 
-        private void BuatChartPendapatan(int jumlahHari)
+        private void BuatChartPendapatan(
+    int jumlahHari)
         {
-            using var conn =
-                DatabaseHelper.Instance.GetConnection();
+            FinanceReportController controller =
+                new FinanceReportController();
 
-            string sql = @"
-SELECT
-    DATE(waktu_keluar) AS tanggal,
-    SUM(total_biaya) AS pendapatan
-FROM transaksi
-WHERE status_transaksi='selesai'
-AND waktu_keluar >= CURRENT_DATE - @hari
-GROUP BY DATE(waktu_keluar)
-ORDER BY tanggal";
+            var data =
+                controller.GetChartPendapatan(
+                    jumlahHari);
 
-            using var cmd =
-                new NpgsqlCommand(sql, conn);
+            panelChartPendapatan.Controls.Clear();
 
-            cmd.Parameters.AddWithValue("@hari", jumlahHari);
+            List<double> values =
+                new();
 
-            List<double> values = new();
-            List<string> labels = new();
+            List<string> labels =
+                new();
 
-            using var reader = cmd.ExecuteReader();
-
-            while (reader.Read())
+            foreach (var item in data)
             {
                 values.Add(
                     Convert.ToDouble(
-                        reader["pendapatan"]));
-
-                DateOnly tanggal =
-    (DateOnly)reader["tanggal"];
+                        item.Total));
 
                 labels.Add(
-                    tanggal.ToString("dd/MM"));
+                    item.Label);
             }
 
-            var chart = new CartesianChart
-            {
-                Dock = DockStyle.Fill,
-
-                Series = new ISeries[]
+            var chart =
+                new CartesianChart
                 {
-            new ColumnSeries<double>
-            {
-                Values = values
-            }
-                },
+                    Dock = DockStyle.Fill,
 
-                XAxes = new[]
+                    Series = new ISeries[]
+                    {
+                new ColumnSeries<double>
                 {
-            new Axis
-            {
-                Labels = labels
-            }
-        }
-            };
+                    Values =
+                        values.ToArray(),
 
-            panelChartPendapatan.Controls.Clear();
-            panelChartPendapatan.Controls.Add(chart);
+                    Name =
+                        "Pendapatan"
+                }
+                    },
+
+                    XAxes = new Axis[]
+                    {
+                new Axis
+                {
+                    Labels =
+                        labels.ToArray(),
+
+                    Name =
+                        "Tanggal"
+                }
+                    },
+
+                    YAxes = new Axis[]
+                    {
+                new Axis
+                {
+                    Name =
+                        "Pendapatan",
+
+                    Labeler =
+                        value =>
+                        "Rp " +
+                        value.ToString("N0")
+                }
+                    }
+                };
+
+            panelChartPendapatan.Controls.Add(
+                chart);
         }
 
 
@@ -290,59 +287,54 @@ ORDER BY m.id_metode_pembayaran";
 
         }
 
-        private void LoadMetodePembayaran(int jumlahHari)
+        private void LoadMetodePembayaran(
+    int jumlahHari)
         {
-            using var conn = DatabaseHelper.Instance.GetConnection();
+            FinanceReportController controller =
+                new FinanceReportController();
 
-            DateTime tanggalAwal =
-                DateTime.Today.AddDays(-jumlahHari);
-
-            string sql = @"
-    SELECT
-        m.nama_metode,
-        COALESCE(SUM(t.total_biaya),0) total
-    FROM metode_pembayaran m
-    LEFT JOIN transaksi t
-        ON t.id_metode_pembayaran = m.id_metode_pembayaran
-        AND t.status_transaksi='selesai'
-        AND t.waktu_keluar >= @tanggalAwal
-    GROUP BY m.nama_metode";
-
-            using var cmd =
-                new NpgsqlCommand(sql, conn);
-
-            cmd.Parameters.AddWithValue(
-                "@tanggalAwal",
-                tanggalAwal);
-
-            using var reader = cmd.ExecuteReader();
+            var data =
+                controller.GetMetodePembayaran(
+                    jumlahHari);
 
             decimal totalKeseluruhan = 0;
 
-            while (reader.Read())
+            foreach (var item in data)
             {
-                string metode = reader["nama_metode"].ToString();
-                decimal total = Convert.ToDecimal(reader["total"]);
+                totalKeseluruhan += item.Total;
 
-                totalKeseluruhan += total;
-
-                switch (metode)
+                switch (
+                    item.NamaMetode)
                 {
                     case "QRIS":
-                        lblJumlahQris.Text = total.ToString("N0");
+
+                        lblJumlahQris.Text =
+                            item.Total
+                            .ToString("N0");
+
                         break;
 
                     case "Tunai":
-                        lblJumlahDebit.Text = total.ToString("N0");
+
+                        lblJumlahDebit.Text =
+                            item.Total
+                            .ToString("N0");
+
                         break;
 
                     case "E-Wallet":
-                        lblJumlahEwallet.Text = total.ToString("N0");
+
+                        lblJumlahEwallet.Text =
+                            item.Total
+                            .ToString("N0");
+
                         break;
                 }
             }
 
-            lblTotal.Text = totalKeseluruhan.ToString("N0");
+            lblTotal.Text =
+                totalKeseluruhan
+                .ToString("N0");
         }
 
         private void BuatChartKendaraan(int jumlahHari)
@@ -428,132 +420,44 @@ ORDER BY m.id_metode_pembayaran";
         }
 
 
-        private void LoadPendapatanHariIni()
+
+
+        private void LoadDataKendaraan(
+    int jumlahHari)
         {
-            using var conn = DatabaseHelper.Instance.GetConnection();
+            FinanceReportController
+                controller =
+                new FinanceReportController();
 
-            string sql = @"
-    SELECT COALESCE(SUM(total_biaya),0)
-    FROM transaksi
-    WHERE status_transaksi='selesai'
-    AND DATE(waktu_keluar)=CURRENT_DATE";
-
-            using var cmd = new NpgsqlCommand(sql, conn);
-
-            decimal total = Convert.ToDecimal(cmd.ExecuteScalar());
-
-            lblPendapatanHarian.Text =
-                total.ToString("N0");
-        }
-
-        private void LoadTotalTransaksi()
-        {
-            using var conn = DatabaseHelper.Instance.GetConnection();
-
-            string sql = @"
-    SELECT COUNT(*)
-    FROM transaksi
-    WHERE status_transaksi='selesai'
-    AND DATE(waktu_keluar)=CURRENT_DATE";
-
-            using var cmd = new NpgsqlCommand(sql, conn);
-
-            int jumlah = Convert.ToInt32(cmd.ExecuteScalar());
-
-            lblJumlahAdmin.Text = jumlah.ToString();
-        }
-
-        private void LoadRataRataTransaksi()
-        {
-            using var conn = DatabaseHelper.Instance.GetConnection();
-
-            string sql = @"
-    SELECT COALESCE(AVG(total_biaya),0)
-    FROM transaksi
-    WHERE status_transaksi='selesai'
-    AND DATE(waktu_keluar)=CURRENT_DATE";
-
-            using var cmd = new NpgsqlCommand(sql, conn);
-
-            decimal rata =
-                Convert.ToDecimal(cmd.ExecuteScalar());
-
-            lblRatarataTransaksi.Text =
-                rata.ToString("N0");
-        }
-
-        private void LoadTotalKendaraan()
-        {
-            using var conn = DatabaseHelper.Instance.GetConnection();
-
-            string sql = @"
-    SELECT COUNT(*)
-    FROM transaksi
-    WHERE status_transaksi='selesai'
-    AND DATE(waktu_keluar)=CURRENT_DATE";
-
-            using var cmd = new NpgsqlCommand(sql, conn);
-
-            int total =
-                Convert.ToInt32(cmd.ExecuteScalar());
-
-            lblJumlahKendaraan.Text =
-                total.ToString();
-        }
-
-        private void LoadDataKendaraan(int jumlahHari)
-        {
-            using var conn = DatabaseHelper.Instance.GetConnection();
-
-            DateTime tanggalAwal =
-                DateTime.Today.AddDays(-jumlahHari);
-
-            string sql = @"
-    SELECT
-        k.jenis_kendaraan,
-        COUNT(*) AS jumlah
-    FROM transaksi t
-    JOIN kendaraan k
-        ON t.id_kendaraan = k.id_kendaraan
-    WHERE t.status_transaksi='selesai'
-    AND t.waktu_keluar >= @tanggalAwal
-    GROUP BY k.jenis_kendaraan";
-
-            using var cmd = new NpgsqlCommand(sql, conn);
-
-            cmd.Parameters.AddWithValue(
-                "@tanggalAwal",
-                tanggalAwal);
-
-            using var reader = cmd.ExecuteReader();
+            var data =
+                controller.GetDataKendaraan(
+                    jumlahHari);
 
             int total = 0;
 
-            while (reader.Read())
+            foreach (var item in data)
             {
-                string jenis =
-                    reader["jenis_kendaraan"].ToString();
+                total += item.Jumlah;
 
-                int jumlah =
-                    Convert.ToInt32(reader["jumlah"]);
-
-                total += jumlah;
-
-                switch (jenis)
+                switch (
+                    item.JenisKendaraan)
                 {
                     case "bus":
                         lblJumlahBus.Text =
-                            jumlah.ToString();
+                            item.Jumlah
+                            .ToString();
                         break;
 
                     case "mobil":
                         lblJumlahMobil.Text =
-                            jumlah.ToString();
+                            item.Jumlah
+                            .ToString();
                         break;
 
                     case "motor":
                         lblJumlahMotor.Text =
-                            jumlah.ToString();
+                            item.Jumlah
+                            .ToString();
                         break;
                 }
             }
@@ -562,25 +466,31 @@ ORDER BY m.id_metode_pembayaran";
                 total.ToString();
         }
 
-        private void cboFilterMetode_SelectedIndexChanged(
+        private void cboFilterMetode_SelectedIndexChanged_1(
     object sender,
     EventArgs e)
         {
+            FinanceReportController controller =
+                new FinanceReportController();
+
             int hari =
-                GetJumlahHari(
+                controller.GetJumlahHari(
                     cboFilterMetode.Text);
 
             LoadMetodePembayaran(hari);
 
-            BuatChartMetode(7);
+            BuatChartMetode(hari);
         }
 
-        private void cboFilterKendaraan_SelectedIndexChanged(
+        private void cboFilterKendaraan_SelectedIndexChanged_1(
     object sender,
     EventArgs e)
         {
+            FinanceReportController controller =
+                new FinanceReportController();
+
             int hari =
-                GetJumlahHari(
+                controller.GetJumlahHari(
                     cboFilterKendaraan.Text);
 
             LoadDataKendaraan(hari);
@@ -589,35 +499,42 @@ ORDER BY m.id_metode_pembayaran";
         }
 
 
-        private void cboFilterDBatang_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void cboFilterDBatang_SelectedIndexChanged_1(
+    object sender,
+    EventArgs e)
         {
+            FinanceReportController controller =
+                new FinanceReportController();
+
             int hari =
-        GetJumlahHari(
-            cboFilterDBatang.Text);
+                controller.GetJumlahHari(
+                    cboFilterDBatang.Text);
 
             BuatChartPendapatan(hari);
         }
 
-        private void cboFilterMetode_SelectedIndexChanged_1(object sender, EventArgs e)
+        
+
+
+        private void LoadStatistic()
         {
-            int hari =
-        GetJumlahHari(
-            cboFilterMetode.Text);
+            FinanceReportController controller =
+                new FinanceReportController();
 
-            LoadMetodePembayaran(hari);
+            var data =
+                controller.GetStatistic();
 
-            BuatChartMetode(hari);
-        }
+            lblPendapatanHarian.Text =
+                data.PendapatanHariIni.ToString("N0");
 
-        private void cboFilterKendaraan_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            int hari =
-        GetJumlahHari(
-            cboFilterKendaraan.Text);
+            lblJumlahAdmin.Text =
+                data.TotalTransaksi.ToString();
 
-            LoadDataKendaraan(hari);
+            lblRatarataTransaksi.Text =
+                data.RataRataTransaksi.ToString("N0");
 
-            BuatChartKendaraan(hari);
+            lblJumlahKendaraan.Text =
+                data.TotalKendaraan.ToString();
         }
     }
 }

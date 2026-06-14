@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FINAL_PROJECT.Data;
-using Npgsql;
+using FINAL_PROJECT.Controllers;
 
 namespace FINAL_PROJECT.forms
 {
@@ -17,15 +17,16 @@ namespace FINAL_PROJECT.forms
         public BagStorage()
         {
             InitializeComponent();
+            dgvPenitipan.CellContentClick +=
+        dgvPenitipan_CellContentClick;
         }
 
         private void BagStorage_Load(object sender, EventArgs e)
         {
-            LoadSummary();
-            LoadGridBagStorage();
-
-            txtIdPenitipan.PlaceholderText =
-    "Cari ID Penitipan";
+            //LoadSummary();
+            //LoadGridBagStorage();
+            LoadData();
+            LoadStatistic();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -77,16 +78,7 @@ namespace FINAL_PROJECT.forms
             this.Hide();
         }
 
-        private void btnTambahUser_Click(object sender, EventArgs e)
-        {
-            inputpenitipan frm = new inputpenitipan();
-
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                LoadSummary();
-                LoadGridBagStorage();
-            }
-        }
+        
 
         private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -98,156 +90,216 @@ namespace FINAL_PROJECT.forms
 
         }
 
-        private void LoadSummary()
-        {
-            try
-            {
-                using var conn =
-                    DatabaseHelper.Instance.GetConnection();
-
-                // Total Dititipkan
-                string q1 = @"
-SELECT COUNT(*)
-FROM penitipan";
-
-                using (var cmd = new NpgsqlCommand(q1, conn))
-                {
-                    lblJumlahDititipkan.Text =
-    cmd.ExecuteScalar().ToString();
-                }
-
-                // Dititipkan Hari Ini
-                string q2 = @"
-
-SELECT COUNT(*)
-FROM penitipan
-WHERE DATE(waktu_masuk)=CURRENT_DATE";
-
-                using (var cmd = new NpgsqlCommand(q2, conn))
-                {
-                    lbltotalDititipkanHariIni.Text =
-    cmd.ExecuteScalar().ToString();
-                }
-
-                // Sudah Diambil
-                string q3 = @"
-SELECT COUNT(*)
-FROM penitipan
-WHERE status_penitipan='diambil'";
-
-                using (var cmd = new NpgsqlCommand(q3, conn))
-                {
-                    lblJumlahDiambil.Text =
-    cmd.ExecuteScalar().ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-        }
-
-        private void LoadGridBagStorage()
-        {
-            try
-            {
-                using var conn =
-                    DatabaseHelper.Instance.GetConnection();
-
-                string query = @"
-        SELECT
-            p.id_penitipan        AS ""ID"",
-            b.nama_barang         AS ""Nama Barang"",
-            b.kategori_barang     AS ""Kategori"",
-            p.nama_pemilik        AS ""Pemilik"",
-            p.jumlah_barang       AS ""Jumlah"",
-            p.waktu_masuk         AS ""Waktu Masuk"",
-            p.waktu_diambil       AS ""Waktu Diambil"",
-            p.status_penitipan    AS ""Status""
-        FROM penitipan p
-        LEFT JOIN barang b
-            ON p.id_barang = b.id_barang
-        ORDER BY p.id_penitipan DESC";
-
-                DataTable dt = new DataTable();
-
-                using var da =
-                    new NpgsqlDataAdapter(query, conn);
-
-                da.Fill(dt);
-
-                dgvLoker.DataSource = dt;
-
-                dgvLoker.AutoSizeColumnsMode =
-                    DataGridViewAutoSizeColumnsMode.Fill;
-
-                dgvLoker.ReadOnly = true;
-                dgvLoker.AllowUserToAddRows = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void txtIdPenitipan_TextChanged(
     object sender,
     EventArgs e)
         {
-            CariPenitipan();
+            PenitipanController controller =
+                new PenitipanController();
+
+            dgvPenitipan.DataSource =
+                controller.Search(
+                    txtIdPenitipan.Text);
         }
 
-        private void CariPenitipan()
-        {
-            try
-            {
-                using var conn =
-                    DatabaseHelper.Instance.GetConnection();
-
-                string query = @"
-        SELECT
-            p.id_penitipan      AS ""ID"",
-            b.nama_barang       AS ""Nama Barang"",
-            b.kategori_barang   AS ""Kategori"",
-            p.nama_pemilik      AS ""Pemilik"",
-            p.jumlah_barang     AS ""Jumlah"",
-            p.waktu_masuk       AS ""Waktu Masuk"",
-            p.waktu_diambil     AS ""Waktu Diambil"",
-            p.status_penitipan  AS ""Status""
-        FROM penitipan p
-        LEFT JOIN barang b
-            ON p.id_barang = b.id_barang
-        WHERE CAST(p.id_penitipan AS TEXT)
-            ILIKE @cari
-        ORDER BY p.id_penitipan DESC";
-
-                DataTable dt = new DataTable();
-
-                using var cmd =
-                    new NpgsqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue(
-                    "@cari",
-                    "%" + txtIdPenitipan.Text + "%");
-
-                using var da =
-                    new NpgsqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                dgvLoker.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+
+        private void LoadData()
+        {
+            PenitipanController controller =
+                new PenitipanController();
+
+            dgvPenitipan.DataSource =
+                controller.GetAll();
+
+            if (!dgvPenitipan.Columns.Contains("Ambil"))
+            {
+                DataGridViewButtonColumn btn =
+                    new DataGridViewButtonColumn();
+
+                btn.Name = "Ambil";
+                btn.HeaderText = "Ambil";
+                btn.Text = "Ambil";
+
+                btn.UseColumnTextForButtonValue = true;
+
+                dgvPenitipan.Columns.Add(btn);
+            }
+
+            if (!dgvPenitipan.Columns.Contains("Delete"))
+            {
+                DataGridViewButtonColumn btnDelete =
+                    new DataGridViewButtonColumn();
+
+                btnDelete.Name = "Delete";
+                btnDelete.HeaderText = "Delete";
+                btnDelete.Text = "Delete";
+
+                btnDelete.UseColumnTextForButtonValue = true;
+
+                dgvPenitipan.Columns.Add(btnDelete);
+            }
+
+            dgvPenitipan.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+
+        }
+
+        private void btnTambahBarang_Click(
+    object sender,
+    EventArgs e)
+        {
+            inputpenitipan form =
+                new inputpenitipan();
+
+            if (form.ShowDialog() ==
+                DialogResult.OK)
+            {
+                LoadData();
+                LoadStatistic();
+            }
+        }
+
+
+
+        private void LoadStatistic()
+        {
+            PenitipanController controller =
+                new PenitipanController();
+
+            var data =
+                controller.GetStatistic();
+
+            lblTotalPenitipan.Text =
+                data.TotalPenitipan.ToString();
+
+            lblDititipkan.Text =
+                data.Dititipkan.ToString();
+
+            lblJumlahDiambil.Text =
+                data.Diambil.ToString();
+        }
+
+
+
+
+        private void dgvPenitipan_CellContentClick(
+    object sender,
+    DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            string namaKolom =
+                dgvPenitipan.Columns[e.ColumnIndex]
+                .Name;
+
+            int idPenitipan =
+                Convert.ToInt32(
+                    dgvPenitipan.Rows[e.RowIndex]
+                    .Cells["IdPenitipan"]
+                    .Value);
+
+            if (namaKolom == "Ambil")
+            {
+                AmbilBarang(idPenitipan);
+            }
+
+            if (namaKolom == "Delete")
+            {
+                DeletePenitipan(idPenitipan);
+            }
+        }
+
+
+        private void DeletePenitipan(
+    int idPenitipan)
+        {
+            DialogResult result =
+                MessageBox.Show(
+                    "Yakin ingin menghapus data penitipan?",
+                    "Konfirmasi",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+                return;
+
+            try
+            {
+                PenitipanController controller =
+                    new PenitipanController();
+
+                controller.DeletePenitipan(
+                    idPenitipan);
+
+                MessageBox.Show(
+                    "Data penitipan berhasil dihapus");
+
+                LoadData();
+                LoadStatistic();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    ex.Message);
+            }
+        }
+
+
+
+
+        private void AmbilBarang(
+    int idPenitipan)
+        {
+            DialogResult result =
+                MessageBox.Show(
+                    "Barang sudah diambil?",
+                    "Konfirmasi",
+                    MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No)
+                return;
+
+            PenitipanController controller =
+                new PenitipanController();
+
+            controller.AmbilBarang(
+                idPenitipan);
+
+            MessageBox.Show(
+                "Status berhasil diubah");
+
+            LoadData();
+            LoadStatistic();
+        }
+
+        private void LoadHistory()
+        {
+            PenitipanController controller =
+                new PenitipanController();
+
+            dgvPenitipan.DataSource =
+                controller.GetHistory();
+
+            dgvPenitipan.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void RiwayatPenitipan_Load(
+    object sender,
+    EventArgs e)
+        {
+            LoadHistory();
         }
     }
 }

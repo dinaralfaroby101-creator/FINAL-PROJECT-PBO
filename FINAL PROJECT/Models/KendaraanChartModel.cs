@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace FINAL_PROJECT.Models
 {
-    public class MetodePembayaranReportModel
+    public class KendaraanChartModel
     {
-        public string NamaMetode { get; set; }
+        public string JenisKendaraan { get; set; }
 
-        public decimal Total { get; set; }
+        public int Jumlah { get; set; }
     }
 }

@@ -44,7 +44,7 @@
             pictureBox2 = new PictureBox();
             txtIdPenitipan = new TextBox();
             panel7 = new Panel();
-            dgvLoker = new DataGridView();
+            dgvPenitipan = new DataGridView();
             btnTambahBarang = new Button();
             panel5 = new Panel();
             lblJumlahDiambil = new Label();
@@ -52,11 +52,11 @@
             pictureBox5 = new PictureBox();
             panel4 = new Panel();
             lblSemuaAdmin = new Label();
-            lbltotalDititipkanHariIni = new Label();
+            lblDititipkan = new Label();
             lblDititipkanHariIni = new Label();
             pictureBox4 = new PictureBox();
             panel3 = new Panel();
-            lblJumlahDititipkan = new Label();
+            lblTotalPenitipan = new Label();
             lblTotalDititipkan = new Label();
             pictureBox3 = new PictureBox();
             panel2 = new Panel();
@@ -65,7 +65,7 @@
             panelUSername.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvLoker).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPenitipan).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel4.SuspendLayout();
@@ -248,23 +248,24 @@
             // 
             // panel7
             // 
-            panel7.Controls.Add(dgvLoker);
+            panel7.Controls.Add(dgvPenitipan);
             panel7.Location = new Point(486, 260);
             panel7.Margin = new Padding(4);
             panel7.Name = "panel7";
             panel7.Size = new Size(1236, 609);
             panel7.TabIndex = 35;
             // 
-            // dgvLoker
+            // dgvPenitipan
             // 
-            dgvLoker.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLoker.Location = new Point(0, 0);
-            dgvLoker.Margin = new Padding(4);
-            dgvLoker.Name = "dgvLoker";
-            dgvLoker.RowHeadersWidth = 51;
-            dgvLoker.Size = new Size(1236, 708);
-            dgvLoker.TabIndex = 0;
-            dgvLoker.CellContentClick += dgvUser_CellContentClick;
+            dgvPenitipan.AllowUserToAddRows = false;
+            dgvPenitipan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPenitipan.Location = new Point(0, 0);
+            dgvPenitipan.Margin = new Padding(4);
+            dgvPenitipan.Name = "dgvPenitipan";
+            dgvPenitipan.RowHeadersWidth = 51;
+            dgvPenitipan.Size = new Size(1236, 708);
+            dgvPenitipan.TabIndex = 0;
+            dgvPenitipan.CellContentClick += dgvUser_CellContentClick;
             // 
             // btnTambahBarang
             // 
@@ -278,7 +279,7 @@
             btnTambahBarang.TabIndex = 32;
             btnTambahBarang.Text = "+ Tambah Barang";
             btnTambahBarang.UseVisualStyleBackColor = false;
-            btnTambahBarang.Click += btnTambahUser_Click;
+            btnTambahBarang.Click += btnTambahBarang_Click;
             // 
             // panel5
             // 
@@ -291,7 +292,7 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(300, 158);
             panel5.TabIndex = 7;
-            panel5.Paint += this.panel5_Paint;
+            panel5.Paint += panel5_Paint;
             // 
             // lblJumlahDiambil
             // 
@@ -329,7 +330,7 @@
             // 
             panel4.BackColor = Color.White;
             panel4.Controls.Add(lblSemuaAdmin);
-            panel4.Controls.Add(lbltotalDititipkanHariIni);
+            panel4.Controls.Add(lblDititipkan);
             panel4.Controls.Add(lblDititipkanHariIni);
             panel4.Controls.Add(pictureBox4);
             panel4.Location = new Point(309, 4);
@@ -347,16 +348,16 @@
             lblSemuaAdmin.Size = new Size(0, 25);
             lblSemuaAdmin.TabIndex = 3;
             // 
-            // lbltotalDititipkanHariIni
+            // lblDititipkan
             // 
-            lbltotalDititipkanHariIni.AutoSize = true;
-            lbltotalDititipkanHariIni.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbltotalDititipkanHariIni.Location = new Point(120, 55);
-            lbltotalDititipkanHariIni.Margin = new Padding(4, 0, 4, 0);
-            lbltotalDititipkanHariIni.Name = "lbltotalDititipkanHariIni";
-            lbltotalDititipkanHariIni.Size = new Size(32, 38);
-            lbltotalDititipkanHariIni.TabIndex = 2;
-            lbltotalDititipkanHariIni.Text = "4";
+            lblDititipkan.AutoSize = true;
+            lblDititipkan.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDititipkan.Location = new Point(120, 55);
+            lblDititipkan.Margin = new Padding(4, 0, 4, 0);
+            lblDititipkan.Name = "lblDititipkan";
+            lblDititipkan.Size = new Size(32, 38);
+            lblDititipkan.TabIndex = 2;
+            lblDititipkan.Text = "4";
             // 
             // lblDititipkanHariIni
             // 
@@ -382,7 +383,7 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(lblJumlahDititipkan);
+            panel3.Controls.Add(lblTotalPenitipan);
             panel3.Controls.Add(lblTotalDititipkan);
             panel3.Controls.Add(pictureBox3);
             panel3.Location = new Point(1, 4);
@@ -391,16 +392,16 @@
             panel3.Size = new Size(300, 150);
             panel3.TabIndex = 5;
             // 
-            // lblJumlahDititipkan
+            // lblTotalPenitipan
             // 
-            lblJumlahDititipkan.AutoSize = true;
-            lblJumlahDititipkan.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahDititipkan.Location = new Point(120, 55);
-            lblJumlahDititipkan.Margin = new Padding(4, 0, 4, 0);
-            lblJumlahDititipkan.Name = "lblJumlahDititipkan";
-            lblJumlahDititipkan.Size = new Size(47, 38);
-            lblJumlahDititipkan.TabIndex = 2;
-            lblJumlahDititipkan.Text = "30";
+            lblTotalPenitipan.AutoSize = true;
+            lblTotalPenitipan.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotalPenitipan.Location = new Point(120, 55);
+            lblTotalPenitipan.Margin = new Padding(4, 0, 4, 0);
+            lblTotalPenitipan.Name = "lblTotalPenitipan";
+            lblTotalPenitipan.Size = new Size(47, 38);
+            lblTotalPenitipan.TabIndex = 2;
+            lblTotalPenitipan.Text = "30";
             // 
             // lblTotalDititipkan
             // 
@@ -457,7 +458,7 @@
             panelUSername.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvLoker).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPenitipan).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -488,7 +489,7 @@
         private PictureBox pictureBox2;
         private TextBox txtIdPenitipan;
         private Panel panel7;
-        private DataGridView dgvLoker;
+        private DataGridView dgvPenitipan;
         private Button btnTambahBarang;
         private Panel panel5;
         private Label lblJumlahDiambil;
@@ -496,12 +497,12 @@
         private PictureBox pictureBox5;
         private Panel panel4;
         private Label lblSemuaAdmin;
-        private Label lbltotalDititipkanHariIni;
+        private Label lblDititipkan;
         private Label lblDititipkanHariIni;
         private PictureBox pictureBox4;
         private Panel panel3;
         private Label lblSemuaUser;
-        private Label lblJumlahDititipkan;
+        private Label lblTotalPenitipan;
         private Label lblTotalDititipkan;
         private PictureBox pictureBox3;
         private Panel panel2;

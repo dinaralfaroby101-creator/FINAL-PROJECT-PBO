@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FINAL_PROJECT.Models
 {
-    public class MetodePembayaranReportModel
+    public class PendapatanChartModel
     {
-        public string NamaMetode { get; set; }
+        public string Label { get; set; }
 
         public decimal Total { get; set; }
     }
