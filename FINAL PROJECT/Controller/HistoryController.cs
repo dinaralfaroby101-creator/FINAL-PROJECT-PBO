@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FINAL_PROJECT.Models;
+using FINAL_PROJECT.Services;
 
-namespace FINAL_PROJECT.Controller
+namespace FINAL_PROJECT.Controllers
 {
-    internal class HistoryController
+    public class HistoryController
     {
+        private readonly HistoryService
+            _service;
+
+        public HistoryController()
+        {
+            _service =
+                new HistoryService();
+        }
+
+        public List<HistoryItem>
+            GetHistoryData()
+        {
+            return _service
+                .GetHistoryData();
+        }
     }
 }

@@ -36,7 +36,6 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             btnDashboard = new Button();
-            panel1 = new Panel();
             panel2 = new Panel();
             label21 = new Label();
             label20 = new Label();
@@ -146,7 +145,6 @@
             dgvMonitoring = new DataGridView();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
@@ -258,7 +256,6 @@
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
             btnDashboard.Click += btnDashboard_Click;
-           
             // 
             // panel2
             // 
@@ -1340,7 +1337,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1920, 801);
-            Controls.Add(panel1);
+            Controls.Add(panel2);
             Controls.Add(panelSidebar);
             Margin = new Padding(4);
             Name = "MonitoringPetugas";
@@ -1350,8 +1347,6 @@
             panelSidebar.ResumeLayout(false);
             panelSidebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
@@ -1376,7 +1371,6 @@
         private Label label2;
         private PictureBox pictureBox1;
         private Button btnDashboard;
-        private Panel panel1;
         private DataGridView dgvMonitoring;
         private Panel panelParking;
         private Panel panel11;

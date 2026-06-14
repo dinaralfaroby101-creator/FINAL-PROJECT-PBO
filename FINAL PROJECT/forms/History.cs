@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FINAL_PROJECT.Controllers;
 
 namespace FINAL_PROJECT.forms
 
@@ -67,38 +68,37 @@ namespace FINAL_PROJECT.forms
             this.Hide();
         }
 
-        private void History_Load(object sender, EventArgs e)
+        private void History_Load(
+    object sender,
+    EventArgs e)
         {
-            dgvHistory.Rows.Add(
-                "c1921AC",
-                "C",
-                "Motor",
-                "789180",
-                "15.00",
-                "16.00",
-                "1 jam",
-                "Rp3000",
-                "QRIS",
-                "✔"
-            );
-
-            dgvHistory.Rows.Add(
-                "b1920AC",
-                "B",
-                "Mobil",
-                "789180",
-                "15.30",
-                "18.00",
-                "2 jam",
-                "Rp12000",
-                "QRIS",
-                "✔"
-            );
+            LoadHistory();
         }
 
         private void dgvHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+
+
+
+        private void LoadHistory()
+        {
+            HistoryController controller =
+                new HistoryController();
+
+            dgvHistory.AutoGenerateColumns = true;
+
+            dgvHistory.DataSource =
+                controller.GetHistoryData();
+
+            dgvHistory.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgvHistory.ReadOnly = true;
+
+            dgvHistory.AllowUserToAddRows = false;
         }
     }
 }

@@ -1,48 +1,48 @@
 ﻿using FINAL_PROJECT.Models;
-using FINAL_PROJECT.Services;
+using FINAL_PROJECT.Repositories;
 
-namespace FINAL_PROJECT.Controllers
+namespace FINAL_PROJECT.Services
 {
-    public class VehicleController
+    public class VehicleService
     {
-        private readonly VehicleService
-            _service;
+        private readonly VehicleRepository
+            _repository;
 
-        public VehicleController()
+        public VehicleService()
         {
-            _service =
-                new VehicleService();
+            _repository =
+                new VehicleRepository();
         }
 
         public List<VehicleDataModel>
             GetAllVehicle()
         {
-            return _service
+            return _repository
                 .GetAllVehicle();
         }
 
 
         public int GetTotalVehicle()
         {
-            return _service
+            return _repository
                 .GetTotalVehicle();
         }
 
         public int GetTotalMotor()
         {
-            return _service
+            return _repository
                 .GetTotalMotor();
         }
 
         public int GetTotalMobil()
         {
-            return _service
+            return _repository
                 .GetTotalMobil();
         }
 
         public int GetTotalBus()
         {
-            return _service
+            return _repository
                 .GetTotalBus();
         }
 
@@ -51,7 +51,7 @@ namespace FINAL_PROJECT.Controllers
         public List<VehicleDataModel>
     SearchVehicle(string keyword)
         {
-            return _service
+            return _repository
                 .SearchVehicle(keyword);
         }
     }

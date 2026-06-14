@@ -42,22 +42,18 @@
             cboJenisKendaraan = new ComboBox();
             txtMerkKendaraan = new TextBox();
             cboAreaParkir = new ComboBox();
-            dtpMasuk = new DateTimePicker();
-            txtIdPetugas = new TextBox();
-            txtCatatan = new TextBox();
             lblPlat = new Label();
             lblKendaraan = new Label();
             lblMerk = new Label();
             lblArea = new Label();
-            lblWaktu = new Label();
-            lblCatatan = new Label();
-            lblPetugas = new Label();
             pictureBox1 = new PictureBox();
             btnBatal = new Button();
             btnSimpan = new Button();
+            pictureBox2 = new PictureBox();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panelSidebar
@@ -180,7 +176,7 @@
             // 
             // txtPlatNomor
             // 
-            txtPlatNomor.Location = new Point(533, 143);
+            txtPlatNomor.Location = new Point(534, 192);
             txtPlatNomor.Name = "txtPlatNomor";
             txtPlatNomor.Size = new Size(315, 31);
             txtPlatNomor.TabIndex = 3;
@@ -189,7 +185,7 @@
             // cboJenisKendaraan
             // 
             cboJenisKendaraan.FormattingEnabled = true;
-            cboJenisKendaraan.Location = new Point(533, 281);
+            cboJenisKendaraan.Location = new Point(534, 330);
             cboJenisKendaraan.Name = "cboJenisKendaraan";
             cboJenisKendaraan.Size = new Size(315, 33);
             cboJenisKendaraan.TabIndex = 4;
@@ -197,7 +193,7 @@
             // 
             // txtMerkKendaraan
             // 
-            txtMerkKendaraan.Location = new Point(533, 418);
+            txtMerkKendaraan.Location = new Point(534, 467);
             txtMerkKendaraan.Name = "txtMerkKendaraan";
             txtMerkKendaraan.Size = new Size(315, 31);
             txtMerkKendaraan.TabIndex = 5;
@@ -205,33 +201,10 @@
             // cboAreaParkir
             // 
             cboAreaParkir.FormattingEnabled = true;
-            cboAreaParkir.Location = new Point(533, 555);
+            cboAreaParkir.Location = new Point(534, 604);
             cboAreaParkir.Name = "cboAreaParkir";
             cboAreaParkir.Size = new Size(315, 33);
             cboAreaParkir.TabIndex = 6;
-            // 
-            // dtpMasuk
-            // 
-            dtpMasuk.Location = new Point(934, 143);
-            dtpMasuk.Margin = new Padding(4, 5, 4, 5);
-            dtpMasuk.Name = "dtpMasuk";
-            dtpMasuk.Size = new Size(315, 31);
-            dtpMasuk.TabIndex = 34;
-            dtpMasuk.ValueChanged += dtpMasuk_ValueChanged;
-            // 
-            // txtIdPetugas
-            // 
-            txtIdPetugas.Location = new Point(934, 418);
-            txtIdPetugas.Name = "txtIdPetugas";
-            txtIdPetugas.Size = new Size(315, 31);
-            txtIdPetugas.TabIndex = 35;
-            // 
-            // txtCatatan
-            // 
-            txtCatatan.Location = new Point(934, 281);
-            txtCatatan.Name = "txtCatatan";
-            txtCatatan.Size = new Size(315, 31);
-            txtCatatan.TabIndex = 36;
             // 
             // lblPlat
             // 
@@ -239,7 +212,7 @@
             lblPlat.BackColor = SystemColors.ActiveCaption;
             lblPlat.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPlat.ForeColor = Color.Black;
-            lblPlat.Location = new Point(533, 98);
+            lblPlat.Location = new Point(534, 147);
             lblPlat.Margin = new Padding(4, 0, 4, 0);
             lblPlat.Name = "lblPlat";
             lblPlat.Size = new Size(88, 39);
@@ -253,7 +226,7 @@
             lblKendaraan.BackColor = SystemColors.ActiveCaption;
             lblKendaraan.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblKendaraan.ForeColor = Color.Black;
-            lblKendaraan.Location = new Point(533, 236);
+            lblKendaraan.Location = new Point(534, 285);
             lblKendaraan.Margin = new Padding(4, 0, 4, 0);
             lblKendaraan.Name = "lblKendaraan";
             lblKendaraan.Size = new Size(173, 39);
@@ -266,7 +239,7 @@
             lblMerk.BackColor = SystemColors.ActiveCaption;
             lblMerk.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMerk.ForeColor = Color.Black;
-            lblMerk.Location = new Point(533, 374);
+            lblMerk.Location = new Point(534, 423);
             lblMerk.Margin = new Padding(4, 0, 4, 0);
             lblMerk.Name = "lblMerk";
             lblMerk.Size = new Size(174, 39);
@@ -279,55 +252,16 @@
             lblArea.BackColor = SystemColors.ActiveCaption;
             lblArea.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblArea.ForeColor = Color.Black;
-            lblArea.Location = new Point(533, 512);
+            lblArea.Location = new Point(534, 561);
             lblArea.Margin = new Padding(4, 0, 4, 0);
             lblArea.Name = "lblArea";
             lblArea.Size = new Size(124, 39);
             lblArea.TabIndex = 40;
             lblArea.Text = "Area Parkir";
             // 
-            // lblWaktu
-            // 
-            lblWaktu.AutoSize = true;
-            lblWaktu.BackColor = SystemColors.ActiveCaption;
-            lblWaktu.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblWaktu.ForeColor = Color.Black;
-            lblWaktu.Location = new Point(934, 98);
-            lblWaktu.Margin = new Padding(4, 0, 4, 0);
-            lblWaktu.Name = "lblWaktu";
-            lblWaktu.Size = new Size(133, 39);
-            lblWaktu.TabIndex = 41;
-            lblWaktu.Text = "Masuk Pada";
-            // 
-            // lblCatatan
-            // 
-            lblCatatan.AutoSize = true;
-            lblCatatan.BackColor = SystemColors.ActiveCaption;
-            lblCatatan.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCatatan.ForeColor = Color.Black;
-            lblCatatan.Location = new Point(934, 373);
-            lblCatatan.Margin = new Padding(4, 0, 4, 0);
-            lblCatatan.Name = "lblCatatan";
-            lblCatatan.Size = new Size(91, 39);
-            lblCatatan.TabIndex = 42;
-            lblCatatan.Text = "Catatan";
-            // 
-            // lblPetugas
-            // 
-            lblPetugas.AutoSize = true;
-            lblPetugas.BackColor = SystemColors.ActiveCaption;
-            lblPetugas.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPetugas.ForeColor = Color.Black;
-            lblPetugas.Location = new Point(934, 236);
-            lblPetugas.Margin = new Padding(4, 0, 4, 0);
-            lblPetugas.Name = "lblPetugas";
-            lblPetugas.Size = new Size(117, 39);
-            lblPetugas.TabIndex = 43;
-            lblPetugas.Text = "Petugas Id";
-            // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(1383, 98);
+            pictureBox1.Location = new Point(1265, 112);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(366, 534);
             pictureBox1.TabIndex = 44;
@@ -337,44 +271,52 @@
             // 
             btnBatal.BackColor = Color.Red;
             btnBatal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBatal.Location = new Point(1599, 684);
+            btnBatal.Location = new Point(1481, 698);
             btnBatal.Margin = new Padding(4, 5, 4, 5);
             btnBatal.Name = "btnBatal";
             btnBatal.Size = new Size(161, 55);
             btnBatal.TabIndex = 46;
             btnBatal.Text = "Batal";
             btnBatal.UseVisualStyleBackColor = false;
+            btnBatal.Click += btnBatal_Click;
             // 
             // btnSimpan
             // 
             btnSimpan.BackColor = Color.Chartreuse;
             btnSimpan.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSimpan.Location = new Point(1383, 684);
+            btnSimpan.Location = new Point(1265, 698);
             btnSimpan.Margin = new Padding(4, 5, 4, 5);
             btnSimpan.Name = "btnSimpan";
             btnSimpan.Size = new Size(161, 55);
             btnSimpan.TabIndex = 45;
             btnSimpan.Text = "Simpan";
             btnSimpan.UseVisualStyleBackColor = false;
+            btnSimpan.Click += btnSimpan_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.logo;
+            pictureBox2.Location = new Point(1265, 112);
+            pictureBox2.Margin = new Padding(4);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(377, 534);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 17;
+            pictureBox2.TabStop = false;
             // 
             // vechileentry
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1910, 824);
+            Controls.Add(pictureBox2);
             Controls.Add(btnBatal);
             Controls.Add(btnSimpan);
             Controls.Add(pictureBox1);
-            Controls.Add(lblPetugas);
-            Controls.Add(lblCatatan);
-            Controls.Add(lblWaktu);
             Controls.Add(lblArea);
             Controls.Add(lblMerk);
             Controls.Add(lblKendaraan);
             Controls.Add(lblPlat);
-            Controls.Add(txtCatatan);
-            Controls.Add(txtIdPetugas);
-            Controls.Add(dtpMasuk);
             Controls.Add(cboAreaParkir);
             Controls.Add(txtMerkKendaraan);
             Controls.Add(cboJenisKendaraan);
@@ -388,6 +330,7 @@
             panelSidebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -408,18 +351,13 @@
         private ComboBox cboJenisKendaraan;
         private TextBox txtMerkKendaraan;
         private ComboBox cboAreaParkir;
-        private DateTimePicker dtpMasuk;
-        private TextBox txtIdPetugas;
-        private TextBox txtCatatan;
         private Label lblPlat;
         private Label lblKendaraan;
         private Label lblMerk;
         private Label lblArea;
-        private Label lblWaktu;
-        private Label lblCatatan;
-        private Label lblPetugas;
         private PictureBox pictureBox1;
         private Button btnBatal;
         private Button btnSimpan;
+        private PictureBox pictureBox2;
     }
 }

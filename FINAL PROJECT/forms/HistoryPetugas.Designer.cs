@@ -42,16 +42,6 @@
             label3 = new Label();
             panelContent = new Panel();
             dgvHistory = new DataGridView();
-            Kode = new DataGridViewTextBoxColumn();
-            area = new DataGridViewTextBoxColumn();
-            jenis = new DataGridViewTextBoxColumn();
-            petugas = new DataGridViewTextBoxColumn();
-            masuk = new DataGridViewTextBoxColumn();
-            keluar = new DataGridViewTextBoxColumn();
-            durasi = new DataGridViewTextBoxColumn();
-            biaya = new DataGridViewTextBoxColumn();
-            metode = new DataGridViewTextBoxColumn();
-            status = new DataGridViewTextBoxColumn();
             txtSearch = new TextBox();
             cbJenis = new ComboBox();
             cbPetugas = new ComboBox();
@@ -215,7 +205,6 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHistory.Columns.AddRange(new DataGridViewColumn[] { Kode, area, jenis, petugas, masuk, keluar, durasi, biaya, metode, status });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -233,66 +222,6 @@
             dgvHistory.Size = new Size(1534, 590);
             dgvHistory.TabIndex = 5;
             dgvHistory.CellContentClick += dgvHistory_CellContentClick;
-            // 
-            // Kode
-            // 
-            Kode.HeaderText = "Kode Transaction";
-            Kode.MinimumWidth = 6;
-            Kode.Name = "Kode";
-            // 
-            // area
-            // 
-            area.HeaderText = "Area";
-            area.MinimumWidth = 6;
-            area.Name = "area";
-            // 
-            // jenis
-            // 
-            jenis.HeaderText = "Jenis Kendaraan";
-            jenis.MinimumWidth = 6;
-            jenis.Name = "jenis";
-            // 
-            // petugas
-            // 
-            petugas.HeaderText = "ID petugas";
-            petugas.MinimumWidth = 6;
-            petugas.Name = "petugas";
-            // 
-            // masuk
-            // 
-            masuk.HeaderText = "Masuk";
-            masuk.MinimumWidth = 6;
-            masuk.Name = "masuk";
-            // 
-            // keluar
-            // 
-            keluar.HeaderText = "Keluar";
-            keluar.MinimumWidth = 6;
-            keluar.Name = "keluar";
-            // 
-            // durasi
-            // 
-            durasi.HeaderText = "Durasi";
-            durasi.MinimumWidth = 6;
-            durasi.Name = "durasi";
-            // 
-            // biaya
-            // 
-            biaya.HeaderText = "Biaya";
-            biaya.MinimumWidth = 6;
-            biaya.Name = "biaya";
-            // 
-            // metode
-            // 
-            metode.HeaderText = "Metode";
-            metode.MinimumWidth = 6;
-            metode.Name = "metode";
-            // 
-            // status
-            // 
-            status.HeaderText = "Status";
-            status.MinimumWidth = 6;
-            status.Name = "status";
             // 
             // txtSearch
             // 
@@ -357,7 +286,7 @@
             Name = "HistoryPetugas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "History";
-            Load += History_Load;
+            Load += HistoryPetugas_Load;
             panelSidebar.ResumeLayout(false);
             panelSidebar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -386,16 +315,6 @@
         private TextBox txtSearch;
         private ComboBox cbJenis;
         private DataGridView dgvHistory;
-        private DataGridViewTextBoxColumn Kode;
-        private DataGridViewTextBoxColumn area;
-        private DataGridViewTextBoxColumn jenis;
-        private DataGridViewTextBoxColumn petugas;
-        private DataGridViewTextBoxColumn masuk;
-        private DataGridViewTextBoxColumn keluar;
-        private DataGridViewTextBoxColumn durasi;
-        private DataGridViewTextBoxColumn biaya;
-        private DataGridViewTextBoxColumn metode;
-        private DataGridViewTextBoxColumn status;
         private Button btnVehicleData;
     }
 }

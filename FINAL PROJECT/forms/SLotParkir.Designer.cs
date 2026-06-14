@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblMasuk = new Label();
             cmsJenisKendaraan = new ComboBox();
-            dtpMasuk = new DateTimePicker();
-            txtPlatNomer = new TextBox();
-            lblPlatNomer = new Label();
             lblArea = new Label();
             lblStatus = new Label();
             lblKendaraan = new Label();
@@ -45,19 +41,6 @@
             cmbStatus = new ComboBox();
             SuspendLayout();
             // 
-            // lblMasuk
-            // 
-            lblMasuk.AutoSize = true;
-            lblMasuk.BackColor = SystemColors.ActiveCaption;
-            lblMasuk.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMasuk.ForeColor = Color.Black;
-            lblMasuk.Location = new Point(758, 593);
-            lblMasuk.Margin = new Padding(4, 0, 4, 0);
-            lblMasuk.Name = "lblMasuk";
-            lblMasuk.Size = new Size(149, 39);
-            lblMasuk.TabIndex = 36;
-            lblMasuk.Text = "Waktu Masuk";
-            // 
             // cmsJenisKendaraan
             // 
             cmsJenisKendaraan.FormattingEnabled = true;
@@ -68,37 +51,6 @@
             cmsJenisKendaraan.Size = new Size(183, 33);
             cmsJenisKendaraan.TabIndex = 35;
             cmsJenisKendaraan.SelectedIndexChanged += comboStatus_SelectedIndexChanged;
-            // 
-            // dtpMasuk
-            // 
-            dtpMasuk.Location = new Point(951, 597);
-            dtpMasuk.Margin = new Padding(4, 5, 4, 5);
-            dtpMasuk.Name = "dtpMasuk";
-            dtpMasuk.Size = new Size(181, 31);
-            dtpMasuk.TabIndex = 33;
-            dtpMasuk.ValueChanged += dateTimePicker1_ValueChanged;
-            // 
-            // txtPlatNomer
-            // 
-            txtPlatNomer.BackColor = SystemColors.Window;
-            txtPlatNomer.Location = new Point(951, 518);
-            txtPlatNomer.Margin = new Padding(4, 5, 4, 5);
-            txtPlatNomer.Name = "txtPlatNomer";
-            txtPlatNomer.Size = new Size(181, 31);
-            txtPlatNomer.TabIndex = 30;
-            // 
-            // lblPlatNomer
-            // 
-            lblPlatNomer.AutoSize = true;
-            lblPlatNomer.BackColor = SystemColors.ActiveCaption;
-            lblPlatNomer.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPlatNomer.ForeColor = Color.Black;
-            lblPlatNomer.Location = new Point(758, 518);
-            lblPlatNomer.Margin = new Padding(4, 0, 4, 0);
-            lblPlatNomer.Name = "lblPlatNomer";
-            lblPlatNomer.Size = new Size(125, 39);
-            lblPlatNomer.TabIndex = 29;
-            lblPlatNomer.Text = "Plat Nomer";
             // 
             // lblArea
             // 
@@ -229,11 +181,7 @@
             Controls.Add(lblInputSLot);
             Controls.Add(btnBatal);
             Controls.Add(btnSimpan);
-            Controls.Add(lblMasuk);
             Controls.Add(cmsJenisKendaraan);
-            Controls.Add(dtpMasuk);
-            Controls.Add(txtPlatNomer);
-            Controls.Add(lblPlatNomer);
             Controls.Add(lblArea);
             Controls.Add(lblStatus);
             Controls.Add(lblKendaraan);
@@ -247,12 +195,7 @@
         }
 
         #endregion
-
-        private Label lblMasuk;
         private ComboBox cmsJenisKendaraan;
-        private DateTimePicker dtpMasuk;
-        private TextBox txtPlatNomer;
-        private Label lblPlatNomer;
         private Label lblArea;
         private Label lblStatus;
         private Label lblKendaraan;

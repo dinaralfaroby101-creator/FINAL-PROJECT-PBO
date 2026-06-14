@@ -53,8 +53,7 @@
             txtSearch = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            cmbArea = new ComboBox();
             button1 = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
@@ -241,8 +240,7 @@
             panel1.BackColor = Color.WhiteSmoke;
             panel1.Controls.Add(panel7);
             panel1.Controls.Add(panelHeader);
-            panel1.Controls.Add(comboBox2);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(cmbArea);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
@@ -389,27 +387,17 @@
             label3.TabIndex = 1;
             label3.Text = "Dashboard / Parking data";
             // 
-            // comboBox2
+            // cmbArea
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Bus", "Mobil", "Motor" });
-            comboBox2.Location = new Point(719, 319);
-            comboBox2.Margin = new Padding(4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(188, 33);
-            comboBox2.TabIndex = 5;
-            comboBox2.Text = "Semua Jenis";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Area A", "Area B", "Area C" });
-            comboBox1.Location = new Point(454, 319);
-            comboBox1.Margin = new Padding(4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(188, 33);
-            comboBox1.TabIndex = 4;
-            comboBox1.Text = "Semua Area";
+            cmbArea.FormattingEnabled = true;
+            cmbArea.Items.AddRange(new object[] { "Area A", "Area B", "Area C" });
+            cmbArea.Location = new Point(454, 319);
+            cmbArea.Margin = new Padding(4);
+            cmbArea.Name = "cmbArea";
+            cmbArea.Size = new Size(188, 33);
+            cmbArea.TabIndex = 4;
+            cmbArea.Text = "Semua Area";
+            cmbArea.SelectedIndexChanged += cmbArea_SelectedIndexChanged;
             // 
             // button1
             // 
@@ -749,8 +737,7 @@
         private Label label13;
         private PictureBox pictureBox5;
         private Button button1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox cmbArea;
         private Panel panelHeader;
         private TextBox txtSearch;
         private Panel panelSearch;

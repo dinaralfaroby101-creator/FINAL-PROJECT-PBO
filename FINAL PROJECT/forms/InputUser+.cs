@@ -15,9 +15,21 @@ namespace FINAL_PROJECT.forms
 {
     public partial class InputUser_ : Form
     {
+
+        private int _idUser = 0;
+    
         public InputUser_()
         {
             InitializeComponent();
+        }
+
+        public InputUser_(int idUser)
+        {
+            InitializeComponent();
+
+            _idUser = idUser;
+
+            LoadUser();
         }
 
         private void lblInputUser_Click(object sender, EventArgs e)
@@ -45,78 +57,174 @@ namespace FINAL_PROJECT.forms
 
         }
 
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void btnSimpan_Click(
+    object sender,
+    EventArgs e)
         {
             try
             {
-                using (var conn = DatabaseHelper.Instance.GetConnection())
+                if (
+                    string.IsNullOrWhiteSpace(
+                        txtNamaUser.Text)
+                    ||
+                    string.IsNullOrWhiteSpace(
+                        txtUsername.Text)
+                    ||
+                    string.IsNullOrWhiteSpace(
+                        txtPassword.Text)
+                    ||
+                    cmbRole.SelectedIndex == -1
+                )
                 {
-                    string query = @"
-            INSERT INTO users
-            (
-                username,
-                password_akun,
-                nama_lengkap,
-                role,
-                status_user
-            )
-            VALUES
-            (
-                @username,
-                @password,
-                @nama,
-                @role::role_user_enum,
-                @status::status_user_enum
-            )";
+                    MessageBox.Show(
+                        "Semua data wajib diisi");
 
-                    using (var cmd = new NpgsqlCommand(query, conn))
+                    return;
+                }
+
+                using (var conn =
+                    DatabaseHelper.Instance.GetConnection())
+                {
+                    string query;
+
+                    if (_idUser == 0)
                     {
-                        cmd.Parameters.AddWithValue("@username",
-                                                    txtUsername.Text);
-                        cmd.Parameters.AddWithValue("@username",
+                        query = @"
+                INSERT INTO users
+                (
+                    username,
+                    password_akun,
+                    nama_lengkap,
+                    role,
+                    status_user
+                )
+                VALUES
+                (
+                    @username,
+                    @password,
+                    @nama,
+                    @role::role_user_enum,
+                    @status::status_user_enum
+                )";
+                    }
+                    else
+                    {
+                        query = @"
+                UPDATE users
+                SET
+                    username = @username,
+                    password_akun = @password,
+                    nama_lengkap = @nama,
+                    role = @role::role_user_enum
+                WHERE id_user = @id";
+                    }
+
+                    using (var cmd =
+                        new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue(
+                            "@username",
                             txtUsername.Text);
 
-                        cmd.Parameters.AddWithValue("@password",
+                        cmd.Parameters.AddWithValue(
+                            "@password",
                             txtPassword.Text);
 
-                        cmd.Parameters.AddWithValue("@nama",
+                        cmd.Parameters.AddWithValue(
+                            "@nama",
                             txtNamaUser.Text);
 
-                        cmd.Parameters.AddWithValue("@role",
+                        cmd.Parameters.AddWithValue(
+                            "@role",
                             cmbRole.Text.ToLower());
 
-                        cmd.Parameters.AddWithValue("@status",
-                            "Offline");
+                        if (_idUser == 0)
+                        {
+                            cmd.Parameters.AddWithValue(
+                                "@status",
+                                "Offline");
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue(
+                                "@id",
+                                _idUser);
+                        }
 
-
-                        MessageBox.Show(
-    "cmbRole.Text = [" + cmbRole.Text + "]"
-);
-                        MessageBox.Show(
-    "Lower = [" + cmbRole.Text.ToLower() + "]"
-);
                         cmd.ExecuteNonQuery();
-
                     }
                 }
 
-                MessageBox.Show("User berhasil ditambahkan");
+                if (_idUser == 0)
+                {
+                    MessageBox.Show(
+                        "User berhasil ditambahkan");
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "User berhasil diupdate");
+                }
 
+                this.DialogResult =
+                    DialogResult.OK;
 
-                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
-
-
+                MessageBox.Show(
+                    ex.Message);
             }
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+
+
+        private void LoadUser()
+        {
+            using (var conn =
+                DatabaseHelper.Instance.GetConnection())
+            {
+                string query = @"
+            SELECT *
+            FROM users
+            WHERE id_user=@id";
+
+                using (var cmd =
+                    new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue(
+                        "@id",
+                        _idUser);
+
+                    using (var rd =
+                        cmd.ExecuteReader())
+                    {
+                        if (rd.Read())
+                        {
+                            txtNamaUser.Text =
+                                rd["nama_lengkap"].ToString();
+
+                            txtUsername.Text =
+                                rd["username"].ToString();
+
+                            txtPassword.Text =
+                                rd["password_akun"].ToString();
+
+                            cmbRole.Text =
+                                rd["role"].ToString();
+                        }
+                    }
+                }
+            }
+
+            lbl.Text = "Edit User";
         }
     }
 }

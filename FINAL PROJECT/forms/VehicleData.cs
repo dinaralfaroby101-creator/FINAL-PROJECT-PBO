@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FINAL_PROJECT.Controllers;
 
 namespace FINAL_PROJECT.forms
 {
@@ -17,9 +18,35 @@ namespace FINAL_PROJECT.forms
             InitializeComponent();
         }
 
-        private void VehicleData_Load(object sender, EventArgs e)
+        private void VehicleData_Load(
+    object sender,
+    EventArgs e)
         {
+            LoadVehicleData();
+            LoadStatistic();
+        }
 
+
+        private void LoadStatistic()
+        {
+            VehicleController controller =
+                new VehicleController();
+
+            lblTotKendaraan.Text =
+                controller.GetTotalVehicle()
+                .ToString();
+
+            lblTotalMotor.Text =
+                controller.GetTotalMotor()
+                .ToString();
+
+            lblTotalMobil.Text =
+                controller.GetTotalMobil()
+                .ToString();
+
+            lblTotalBus.Text =
+                controller.GetTotalBus()
+                .ToString();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -94,9 +121,30 @@ namespace FINAL_PROJECT.forms
             this.Hide();
         }
 
-        private void PanelArea_Paint(object sender, PaintEventArgs e)
-        {
 
+
+        private void LoadVehicleData()
+        {
+            VehicleController controller =
+                new VehicleController();
+
+            gdvVehicleData.DataSource =
+                controller.GetAllVehicle();
+
+            gdvVehicleData.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            gdvVehicleData.ReadOnly = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            VehicleController controller =
+        new VehicleController();
+
+            gdvVehicleData.DataSource =
+                controller.SearchVehicle(
+                    textBox1.Text);
         }
     }
 }

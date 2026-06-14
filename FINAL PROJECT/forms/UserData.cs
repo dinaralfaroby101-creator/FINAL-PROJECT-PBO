@@ -1,4 +1,5 @@
-﻿using FINAL_PROJECT.Data;
+﻿using FINAL_PROJECT.Controller;
+using FINAL_PROJECT.Data;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -163,40 +164,19 @@ namespace FINAL_PROJECT.forms
     object sender,
     EventArgs e)
         {
-            using (var conn =
-                DatabaseHelper.Instance.GetConnection())
+            UserController controller =
+                new UserController();
+
+            if (cbxUser.Text ==
+                "Semua User")
             {
-                string query =
-                @"SELECT
-                id_user,
-                username,
-                password_akun,
-                nama_lengkap,
-                role,
-                status_user,
-                last_login
-              FROM users";
-
-                if (cbxUser.Text != "Semua User")
-                {
-                    query += " WHERE role = @role";
-                }
-
-                NpgsqlDataAdapter da =
-                    new NpgsqlDataAdapter(query, conn);
-
-                if (cbxUser.Text != "Semua User")
-                {
-                    da.SelectCommand.Parameters.AddWithValue(
-                        "@role",
+                LoadUserData();
+            }
+            else
+            {
+                dgvUser.DataSource =
+                    controller.GetByRole(
                         cbxUser.Text);
-                }
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                dgvUser.DataSource = dt;
             }
         }
 
@@ -208,36 +188,23 @@ namespace FINAL_PROJECT.forms
 
         private void UpdateStatistic()
         {
-            using (var conn = DatabaseHelper.Instance.GetConnection())
-            {
-                string total =
-                    "SELECT COUNT(*) FROM users";
+            UserController controller =
+                new UserController();
 
-                string admin =
-                    "SELECT COUNT(*) FROM users WHERE role='admin'";
+            var data =
+                controller.GetStatistic();
 
-                string petugas =
-                    "SELECT COUNT(*) FROM users WHERE role='petugas'";
+            lblJumlahUser.Text =
+                data.TotalUser.ToString();
 
-                string aktif =
-                    "SELECT COUNT(*) FROM users WHERE status_user='Active'";
+            lblJumlahAdmin.Text =
+                data.TotalAdmin.ToString();
 
-                lblJumlahUser.Text =
-                    new NpgsqlCommand(total, conn)
-                    .ExecuteScalar().ToString();
+            lblJumlahPetugas.Text =
+                data.TotalPetugas.ToString();
 
-                lblJumlahAdmin.Text =
-                    new NpgsqlCommand(admin, conn)
-                    .ExecuteScalar().ToString();
-
-                lblJumlahPetugas.Text =
-                    new NpgsqlCommand(petugas, conn)
-                    .ExecuteScalar().ToString();
-
-                lblJumlahUserAktif.Text =
-                    new NpgsqlCommand(aktif, conn)
-                    .ExecuteScalar().ToString();
-            }
+            lblJumlahUserAktif.Text =
+                data.TotalAktif.ToString();
         }
 
         private void btnTambahUser_Click(object sender, EventArgs e)
@@ -252,30 +219,15 @@ namespace FINAL_PROJECT.forms
         }
 
         private void txtSearch_TextChanged(
-        object sender,
-        EventArgs e)
+    object sender,
+    EventArgs e)
         {
-            using (var conn =
-                DatabaseHelper.Instance.GetConnection())
-            {
-                string query =
-                @"SELECT *
-          FROM users
-          WHERE username ILIKE @search";
+            UserController controller =
+                new UserController();
 
-                NpgsqlDataAdapter da =
-                    new NpgsqlDataAdapter(query, conn);
-
-                da.SelectCommand.Parameters.AddWithValue(
-                    "@search",
-                    "%" + txtCariUsername.Text + "%");
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                dgvUser.DataSource = dt;
-            }
+            dgvUser.DataSource =
+                controller.Search(
+                    txtCariUsername.Text);
         }
 
         private void dgvUser_CellContentClick(
@@ -312,29 +264,29 @@ namespace FINAL_PROJECT.forms
             if (result == DialogResult.No)
                 return;
 
-            using (var conn =
-                DatabaseHelper.Instance.GetConnection())
-            {
-                string query =
-                    "DELETE FROM users WHERE id_user=@id";
+            UserController controller =
+                new UserController();
 
-                using (var cmd =
-                    new NpgsqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", id);
-
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            controller.DeleteUser(id);
 
             LoadUserData();
             UpdateStatistic();
         }
 
+        
+        
+
         private void EditUser(int id)
         {
-            MessageBox.Show(
-                "Edit User ID : " + id);
+            InputUser_ form =
+                new InputUser_(id);
+
+            if (form.ShowDialog() ==
+                DialogResult.OK)
+            {
+                LoadUserData();
+                UpdateStatistic();
+            }
         }
 
         private void button1_Click(

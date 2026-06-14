@@ -1,4 +1,5 @@
-﻿using FINAL_PROJECT.Data;
+﻿using FINAL_PROJECT.Controllers;
+using FINAL_PROJECT.Data;
 using Npgsql;
 using System;
 using System.Data;
@@ -13,62 +14,21 @@ namespace FINAL_PROJECT.forms
             InitializeComponent();
         }
 
-        private void ParkingData_Load(object sender, EventArgs e)
-        {
-            LoadParkingData();
-            UpdateStatistic();
-        }
+
 
         // ==========================
         // LOAD DATA GRID
         // ==========================
         private void LoadParkingData()
         {
-            using (var conn = DatabaseHelper.Instance.GetConnection())
-            {
-                string query =
-                    "SELECT * FROM slot_parkir ORDER BY id_slot";
+            ParkingDataController controller =
+                new ParkingDataController();
 
-                NpgsqlDataAdapter da =
-                    new NpgsqlDataAdapter(query, conn);
+            dataGridView1.DataSource =
+                controller.GetAll();
 
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-
-                dataGridView1.AutoSizeColumnsMode =
-                    DataGridViewAutoSizeColumnsMode.Fill;
-
-                // tombol edit
-                if (!dataGridView1.Columns.Contains("Edit"))
-                {
-                    DataGridViewButtonColumn edit =
-                        new DataGridViewButtonColumn();
-
-                    edit.Name = "Edit";
-                    edit.HeaderText = "Edit";
-                    edit.Text = "Edit";
-                    edit.UseColumnTextForButtonValue = true;
-
-                    dataGridView1.Columns.Add(edit);
-                }
-
-                // tombol delete
-                if (!dataGridView1.Columns.Contains("Delete"))
-                {
-                    DataGridViewButtonColumn hapus =
-                        new DataGridViewButtonColumn();
-
-                    hapus.Name = "Delete";
-                    hapus.HeaderText = "Delete";
-                    hapus.Text = "Delete";
-                    hapus.UseColumnTextForButtonValue = true;
-
-                    dataGridView1.Columns.Add(hapus);
-                }
-            }
+            dataGridView1.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         // ==========================
@@ -76,40 +36,23 @@ namespace FINAL_PROJECT.forms
         // ==========================
         private void UpdateStatistic()
         {
-            using (var conn = DatabaseHelper.Instance.GetConnection())
-            {
-                string total =
-                    "SELECT COUNT(*) FROM slot_parkir";
+            ParkingDataController controller =
+                new ParkingDataController();
 
-                string kosong =
-                    "SELECT COUNT(*) FROM slot_parkir WHERE status_slot='kosong'";
+            var data =
+                controller.GetStatistic();
 
-                string terisi =
-                    "SELECT COUNT(*) FROM slot_parkir WHERE status_slot='terisi'";
+            label6.Text =
+                data.TotalSlot.ToString();
 
-                string maintenance =
-                    "SELECT COUNT(*) FROM slot_parkir WHERE status_slot='maintenance'";
+            label9.Text =
+                data.SlotKosong.ToString();
 
-                label6.Text =
-                    new NpgsqlCommand(total, conn)
-                    .ExecuteScalar()
-                    .ToString();
+            label12.Text =
+                data.SlotTerisi.ToString();
 
-                label9.Text =
-                    new NpgsqlCommand(kosong, conn)
-                    .ExecuteScalar()
-                    .ToString();
-
-                label12.Text =
-                    new NpgsqlCommand(terisi, conn)
-                    .ExecuteScalar()
-                    .ToString();
-
-                label15.Text =
-                    new NpgsqlCommand(maintenance, conn)
-                    .ExecuteScalar()
-                    .ToString();
-            }
+            label15.Text =
+                data.SlotMaintenance.ToString();
         }
 
         // ==========================
@@ -138,26 +81,12 @@ namespace FINAL_PROJECT.forms
 
         private void SearchData()
         {
-            using (var conn = DatabaseHelper.Instance.GetConnection())
-            {
-                string query =
-                    @"SELECT *
-                      FROM slot_parkir
-                      WHERE kode_slot ILIKE @search";
+            ParkingDataController controller =
+                new ParkingDataController();
 
-                NpgsqlDataAdapter da =
-                    new NpgsqlDataAdapter(query, conn);
-
-                da.SelectCommand.Parameters.AddWithValue(
-                    "@search",
-                    "%" + txtSearch.Text + "%");
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }
+            dataGridView1.DataSource =
+                controller.Search(
+                    txtSearch.Text);
         }
 
         // ==========================
@@ -203,21 +132,13 @@ namespace FINAL_PROJECT.forms
             if (result == DialogResult.No)
                 return;
 
-            using (var conn = DatabaseHelper.Instance.GetConnection())
-            {
-                string query =
-                    "DELETE FROM slot_parkir WHERE id_slot=@id";
+            ParkingDataController controller =
+    new ParkingDataController();
 
-                using (var cmd =
-                    new NpgsqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue(
-                        "@id",
-                        id);
+            controller.Delete(id);
 
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            LoadParkingData();
+            UpdateStatistic();
 
             LoadParkingData();
             UpdateStatistic();
@@ -228,9 +149,15 @@ namespace FINAL_PROJECT.forms
         // ==========================
         private void EditData(int id)
         {
-            MessageBox.Show(
-                "Fitur Edit Slot ID : " + id +
-                "\nBelum dibuat");
+            SLotParkir form =
+                new SLotParkir(id);
+
+            if (form.ShowDialog()
+                == DialogResult.OK)
+            {
+                LoadParkingData();
+                UpdateStatistic();
+            }
         }
 
         // ==========================
@@ -317,6 +244,54 @@ namespace FINAL_PROJECT.forms
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ParkingData_Load(
+    object sender,
+    EventArgs e)
+        {
+            LoadParkingData();
+            UpdateStatistic();
+
+            cmbArea.Items.Clear();
+
+            cmbArea.Items.Add(
+                "Semua Area");
+
+            cmbArea.Items.Add(
+                "Area A");
+
+            cmbArea.Items.Add(
+                "Area B");
+
+            cmbArea.Items.Add(
+                "Area C");
+
+            cmbArea.SelectedIndex = 0;
+        }
+
+        private void cmbArea_SelectedIndexChanged(
+    object sender,
+    EventArgs e)
+        {
+            ParkingDataController controller =
+                new ParkingDataController();
+
+            if (cmbArea.Text ==
+                "Semua Area")
+            {
+                dataGridView1.DataSource =
+                    controller.GetAll();
+            }
+            else
+            {
+                string area =
+                    cmbArea.Text
+                    .Replace("Area ", "");
+
+                dataGridView1.DataSource =
+                    controller.GetByArea(area);
+            }
         }
     }
 }

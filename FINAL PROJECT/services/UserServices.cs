@@ -1,10 +1,13 @@
 ﻿using FINAL_PROJECT.Data;
+using FINAL_PROJECT.Interfaces;
+using FINAL_PROJECT.Models;
+using FINAL_PROJECT.Repositories;
 using Npgsql;
 using System.Data;
 
 namespace FINAL_PROJECT.Services
 {
-    public class UserService
+    public class UserServices
     {
         public DataTable GetUsers()
         {
@@ -73,6 +76,47 @@ namespace FINAL_PROJECT.Services
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+
+
+        private readonly UserRepository
+           _repository =
+           new UserRepository();
+
+        public List<UserModels> GetAll()
+        {
+            return _repository.GetAllUsers();
+        }
+
+        public void DeleteUser(int id)
+        {
+            _repository.DeleteUser(id);
+        }
+
+        public List<UserModels> Search(string keyword)
+        {
+            return _repository.Search(keyword);
+        }
+
+
+
+
+        public List<UserModels>
+    GetByRole(string role)
+        {
+            return _repository
+                .GetByRole(role);
+        }
+
+
+
+
+        public UserStatisticModel
+    GetStatistic()
+        {
+            return _repository
+                .GetStatistic();
         }
     }
 }

@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FINAL_PROJECT.Data;
-using Npgsql;
+using FINAL_PROJECT.Controllers;
 
 namespace FINAL_PROJECT.forms
 
@@ -21,69 +20,53 @@ namespace FINAL_PROJECT.forms
         }
         private void LoadMonitoring()
         {
-            try
+            MonitoringController controller =
+                new MonitoringController();
+
+            var data =
+                controller.GetMonitoringSlots();
+
+            panel11.Controls.Clear();
+            panel10.Controls.Clear();
+            panelBus.Controls.Clear();
+
+            foreach (var item in data)
             {
-                using var conn =
-                    DatabaseHelper.Instance.GetConnection();
+                Label lbl = new Label();
 
-                string query = @"
-        SELECT *
-        FROM v_monitoring_slot
-        ORDER BY kode_slot";
+                lbl.Width = 70;
+                lbl.Height = 40;
 
-                using var cmd =
-                    new NpgsqlCommand(query, conn);
+                lbl.TextAlign =
+                    ContentAlignment.MiddleCenter;
 
-                using var rd =
-                    cmd.ExecuteReader();
+                lbl.BorderStyle =
+                    BorderStyle.FixedSingle;
 
-                panel11.Controls.Clear();
-                panel10.Controls.Clear();
-                panelBus.Controls.Clear();
+                lbl.Text =
+                    item.KodeSlot;
 
-                while (rd.Read())
-                {
-                    Label lbl = new Label();
+                bool terisi =
+                    item.StatusSlot
+                    .ToLower() == "terisi";
 
-                    lbl.Width = 70;
-                    lbl.Height = 40;
-                    lbl.TextAlign =
-                        ContentAlignment.MiddleCenter;
+                lbl.BackColor =
+                    terisi
+                    ? Color.Red
+                    : Color.LightGreen;
 
-                    lbl.BorderStyle =
-                        BorderStyle.FixedSingle;
+                string jenis =
+                    item.JenisKendaraan
+                    .ToLower();
 
-                    lbl.Text =
-                        rd["kode_slot"].ToString();
+                if (jenis == "motor")
+                    panel11.Controls.Add(lbl);
 
-                    bool terisi =
-                        rd["status_slot"]
-                        .ToString()
-                        .ToLower() == "terisi";
+                else if (jenis == "mobil")
+                    panel10.Controls.Add(lbl);
 
-                    lbl.BackColor =
-                        terisi
-                        ? Color.Red
-                        : Color.LightGreen;
-
-                    string jenis =
-                        rd["jenis_kendaraan"]
-                        .ToString()
-                        .ToLower();
-
-                    if (jenis == "motor")
-                        panel11.Controls.Add(lbl);
-
-                    else if (jenis == "mobil")
-                        panel10.Controls.Add(lbl);
-
-                    else if (jenis == "bus")
-                        panelBus.Controls.Add(lbl);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                else if (jenis == "bus")
+                    panelBus.Controls.Add(lbl);
             }
         }
         private void button3_Click(object sender, EventArgs e)
@@ -135,42 +118,19 @@ namespace FINAL_PROJECT.forms
 
         private void LoadGridMonitoring()
         {
-            try
-            {
-                using var conn =
-                    DatabaseHelper.Instance.GetConnection();
+            MonitoringController controller =
+                new MonitoringController();
 
-                string query = @"
-        SELECT
-            kode_slot AS ""Kode Slot"",
-            status_slot AS ""Status"",
-            jenis_kendaraan AS ""Jenis Kendaraan"",
-            plat_nomor AS ""Plat Nomor"",
-            waktu_masuk AS ""Waktu Masuk"",
-            nama_petugas AS ""Petugas""
-        FROM v_monitoring_slot
-        ORDER BY kode_slot";
+            dgvListMonitoring.DataSource =
+                controller.GetMonitoringSlots();
 
-                DataTable dt = new DataTable();
+            dgvListMonitoring.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
 
-                using var da =
-                    new NpgsqlDataAdapter(query, conn);
+            dgvListMonitoring.ReadOnly = true;
 
-                da.Fill(dt);
-
-                dgvListMonitoring.DataSource = dt;
-
-                dgvListMonitoring
-                    .AutoSizeColumnsMode =
-                    DataGridViewAutoSizeColumnsMode.Fill;
-
-                dgvListMonitoring.ReadOnly = true;
-                dgvListMonitoring.AllowUserToAddRows = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            dgvListMonitoring.AllowUserToAddRows =
+                false;
         }
 
         private void Monitoring_Load(object sender, EventArgs e)
@@ -178,7 +138,7 @@ namespace FINAL_PROJECT.forms
             LoadMonitoring();
             LoadGridMonitoring();
             LoadStatistic();
-            LoadJumlahSlot();
+           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -206,70 +166,38 @@ namespace FINAL_PROJECT.forms
 
         private void LoadStatistic()
         {
-            try
-            {
-                using var conn =
-                    DatabaseHelper.Instance.GetConnection();
+            MonitoringController controller =
+                new MonitoringController();
 
-                LoadAreaStatistic(
-                    conn,
-                    "A",
-                    lblAreaAterisi,
-                    lblAreaA);
+            var areaA =
+                controller.GetAreaStatistic("A");
 
-                LoadAreaStatistic(
-                    conn,
-                    "B",
-                    lblAreaBterisi,
-                    lblAreaB);
+            var areaB =
+                controller.GetAreaStatistic("B");
 
-                LoadAreaStatistic(
-                    conn,
-                    "C",
-                    lblAreaCterisi,
-                    lblAreaC);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            var areaC =
+                controller.GetAreaStatistic("C");
+
+            lblAreaA.Text =
+                areaA.TotalSlot.ToString();
+
+            lblAreaAterisi.Text =
+                areaA.SlotTerisi.ToString();
+
+            lblAreaB.Text =
+                areaB.TotalSlot.ToString();
+
+            lblAreaBterisi.Text =
+                areaB.SlotTerisi.ToString();
+
+            lblAreaC.Text =
+                areaC.TotalSlot.ToString();
+
+            lblAreaCterisi.Text =
+                areaC.SlotTerisi.ToString();
         }
 
-        private void LoadAreaStatistic(
-            NpgsqlConnection conn,
-            string area,
-            Label lblTerisi,
-            Label lblTotal)
-        {
-            string query = @"
-    SELECT
-        COUNT(*) FILTER
-        (WHERE status_slot = 'terisi') AS terisi,
-        COUNT(*) AS total
-    FROM slot_parkir
-    WHERE kode_slot LIKE @area";
 
-            using var cmd =
-                new NpgsqlCommand(query, conn);
-
-            cmd.Parameters.AddWithValue(
-                "@area",
-                area + "-%");
-
-            using var rd =
-                cmd.ExecuteReader();
-
-            if (rd.Read())
-            {
-                lblTerisi.Text =
-                    rd["terisi"].ToString();
-
-                lblTotal.Text =
-                    rd["total"].ToString();
-            }
-
-            rd.Close();
-        }
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -291,59 +219,7 @@ namespace FINAL_PROJECT.forms
 
         }
 
-        private void LoadJumlahSlot()
-        {
-            using var conn =
-                DatabaseHelper.Instance.GetConnection();
-
-            string query = @"
-    SELECT
-        LEFT(kode_slot,1) area,
-        COUNT(*) total,
-        SUM(
-            CASE
-                WHEN status_slot='terisi'
-                THEN 1
-                ELSE 0
-            END
-        ) terisi
-    FROM slot_parkir
-    GROUP BY LEFT(kode_slot,1)";
-
-            using var cmd =
-                new NpgsqlCommand(query, conn);
-
-            using var rd =
-                cmd.ExecuteReader();
-
-            while (rd.Read())
-            {
-                string area =
-                    rd["area"].ToString();
-
-                string total =
-                    rd["total"].ToString();
-
-                string terisi =
-                    rd["terisi"].ToString();
-
-                if (area == "A")
-                {
-                    lblAreaA.Text = total;
-                    lblAreaAterisi.Text = terisi;
-                }
-                else if (area == "B")
-                {
-                    lblAreaB.Text = total;
-                    lblAreaBterisi.Text = terisi;
-                }
-                else if (area == "C")
-                {
-                    lblAreaC.Text = total;
-                    lblAreaCterisi.Text = terisi;
-                }
-            }
-        }
+        
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {

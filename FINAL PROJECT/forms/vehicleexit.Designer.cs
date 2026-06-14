@@ -38,11 +38,13 @@
             lblSPpetugas = new Label();
             picLogo = new PictureBox();
             btnDashboardPetugas = new Button();
-            lblIdKendaraan = new Label();
-            txtCariKendaraan = new TextBox();
+            lblcariKendaraan = new Label();
+            txtPlatNoKendaraan = new TextBox();
             btnCari = new Button();
             panel1 = new Panel();
             label1 = new Label();
+            cboMetodePembayaran = new ComboBox();
+            lblPetugas = new Label();
             lblPetugasTitle = new Label();
             lblSlot = new Label();
             lblSlotTitle = new Label();
@@ -182,22 +184,22 @@
             btnDashboardPetugas.Text = "Dashboard";
             btnDashboardPetugas.UseVisualStyleBackColor = false;
             // 
-            // lblIdKendaraan
+            // lblcariKendaraan
             // 
-            lblIdKendaraan.AutoSize = true;
-            lblIdKendaraan.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIdKendaraan.Location = new Point(526, 112);
-            lblIdKendaraan.Name = "lblIdKendaraan";
-            lblIdKendaraan.Size = new Size(140, 28);
-            lblIdKendaraan.TabIndex = 4;
-            lblIdKendaraan.Text = "ID Kendaraan";
+            lblcariKendaraan.AutoSize = true;
+            lblcariKendaraan.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblcariKendaraan.Location = new Point(526, 112);
+            lblcariKendaraan.Name = "lblcariKendaraan";
+            lblcariKendaraan.Size = new Size(190, 28);
+            lblcariKendaraan.TabIndex = 4;
+            lblcariKendaraan.Text = "Plat No Kendaraan";
             // 
-            // txtCariKendaraan
+            // txtPlatNoKendaraan
             // 
-            txtCariKendaraan.Location = new Point(526, 146);
-            txtCariKendaraan.Name = "txtCariKendaraan";
-            txtCariKendaraan.Size = new Size(455, 31);
-            txtCariKendaraan.TabIndex = 5;
+            txtPlatNoKendaraan.Location = new Point(526, 146);
+            txtPlatNoKendaraan.Name = "txtPlatNoKendaraan";
+            txtPlatNoKendaraan.Size = new Size(455, 31);
+            txtPlatNoKendaraan.TabIndex = 5;
             // 
             // btnCari
             // 
@@ -210,10 +212,13 @@
             btnCari.TabIndex = 6;
             btnCari.Text = "Cari";
             btnCari.UseVisualStyleBackColor = false;
+            btnCari.Click += btnCari_Click;
             // 
             // panel1
             // 
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(cboMetodePembayaran);
+            panel1.Controls.Add(lblPetugas);
             panel1.Controls.Add(lblPetugasTitle);
             panel1.Controls.Add(lblSlot);
             panel1.Controls.Add(lblSlotTitle);
@@ -236,11 +241,28 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(554, 371);
+            label1.Location = new Point(404, 422);
             label1.Name = "label1";
-            label1.Size = new Size(19, 25);
-            label1.TabIndex = 13;
-            label1.Text = "-";
+            label1.Size = new Size(176, 25);
+            label1.TabIndex = 14;
+            label1.Text = "Metode Pembayaran";
+            // 
+            // cboMetodePembayaran
+            // 
+            cboMetodePembayaran.FormattingEnabled = true;
+            cboMetodePembayaran.Location = new Point(602, 420);
+            cboMetodePembayaran.Name = "cboMetodePembayaran";
+            cboMetodePembayaran.Size = new Size(137, 33);
+            cboMetodePembayaran.TabIndex = 9;
+            // 
+            // lblPetugas
+            // 
+            lblPetugas.AutoSize = true;
+            lblPetugas.Location = new Point(554, 371);
+            lblPetugas.Name = "lblPetugas";
+            lblPetugas.Size = new Size(19, 25);
+            lblPetugas.TabIndex = 13;
+            lblPetugas.Text = "-";
             // 
             // lblPetugasTitle
             // 
@@ -376,6 +398,7 @@
             btnKonfirmasi.TabIndex = 8;
             btnKonfirmasi.Text = "Konfirmasi";
             btnKonfirmasi.UseVisualStyleBackColor = false;
+            btnKonfirmasi.Click += btnKonfirmasi_Click;
             // 
             // vehicleexit
             // 
@@ -385,8 +408,8 @@
             Controls.Add(btnKonfirmasi);
             Controls.Add(panel1);
             Controls.Add(btnCari);
-            Controls.Add(txtCariKendaraan);
-            Controls.Add(lblIdKendaraan);
+            Controls.Add(txtPlatNoKendaraan);
+            Controls.Add(lblcariKendaraan);
             Controls.Add(panelSidebar);
             Name = "vehicleexit";
             StartPosition = FormStartPosition.CenterScreen;
@@ -414,8 +437,8 @@
         private Label lblSPpetugas;
         private PictureBox picLogo;
         private Button btnDashboardPetugas;
-        private Label lblIdKendaraan;
-        private TextBox txtCariKendaraan;
+        private Label lblcariKendaraan;
+        private TextBox txtPlatNoKendaraan;
         private Button btnCari;
         private Panel panel1;
         private Label lblArea;
@@ -429,9 +452,11 @@
         private Label lblDurasi;
         private Label lblDurasiTitle;
         private Label lblMasuk;
-        private Label label1;
+        private Label lblPetugas;
         private Label lblPetugasTitle;
         private Label lblSlot;
         private Button btnKonfirmasi;
+        private Label label1;
+        private ComboBox cboMetodePembayaran;
     }
 }
