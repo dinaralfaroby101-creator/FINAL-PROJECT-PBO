@@ -4,7 +4,7 @@ using Npgsql;
 
 namespace FINAL_PROJECT.Repositories
 {
-    public class MonitoringRepository
+public class MonitoringRepository
     {
         public List<MonitoringSlot>
             GetMonitoringSlots()
@@ -42,6 +42,9 @@ ORDER BY kode_slot";
 
                         PlatNomor =
                             rd["plat_nomor"].ToString(),
+
+                        WaktuMasuk = Convert.ToDateTime
+                            (rd["waktu_masuk"]),
 
                         NamaPetugas =
                             rd["nama_petugas"].ToString(),

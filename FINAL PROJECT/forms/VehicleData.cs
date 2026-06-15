@@ -146,5 +146,10 @@ namespace FINAL_PROJECT.forms
                 controller.SearchVehicle(
                     textBox1.Text);
         }
+
+        private void gdvVehicleData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

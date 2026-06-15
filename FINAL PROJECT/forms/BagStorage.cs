@@ -78,7 +78,7 @@ namespace FINAL_PROJECT.forms
             this.Hide();
         }
 
-        
+
 
         private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -90,7 +90,7 @@ namespace FINAL_PROJECT.forms
 
         }
 
-        
+
 
         private void txtIdPenitipan_TextChanged(
     object sender,
@@ -104,7 +104,7 @@ namespace FINAL_PROJECT.forms
                     txtIdPenitipan.Text);
         }
 
-        
+
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
@@ -300,6 +300,11 @@ namespace FINAL_PROJECT.forms
     EventArgs e)
         {
             LoadHistory();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

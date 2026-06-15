@@ -163,7 +163,7 @@ namespace FINAL_PROJECT.forms
 
         }
 
-       
+
 
         private void PanelMonitoring_Paint(object sender, PaintEventArgs e)
         {
@@ -236,6 +236,11 @@ namespace FINAL_PROJECT.forms
 
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel72_Paint(object sender, PaintEventArgs e)
         {
 
         }

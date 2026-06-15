@@ -77,7 +77,7 @@ namespace FINAL_PROJECT.forms
 
         private void dgvHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
 
@@ -99,6 +99,11 @@ namespace FINAL_PROJECT.forms
             dgvHistory.ReadOnly = true;
 
             dgvHistory.AllowUserToAddRows = false;
+        }
+
+        private void cbJenis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

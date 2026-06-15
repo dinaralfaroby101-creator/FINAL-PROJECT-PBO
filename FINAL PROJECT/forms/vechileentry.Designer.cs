@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vechileentry));
             panelSidebar = new Panel();
             btnVehicleEntry = new Button();
             btnVehicleExit = new Button();
@@ -70,28 +71,25 @@
             panelSidebar.Controls.Add(btnDashboardPetugas);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 0);
-            panelSidebar.Margin = new Padding(4);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(350, 824);
+            panelSidebar.Size = new Size(280, 659);
             panelSidebar.TabIndex = 2;
             // 
             // btnVehicleEntry
             // 
             btnVehicleEntry.BackColor = Color.DeepSkyBlue;
-            btnVehicleEntry.Location = new Point(81, 273);
-            btnVehicleEntry.Margin = new Padding(4);
+            btnVehicleEntry.Location = new Point(65, 218);
             btnVehicleEntry.Name = "btnVehicleEntry";
-            btnVehicleEntry.Size = new Size(229, 49);
+            btnVehicleEntry.Size = new Size(183, 39);
             btnVehicleEntry.TabIndex = 16;
             btnVehicleEntry.Text = "Vehicle Entry";
             btnVehicleEntry.UseVisualStyleBackColor = false;
             // 
             // btnVehicleExit
             // 
-            btnVehicleExit.Location = new Point(81, 335);
-            btnVehicleExit.Margin = new Padding(4);
+            btnVehicleExit.Location = new Point(65, 268);
             btnVehicleExit.Name = "btnVehicleExit";
-            btnVehicleExit.Size = new Size(229, 46);
+            btnVehicleExit.Size = new Size(183, 37);
             btnVehicleExit.TabIndex = 15;
             btnVehicleExit.Text = "Vehicle Exit";
             btnVehicleExit.UseVisualStyleBackColor = true;
@@ -100,10 +98,9 @@
             // btnVehicleData
             // 
             btnVehicleData.BackColor = Color.White;
-            btnVehicleData.Location = new Point(35, 199);
-            btnVehicleData.Margin = new Padding(4);
+            btnVehicleData.Location = new Point(28, 159);
             btnVehicleData.Name = "btnVehicleData";
-            btnVehicleData.Size = new Size(275, 62);
+            btnVehicleData.Size = new Size(220, 50);
             btnVehicleData.TabIndex = 13;
             btnVehicleData.Text = "Vehicle Data";
             btnVehicleData.UseVisualStyleBackColor = false;
@@ -111,30 +108,27 @@
             // 
             // btnLogOut
             // 
-            btnLogOut.Location = new Point(35, 610);
-            btnLogOut.Margin = new Padding(4);
+            btnLogOut.Location = new Point(28, 488);
             btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(275, 62);
+            btnLogOut.Size = new Size(220, 50);
             btnLogOut.TabIndex = 12;
             btnLogOut.Text = "Log Out";
             btnLogOut.UseVisualStyleBackColor = true;
             // 
             // btnHistoryPetugas
             // 
-            btnHistoryPetugas.Location = new Point(35, 499);
-            btnHistoryPetugas.Margin = new Padding(4);
+            btnHistoryPetugas.Location = new Point(28, 399);
             btnHistoryPetugas.Name = "btnHistoryPetugas";
-            btnHistoryPetugas.Size = new Size(275, 62);
+            btnHistoryPetugas.Size = new Size(220, 50);
             btnHistoryPetugas.TabIndex = 10;
             btnHistoryPetugas.Text = "History";
             btnHistoryPetugas.UseVisualStyleBackColor = true;
             // 
             // btnMonitoringPetugas
             // 
-            btnMonitoringPetugas.Location = new Point(35, 407);
-            btnMonitoringPetugas.Margin = new Padding(4);
+            btnMonitoringPetugas.Location = new Point(28, 326);
             btnMonitoringPetugas.Name = "btnMonitoringPetugas";
-            btnMonitoringPetugas.Size = new Size(275, 62);
+            btnMonitoringPetugas.Size = new Size(220, 50);
             btnMonitoringPetugas.TabIndex = 9;
             btnMonitoringPetugas.Text = "Monitoring";
             btnMonitoringPetugas.UseVisualStyleBackColor = true;
@@ -144,10 +138,9 @@
             lblSPpetugas.AutoSize = true;
             lblSPpetugas.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSPpetugas.ForeColor = Color.White;
-            lblSPpetugas.Location = new Point(81, 15);
-            lblSPpetugas.Margin = new Padding(4, 0, 4, 0);
+            lblSPpetugas.Location = new Point(65, 12);
             lblSPpetugas.Name = "lblSPpetugas";
-            lblSPpetugas.Size = new Size(243, 76);
+            lblSPpetugas.Size = new Size(199, 62);
             lblSPpetugas.TabIndex = 0;
             lblSPpetugas.Text = "SMART PARKING\r\nPETUGAS";
             lblSPpetugas.TextAlign = ContentAlignment.TopCenter;
@@ -155,10 +148,9 @@
             // picLogo
             // 
             picLogo.Image = Properties.Resources.logo;
-            picLogo.Location = new Point(6, 15);
-            picLogo.Margin = new Padding(4);
+            picLogo.Location = new Point(5, 12);
             picLogo.Name = "picLogo";
-            picLogo.Size = new Size(80, 78);
+            picLogo.Size = new Size(64, 62);
             picLogo.SizeMode = PictureBoxSizeMode.Zoom;
             picLogo.TabIndex = 5;
             picLogo.TabStop = false;
@@ -166,44 +158,47 @@
             // btnDashboardPetugas
             // 
             btnDashboardPetugas.BackColor = Color.White;
-            btnDashboardPetugas.Location = new Point(35, 112);
-            btnDashboardPetugas.Margin = new Padding(4);
+            btnDashboardPetugas.Location = new Point(28, 90);
             btnDashboardPetugas.Name = "btnDashboardPetugas";
-            btnDashboardPetugas.Size = new Size(275, 62);
+            btnDashboardPetugas.Size = new Size(220, 50);
             btnDashboardPetugas.TabIndex = 1;
             btnDashboardPetugas.Text = "Dashboard";
             btnDashboardPetugas.UseVisualStyleBackColor = false;
             // 
             // txtPlatNomor
             // 
-            txtPlatNomor.Location = new Point(534, 192);
+            txtPlatNomor.Location = new Point(427, 154);
+            txtPlatNomor.Margin = new Padding(2, 2, 2, 2);
             txtPlatNomor.Name = "txtPlatNomor";
-            txtPlatNomor.Size = new Size(315, 31);
+            txtPlatNomor.Size = new Size(253, 27);
             txtPlatNomor.TabIndex = 3;
             txtPlatNomor.TextChanged += txtPlatNomor_TextChanged;
             // 
             // cboJenisKendaraan
             // 
             cboJenisKendaraan.FormattingEnabled = true;
-            cboJenisKendaraan.Location = new Point(534, 330);
+            cboJenisKendaraan.Location = new Point(427, 264);
+            cboJenisKendaraan.Margin = new Padding(2, 2, 2, 2);
             cboJenisKendaraan.Name = "cboJenisKendaraan";
-            cboJenisKendaraan.Size = new Size(315, 33);
+            cboJenisKendaraan.Size = new Size(253, 28);
             cboJenisKendaraan.TabIndex = 4;
             cboJenisKendaraan.SelectedIndexChanged += cboJenisKendaraan_SelectedIndexChanged;
             // 
             // txtMerkKendaraan
             // 
-            txtMerkKendaraan.Location = new Point(534, 467);
+            txtMerkKendaraan.Location = new Point(427, 374);
+            txtMerkKendaraan.Margin = new Padding(2, 2, 2, 2);
             txtMerkKendaraan.Name = "txtMerkKendaraan";
-            txtMerkKendaraan.Size = new Size(315, 31);
+            txtMerkKendaraan.Size = new Size(253, 27);
             txtMerkKendaraan.TabIndex = 5;
             // 
             // cboAreaParkir
             // 
             cboAreaParkir.FormattingEnabled = true;
-            cboAreaParkir.Location = new Point(534, 604);
+            cboAreaParkir.Location = new Point(427, 483);
+            cboAreaParkir.Margin = new Padding(2, 2, 2, 2);
             cboAreaParkir.Name = "cboAreaParkir";
-            cboAreaParkir.Size = new Size(315, 33);
+            cboAreaParkir.Size = new Size(253, 28);
             cboAreaParkir.TabIndex = 6;
             // 
             // lblPlat
@@ -212,10 +207,9 @@
             lblPlat.BackColor = SystemColors.ActiveCaption;
             lblPlat.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPlat.ForeColor = Color.Black;
-            lblPlat.Location = new Point(534, 147);
-            lblPlat.Margin = new Padding(4, 0, 4, 0);
+            lblPlat.Location = new Point(427, 118);
             lblPlat.Name = "lblPlat";
-            lblPlat.Size = new Size(88, 39);
+            lblPlat.Size = new Size(73, 32);
             lblPlat.TabIndex = 37;
             lblPlat.Text = "No Plat";
             lblPlat.Click += lblKodeSlot_Click;
@@ -226,10 +220,9 @@
             lblKendaraan.BackColor = SystemColors.ActiveCaption;
             lblKendaraan.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblKendaraan.ForeColor = Color.Black;
-            lblKendaraan.Location = new Point(534, 285);
-            lblKendaraan.Margin = new Padding(4, 0, 4, 0);
+            lblKendaraan.Location = new Point(427, 228);
             lblKendaraan.Name = "lblKendaraan";
-            lblKendaraan.Size = new Size(173, 39);
+            lblKendaraan.Size = new Size(143, 32);
             lblKendaraan.TabIndex = 38;
             lblKendaraan.Text = "Jenis Kendaraan";
             // 
@@ -239,10 +232,9 @@
             lblMerk.BackColor = SystemColors.ActiveCaption;
             lblMerk.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMerk.ForeColor = Color.Black;
-            lblMerk.Location = new Point(534, 423);
-            lblMerk.Margin = new Padding(4, 0, 4, 0);
+            lblMerk.Location = new Point(427, 338);
             lblMerk.Name = "lblMerk";
-            lblMerk.Size = new Size(174, 39);
+            lblMerk.Size = new Size(144, 32);
             lblMerk.TabIndex = 39;
             lblMerk.Text = "Merk Kendaraan";
             // 
@@ -252,18 +244,18 @@
             lblArea.BackColor = SystemColors.ActiveCaption;
             lblArea.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblArea.ForeColor = Color.Black;
-            lblArea.Location = new Point(534, 561);
-            lblArea.Margin = new Padding(4, 0, 4, 0);
+            lblArea.Location = new Point(427, 449);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(124, 39);
+            lblArea.Size = new Size(103, 32);
             lblArea.TabIndex = 40;
             lblArea.Text = "Area Parkir";
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(1265, 112);
+            pictureBox1.Location = new Point(1012, 90);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(366, 534);
+            pictureBox1.Size = new Size(293, 427);
             pictureBox1.TabIndex = 44;
             pictureBox1.TabStop = false;
             // 
@@ -271,10 +263,10 @@
             // 
             btnBatal.BackColor = Color.Red;
             btnBatal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBatal.Location = new Point(1481, 698);
-            btnBatal.Margin = new Padding(4, 5, 4, 5);
+            btnBatal.Location = new Point(1185, 558);
+            btnBatal.Margin = new Padding(3, 4, 3, 4);
             btnBatal.Name = "btnBatal";
-            btnBatal.Size = new Size(161, 55);
+            btnBatal.Size = new Size(129, 44);
             btnBatal.TabIndex = 46;
             btnBatal.Text = "Batal";
             btnBatal.UseVisualStyleBackColor = false;
@@ -284,10 +276,10 @@
             // 
             btnSimpan.BackColor = Color.Chartreuse;
             btnSimpan.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSimpan.Location = new Point(1265, 698);
-            btnSimpan.Margin = new Padding(4, 5, 4, 5);
+            btnSimpan.Location = new Point(1012, 558);
+            btnSimpan.Margin = new Padding(3, 4, 3, 4);
             btnSimpan.Name = "btnSimpan";
-            btnSimpan.Size = new Size(161, 55);
+            btnSimpan.Size = new Size(129, 44);
             btnSimpan.TabIndex = 45;
             btnSimpan.Text = "Simpan";
             btnSimpan.UseVisualStyleBackColor = false;
@@ -295,20 +287,22 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Properties.Resources.logo;
-            pictureBox2.Location = new Point(1265, 112);
-            pictureBox2.Margin = new Padding(4);
+            pictureBox2.Location = new Point(1012, 90);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(377, 534);
+            pictureBox2.Size = new Size(302, 427);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 17;
             pictureBox2.TabStop = false;
             // 
             // vechileentry
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1910, 824);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1528, 659);
             Controls.Add(pictureBox2);
             Controls.Add(btnBatal);
             Controls.Add(btnSimpan);
@@ -322,6 +316,8 @@
             Controls.Add(cboJenisKendaraan);
             Controls.Add(txtPlatNomor);
             Controls.Add(panelSidebar);
+            DoubleBuffered = true;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "vechileentry";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "vechileentry";

@@ -43,12 +43,13 @@
             // 
             // cmsJenisKendaraan
             // 
+            cmsJenisKendaraan.DropDownStyle = ComboBoxStyle.DropDownList;
             cmsJenisKendaraan.FormattingEnabled = true;
             cmsJenisKendaraan.Items.AddRange(new object[] { "Bus", "Mobil", "Motor" });
-            cmsJenisKendaraan.Location = new Point(951, 308);
-            cmsJenisKendaraan.Margin = new Padding(4, 5, 4, 5);
+            cmsJenisKendaraan.Location = new Point(761, 246);
+            cmsJenisKendaraan.Margin = new Padding(3, 4, 3, 4);
             cmsJenisKendaraan.Name = "cmsJenisKendaraan";
-            cmsJenisKendaraan.Size = new Size(183, 33);
+            cmsJenisKendaraan.Size = new Size(147, 28);
             cmsJenisKendaraan.TabIndex = 35;
             cmsJenisKendaraan.SelectedIndexChanged += comboStatus_SelectedIndexChanged;
             // 
@@ -58,10 +59,9 @@
             lblArea.BackColor = SystemColors.ActiveCaption;
             lblArea.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblArea.ForeColor = Color.Black;
-            lblArea.Location = new Point(758, 217);
-            lblArea.Margin = new Padding(4, 0, 4, 0);
+            lblArea.Location = new Point(606, 174);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(62, 39);
+            lblArea.Size = new Size(51, 32);
             lblArea.TabIndex = 27;
             lblArea.Text = "Area";
             // 
@@ -71,10 +71,9 @@
             lblStatus.BackColor = SystemColors.ActiveCaption;
             lblStatus.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStatus.ForeColor = Color.Black;
-            lblStatus.Location = new Point(758, 382);
-            lblStatus.Margin = new Padding(4, 0, 4, 0);
+            lblStatus.Location = new Point(606, 306);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(79, 39);
+            lblStatus.Size = new Size(65, 32);
             lblStatus.TabIndex = 25;
             lblStatus.Text = "Status";
             // 
@@ -84,10 +83,9 @@
             lblKendaraan.BackColor = SystemColors.ActiveCaption;
             lblKendaraan.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblKendaraan.ForeColor = Color.Black;
-            lblKendaraan.Location = new Point(758, 302);
-            lblKendaraan.Margin = new Padding(4, 0, 4, 0);
+            lblKendaraan.Location = new Point(606, 242);
             lblKendaraan.Name = "lblKendaraan";
-            lblKendaraan.Size = new Size(173, 39);
+            lblKendaraan.Size = new Size(143, 32);
             lblKendaraan.TabIndex = 23;
             lblKendaraan.Text = "Jenis Kendaraan";
             // 
@@ -97,30 +95,29 @@
             lblKodeSlot.BackColor = SystemColors.ActiveCaption;
             lblKodeSlot.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblKodeSlot.ForeColor = Color.Black;
-            lblKodeSlot.Location = new Point(758, 140);
-            lblKodeSlot.Margin = new Padding(4, 0, 4, 0);
+            lblKodeSlot.Location = new Point(606, 112);
             lblKodeSlot.Name = "lblKodeSlot";
-            lblKodeSlot.Size = new Size(117, 39);
+            lblKodeSlot.Size = new Size(96, 32);
             lblKodeSlot.TabIndex = 22;
             lblKodeSlot.Text = "Kode SLot";
             // 
             // txtKode
             // 
             txtKode.BackColor = SystemColors.Window;
-            txtKode.Location = new Point(951, 140);
-            txtKode.Margin = new Padding(4, 5, 4, 5);
+            txtKode.Location = new Point(761, 112);
+            txtKode.Margin = new Padding(3, 4, 3, 4);
             txtKode.Name = "txtKode";
-            txtKode.Size = new Size(181, 31);
+            txtKode.Size = new Size(146, 27);
             txtKode.TabIndex = 21;
             // 
             // btnBatal
             // 
             btnBatal.BackColor = Color.Red;
             btnBatal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBatal.Location = new Point(973, 718);
-            btnBatal.Margin = new Padding(4, 5, 4, 5);
+            btnBatal.Location = new Point(778, 574);
+            btnBatal.Margin = new Padding(3, 4, 3, 4);
             btnBatal.Name = "btnBatal";
-            btnBatal.Size = new Size(161, 55);
+            btnBatal.Size = new Size(129, 44);
             btnBatal.TabIndex = 38;
             btnBatal.Text = "Batal";
             btnBatal.UseVisualStyleBackColor = false;
@@ -130,10 +127,10 @@
             // 
             btnSimpan.BackColor = Color.Chartreuse;
             btnSimpan.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSimpan.Location = new Point(757, 718);
-            btnSimpan.Margin = new Padding(4, 5, 4, 5);
+            btnSimpan.Location = new Point(606, 574);
+            btnSimpan.Margin = new Padding(3, 4, 3, 4);
             btnSimpan.Name = "btnSimpan";
-            btnSimpan.Size = new Size(161, 55);
+            btnSimpan.Size = new Size(129, 44);
             btnSimpan.TabIndex = 37;
             btnSimpan.Text = "Simpan";
             btnSimpan.UseVisualStyleBackColor = false;
@@ -143,39 +140,40 @@
             // 
             lblInputSLot.AutoSize = true;
             lblInputSLot.Font = new Font("Palatino Linotype", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblInputSLot.Location = new Point(763, 33);
-            lblInputSLot.Margin = new Padding(4, 0, 4, 0);
+            lblInputSLot.Location = new Point(610, 26);
             lblInputSLot.Name = "lblInputSLot";
-            lblInputSLot.Size = new Size(341, 56);
+            lblInputSLot.Size = new Size(281, 46);
             lblInputSLot.TabIndex = 39;
             lblInputSLot.Text = "Input Slot Parkir";
             lblInputSLot.Click += label1_Click;
             // 
             // cmbArea
             // 
+            cmbArea.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbArea.FormattingEnabled = true;
             cmbArea.Items.AddRange(new object[] { "Area A", "Area B", "Area C" });
-            cmbArea.Location = new Point(951, 223);
-            cmbArea.Margin = new Padding(4, 5, 4, 5);
+            cmbArea.Location = new Point(761, 178);
+            cmbArea.Margin = new Padding(3, 4, 3, 4);
             cmbArea.Name = "cmbArea";
-            cmbArea.Size = new Size(183, 33);
+            cmbArea.Size = new Size(147, 28);
             cmbArea.TabIndex = 40;
             // 
             // cmbStatus
             // 
+            cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbStatus.FormattingEnabled = true;
             cmbStatus.Items.AddRange(new object[] { "Kosong", "Terisi" });
-            cmbStatus.Location = new Point(951, 388);
-            cmbStatus.Margin = new Padding(4, 5, 4, 5);
+            cmbStatus.Location = new Point(761, 310);
+            cmbStatus.Margin = new Padding(3, 4, 3, 4);
             cmbStatus.Name = "cmbStatus";
-            cmbStatus.Size = new Size(183, 33);
+            cmbStatus.Size = new Size(147, 28);
             cmbStatus.TabIndex = 42;
             // 
             // SLotParkir
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1910, 824);
+            ClientSize = new Size(1528, 659);
             Controls.Add(cmbStatus);
             Controls.Add(cmbArea);
             Controls.Add(lblInputSLot);
@@ -187,6 +185,7 @@
             Controls.Add(lblKendaraan);
             Controls.Add(lblKodeSlot);
             Controls.Add(txtKode);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "SLotParkir";
             Text = "SLotParkir";
             Load += SLotParkir_Load;

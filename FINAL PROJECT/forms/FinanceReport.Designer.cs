@@ -154,17 +154,15 @@
             panelSidebar.Controls.Add(btnDashboard);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 0);
-            panelSidebar.Margin = new Padding(4);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(350, 801);
+            panelSidebar.Size = new Size(280, 641);
             panelSidebar.TabIndex = 26;
             // 
             // button1
             // 
-            button1.Location = new Point(35, 602);
-            button1.Margin = new Padding(4);
+            button1.Location = new Point(28, 482);
             button1.Name = "button1";
-            button1.Size = new Size(275, 62);
+            button1.Size = new Size(220, 50);
             button1.TabIndex = 12;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
@@ -172,10 +170,9 @@
             // btnFinanceReport
             // 
             btnFinanceReport.BackColor = Color.DeepSkyBlue;
-            btnFinanceReport.Location = new Point(35, 532);
-            btnFinanceReport.Margin = new Padding(4);
+            btnFinanceReport.Location = new Point(28, 426);
             btnFinanceReport.Name = "btnFinanceReport";
-            btnFinanceReport.Size = new Size(275, 62);
+            btnFinanceReport.Size = new Size(220, 50);
             btnFinanceReport.TabIndex = 11;
             btnFinanceReport.Text = "Finance Report";
             btnFinanceReport.UseVisualStyleBackColor = false;
@@ -184,10 +181,9 @@
             // btnHistory
             // 
             btnHistory.BackColor = Color.White;
-            btnHistory.Location = new Point(35, 462);
-            btnHistory.Margin = new Padding(4);
+            btnHistory.Location = new Point(28, 370);
             btnHistory.Name = "btnHistory";
-            btnHistory.Size = new Size(275, 62);
+            btnHistory.Size = new Size(220, 50);
             btnHistory.TabIndex = 10;
             btnHistory.Text = "History";
             btnHistory.UseVisualStyleBackColor = false;
@@ -195,10 +191,9 @@
             // 
             // btnMonitoring
             // 
-            btnMonitoring.Location = new Point(35, 392);
-            btnMonitoring.Margin = new Padding(4);
+            btnMonitoring.Location = new Point(28, 314);
             btnMonitoring.Name = "btnMonitoring";
-            btnMonitoring.Size = new Size(275, 62);
+            btnMonitoring.Size = new Size(220, 50);
             btnMonitoring.TabIndex = 9;
             btnMonitoring.Text = "Monitoring";
             btnMonitoring.UseVisualStyleBackColor = true;
@@ -207,10 +202,9 @@
             // btnBagStorage
             // 
             btnBagStorage.BackColor = Color.White;
-            btnBagStorage.Location = new Point(35, 322);
-            btnBagStorage.Margin = new Padding(4);
+            btnBagStorage.Location = new Point(28, 258);
             btnBagStorage.Name = "btnBagStorage";
-            btnBagStorage.Size = new Size(275, 62);
+            btnBagStorage.Size = new Size(220, 50);
             btnBagStorage.TabIndex = 8;
             btnBagStorage.Text = "Bag Storage";
             btnBagStorage.UseVisualStyleBackColor = false;
@@ -219,10 +213,9 @@
             // btnUserData
             // 
             btnUserData.BackColor = Color.White;
-            btnUserData.Location = new Point(35, 252);
-            btnUserData.Margin = new Padding(4);
+            btnUserData.Location = new Point(28, 202);
             btnUserData.Name = "btnUserData";
-            btnUserData.Size = new Size(275, 62);
+            btnUserData.Size = new Size(220, 50);
             btnUserData.TabIndex = 7;
             btnUserData.Text = "User Data";
             btnUserData.UseVisualStyleBackColor = false;
@@ -230,10 +223,9 @@
             // 
             // btnParkingData
             // 
-            btnParkingData.Location = new Point(35, 182);
-            btnParkingData.Margin = new Padding(4);
+            btnParkingData.Location = new Point(28, 146);
             btnParkingData.Name = "btnParkingData";
-            btnParkingData.Size = new Size(275, 62);
+            btnParkingData.Size = new Size(220, 50);
             btnParkingData.TabIndex = 6;
             btnParkingData.Text = "Parking Data";
             btnParkingData.UseVisualStyleBackColor = true;
@@ -244,10 +236,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(81, 15);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(65, 12);
             label2.Name = "label2";
-            label2.Size = new Size(243, 76);
+            label2.Size = new Size(199, 62);
             label2.TabIndex = 0;
             label2.Text = "SMART PARKING\r\nADMIN";
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -255,10 +246,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo;
-            pictureBox1.Location = new Point(6, 15);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(5, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(80, 78);
+            pictureBox1.Size = new Size(64, 62);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -266,10 +256,9 @@
             // btnDashboard
             // 
             btnDashboard.BackColor = Color.White;
-            btnDashboard.Location = new Point(35, 112);
-            btnDashboard.Margin = new Padding(4);
+            btnDashboard.Location = new Point(28, 90);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(275, 62);
+            btnDashboard.Size = new Size(220, 50);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
@@ -345,7 +334,7 @@
             lblTransaksiGrowht.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTransaksiGrowht.Location = new Point(109, 117);
             lblTransaksiGrowht.Name = "lblTransaksiGrowht";
-            lblTransaksiGrowht.Size = new Size(164, 25);
+            lblTransaksiGrowht.Size = new Size(134, 20);
             lblTransaksiGrowht.TabIndex = 7;
             lblTransaksiGrowht.Text = "↑ 0% dari kemarin";
             // 
@@ -363,7 +352,7 @@
             lblTotalTransaksi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalTransaksi.Location = new Point(170, 65);
             lblTotalTransaksi.Name = "lblTotalTransaksi";
-            lblTotalTransaksi.Size = new Size(22, 25);
+            lblTotalTransaksi.Size = new Size(18, 20);
             lblTotalTransaksi.TabIndex = 7;
             lblTotalTransaksi.Text = "0";
             // 
@@ -373,7 +362,7 @@
             lblTransaksiTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTransaksiTitle.Location = new Point(115, 12);
             lblTransaksiTitle.Name = "lblTransaksiTitle";
-            lblTransaksiTitle.Size = new Size(138, 25);
+            lblTransaksiTitle.Size = new Size(113, 20);
             lblTransaksiTitle.TabIndex = 6;
             lblTransaksiTitle.Text = "Total Transaksi";
             // 
@@ -396,7 +385,7 @@
             lblRataGrowth.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRataGrowth.Location = new Point(107, 117);
             lblRataGrowth.Name = "lblRataGrowth";
-            lblRataGrowth.Size = new Size(164, 25);
+            lblRataGrowth.Size = new Size(134, 20);
             lblRataGrowth.TabIndex = 8;
             lblRataGrowth.Text = "↑ 0% dari kemarin";
             // 
@@ -414,7 +403,7 @@
             lblRataRata.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRataRata.Location = new Point(151, 66);
             lblRataRata.Name = "lblRataRata";
-            lblRataRata.Size = new Size(55, 25);
+            lblRataRata.Size = new Size(45, 20);
             lblRataRata.TabIndex = 7;
             lblRataRata.Text = "Rp. 0";
             // 
@@ -424,7 +413,7 @@
             lblRataTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRataTitle.Location = new Point(97, 12);
             lblRataTitle.Name = "lblRataTitle";
-            lblRataTitle.Size = new Size(176, 25);
+            lblRataTitle.Size = new Size(144, 20);
             lblRataTitle.TabIndex = 6;
             lblRataTitle.Text = "Rata-rata Transaksi";
             // 
@@ -448,7 +437,7 @@
             lblPendapatanGrowth.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPendapatanGrowth.Location = new Point(108, 117);
             lblPendapatanGrowth.Name = "lblPendapatanGrowth";
-            lblPendapatanGrowth.Size = new Size(164, 25);
+            lblPendapatanGrowth.Size = new Size(134, 20);
             lblPendapatanGrowth.TabIndex = 6;
             lblPendapatanGrowth.Text = "↑ 0% dari kemarin";
             // 
@@ -458,7 +447,7 @@
             lblPendapatanHariIni.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPendapatanHariIni.Location = new Point(144, 63);
             lblPendapatanHariIni.Name = "lblPendapatanHariIni";
-            lblPendapatanHariIni.Size = new Size(60, 28);
+            lblPendapatanHariIni.Size = new Size(52, 23);
             lblPendapatanHariIni.TabIndex = 7;
             lblPendapatanHariIni.Text = "Rp. 0";
             // 
@@ -468,7 +457,7 @@
             lblPendapatanTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPendapatanTitle.Location = new Point(93, 12);
             lblPendapatanTitle.Name = "lblPendapatanTitle";
-            lblPendapatanTitle.Size = new Size(181, 25);
+            lblPendapatanTitle.Size = new Size(147, 20);
             lblPendapatanTitle.TabIndex = 6;
             lblPendapatanTitle.Text = "Pendapatan Hari Ini";
             // 
@@ -499,7 +488,7 @@
             textBox1.Margin = new Padding(4);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Cari Sesuatu Disini..";
-            textBox1.Size = new Size(182, 24);
+            textBox1.Size = new Size(182, 20);
             textBox1.TabIndex = 4;
             // 
             // pictureBox2
@@ -539,10 +528,9 @@
             panel5.Controls.Add(panel6);
             panel5.Controls.Add(panel7);
             panel5.Controls.Add(panel9);
-            panel5.Location = new Point(388, 37);
-            panel5.Margin = new Padding(4);
+            panel5.Location = new Point(310, 30);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1229, 158);
+            panel5.Size = new Size(984, 127);
             panel5.TabIndex = 27;
             // 
             // panel6
@@ -551,40 +539,36 @@
             panel6.Controls.Add(lblPendapatanHarian);
             panel6.Controls.Add(lblpendapatan);
             panel6.Controls.Add(pictureBox8);
-            panel6.Location = new Point(1, 4);
-            panel6.Margin = new Padding(4);
+            panel6.Location = new Point(1, 3);
             panel6.Name = "panel6";
-            panel6.Size = new Size(300, 150);
+            panel6.Size = new Size(240, 120);
             panel6.TabIndex = 5;
             // 
             // lblPendapatanHarian
             // 
             lblPendapatanHarian.AutoSize = true;
             lblPendapatanHarian.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPendapatanHarian.Location = new Point(120, 55);
-            lblPendapatanHarian.Margin = new Padding(4, 0, 4, 0);
+            lblPendapatanHarian.Location = new Point(96, 44);
             lblPendapatanHarian.Name = "lblPendapatanHarian";
-            lblPendapatanHarian.Size = new Size(62, 38);
+            lblPendapatanHarian.Size = new Size(50, 31);
             lblPendapatanHarian.TabIndex = 2;
             lblPendapatanHarian.Text = "135";
             // 
             // lblpendapatan
             // 
             lblpendapatan.AutoSize = true;
-            lblpendapatan.Location = new Point(115, 29);
-            lblpendapatan.Margin = new Padding(4, 0, 4, 0);
+            lblpendapatan.Location = new Point(92, 23);
             lblpendapatan.Name = "lblpendapatan";
-            lblpendapatan.Size = new Size(163, 25);
+            lblpendapatan.Size = new Size(136, 20);
             lblpendapatan.TabIndex = 1;
             lblpendapatan.Text = "Pendapatan hari Ini";
             // 
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(21, 29);
-            pictureBox8.Margin = new Padding(4);
+            pictureBox8.Location = new Point(17, 23);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(86, 78);
+            pictureBox8.Size = new Size(69, 62);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 0;
             pictureBox8.TabStop = false;
@@ -596,49 +580,44 @@
             panel7.Controls.Add(lblJumlahAdmin);
             panel7.Controls.Add(lbltransaksi);
             panel7.Controls.Add(pictureBox9);
-            panel7.Location = new Point(309, 4);
-            panel7.Margin = new Padding(4);
+            panel7.Location = new Point(247, 3);
             panel7.Name = "panel7";
-            panel7.Size = new Size(300, 150);
+            panel7.Size = new Size(240, 120);
             panel7.TabIndex = 6;
             // 
             // lblSemuaAdmin
             // 
             lblSemuaAdmin.AutoSize = true;
-            lblSemuaAdmin.Location = new Point(115, 94);
-            lblSemuaAdmin.Margin = new Padding(4, 0, 4, 0);
+            lblSemuaAdmin.Location = new Point(92, 75);
             lblSemuaAdmin.Name = "lblSemuaAdmin";
-            lblSemuaAdmin.Size = new Size(0, 25);
+            lblSemuaAdmin.Size = new Size(0, 20);
             lblSemuaAdmin.TabIndex = 3;
             // 
             // lblJumlahAdmin
             // 
             lblJumlahAdmin.AutoSize = true;
             lblJumlahAdmin.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahAdmin.Location = new Point(120, 55);
-            lblJumlahAdmin.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahAdmin.Location = new Point(96, 44);
             lblJumlahAdmin.Name = "lblJumlahAdmin";
-            lblJumlahAdmin.Size = new Size(32, 38);
+            lblJumlahAdmin.Size = new Size(26, 31);
             lblJumlahAdmin.TabIndex = 2;
             lblJumlahAdmin.Text = "4";
             // 
             // lbltransaksi
             // 
             lbltransaksi.AutoSize = true;
-            lbltransaksi.Location = new Point(115, 29);
-            lbltransaksi.Margin = new Padding(4, 0, 4, 0);
+            lbltransaksi.Location = new Point(92, 23);
             lbltransaksi.Name = "lbltransaksi";
-            lbltransaksi.Size = new Size(124, 25);
+            lbltransaksi.Size = new Size(105, 20);
             lbltransaksi.TabIndex = 1;
             lbltransaksi.Text = "Total Transaksi";
             // 
             // pictureBox9
             // 
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(21, 29);
-            pictureBox9.Margin = new Padding(4);
+            pictureBox9.Location = new Point(17, 23);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(86, 78);
+            pictureBox9.Size = new Size(69, 62);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox9.TabIndex = 0;
             pictureBox9.TabStop = false;
@@ -649,57 +628,55 @@
             panel9.Controls.Add(lblRatarataTransaksi);
             panel9.Controls.Add(lblrata);
             panel9.Controls.Add(pictureBox11);
-            panel9.Location = new Point(617, 1);
-            panel9.Margin = new Padding(4);
+            panel9.Location = new Point(494, 1);
             panel9.Name = "panel9";
-            panel9.Size = new Size(300, 150);
+            panel9.Size = new Size(240, 120);
             panel9.TabIndex = 7;
             // 
             // lblRatarataTransaksi
             // 
             lblRatarataTransaksi.AutoSize = true;
             lblRatarataTransaksi.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRatarataTransaksi.Location = new Point(120, 55);
-            lblRatarataTransaksi.Margin = new Padding(4, 0, 4, 0);
+            lblRatarataTransaksi.Location = new Point(96, 44);
             lblRatarataTransaksi.Name = "lblRatarataTransaksi";
-            lblRatarataTransaksi.Size = new Size(47, 38);
+            lblRatarataTransaksi.Size = new Size(38, 31);
             lblRatarataTransaksi.TabIndex = 2;
             lblRatarataTransaksi.Text = "85";
             // 
             // lblrata
             // 
             lblrata.AutoSize = true;
-            lblrata.Location = new Point(115, 29);
-            lblrata.Margin = new Padding(4, 0, 4, 0);
+            lblrata.Location = new Point(92, 23);
             lblrata.Name = "lblrata";
-            lblrata.Size = new Size(159, 25);
+            lblrata.Size = new Size(134, 20);
             lblrata.TabIndex = 1;
             lblrata.Text = "Rata-rata Transaksi";
             // 
             // pictureBox11
             // 
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(21, 29);
-            pictureBox11.Margin = new Padding(4);
+            pictureBox11.Location = new Point(17, 23);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(86, 78);
+            pictureBox11.Size = new Size(69, 62);
             pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox11.TabIndex = 0;
             pictureBox11.TabStop = false;
             // 
             // panelChartPendapatan
             // 
-            panelChartPendapatan.Location = new Point(390, 293);
+            panelChartPendapatan.Location = new Point(312, 252);
+            panelChartPendapatan.Margin = new Padding(2, 2, 2, 2);
             panelChartPendapatan.Name = "panelChartPendapatan";
-            panelChartPendapatan.Size = new Size(616, 328);
+            panelChartPendapatan.Size = new Size(493, 262);
             panelChartPendapatan.TabIndex = 29;
             panelChartPendapatan.Paint += panel8_Paint;
             // 
             // panelChartMetode
             // 
-            panelChartMetode.Location = new Point(1039, 235);
+            panelChartMetode.Location = new Point(831, 188);
+            panelChartMetode.Margin = new Padding(2, 2, 2, 2);
             panelChartMetode.Name = "panelChartMetode";
-            panelChartMetode.Size = new Size(235, 219);
+            panelChartMetode.Size = new Size(188, 175);
             panelChartMetode.TabIndex = 30;
             // 
             // panel8
@@ -709,58 +686,54 @@
             panel8.Controls.Add(lblJumlahKendaraan);
             panel8.Controls.Add(lblkendaraan);
             panel8.Controls.Add(pictureBox10);
-            panel8.Location = new Point(1316, 40);
-            panel8.Margin = new Padding(4);
+            panel8.Location = new Point(1053, 32);
             panel8.Name = "panel8";
-            panel8.Size = new Size(300, 150);
+            panel8.Size = new Size(240, 120);
             panel8.TabIndex = 7;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(115, 94);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(92, 75);
             label5.Name = "label5";
-            label5.Size = new Size(0, 25);
+            label5.Size = new Size(0, 20);
             label5.TabIndex = 3;
             // 
             // lblJumlahKendaraan
             // 
             lblJumlahKendaraan.AutoSize = true;
             lblJumlahKendaraan.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahKendaraan.Location = new Point(120, 55);
-            lblJumlahKendaraan.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahKendaraan.Location = new Point(96, 44);
             lblJumlahKendaraan.Name = "lblJumlahKendaraan";
-            lblJumlahKendaraan.Size = new Size(32, 38);
+            lblJumlahKendaraan.Size = new Size(26, 31);
             lblJumlahKendaraan.TabIndex = 2;
             lblJumlahKendaraan.Text = "4";
             // 
             // lblkendaraan
             // 
             lblkendaraan.AutoSize = true;
-            lblkendaraan.Location = new Point(115, 29);
-            lblkendaraan.Margin = new Padding(4, 0, 4, 0);
+            lblkendaraan.Location = new Point(92, 23);
             lblkendaraan.Name = "lblkendaraan";
-            lblkendaraan.Size = new Size(137, 25);
+            lblkendaraan.Size = new Size(117, 20);
             lblkendaraan.TabIndex = 1;
             lblkendaraan.Text = "Total Kendaraan";
             // 
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(21, 29);
-            pictureBox10.Margin = new Padding(4);
+            pictureBox10.Location = new Point(17, 23);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(86, 78);
+            pictureBox10.Size = new Size(69, 62);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox10.TabIndex = 0;
             pictureBox10.TabStop = false;
             // 
             // panelChartKendaraan
             // 
-            panelChartKendaraan.Location = new Point(1039, 545);
+            panelChartKendaraan.Location = new Point(831, 436);
+            panelChartKendaraan.Margin = new Padding(2, 2, 2, 2);
             panelChartKendaraan.Name = "panelChartKendaraan";
-            panelChartKendaraan.Size = new Size(235, 219);
+            panelChartKendaraan.Size = new Size(188, 175);
             panelChartKendaraan.TabIndex = 31;
             // 
             // panel11
@@ -779,19 +752,19 @@
             panel11.Controls.Add(label10);
             panel11.Controls.Add(label9);
             panel11.Controls.Add(lblJumlahEwallet);
-            panel11.Location = new Point(1317, 235);
+            panel11.Location = new Point(1054, 188);
+            panel11.Margin = new Padding(2, 2, 2, 2);
             panel11.Name = "panel11";
-            panel11.Size = new Size(418, 219);
+            panel11.Size = new Size(334, 175);
             panel11.TabIndex = 32;
             // 
             // cboFilterMetode
             // 
             cboFilterMetode.FormattingEnabled = true;
             cboFilterMetode.Items.AddRange(new object[] { "7 Hari", "1 Bulan", "3 Bulan" });
-            cboFilterMetode.Location = new Point(226, 7);
-            cboFilterMetode.Margin = new Padding(4);
+            cboFilterMetode.Location = new Point(181, 6);
             cboFilterMetode.Name = "cboFilterMetode";
-            cboFilterMetode.Size = new Size(188, 33);
+            cboFilterMetode.Size = new Size(151, 28);
             cboFilterMetode.TabIndex = 35;
             cboFilterMetode.Text = "7 Hari";
             cboFilterMetode.SelectedIndexChanged += cboFilterMetode_SelectedIndexChanged_1;
@@ -800,10 +773,9 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label19.Location = new Point(199, 111);
-            label19.Margin = new Padding(4, 0, 4, 0);
+            label19.Location = new Point(159, 89);
             label19.Name = "label19";
-            label19.Size = new Size(56, 38);
+            label19.Size = new Size(47, 31);
             label19.TabIndex = 13;
             label19.Text = "Rp.";
             // 
@@ -811,10 +783,9 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(7, 173);
-            label18.Margin = new Padding(4, 0, 4, 0);
+            label18.Location = new Point(6, 138);
             label18.Name = "label18";
-            label18.Size = new Size(56, 38);
+            label18.Size = new Size(47, 31);
             label18.TabIndex = 12;
             label18.Text = "Rp.";
             // 
@@ -822,10 +793,9 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label17.Location = new Point(7, 106);
-            label17.Margin = new Padding(4, 0, 4, 0);
+            label17.Location = new Point(6, 85);
             label17.Name = "label17";
-            label17.Size = new Size(56, 38);
+            label17.Size = new Size(47, 31);
             label17.TabIndex = 11;
             label17.Text = "Rp.";
             // 
@@ -833,10 +803,9 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label16.Location = new Point(7, 35);
-            label16.Margin = new Padding(4, 0, 4, 0);
+            label16.Location = new Point(6, 28);
             label16.Name = "label16";
-            label16.Size = new Size(56, 38);
+            label16.Size = new Size(47, 31);
             label16.TabIndex = 10;
             label16.Text = "Rp.";
             // 
@@ -844,20 +813,18 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(258, 111);
-            lblTotal.Margin = new Padding(4, 0, 4, 0);
+            lblTotal.Location = new Point(206, 89);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(122, 38);
+            lblTotal.Size = new Size(98, 31);
             lblTotal.TabIndex = 9;
             lblTotal.Text = "8550000";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(238, 81);
-            label14.Margin = new Padding(4, 0, 4, 0);
+            label14.Location = new Point(190, 65);
             label14.Name = "label14";
-            label14.Size = new Size(49, 25);
+            label14.Size = new Size(42, 20);
             label14.TabIndex = 8;
             label14.Text = "Total";
             // 
@@ -865,20 +832,18 @@
             // 
             lblJumlahDebit.AutoSize = true;
             lblJumlahDebit.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahDebit.Location = new Point(64, 106);
-            lblJumlahDebit.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahDebit.Location = new Point(51, 85);
             lblJumlahDebit.Name = "lblJumlahDebit";
-            lblJumlahDebit.Size = new Size(77, 38);
+            lblJumlahDebit.Size = new Size(62, 31);
             lblJumlahDebit.TabIndex = 7;
             lblJumlahDebit.Text = "1200";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(19, 80);
-            label12.Margin = new Padding(4, 0, 4, 0);
+            label12.Location = new Point(15, 64);
             label12.Name = "label12";
-            label12.Size = new Size(55, 25);
+            label12.Size = new Size(46, 20);
             label12.TabIndex = 6;
             label12.Text = "Debit";
             // 
@@ -886,30 +851,27 @@
             // 
             lblJumlahQris.AutoSize = true;
             lblJumlahQris.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahQris.Location = new Point(64, 35);
-            lblJumlahQris.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahQris.Location = new Point(51, 28);
             lblJumlahQris.Name = "lblJumlahQris";
-            lblJumlahQris.Size = new Size(92, 38);
+            lblJumlahQris.Size = new Size(74, 31);
             lblJumlahQris.TabIndex = 5;
             lblJumlahQris.Text = "12000";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(19, 7);
-            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Location = new Point(15, 6);
             label10.Name = "label10";
-            label10.Size = new Size(44, 25);
+            label10.Size = new Size(35, 20);
             label10.TabIndex = 4;
             label10.Text = "Qris";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(20, 148);
-            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Location = new Point(16, 118);
             label9.Name = "label9";
-            label9.Size = new Size(76, 25);
+            label9.Size = new Size(65, 20);
             label9.TabIndex = 3;
             label9.Text = "E-Wallet";
             // 
@@ -917,10 +879,9 @@
             // 
             lblJumlahEwallet.AutoSize = true;
             lblJumlahEwallet.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahEwallet.Location = new Point(64, 173);
-            lblJumlahEwallet.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahEwallet.Location = new Point(51, 138);
             lblJumlahEwallet.Name = "lblJumlahEwallet";
-            lblJumlahEwallet.Size = new Size(77, 38);
+            lblJumlahEwallet.Size = new Size(62, 31);
             lblJumlahEwallet.TabIndex = 3;
             lblJumlahEwallet.Text = "1200";
             lblJumlahEwallet.Click += label8_Click;
@@ -937,19 +898,19 @@
             panel12.Controls.Add(label29);
             panel12.Controls.Add(label30);
             panel12.Controls.Add(lblJumlahMotor);
-            panel12.Location = new Point(1316, 545);
+            panel12.Location = new Point(1053, 436);
+            panel12.Margin = new Padding(2, 2, 2, 2);
             panel12.Name = "panel12";
-            panel12.Size = new Size(418, 219);
+            panel12.Size = new Size(334, 175);
             panel12.TabIndex = 33;
             // 
             // cboFilterKendaraan
             // 
             cboFilterKendaraan.FormattingEnabled = true;
             cboFilterKendaraan.Items.AddRange(new object[] { "7 Hari", "1 Bulan", "3 Bulan" });
-            cboFilterKendaraan.Location = new Point(226, 6);
-            cboFilterKendaraan.Margin = new Padding(4);
+            cboFilterKendaraan.Location = new Point(181, 5);
             cboFilterKendaraan.Name = "cboFilterKendaraan";
-            cboFilterKendaraan.Size = new Size(188, 33);
+            cboFilterKendaraan.Size = new Size(151, 28);
             cboFilterKendaraan.TabIndex = 36;
             cboFilterKendaraan.Text = "7 Hari";
             cboFilterKendaraan.SelectedIndexChanged += cboFilterKendaraan_SelectedIndexChanged_1;
@@ -958,20 +919,18 @@
             // 
             lblTotalKendaraan.AutoSize = true;
             lblTotalKendaraan.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotalKendaraan.Location = new Point(239, 115);
-            lblTotalKendaraan.Margin = new Padding(4, 0, 4, 0);
+            lblTotalKendaraan.Location = new Point(191, 92);
             lblTotalKendaraan.Name = "lblTotalKendaraan";
-            lblTotalKendaraan.Size = new Size(122, 38);
+            lblTotalKendaraan.Size = new Size(98, 31);
             lblTotalKendaraan.TabIndex = 9;
             lblTotalKendaraan.Text = "8550000";
             // 
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(238, 81);
-            label25.Margin = new Padding(4, 0, 4, 0);
+            label25.Location = new Point(190, 65);
             label25.Name = "label25";
-            label25.Size = new Size(49, 25);
+            label25.Size = new Size(42, 20);
             label25.TabIndex = 8;
             label25.Text = "Total";
             // 
@@ -979,20 +938,18 @@
             // 
             lblJumlahMobil.AutoSize = true;
             lblJumlahMobil.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahMobil.Location = new Point(19, 104);
-            lblJumlahMobil.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahMobil.Location = new Point(15, 83);
             lblJumlahMobil.Name = "lblJumlahMobil";
-            lblJumlahMobil.Size = new Size(77, 38);
+            lblJumlahMobil.Size = new Size(62, 31);
             lblJumlahMobil.TabIndex = 7;
             lblJumlahMobil.Text = "1200";
             // 
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(19, 79);
-            label27.Margin = new Padding(4, 0, 4, 0);
+            label27.Location = new Point(15, 63);
             label27.Name = "label27";
-            label27.Size = new Size(58, 25);
+            label27.Size = new Size(48, 20);
             label27.TabIndex = 6;
             label27.Text = "Mobil";
             // 
@@ -1000,30 +957,27 @@
             // 
             lblJumlahBus.AutoSize = true;
             lblJumlahBus.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahBus.Location = new Point(24, 36);
-            lblJumlahBus.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahBus.Location = new Point(19, 29);
             lblJumlahBus.Name = "lblJumlahBus";
-            lblJumlahBus.Size = new Size(92, 38);
+            lblJumlahBus.Size = new Size(74, 31);
             lblJumlahBus.TabIndex = 5;
             lblJumlahBus.Text = "12000";
             // 
             // label29
             // 
             label29.AutoSize = true;
-            label29.Location = new Point(19, 7);
-            label29.Margin = new Padding(4, 0, 4, 0);
+            label29.Location = new Point(15, 6);
             label29.Name = "label29";
-            label29.Size = new Size(40, 25);
+            label29.Size = new Size(32, 20);
             label29.TabIndex = 4;
             label29.Text = "Bus";
             // 
             // label30
             // 
             label30.AutoSize = true;
-            label30.Location = new Point(20, 148);
-            label30.Margin = new Padding(4, 0, 4, 0);
+            label30.Location = new Point(16, 118);
             label30.Name = "label30";
-            label30.Size = new Size(62, 25);
+            label30.Size = new Size(50, 20);
             label30.TabIndex = 3;
             label30.Text = "Motor";
             // 
@@ -1031,10 +985,9 @@
             // 
             lblJumlahMotor.AutoSize = true;
             lblJumlahMotor.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahMotor.Location = new Point(19, 173);
-            lblJumlahMotor.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahMotor.Location = new Point(15, 138);
             lblJumlahMotor.Name = "lblJumlahMotor";
-            lblJumlahMotor.Size = new Size(77, 38);
+            lblJumlahMotor.Size = new Size(62, 31);
             lblJumlahMotor.TabIndex = 3;
             lblJumlahMotor.Text = "1200";
             // 
@@ -1042,29 +995,30 @@
             // 
             cboFilterDBatang.FormattingEnabled = true;
             cboFilterDBatang.Items.AddRange(new object[] { "7 Hari", "1 Bulan", "3 Bulan" });
-            cboFilterDBatang.Location = new Point(818, 235);
-            cboFilterDBatang.Margin = new Padding(4);
+            cboFilterDBatang.Location = new Point(654, 188);
             cboFilterDBatang.Name = "cboFilterDBatang";
-            cboFilterDBatang.Size = new Size(188, 33);
+            cboFilterDBatang.Size = new Size(151, 28);
             cboFilterDBatang.TabIndex = 34;
             cboFilterDBatang.Text = "7 Hari";
             cboFilterDBatang.SelectedIndexChanged += cboFilterDBatang_SelectedIndexChanged_1;
             // 
             // FinanceReport
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1920, 801);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1536, 641);
+            Controls.Add(panelChartPendapatan);
             Controls.Add(cboFilterDBatang);
             Controls.Add(panel12);
             Controls.Add(panel11);
             Controls.Add(panelChartKendaraan);
             Controls.Add(panel8);
             Controls.Add(panelChartMetode);
-            Controls.Add(panelChartPendapatan);
             Controls.Add(panel5);
             Controls.Add(panelSidebar);
-            Margin = new Padding(4);
+            DoubleBuffered = true;
             Name = "FinanceReport";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FinanceReport";
@@ -1194,5 +1148,6 @@
         private ComboBox cboFilterMetode;
         private ComboBox cboFilterKendaraan;
         private ComboBox cboFilterDBatang;
+        private GroupBox groupBox1;
     }
 }

@@ -29,17 +29,17 @@ namespace FINAL_PROJECT.forms
         {
             using (var conn = DatabaseHelper.Instance.GetConnection())
             {
-                string query =
-                @"SELECT
-                id_user,
-                username,
-                password_akun,
-                nama_lengkap,
-                role,
-                status_user,
-                last_login
-                FROM users
-                ORDER BY id_user";
+                string query = @"
+        SELECT
+            id_user,
+            username,
+            password_akun,
+            nama_lengkap,
+            role,
+            status_user,
+            last_login
+        FROM users
+        ORDER BY id_user";
 
                 NpgsqlDataAdapter da =
                     new NpgsqlDataAdapter(query, conn);
@@ -48,8 +48,16 @@ namespace FINAL_PROJECT.forms
 
                 da.Fill(dt);
 
+                // Reset DataGridView
+                dgvUser.Columns.Clear();
+
+                // Generate kolom otomatis
+                dgvUser.AutoGenerateColumns = true;
+
+                // Masukkan data
                 dgvUser.DataSource = dt;
 
+                // Pengaturan tabel
                 dgvUser.AutoSizeColumnsMode =
                     DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -58,29 +66,22 @@ namespace FINAL_PROJECT.forms
 
                 dgvUser.AllowUserToAddRows = false;
 
-                if (!dgvUser.Columns.Contains("Edit"))
+                dgvUser.ReadOnly = true;
+
+                // Header kolom
+                if (dgvUser.Columns.Count > 0)
                 {
-                    DataGridViewButtonColumn edit =
-                        new DataGridViewButtonColumn();
-
-                    edit.Name = "Edit";
-                    edit.Text = "Edit";
-                    edit.UseColumnTextForButtonValue = true;
-
-                    dgvUser.Columns.Add(edit);
+                    dgvUser.Columns[0].HeaderText = "ID";
+                    dgvUser.Columns[1].HeaderText = "Username";
+                    dgvUser.Columns[2].HeaderText = "Password";
+                    dgvUser.Columns[3].HeaderText = "Nama Lengkap";
+                    dgvUser.Columns[4].HeaderText = "Role";
+                    dgvUser.Columns[5].HeaderText = "Status";
+                    dgvUser.Columns[6].HeaderText = "Last Login";
                 }
 
-                if (!dgvUser.Columns.Contains("Delete"))
-                {
-                    DataGridViewButtonColumn delete =
-                        new DataGridViewButtonColumn();
-
-                    delete.Name = "Delete";
-                    delete.Text = "Delete";
-                    delete.UseColumnTextForButtonValue = true;
-
-                    dgvUser.Columns.Add(delete);
-                }
+                // OPTIONAL: sembunyikan password
+                dgvUser.Columns[2].Visible = false;
             }
         }
 
@@ -273,8 +274,8 @@ namespace FINAL_PROJECT.forms
             UpdateStatistic();
         }
 
-        
-        
+
+
 
         private void EditUser(int id)
         {
@@ -307,6 +308,24 @@ namespace FINAL_PROJECT.forms
                 login.Show();
 
                 this.Hide();
+            }
+        }
+
+        private void btnEditUser_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int id = Convert.ToInt32(
+                    dataGridView1.SelectedRows[0].Cells["ID"].Value);
+
+                FormEditUser frm = new FormEditUser(id);
+                frm.ShowDialog();
+
+                LoadUserData(); // refresh data setelah edit
+            }
+            else
+            {
+                MessageBox.Show("Pilih user yang ingin diedit!");
             }
         }
     }

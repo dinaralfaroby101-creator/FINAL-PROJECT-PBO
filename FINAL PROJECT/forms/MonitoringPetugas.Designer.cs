@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonitoringPetugas));
             panelSidebar = new Panel();
             btnVehicleData = new Button();
             button1 = new Button();
@@ -170,18 +171,16 @@
             panelSidebar.Controls.Add(btnDashboard);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 0);
-            panelSidebar.Margin = new Padding(4);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(350, 801);
+            panelSidebar.Size = new Size(280, 641);
             panelSidebar.TabIndex = 25;
             // 
             // btnVehicleData
             // 
             btnVehicleData.BackColor = Color.White;
-            btnVehicleData.Location = new Point(35, 210);
-            btnVehicleData.Margin = new Padding(4);
+            btnVehicleData.Location = new Point(28, 168);
             btnVehicleData.Name = "btnVehicleData";
-            btnVehicleData.Size = new Size(275, 62);
+            btnVehicleData.Size = new Size(220, 50);
             btnVehicleData.TabIndex = 14;
             btnVehicleData.Text = "Vehicle Data";
             btnVehicleData.UseVisualStyleBackColor = false;
@@ -189,10 +188,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(35, 602);
-            button1.Margin = new Padding(4);
+            button1.Location = new Point(28, 482);
             button1.Name = "button1";
-            button1.Size = new Size(275, 62);
+            button1.Size = new Size(220, 50);
             button1.TabIndex = 12;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
@@ -200,10 +198,9 @@
             // 
             // btnHistory
             // 
-            btnHistory.Location = new Point(35, 408);
-            btnHistory.Margin = new Padding(4);
+            btnHistory.Location = new Point(28, 326);
             btnHistory.Name = "btnHistory";
-            btnHistory.Size = new Size(275, 62);
+            btnHistory.Size = new Size(220, 50);
             btnHistory.TabIndex = 10;
             btnHistory.Text = "History";
             btnHistory.UseVisualStyleBackColor = true;
@@ -212,10 +209,9 @@
             // btnMonitoring
             // 
             btnMonitoring.BackColor = Color.DeepSkyBlue;
-            btnMonitoring.Location = new Point(35, 310);
-            btnMonitoring.Margin = new Padding(4);
+            btnMonitoring.Location = new Point(28, 248);
             btnMonitoring.Name = "btnMonitoring";
-            btnMonitoring.Size = new Size(275, 62);
+            btnMonitoring.Size = new Size(220, 50);
             btnMonitoring.TabIndex = 9;
             btnMonitoring.Text = "Monitoring";
             btnMonitoring.UseVisualStyleBackColor = false;
@@ -226,10 +222,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(81, 15);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(65, 12);
             label2.Name = "label2";
-            label2.Size = new Size(243, 76);
+            label2.Size = new Size(199, 62);
             label2.TabIndex = 0;
             label2.Text = "SMART PARKING\r\nADMIN";
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -237,10 +232,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo;
-            pictureBox1.Location = new Point(6, 15);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(5, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(80, 78);
+            pictureBox1.Size = new Size(64, 62);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -248,10 +242,9 @@
             // btnDashboard
             // 
             btnDashboard.BackColor = Color.White;
-            btnDashboard.Location = new Point(35, 112);
-            btnDashboard.Margin = new Padding(4);
+            btnDashboard.Location = new Point(28, 90);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(275, 62);
+            btnDashboard.Size = new Size(220, 50);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
@@ -260,6 +253,8 @@
             // panel2
             // 
             panel2.BackColor = Color.WhiteSmoke;
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
             panel2.Controls.Add(label21);
             panel2.Controls.Add(label20);
             panel2.Controls.Add(label19);
@@ -275,10 +270,9 @@
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(dgvListMonitoring);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(4);
+            panel2.Location = new Point(280, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1570, 801);
+            panel2.Size = new Size(1256, 641);
             panel2.TabIndex = 27;
             panel2.Paint += panel2_Paint;
             // 
@@ -287,10 +281,9 @@
             label21.AutoSize = true;
             label21.BackColor = Color.Orange;
             label21.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label21.Location = new Point(920, 416);
-            label21.Margin = new Padding(4, 0, 4, 0);
+            label21.Location = new Point(736, 333);
             label21.Name = "label21";
-            label21.Size = new Size(34, 38);
+            label21.Size = new Size(28, 31);
             label21.TabIndex = 16;
             label21.Text = "C";
             // 
@@ -299,10 +292,9 @@
             label20.AutoSize = true;
             label20.BackColor = Color.Red;
             label20.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label20.Location = new Point(652, 416);
-            label20.Margin = new Padding(4, 0, 4, 0);
+            label20.Location = new Point(522, 333);
             label20.Name = "label20";
-            label20.Size = new Size(33, 38);
+            label20.Size = new Size(27, 31);
             label20.TabIndex = 15;
             label20.Text = "B";
             // 
@@ -311,10 +303,9 @@
             label19.AutoSize = true;
             label19.BackColor = Color.DodgerBlue;
             label19.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label19.Location = new Point(396, 416);
-            label19.Margin = new Padding(4, 0, 4, 0);
+            label19.Location = new Point(317, 333);
             label19.Name = "label19";
-            label19.Size = new Size(35, 38);
+            label19.Size = new Size(29, 31);
             label19.TabIndex = 14;
             label19.Text = "A";
             // 
@@ -322,10 +313,9 @@
             // 
             label18.AutoSize = true;
             label18.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(1009, 416);
-            label18.Margin = new Padding(4, 0, 4, 0);
+            label18.Location = new Point(807, 333);
             label18.Name = "label18";
-            label18.Size = new Size(28, 38);
+            label18.Size = new Size(23, 31);
             label18.TabIndex = 13;
             label18.Text = "/";
             // 
@@ -333,10 +323,9 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(739, 416);
-            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Location = new Point(591, 333);
             label10.Name = "label10";
-            label10.Size = new Size(28, 38);
+            label10.Size = new Size(23, 31);
             label10.TabIndex = 12;
             label10.Text = "/";
             // 
@@ -344,10 +333,9 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(478, 416);
-            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Location = new Point(382, 333);
             label11.Name = "label11";
-            label11.Size = new Size(28, 38);
+            label11.Size = new Size(23, 31);
             label11.TabIndex = 11;
             label11.Text = "/";
             // 
@@ -355,10 +343,9 @@
             // 
             lblAreaCterisi.AutoSize = true;
             lblAreaCterisi.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAreaCterisi.Location = new Point(960, 416);
-            lblAreaCterisi.Margin = new Padding(4, 0, 4, 0);
+            lblAreaCterisi.Location = new Point(768, 333);
             lblAreaCterisi.Name = "lblAreaCterisi";
-            lblAreaCterisi.Size = new Size(47, 38);
+            lblAreaCterisi.Size = new Size(38, 31);
             lblAreaCterisi.TabIndex = 10;
             lblAreaCterisi.Text = "50";
             lblAreaCterisi.Click += lblAreaCterisi_Click;
@@ -367,10 +354,9 @@
             // 
             lblAreaBterisi.AutoSize = true;
             lblAreaBterisi.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAreaBterisi.Location = new Point(690, 416);
-            lblAreaBterisi.Margin = new Padding(4, 0, 4, 0);
+            lblAreaBterisi.Location = new Point(552, 333);
             lblAreaBterisi.Name = "lblAreaBterisi";
-            lblAreaBterisi.Size = new Size(47, 38);
+            lblAreaBterisi.Size = new Size(38, 31);
             lblAreaBterisi.TabIndex = 9;
             lblAreaBterisi.Text = "50";
             lblAreaBterisi.Click += lblAreaBterisi_Click;
@@ -379,10 +365,9 @@
             // 
             lblAreaAterisi.AutoSize = true;
             lblAreaAterisi.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAreaAterisi.Location = new Point(432, 416);
-            lblAreaAterisi.Margin = new Padding(4, 0, 4, 0);
+            lblAreaAterisi.Location = new Point(346, 333);
             lblAreaAterisi.Name = "lblAreaAterisi";
-            lblAreaAterisi.Size = new Size(47, 38);
+            lblAreaAterisi.Size = new Size(38, 31);
             lblAreaAterisi.TabIndex = 8;
             lblAreaAterisi.Text = "50";
             lblAreaAterisi.Click += lblAreaAterisi_Click;
@@ -391,10 +376,9 @@
             // 
             lblAreaC.AutoSize = true;
             lblAreaC.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAreaC.Location = new Point(1035, 416);
-            lblAreaC.Margin = new Padding(4, 0, 4, 0);
+            lblAreaC.Location = new Point(828, 333);
             lblAreaC.Name = "lblAreaC";
-            lblAreaC.Size = new Size(62, 38);
+            lblAreaC.Size = new Size(50, 31);
             lblAreaC.TabIndex = 7;
             lblAreaC.Text = "135";
             // 
@@ -402,10 +386,9 @@
             // 
             lblAreaB.AutoSize = true;
             lblAreaB.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAreaB.Location = new Point(764, 416);
-            lblAreaB.Margin = new Padding(4, 0, 4, 0);
+            lblAreaB.Location = new Point(611, 333);
             lblAreaB.Name = "lblAreaB";
-            lblAreaB.Size = new Size(62, 38);
+            lblAreaB.Size = new Size(50, 31);
             lblAreaB.TabIndex = 6;
             lblAreaB.Text = "135";
             // 
@@ -413,10 +396,9 @@
             // 
             lblAreaA.AutoSize = true;
             lblAreaA.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAreaA.Location = new Point(502, 416);
-            lblAreaA.Margin = new Padding(4, 0, 4, 0);
+            lblAreaA.Location = new Point(402, 333);
             lblAreaA.Name = "lblAreaA";
-            lblAreaA.Size = new Size(62, 38);
+            lblAreaA.Size = new Size(50, 31);
             lblAreaA.TabIndex = 5;
             lblAreaA.Text = "135";
             // 
@@ -426,10 +408,9 @@
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(panel59);
             panel3.Controls.Add(panel72);
-            panel3.Location = new Point(330, 35);
-            panel3.Margin = new Padding(4);
+            panel3.Location = new Point(264, 28);
             panel3.Name = "panel3";
-            panel3.Size = new Size(840, 350);
+            panel3.Size = new Size(672, 280);
             panel3.TabIndex = 4;
             // 
             // panel4
@@ -452,161 +433,142 @@
             panel4.Controls.Add(panel56);
             panel4.Controls.Add(panel57);
             panel4.Controls.Add(panel58);
-            panel4.Location = new Point(556, 4);
-            panel4.Margin = new Padding(4);
+            panel4.Location = new Point(445, 3);
             panel4.Name = "panel4";
-            panel4.Size = new Size(228, 339);
+            panel4.Size = new Size(182, 271);
             panel4.TabIndex = 1;
             // 
             // panel5
             // 
-            panel5.Location = new Point(15, 289);
-            panel5.Margin = new Padding(4);
+            panel5.Location = new Point(12, 231);
             panel5.Name = "panel5";
-            panel5.Size = new Size(59, 38);
+            panel5.Size = new Size(47, 30);
             panel5.TabIndex = 1;
             // 
             // panel6
             // 
-            panel6.Location = new Point(81, 289);
-            panel6.Margin = new Padding(4);
+            panel6.Location = new Point(65, 231);
             panel6.Name = "panel6";
-            panel6.Size = new Size(59, 38);
+            panel6.Size = new Size(47, 30);
             panel6.TabIndex = 1;
             // 
             // panel7
             // 
-            panel7.Location = new Point(148, 289);
-            panel7.Margin = new Padding(4);
+            panel7.Location = new Point(118, 231);
             panel7.Name = "panel7";
-            panel7.Size = new Size(59, 38);
+            panel7.Size = new Size(47, 30);
             panel7.TabIndex = 1;
             // 
             // panel8
             // 
-            panel8.Location = new Point(148, 239);
-            panel8.Margin = new Padding(4);
+            panel8.Location = new Point(118, 191);
             panel8.Name = "panel8";
-            panel8.Size = new Size(59, 38);
+            panel8.Size = new Size(47, 30);
             panel8.TabIndex = 1;
             // 
             // panel45
             // 
             panel45.BackColor = Color.Orange;
-            panel45.Location = new Point(81, 239);
-            panel45.Margin = new Padding(4);
+            panel45.Location = new Point(65, 191);
             panel45.Name = "panel45";
-            panel45.Size = new Size(59, 38);
+            panel45.Size = new Size(47, 30);
             panel45.TabIndex = 1;
             // 
             // panel46
             // 
-            panel46.Location = new Point(15, 239);
-            panel46.Margin = new Padding(4);
+            panel46.Location = new Point(12, 191);
             panel46.Name = "panel46";
-            panel46.Size = new Size(59, 38);
+            panel46.Size = new Size(47, 30);
             panel46.TabIndex = 1;
             // 
             // panel47
             // 
-            panel47.Location = new Point(15, 182);
-            panel47.Margin = new Padding(4);
+            panel47.Location = new Point(12, 146);
             panel47.Name = "panel47";
-            panel47.Size = new Size(59, 38);
+            panel47.Size = new Size(47, 30);
             panel47.TabIndex = 1;
             // 
             // panel48
             // 
             panel48.BackColor = Color.Orange;
-            panel48.Location = new Point(81, 182);
-            panel48.Margin = new Padding(4);
+            panel48.Location = new Point(65, 146);
             panel48.Name = "panel48";
-            panel48.Size = new Size(59, 38);
+            panel48.Size = new Size(47, 30);
             panel48.TabIndex = 1;
             // 
             // panel49
             // 
             panel49.BackColor = Color.Orange;
-            panel49.Location = new Point(148, 182);
-            panel49.Margin = new Padding(4);
+            panel49.Location = new Point(118, 146);
             panel49.Name = "panel49";
-            panel49.Size = new Size(59, 38);
+            panel49.Size = new Size(47, 30);
             panel49.TabIndex = 1;
             // 
             // panel50
             // 
             panel50.BackColor = Color.Orange;
-            panel50.Location = new Point(148, 126);
-            panel50.Margin = new Padding(4);
+            panel50.Location = new Point(118, 101);
             panel50.Name = "panel50";
-            panel50.Size = new Size(59, 38);
+            panel50.Size = new Size(47, 30);
             panel50.TabIndex = 1;
             // 
             // panel51
             // 
-            panel51.Location = new Point(81, 126);
-            panel51.Margin = new Padding(4);
+            panel51.Location = new Point(65, 101);
             panel51.Name = "panel51";
-            panel51.Size = new Size(59, 38);
+            panel51.Size = new Size(47, 30);
             panel51.TabIndex = 1;
             // 
             // panel52
             // 
             panel52.BackColor = Color.Orange;
-            panel52.Location = new Point(15, 126);
-            panel52.Margin = new Padding(4);
+            panel52.Location = new Point(12, 101);
             panel52.Name = "panel52";
-            panel52.Size = new Size(59, 38);
+            panel52.Size = new Size(47, 30);
             panel52.TabIndex = 1;
             // 
             // panel53
             // 
-            panel53.Location = new Point(148, 74);
-            panel53.Margin = new Padding(4);
+            panel53.Location = new Point(118, 59);
             panel53.Name = "panel53";
-            panel53.Size = new Size(59, 38);
+            panel53.Size = new Size(47, 30);
             panel53.TabIndex = 1;
             // 
             // panel54
             // 
-            panel54.Location = new Point(81, 74);
-            panel54.Margin = new Padding(4);
+            panel54.Location = new Point(65, 59);
             panel54.Name = "panel54";
-            panel54.Size = new Size(59, 38);
+            panel54.Size = new Size(47, 30);
             panel54.TabIndex = 1;
             // 
             // panel55
             // 
             panel55.BackColor = Color.Orange;
-            panel55.Location = new Point(15, 74);
-            panel55.Margin = new Padding(4);
+            panel55.Location = new Point(12, 59);
             panel55.Name = "panel55";
-            panel55.Size = new Size(59, 38);
+            panel55.Size = new Size(47, 30);
             panel55.TabIndex = 1;
             // 
             // panel56
             // 
-            panel56.Location = new Point(148, 19);
-            panel56.Margin = new Padding(4);
+            panel56.Location = new Point(118, 15);
             panel56.Name = "panel56";
-            panel56.Size = new Size(59, 38);
+            panel56.Size = new Size(47, 30);
             panel56.TabIndex = 1;
             // 
             // panel57
             // 
-            panel57.Location = new Point(81, 19);
-            panel57.Margin = new Padding(4);
+            panel57.Location = new Point(65, 15);
             panel57.Name = "panel57";
-            panel57.Size = new Size(59, 38);
+            panel57.Size = new Size(47, 30);
             panel57.TabIndex = 1;
             // 
             // panel58
             // 
             panel58.BackColor = Color.Orange;
-            panel58.Location = new Point(15, 20);
-            panel58.Margin = new Padding(4);
+            panel58.Location = new Point(12, 16);
             panel58.Name = "panel58";
-            panel58.Size = new Size(59, 38);
+            panel58.Size = new Size(47, 30);
             panel58.TabIndex = 0;
             // 
             // panel59
@@ -623,114 +585,101 @@
             panel59.Controls.Add(panel69);
             panel59.Controls.Add(panel70);
             panel59.Controls.Add(panel71);
-            panel59.Location = new Point(274, 4);
-            panel59.Margin = new Padding(4);
+            panel59.Location = new Point(219, 3);
             panel59.Name = "panel59";
-            panel59.Size = new Size(251, 339);
+            panel59.Size = new Size(201, 271);
             panel59.TabIndex = 1;
             // 
             // panel60
             // 
             panel60.BackColor = Color.White;
-            panel60.Location = new Point(115, 265);
-            panel60.Margin = new Padding(4);
+            panel60.Location = new Point(92, 212);
             panel60.Name = "panel60";
-            panel60.Size = new Size(12, 70);
+            panel60.Size = new Size(10, 56);
             panel60.TabIndex = 3;
             // 
             // panel61
             // 
             panel61.BackColor = Color.White;
-            panel61.Location = new Point(115, 181);
-            panel61.Margin = new Padding(4);
+            panel61.Location = new Point(92, 145);
             panel61.Name = "panel61";
-            panel61.Size = new Size(12, 70);
+            panel61.Size = new Size(10, 56);
             panel61.TabIndex = 3;
             // 
             // panel62
             // 
             panel62.BackColor = Color.White;
-            panel62.Location = new Point(115, 100);
-            panel62.Margin = new Padding(4);
+            panel62.Location = new Point(92, 80);
             panel62.Name = "panel62";
-            panel62.Size = new Size(12, 70);
+            panel62.Size = new Size(10, 56);
             panel62.TabIndex = 3;
             // 
             // panel63
             // 
             panel63.BackColor = Color.White;
-            panel63.Location = new Point(115, 19);
-            panel63.Margin = new Padding(4);
+            panel63.Location = new Point(92, 15);
             panel63.Name = "panel63";
-            panel63.Size = new Size(12, 70);
+            panel63.Size = new Size(10, 56);
             panel63.TabIndex = 3;
             // 
             // panel64
             // 
-            panel64.Location = new Point(135, 259);
-            panel64.Margin = new Padding(4);
+            panel64.Location = new Point(108, 207);
             panel64.Name = "panel64";
-            panel64.Size = new Size(95, 66);
+            panel64.Size = new Size(76, 53);
             panel64.TabIndex = 2;
             // 
             // panel65
             // 
-            panel65.Location = new Point(135, 181);
-            panel65.Margin = new Padding(4);
+            panel65.Location = new Point(108, 145);
             panel65.Name = "panel65";
-            panel65.Size = new Size(95, 66);
+            panel65.Size = new Size(76, 53);
             panel65.TabIndex = 2;
             // 
             // panel66
             // 
             panel66.BackColor = Color.Red;
-            panel66.Location = new Point(135, 100);
-            panel66.Margin = new Padding(4);
+            panel66.Location = new Point(108, 80);
             panel66.Name = "panel66";
-            panel66.Size = new Size(95, 66);
+            panel66.Size = new Size(76, 53);
             panel66.TabIndex = 2;
             // 
             // panel67
             // 
-            panel67.Location = new Point(135, 19);
-            panel67.Margin = new Padding(4);
+            panel67.Location = new Point(108, 15);
             panel67.Name = "panel67";
-            panel67.Size = new Size(95, 66);
+            panel67.Size = new Size(76, 53);
             panel67.TabIndex = 2;
             // 
             // panel68
             // 
-            panel68.Location = new Point(15, 259);
-            panel68.Margin = new Padding(4);
+            panel68.Location = new Point(12, 207);
             panel68.Name = "panel68";
-            panel68.Size = new Size(95, 66);
+            panel68.Size = new Size(76, 53);
             panel68.TabIndex = 2;
             // 
             // panel69
             // 
             panel69.BackColor = Color.Red;
-            panel69.Location = new Point(15, 181);
-            panel69.Margin = new Padding(4);
+            panel69.Location = new Point(12, 145);
             panel69.Name = "panel69";
-            panel69.Size = new Size(95, 66);
+            panel69.Size = new Size(76, 53);
             panel69.TabIndex = 2;
             // 
             // panel70
             // 
             panel70.BackColor = Color.Red;
-            panel70.Location = new Point(15, 100);
-            panel70.Margin = new Padding(4);
+            panel70.Location = new Point(12, 80);
             panel70.Name = "panel70";
-            panel70.Size = new Size(95, 66);
+            panel70.Size = new Size(76, 53);
             panel70.TabIndex = 1;
             // 
             // panel71
             // 
             panel71.BackColor = Color.Red;
-            panel71.Location = new Point(15, 19);
-            panel71.Margin = new Padding(4);
+            panel71.Location = new Point(12, 15);
             panel71.Name = "panel71";
-            panel71.Size = new Size(95, 66);
+            panel71.Size = new Size(76, 53);
             panel71.TabIndex = 0;
             // 
             // panel72
@@ -743,93 +692,85 @@
             panel72.Controls.Add(panel78);
             panel72.Controls.Add(panel79);
             panel72.Controls.Add(panel80);
-            panel72.Location = new Point(40, 8);
-            panel72.Margin = new Padding(4);
+            panel72.Location = new Point(32, 6);
             panel72.Name = "panel72";
-            panel72.Size = new Size(200, 339);
+            panel72.Size = new Size(160, 271);
             panel72.TabIndex = 0;
             // 
             // panel73
             // 
             panel73.BackColor = Color.White;
-            panel73.Location = new Point(92, 259);
-            panel73.Margin = new Padding(4);
+            panel73.Location = new Point(74, 207);
             panel73.Name = "panel73";
-            panel73.Size = new Size(12, 70);
+            panel73.Size = new Size(10, 56);
             panel73.TabIndex = 3;
             // 
             // panel74
             // 
             panel74.BackColor = Color.White;
-            panel74.Location = new Point(92, 178);
-            panel74.Margin = new Padding(4);
+            panel74.Location = new Point(74, 142);
             panel74.Name = "panel74";
-            panel74.Size = new Size(12, 70);
+            panel74.Size = new Size(10, 56);
             panel74.TabIndex = 3;
             // 
             // panel75
             // 
             panel75.BackColor = Color.White;
-            panel75.Location = new Point(92, 90);
-            panel75.Margin = new Padding(4);
+            panel75.Location = new Point(74, 72);
             panel75.Name = "panel75";
-            panel75.Size = new Size(12, 70);
+            panel75.Size = new Size(10, 56);
             panel75.TabIndex = 3;
             // 
             // panel76
             // 
             panel76.BackColor = Color.White;
-            panel76.Location = new Point(92, 4);
-            panel76.Margin = new Padding(4);
+            panel76.Location = new Point(74, 3);
             panel76.Name = "panel76";
-            panel76.Size = new Size(12, 70);
+            panel76.Size = new Size(10, 56);
             panel76.TabIndex = 2;
             // 
             // panel77
             // 
             panel77.BackColor = Color.Gray;
-            panel77.Location = new Point(119, 179);
-            panel77.Margin = new Padding(4);
+            panel77.Location = new Point(95, 143);
             panel77.Name = "panel77";
-            panel77.Size = new Size(61, 156);
+            panel77.Size = new Size(49, 125);
             panel77.TabIndex = 1;
             // 
             // panel78
             // 
             panel78.BackColor = Color.DodgerBlue;
-            panel78.Location = new Point(24, 179);
-            panel78.Margin = new Padding(4);
+            panel78.Location = new Point(19, 143);
             panel78.Name = "panel78";
-            panel78.Size = new Size(61, 156);
+            panel78.Size = new Size(49, 125);
             panel78.TabIndex = 1;
             // 
             // panel79
             // 
             panel79.BackColor = Color.Gray;
-            panel79.Location = new Point(119, 4);
-            panel79.Margin = new Padding(4);
+            panel79.Location = new Point(95, 3);
             panel79.Name = "panel79";
-            panel79.Size = new Size(61, 156);
+            panel79.Size = new Size(49, 125);
             panel79.TabIndex = 1;
             // 
             // panel80
             // 
             panel80.BackColor = Color.DodgerBlue;
-            panel80.Location = new Point(24, 4);
-            panel80.Margin = new Padding(4);
+            panel80.Location = new Point(19, 3);
             panel80.Name = "panel80";
-            panel80.Size = new Size(61, 156);
+            panel80.Size = new Size(49, 125);
             panel80.TabIndex = 0;
             // 
             // dgvListMonitoring
             // 
+            dgvListMonitoring.BackgroundColor = SystemColors.ControlLightLight;
             dgvListMonitoring.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvListMonitoring.Location = new Point(172, 478);
-            dgvListMonitoring.Margin = new Padding(4);
+            dgvListMonitoring.Location = new Point(138, 382);
             dgvListMonitoring.Name = "dgvListMonitoring";
             dgvListMonitoring.RowHeadersWidth = 51;
-            dgvListMonitoring.Size = new Size(1232, 320);
+            dgvListMonitoring.Size = new Size(986, 256);
             dgvListMonitoring.TabIndex = 3;
+            dgvListMonitoring.CellContentClick += dgvListMonitoring_CellContentClick;
             // 
             // label8
             // 
@@ -1334,12 +1275,11 @@
             // 
             // MonitoringPetugas
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1920, 801);
+            ClientSize = new Size(1536, 641);
             Controls.Add(panel2);
             Controls.Add(panelSidebar);
-            Margin = new Padding(4);
             Name = "MonitoringPetugas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Monitoring";

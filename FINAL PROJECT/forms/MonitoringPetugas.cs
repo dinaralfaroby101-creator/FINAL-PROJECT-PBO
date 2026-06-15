@@ -138,7 +138,7 @@ namespace FINAL_PROJECT.forms
             LoadMonitoring();
             LoadGridMonitoring();
             LoadStatistic();
-           
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -219,7 +219,7 @@ namespace FINAL_PROJECT.forms
 
         }
 
-        
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -248,6 +248,11 @@ namespace FINAL_PROJECT.forms
 
                 this.Hide();
             }
+        }
+
+        private void dgvListMonitoring_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

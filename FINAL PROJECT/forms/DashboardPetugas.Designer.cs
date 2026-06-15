@@ -173,17 +173,15 @@
             panelSidebar.Controls.Add(btnDashboard);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 0);
-            panelSidebar.Margin = new Padding(4);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(350, 801);
+            panelSidebar.Size = new Size(280, 641);
             panelSidebar.TabIndex = 0;
             // 
             // btnLogOut
             // 
-            btnLogOut.Location = new Point(35, 636);
-            btnLogOut.Margin = new Padding(4);
+            btnLogOut.Location = new Point(28, 509);
             btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(275, 62);
+            btnLogOut.Size = new Size(220, 50);
             btnLogOut.TabIndex = 13;
             btnLogOut.Text = "Log Out";
             btnLogOut.UseVisualStyleBackColor = true;
@@ -191,10 +189,9 @@
             // 
             // btnHistoryPetugas
             // 
-            btnHistoryPetugas.Location = new Point(35, 406);
-            btnHistoryPetugas.Margin = new Padding(4);
+            btnHistoryPetugas.Location = new Point(28, 325);
             btnHistoryPetugas.Name = "btnHistoryPetugas";
-            btnHistoryPetugas.Size = new Size(275, 62);
+            btnHistoryPetugas.Size = new Size(220, 50);
             btnHistoryPetugas.TabIndex = 16;
             btnHistoryPetugas.Text = "History";
             btnHistoryPetugas.UseVisualStyleBackColor = true;
@@ -202,10 +199,9 @@
             // 
             // btnMonitoringPetugas
             // 
-            btnMonitoringPetugas.Location = new Point(35, 307);
-            btnMonitoringPetugas.Margin = new Padding(4);
+            btnMonitoringPetugas.Location = new Point(28, 246);
             btnMonitoringPetugas.Name = "btnMonitoringPetugas";
-            btnMonitoringPetugas.Size = new Size(275, 62);
+            btnMonitoringPetugas.Size = new Size(220, 50);
             btnMonitoringPetugas.TabIndex = 15;
             btnMonitoringPetugas.Text = "Monitoring";
             btnMonitoringPetugas.UseVisualStyleBackColor = true;
@@ -214,10 +210,9 @@
             // btnVehicleData
             // 
             btnVehicleData.BackColor = Color.White;
-            btnVehicleData.Location = new Point(35, 209);
-            btnVehicleData.Margin = new Padding(4);
+            btnVehicleData.Location = new Point(28, 167);
             btnVehicleData.Name = "btnVehicleData";
-            btnVehicleData.Size = new Size(275, 62);
+            btnVehicleData.Size = new Size(220, 50);
             btnVehicleData.TabIndex = 14;
             btnVehicleData.Text = "Vehicle Data";
             btnVehicleData.UseVisualStyleBackColor = false;
@@ -228,10 +223,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(81, 15);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(65, 12);
             label1.Name = "label1";
-            label1.Size = new Size(243, 76);
+            label1.Size = new Size(199, 62);
             label1.TabIndex = 0;
             label1.Text = "SMART PARKING\r\nPETUGAS";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -240,10 +234,9 @@
             // picLogo
             // 
             picLogo.Image = Properties.Resources.logo;
-            picLogo.Location = new Point(6, 15);
-            picLogo.Margin = new Padding(4);
+            picLogo.Location = new Point(5, 12);
             picLogo.Name = "picLogo";
-            picLogo.Size = new Size(80, 78);
+            picLogo.Size = new Size(64, 62);
             picLogo.SizeMode = PictureBoxSizeMode.Zoom;
             picLogo.TabIndex = 5;
             picLogo.TabStop = false;
@@ -251,10 +244,9 @@
             // btnDashboard
             // 
             btnDashboard.BackColor = Color.DeepSkyBlue;
-            btnDashboard.Location = new Point(35, 112);
-            btnDashboard.Margin = new Padding(4);
+            btnDashboard.Location = new Point(28, 90);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(275, 62);
+            btnDashboard.Size = new Size(220, 50);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
@@ -263,6 +255,8 @@
             // panelContent
             // 
             panelContent.BackColor = Color.Transparent;
+            panelContent.BackgroundImage = (Image)resources.GetObject("panelContent.BackgroundImage");
+            panelContent.BackgroundImageLayout = ImageLayout.Stretch;
             panelContent.Controls.Add(panel1);
             panelContent.Controls.Add(panelSearch);
             panelContent.Controls.Add(PanelMonitoring);
@@ -271,10 +265,9 @@
             panelContent.Controls.Add(label2);
             panelContent.Controls.Add(lblDashboard);
             panelContent.Dock = DockStyle.Fill;
-            panelContent.Location = new Point(350, 0);
-            panelContent.Margin = new Padding(4);
+            panelContent.Location = new Point(280, 0);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(1570, 801);
+            panelContent.Size = new Size(1256, 641);
             panelContent.TabIndex = 1;
             // 
             // panel1
@@ -285,15 +278,17 @@
             panel1.Controls.Add(pictureBox7);
             panel1.Controls.Add(label4);
             panel1.ImeMode = ImeMode.Off;
-            panel1.Location = new Point(1366, 12);
+            panel1.Location = new Point(1093, 10);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(182, 77);
+            panel1.Size = new Size(146, 62);
             panel1.TabIndex = 11;
             // 
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(3, 12);
+            pictureBox7.Location = new Point(2, 10);
+            pictureBox7.Margin = new Padding(2, 2, 2, 2);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(50, 50);
             pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -303,9 +298,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(59, 13);
+            label4.Location = new Point(47, 10);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(111, 50);
+            label4.Size = new Size(92, 40);
             label4.TabIndex = 8;
             label4.Text = "Admin\r\nAhmad Dani\r\n";
             // 
@@ -316,19 +312,17 @@
             panelSearch.BorderStyle = BorderStyle.FixedSingle;
             panelSearch.Controls.Add(pictureBox2);
             panelSearch.Controls.Add(txtSearch);
-            panelSearch.Location = new Point(904, 22);
-            panelSearch.Margin = new Padding(4);
+            panelSearch.Location = new Point(723, 18);
             panelSearch.Name = "panelSearch";
-            panelSearch.Size = new Size(312, 50);
+            panelSearch.Size = new Size(250, 40);
             panelSearch.TabIndex = 8;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(4, 4);
-            pictureBox2.Margin = new Padding(4);
+            pictureBox2.Location = new Point(3, 3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 38);
+            pictureBox2.Size = new Size(32, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -338,10 +332,9 @@
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSearch.ForeColor = Color.Gray;
-            txtSearch.Location = new Point(51, 9);
-            txtSearch.Margin = new Padding(4);
+            txtSearch.Location = new Point(41, 7);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(225, 28);
+            txtSearch.Size = new Size(180, 23);
             txtSearch.TabIndex = 3;
             txtSearch.Text = "Cari Data Parkir";
             // 
@@ -350,10 +343,9 @@
             PanelMonitoring.Controls.Add(panelParking);
             PanelMonitoring.Controls.Add(PanelArea);
             PanelMonitoring.ForeColor = Color.White;
-            PanelMonitoring.Location = new Point(85, 279);
-            PanelMonitoring.Margin = new Padding(4);
+            PanelMonitoring.Location = new Point(68, 223);
             PanelMonitoring.Name = "PanelMonitoring";
-            PanelMonitoring.Size = new Size(1375, 438);
+            PanelMonitoring.Size = new Size(1100, 350);
             PanelMonitoring.TabIndex = 6;
             // 
             // panelParking
@@ -362,10 +354,9 @@
             panelParking.Controls.Add(panel11);
             panelParking.Controls.Add(panel10);
             panelParking.Controls.Add(panelBus);
-            panelParking.Location = new Point(501, 36);
-            panelParking.Margin = new Padding(4);
+            panelParking.Location = new Point(401, 29);
             panelParking.Name = "panelParking";
-            panelParking.Size = new Size(840, 350);
+            panelParking.Size = new Size(672, 280);
             panelParking.TabIndex = 1;
             panelParking.Paint += panelParking_Paint;
             // 
@@ -389,161 +380,142 @@
             panel11.Controls.Add(panel29);
             panel11.Controls.Add(panel28);
             panel11.Controls.Add(panel27);
-            panel11.Location = new Point(556, 4);
-            panel11.Margin = new Padding(4);
+            panel11.Location = new Point(445, 3);
             panel11.Name = "panel11";
-            panel11.Size = new Size(228, 339);
+            panel11.Size = new Size(182, 271);
             panel11.TabIndex = 1;
             // 
             // panel44
             // 
-            panel44.Location = new Point(15, 289);
-            panel44.Margin = new Padding(4);
+            panel44.Location = new Point(12, 231);
             panel44.Name = "panel44";
-            panel44.Size = new Size(59, 38);
+            panel44.Size = new Size(47, 30);
             panel44.TabIndex = 1;
             // 
             // panel43
             // 
-            panel43.Location = new Point(81, 289);
-            panel43.Margin = new Padding(4);
+            panel43.Location = new Point(65, 231);
             panel43.Name = "panel43";
-            panel43.Size = new Size(59, 38);
+            panel43.Size = new Size(47, 30);
             panel43.TabIndex = 1;
             // 
             // panel42
             // 
-            panel42.Location = new Point(148, 289);
-            panel42.Margin = new Padding(4);
+            panel42.Location = new Point(118, 231);
             panel42.Name = "panel42";
-            panel42.Size = new Size(59, 38);
+            panel42.Size = new Size(47, 30);
             panel42.TabIndex = 1;
             // 
             // panel41
             // 
-            panel41.Location = new Point(148, 239);
-            panel41.Margin = new Padding(4);
+            panel41.Location = new Point(118, 191);
             panel41.Name = "panel41";
-            panel41.Size = new Size(59, 38);
+            panel41.Size = new Size(47, 30);
             panel41.TabIndex = 1;
             // 
             // panel40
             // 
             panel40.BackColor = Color.Orange;
-            panel40.Location = new Point(81, 239);
-            panel40.Margin = new Padding(4);
+            panel40.Location = new Point(65, 191);
             panel40.Name = "panel40";
-            panel40.Size = new Size(59, 38);
+            panel40.Size = new Size(47, 30);
             panel40.TabIndex = 1;
             // 
             // panel39
             // 
-            panel39.Location = new Point(15, 239);
-            panel39.Margin = new Padding(4);
+            panel39.Location = new Point(12, 191);
             panel39.Name = "panel39";
-            panel39.Size = new Size(59, 38);
+            panel39.Size = new Size(47, 30);
             panel39.TabIndex = 1;
             // 
             // panel38
             // 
-            panel38.Location = new Point(15, 182);
-            panel38.Margin = new Padding(4);
+            panel38.Location = new Point(12, 146);
             panel38.Name = "panel38";
-            panel38.Size = new Size(59, 38);
+            panel38.Size = new Size(47, 30);
             panel38.TabIndex = 1;
             // 
             // panel37
             // 
             panel37.BackColor = Color.Orange;
-            panel37.Location = new Point(81, 182);
-            panel37.Margin = new Padding(4);
+            panel37.Location = new Point(65, 146);
             panel37.Name = "panel37";
-            panel37.Size = new Size(59, 38);
+            panel37.Size = new Size(47, 30);
             panel37.TabIndex = 1;
             // 
             // panel36
             // 
             panel36.BackColor = Color.Orange;
-            panel36.Location = new Point(148, 182);
-            panel36.Margin = new Padding(4);
+            panel36.Location = new Point(118, 146);
             panel36.Name = "panel36";
-            panel36.Size = new Size(59, 38);
+            panel36.Size = new Size(47, 30);
             panel36.TabIndex = 1;
             // 
             // panel35
             // 
             panel35.BackColor = Color.Orange;
-            panel35.Location = new Point(148, 126);
-            panel35.Margin = new Padding(4);
+            panel35.Location = new Point(118, 101);
             panel35.Name = "panel35";
-            panel35.Size = new Size(59, 38);
+            panel35.Size = new Size(47, 30);
             panel35.TabIndex = 1;
             // 
             // panel34
             // 
-            panel34.Location = new Point(81, 126);
-            panel34.Margin = new Padding(4);
+            panel34.Location = new Point(65, 101);
             panel34.Name = "panel34";
-            panel34.Size = new Size(59, 38);
+            panel34.Size = new Size(47, 30);
             panel34.TabIndex = 1;
             // 
             // panel33
             // 
             panel33.BackColor = Color.Orange;
-            panel33.Location = new Point(15, 126);
-            panel33.Margin = new Padding(4);
+            panel33.Location = new Point(12, 101);
             panel33.Name = "panel33";
-            panel33.Size = new Size(59, 38);
+            panel33.Size = new Size(47, 30);
             panel33.TabIndex = 1;
             // 
             // panel32
             // 
-            panel32.Location = new Point(148, 74);
-            panel32.Margin = new Padding(4);
+            panel32.Location = new Point(118, 59);
             panel32.Name = "panel32";
-            panel32.Size = new Size(59, 38);
+            panel32.Size = new Size(47, 30);
             panel32.TabIndex = 1;
             // 
             // panel31
             // 
-            panel31.Location = new Point(81, 74);
-            panel31.Margin = new Padding(4);
+            panel31.Location = new Point(65, 59);
             panel31.Name = "panel31";
-            panel31.Size = new Size(59, 38);
+            panel31.Size = new Size(47, 30);
             panel31.TabIndex = 1;
             // 
             // panel30
             // 
             panel30.BackColor = Color.Orange;
-            panel30.Location = new Point(15, 74);
-            panel30.Margin = new Padding(4);
+            panel30.Location = new Point(12, 59);
             panel30.Name = "panel30";
-            panel30.Size = new Size(59, 38);
+            panel30.Size = new Size(47, 30);
             panel30.TabIndex = 1;
             // 
             // panel29
             // 
-            panel29.Location = new Point(148, 19);
-            panel29.Margin = new Padding(4);
+            panel29.Location = new Point(118, 15);
             panel29.Name = "panel29";
-            panel29.Size = new Size(59, 38);
+            panel29.Size = new Size(47, 30);
             panel29.TabIndex = 1;
             // 
             // panel28
             // 
-            panel28.Location = new Point(81, 19);
-            panel28.Margin = new Padding(4);
+            panel28.Location = new Point(65, 15);
             panel28.Name = "panel28";
-            panel28.Size = new Size(59, 38);
+            panel28.Size = new Size(47, 30);
             panel28.TabIndex = 1;
             // 
             // panel27
             // 
             panel27.BackColor = Color.Orange;
-            panel27.Location = new Point(15, 20);
-            panel27.Margin = new Padding(4);
+            panel27.Location = new Point(12, 16);
             panel27.Name = "panel27";
-            panel27.Size = new Size(59, 38);
+            panel27.Size = new Size(47, 30);
             panel27.TabIndex = 0;
             panel27.Paint += panel27_Paint;
             // 
@@ -561,115 +533,102 @@
             panel10.Controls.Add(panel13);
             panel10.Controls.Add(panel12);
             panel10.Controls.Add(panel9);
-            panel10.Location = new Point(274, 4);
-            panel10.Margin = new Padding(4);
+            panel10.Location = new Point(219, 3);
             panel10.Name = "panel10";
-            panel10.Size = new Size(251, 339);
+            panel10.Size = new Size(201, 271);
             panel10.TabIndex = 1;
             // 
             // panel26
             // 
             panel26.BackColor = Color.White;
-            panel26.Location = new Point(115, 265);
-            panel26.Margin = new Padding(4);
+            panel26.Location = new Point(92, 212);
             panel26.Name = "panel26";
-            panel26.Size = new Size(12, 70);
+            panel26.Size = new Size(10, 56);
             panel26.TabIndex = 3;
             // 
             // panel25
             // 
             panel25.BackColor = Color.White;
-            panel25.Location = new Point(115, 181);
-            panel25.Margin = new Padding(4);
+            panel25.Location = new Point(92, 145);
             panel25.Name = "panel25";
-            panel25.Size = new Size(12, 70);
+            panel25.Size = new Size(10, 56);
             panel25.TabIndex = 3;
             // 
             // panel24
             // 
             panel24.BackColor = Color.White;
-            panel24.Location = new Point(115, 100);
-            panel24.Margin = new Padding(4);
+            panel24.Location = new Point(92, 80);
             panel24.Name = "panel24";
-            panel24.Size = new Size(12, 70);
+            panel24.Size = new Size(10, 56);
             panel24.TabIndex = 3;
             // 
             // panel23
             // 
             panel23.BackColor = Color.White;
-            panel23.Location = new Point(115, 19);
-            panel23.Margin = new Padding(4);
+            panel23.Location = new Point(92, 15);
             panel23.Name = "panel23";
-            panel23.Size = new Size(12, 70);
+            panel23.Size = new Size(10, 56);
             panel23.TabIndex = 3;
             // 
             // panel18
             // 
-            panel18.Location = new Point(135, 259);
-            panel18.Margin = new Padding(4);
+            panel18.Location = new Point(108, 207);
             panel18.Name = "panel18";
-            panel18.Size = new Size(95, 66);
+            panel18.Size = new Size(76, 53);
             panel18.TabIndex = 2;
             // 
             // panel17
             // 
-            panel17.Location = new Point(135, 181);
-            panel17.Margin = new Padding(4);
+            panel17.Location = new Point(108, 145);
             panel17.Name = "panel17";
-            panel17.Size = new Size(95, 66);
+            panel17.Size = new Size(76, 53);
             panel17.TabIndex = 2;
             // 
             // panel16
             // 
             panel16.BackColor = Color.Red;
-            panel16.Location = new Point(135, 100);
-            panel16.Margin = new Padding(4);
+            panel16.Location = new Point(108, 80);
             panel16.Name = "panel16";
-            panel16.Size = new Size(95, 66);
+            panel16.Size = new Size(76, 53);
             panel16.TabIndex = 2;
             // 
             // panel15
             // 
-            panel15.Location = new Point(135, 19);
-            panel15.Margin = new Padding(4);
+            panel15.Location = new Point(108, 15);
             panel15.Name = "panel15";
-            panel15.Size = new Size(95, 66);
+            panel15.Size = new Size(76, 53);
             panel15.TabIndex = 2;
             // 
             // panel14
             // 
-            panel14.Location = new Point(15, 259);
-            panel14.Margin = new Padding(4);
+            panel14.Location = new Point(12, 207);
             panel14.Name = "panel14";
-            panel14.Size = new Size(95, 66);
+            panel14.Size = new Size(76, 53);
             panel14.TabIndex = 2;
             // 
             // panel13
             // 
             panel13.BackColor = Color.Red;
-            panel13.Location = new Point(15, 181);
-            panel13.Margin = new Padding(4);
+            panel13.Location = new Point(12, 145);
             panel13.Name = "panel13";
-            panel13.Size = new Size(95, 66);
+            panel13.Size = new Size(76, 53);
             panel13.TabIndex = 2;
             panel13.Paint += panel13_Paint;
             // 
             // panel12
             // 
             panel12.BackColor = Color.Red;
-            panel12.Location = new Point(15, 100);
-            panel12.Margin = new Padding(4);
+            panel12.Location = new Point(12, 80);
             panel12.Name = "panel12";
-            panel12.Size = new Size(95, 66);
+            panel12.Size = new Size(76, 53);
             panel12.TabIndex = 1;
             // 
             // panel9
             // 
             panel9.BackColor = Color.Red;
-            panel9.Location = new Point(15, 19);
-            panel9.Margin = new Padding(4);
+            panel9.Location = new Point(12, 15);
             panel9.Name = "panel9";
-            panel9.Size = new Size(95, 66);
+            panel9.Size = new Size(76, 53);
             panel9.TabIndex = 0;
             // 
             // panelBus
@@ -682,82 +641,73 @@
             panelBus.Controls.Add(Slotbus3);
             panelBus.Controls.Add(SlotBus2);
             panelBus.Controls.Add(SlotBus1);
-            panelBus.Location = new Point(40, 8);
-            panelBus.Margin = new Padding(4);
+            panelBus.Location = new Point(32, 6);
             panelBus.Name = "panelBus";
-            panelBus.Size = new Size(200, 339);
+            panelBus.Size = new Size(160, 271);
             panelBus.TabIndex = 0;
             // 
             // panel22
             // 
             panel22.BackColor = Color.White;
-            panel22.Location = new Point(92, 259);
-            panel22.Margin = new Padding(4);
+            panel22.Location = new Point(74, 207);
             panel22.Name = "panel22";
-            panel22.Size = new Size(12, 70);
+            panel22.Size = new Size(10, 56);
             panel22.TabIndex = 3;
             // 
             // panel21
             // 
             panel21.BackColor = Color.White;
-            panel21.Location = new Point(92, 178);
-            panel21.Margin = new Padding(4);
+            panel21.Location = new Point(74, 142);
             panel21.Name = "panel21";
-            panel21.Size = new Size(12, 70);
+            panel21.Size = new Size(10, 56);
             panel21.TabIndex = 3;
             // 
             // panel20
             // 
             panel20.BackColor = Color.White;
-            panel20.Location = new Point(92, 90);
-            panel20.Margin = new Padding(4);
+            panel20.Location = new Point(74, 72);
             panel20.Name = "panel20";
-            panel20.Size = new Size(12, 70);
+            panel20.Size = new Size(10, 56);
             panel20.TabIndex = 3;
             // 
             // panel19
             // 
             panel19.BackColor = Color.White;
-            panel19.Location = new Point(92, 4);
-            panel19.Margin = new Padding(4);
+            panel19.Location = new Point(74, 3);
             panel19.Name = "panel19";
-            panel19.Size = new Size(12, 70);
+            panel19.Size = new Size(10, 56);
             panel19.TabIndex = 2;
             // 
             // SlotBus4
             // 
             SlotBus4.BackColor = Color.Gray;
-            SlotBus4.Location = new Point(119, 179);
-            SlotBus4.Margin = new Padding(4);
+            SlotBus4.Location = new Point(95, 143);
             SlotBus4.Name = "SlotBus4";
-            SlotBus4.Size = new Size(61, 156);
+            SlotBus4.Size = new Size(49, 125);
             SlotBus4.TabIndex = 1;
             // 
             // Slotbus3
             // 
             Slotbus3.BackColor = Color.DodgerBlue;
-            Slotbus3.Location = new Point(24, 179);
-            Slotbus3.Margin = new Padding(4);
+            Slotbus3.Location = new Point(19, 143);
             Slotbus3.Name = "Slotbus3";
-            Slotbus3.Size = new Size(61, 156);
+            Slotbus3.Size = new Size(49, 125);
             Slotbus3.TabIndex = 1;
             // 
             // SlotBus2
             // 
             SlotBus2.BackColor = Color.Gray;
-            SlotBus2.Location = new Point(119, 4);
-            SlotBus2.Margin = new Padding(4);
+            SlotBus2.Location = new Point(95, 3);
             SlotBus2.Name = "SlotBus2";
-            SlotBus2.Size = new Size(61, 156);
+            SlotBus2.Size = new Size(49, 125);
             SlotBus2.TabIndex = 1;
             // 
             // SlotBus1
             // 
             SlotBus1.BackColor = Color.DodgerBlue;
-            SlotBus1.Location = new Point(24, 4);
-            SlotBus1.Margin = new Padding(4);
+            SlotBus1.Location = new Point(19, 3);
             SlotBus1.Name = "SlotBus1";
-            SlotBus1.Size = new Size(61, 156);
+            SlotBus1.Size = new Size(49, 125);
             SlotBus1.TabIndex = 0;
             // 
             // PanelArea
@@ -767,10 +717,9 @@
             PanelArea.Controls.Add(panel7);
             PanelArea.Controls.Add(panel6);
             PanelArea.ForeColor = SystemColors.ActiveBorder;
-            PanelArea.Location = new Point(40, 36);
-            PanelArea.Margin = new Padding(4);
+            PanelArea.Location = new Point(32, 29);
             PanelArea.Name = "PanelArea";
-            PanelArea.Size = new Size(438, 350);
+            PanelArea.Size = new Size(350, 280);
             PanelArea.TabIndex = 0;
             // 
             // panel8
@@ -781,20 +730,18 @@
             panel8.Controls.Add(lblPersenC);
             panel8.Controls.Add(lblSlotC);
             panel8.Controls.Add(label31);
-            panel8.Location = new Point(20, 235);
-            panel8.Margin = new Padding(4);
+            panel8.Location = new Point(16, 188);
             panel8.Name = "panel8";
-            panel8.Size = new Size(400, 100);
+            panel8.Size = new Size(320, 80);
             panel8.TabIndex = 6;
             // 
             // lblTersediaC
             // 
             lblTersediaC.AutoSize = true;
             lblTersediaC.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTersediaC.Location = new Point(235, 74);
-            lblTersediaC.Margin = new Padding(4, 0, 4, 0);
+            lblTersediaC.Location = new Point(188, 59);
             lblTersediaC.Name = "lblTersediaC";
-            lblTersediaC.Size = new Size(88, 21);
+            lblTersediaC.Size = new Size(75, 17);
             lblTersediaC.TabIndex = 5;
             lblTersediaC.Text = "Tersedia 35";
             // 
@@ -802,29 +749,26 @@
             // 
             lblTerisiC.AutoSize = true;
             lblTerisiC.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTerisiC.Location = new Point(11, 72);
-            lblTerisiC.Margin = new Padding(4, 0, 4, 0);
+            lblTerisiC.Location = new Point(9, 58);
             lblTerisiC.Name = "lblTerisiC";
-            lblTerisiC.Size = new Size(67, 21);
+            lblTerisiC.Size = new Size(56, 17);
             lblTerisiC.TabIndex = 4;
             lblTerisiC.Text = "Terisi 30";
             // 
             // progressBarC
             // 
-            progressBarC.Location = new Point(18, 56);
-            progressBarC.Margin = new Padding(4);
+            progressBarC.Location = new Point(14, 45);
             progressBarC.Name = "progressBarC";
-            progressBarC.Size = new Size(312, 12);
+            progressBarC.Size = new Size(250, 10);
             progressBarC.TabIndex = 3;
             progressBarC.Value = 67;
             // 
             // lblPersenC
             // 
             lblPersenC.AutoSize = true;
-            lblPersenC.Location = new Point(346, 8);
-            lblPersenC.Margin = new Padding(4, 0, 4, 0);
+            lblPersenC.Location = new Point(277, 6);
             lblPersenC.Name = "lblPersenC";
-            lblPersenC.Size = new Size(47, 25);
+            lblPersenC.Size = new Size(37, 20);
             lblPersenC.TabIndex = 2;
             lblPersenC.Text = "67%";
             lblPersenC.Click += DashboardPetugas_Load;
@@ -833,20 +777,18 @@
             // 
             lblSlotC.AutoSize = true;
             lblSlotC.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSlotC.Location = new Point(14, 31);
-            lblSlotC.Margin = new Padding(4, 0, 4, 0);
+            lblSlotC.Location = new Point(11, 25);
             lblSlotC.Name = "lblSlotC";
-            lblSlotC.Size = new Size(55, 20);
+            lblSlotC.Size = new Size(48, 17);
             lblSlotC.TabIndex = 1;
             lblSlotC.Text = "Slot 45";
             // 
             // label31
             // 
             label31.AutoSize = true;
-            label31.Location = new Point(11, 8);
-            label31.Margin = new Padding(4, 0, 4, 0);
+            label31.Location = new Point(9, 6);
             label31.Name = "label31";
-            label31.Size = new Size(64, 25);
+            label31.Size = new Size(53, 20);
             label31.TabIndex = 0;
             label31.Text = "Area C";
             // 
@@ -858,20 +800,18 @@
             panel7.Controls.Add(lblPersenB);
             panel7.Controls.Add(lblSlotB);
             panel7.Controls.Add(label26);
-            panel7.Location = new Point(20, 121);
-            panel7.Margin = new Padding(4);
+            panel7.Location = new Point(16, 97);
             panel7.Name = "panel7";
-            panel7.Size = new Size(400, 100);
+            panel7.Size = new Size(320, 80);
             panel7.TabIndex = 6;
             // 
             // lblTersediaB
             // 
             lblTersediaB.AutoSize = true;
             lblTersediaB.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTersediaB.Location = new Point(231, 74);
-            lblTersediaB.Margin = new Padding(4, 0, 4, 0);
+            lblTersediaB.Location = new Point(185, 59);
             lblTersediaB.Name = "lblTersediaB";
-            lblTersediaB.Size = new Size(88, 21);
+            lblTersediaB.Size = new Size(75, 17);
             lblTersediaB.TabIndex = 5;
             lblTersediaB.Text = "Tersedia 35";
             // 
@@ -879,29 +819,26 @@
             // 
             lblTerisiB.AutoSize = true;
             lblTerisiB.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTerisiB.Location = new Point(11, 72);
-            lblTerisiB.Margin = new Padding(4, 0, 4, 0);
+            lblTerisiB.Location = new Point(9, 58);
             lblTerisiB.Name = "lblTerisiB";
-            lblTerisiB.Size = new Size(67, 21);
+            lblTerisiB.Size = new Size(56, 17);
             lblTerisiB.TabIndex = 4;
             lblTerisiB.Text = "Terisi 30";
             // 
             // progressBarB
             // 
-            progressBarB.Location = new Point(18, 56);
-            progressBarB.Margin = new Padding(4);
+            progressBarB.Location = new Point(14, 45);
             progressBarB.Name = "progressBarB";
-            progressBarB.Size = new Size(312, 12);
+            progressBarB.Size = new Size(250, 10);
             progressBarB.TabIndex = 3;
             progressBarB.Value = 67;
             // 
             // lblPersenB
             // 
             lblPersenB.AutoSize = true;
-            lblPersenB.Location = new Point(346, 8);
-            lblPersenB.Margin = new Padding(4, 0, 4, 0);
+            lblPersenB.Location = new Point(277, 6);
             lblPersenB.Name = "lblPersenB";
-            lblPersenB.Size = new Size(47, 25);
+            lblPersenB.Size = new Size(37, 20);
             lblPersenB.TabIndex = 2;
             lblPersenB.Text = "67%";
             // 
@@ -909,20 +846,18 @@
             // 
             lblSlotB.AutoSize = true;
             lblSlotB.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSlotB.Location = new Point(14, 31);
-            lblSlotB.Margin = new Padding(4, 0, 4, 0);
+            lblSlotB.Location = new Point(11, 25);
             lblSlotB.Name = "lblSlotB";
-            lblSlotB.Size = new Size(55, 20);
+            lblSlotB.Size = new Size(48, 17);
             lblSlotB.TabIndex = 1;
             lblSlotB.Text = "Slot 45";
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(11, 8);
-            label26.Margin = new Padding(4, 0, 4, 0);
+            label26.Location = new Point(9, 6);
             label26.Name = "label26";
-            label26.Size = new Size(63, 25);
+            label26.Size = new Size(53, 20);
             label26.TabIndex = 0;
             label26.Text = "Area B";
             // 
@@ -934,10 +869,9 @@
             panel6.Controls.Add(lblPersenA);
             panel6.Controls.Add(lblSlotA);
             panel6.Controls.Add(label17);
-            panel6.Location = new Point(20, 8);
-            panel6.Margin = new Padding(4);
+            panel6.Location = new Point(16, 6);
             panel6.Name = "panel6";
-            panel6.Size = new Size(400, 100);
+            panel6.Size = new Size(320, 80);
             panel6.TabIndex = 1;
             panel6.Paint += panel6_Paint;
             // 
@@ -945,10 +879,9 @@
             // 
             lblTersediaA.AutoSize = true;
             lblTersediaA.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTersediaA.Location = new Point(231, 74);
-            lblTersediaA.Margin = new Padding(4, 0, 4, 0);
+            lblTersediaA.Location = new Point(185, 59);
             lblTersediaA.Name = "lblTersediaA";
-            lblTersediaA.Size = new Size(88, 21);
+            lblTersediaA.Size = new Size(75, 17);
             lblTersediaA.TabIndex = 5;
             lblTersediaA.Text = "Tersedia 35";
             // 
@@ -956,30 +889,27 @@
             // 
             lblTerisiA.AutoSize = true;
             lblTerisiA.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTerisiA.Location = new Point(11, 72);
-            lblTerisiA.Margin = new Padding(4, 0, 4, 0);
+            lblTerisiA.Location = new Point(9, 58);
             lblTerisiA.Name = "lblTerisiA";
-            lblTerisiA.Size = new Size(67, 21);
+            lblTerisiA.Size = new Size(56, 17);
             lblTerisiA.TabIndex = 4;
             lblTerisiA.Text = "Terisi 30";
             lblTerisiA.Click += label20_Click;
             // 
             // progressBarA
             // 
-            progressBarA.Location = new Point(18, 56);
-            progressBarA.Margin = new Padding(4);
+            progressBarA.Location = new Point(14, 45);
             progressBarA.Name = "progressBarA";
-            progressBarA.Size = new Size(312, 12);
+            progressBarA.Size = new Size(250, 10);
             progressBarA.TabIndex = 3;
             progressBarA.Value = 67;
             // 
             // lblPersenA
             // 
             lblPersenA.AutoSize = true;
-            lblPersenA.Location = new Point(346, 8);
-            lblPersenA.Margin = new Padding(4, 0, 4, 0);
+            lblPersenA.Location = new Point(277, 6);
             lblPersenA.Name = "lblPersenA";
-            lblPersenA.Size = new Size(47, 25);
+            lblPersenA.Size = new Size(37, 20);
             lblPersenA.TabIndex = 2;
             lblPersenA.Text = "67%";
             // 
@@ -987,20 +917,18 @@
             // 
             lblSlotA.AutoSize = true;
             lblSlotA.Font = new Font("Segoe UI", 7.20000029F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSlotA.Location = new Point(14, 31);
-            lblSlotA.Margin = new Padding(4, 0, 4, 0);
+            lblSlotA.Location = new Point(11, 25);
             lblSlotA.Name = "lblSlotA";
-            lblSlotA.Size = new Size(55, 20);
+            lblSlotA.Size = new Size(48, 17);
             lblSlotA.TabIndex = 1;
             lblSlotA.Text = "Slot 45";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(11, 8);
-            label17.Margin = new Padding(4, 0, 4, 0);
+            label17.Location = new Point(9, 6);
             label17.Name = "label17";
-            label17.Size = new Size(65, 25);
+            label17.Size = new Size(54, 20);
             label17.TabIndex = 0;
             label17.Text = "Area A";
             // 
@@ -1010,10 +938,9 @@
             flowLayoutPanel1.Controls.Add(panel3);
             flowLayoutPanel1.Controls.Add(panel4);
             flowLayoutPanel1.Controls.Add(panel5);
-            flowLayoutPanel1.Location = new Point(160, 112);
-            flowLayoutPanel1.Margin = new Padding(4);
+            flowLayoutPanel1.Location = new Point(128, 90);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1234, 159);
+            flowLayoutPanel1.Size = new Size(987, 127);
             flowLayoutPanel1.TabIndex = 5;
             // 
             // panel2
@@ -1023,19 +950,17 @@
             panel2.Controls.Add(lblParkingArea);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(pictureBox3);
-            panel2.Location = new Point(4, 4);
-            panel2.Margin = new Padding(4);
+            panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(300, 150);
+            panel2.Size = new Size(240, 120);
             panel2.TabIndex = 0;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(115, 94);
-            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Location = new Point(92, 75);
             label7.Name = "label7";
-            label7.Size = new Size(103, 50);
+            label7.Size = new Size(85, 40);
             label7.TabIndex = 3;
             label7.Text = "Bus, Car, \r\nMotorCycle\r\n";
             // 
@@ -1043,10 +968,9 @@
             // 
             lblParkingArea.AutoSize = true;
             lblParkingArea.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblParkingArea.Location = new Point(120, 55);
-            lblParkingArea.Margin = new Padding(4, 0, 4, 0);
+            lblParkingArea.Location = new Point(96, 44);
             lblParkingArea.Name = "lblParkingArea";
-            lblParkingArea.Size = new Size(32, 38);
+            lblParkingArea.Size = new Size(26, 31);
             lblParkingArea.TabIndex = 2;
             lblParkingArea.Text = "3";
             lblParkingArea.Click += label6_Click;
@@ -1054,20 +978,18 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(115, 29);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(92, 23);
             label5.Name = "label5";
-            label5.Size = new Size(111, 25);
+            label5.Size = new Size(92, 20);
             label5.TabIndex = 1;
             label5.Text = "Parking Area";
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(21, 29);
-            pictureBox3.Margin = new Padding(4);
+            pictureBox3.Location = new Point(17, 23);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(86, 78);
+            pictureBox3.Size = new Size(69, 62);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
@@ -1080,19 +1002,17 @@
             panel3.Controls.Add(lblTotalSlot);
             panel3.Controls.Add(label10);
             panel3.Controls.Add(pictureBox4);
-            panel3.Location = new Point(312, 4);
-            panel3.Margin = new Padding(4);
+            panel3.Location = new Point(249, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(300, 150);
+            panel3.Size = new Size(240, 120);
             panel3.TabIndex = 4;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(115, 94);
-            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Location = new Point(92, 75);
             label8.Name = "label8";
-            label8.Size = new Size(85, 25);
+            label8.Size = new Size(72, 20);
             label8.TabIndex = 3;
             label8.Text = "Total Slot";
             // 
@@ -1100,30 +1020,27 @@
             // 
             lblTotalSlot.AutoSize = true;
             lblTotalSlot.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotalSlot.Location = new Point(120, 55);
-            lblTotalSlot.Margin = new Padding(4, 0, 4, 0);
+            lblTotalSlot.Location = new Point(96, 44);
             lblTotalSlot.Name = "lblTotalSlot";
-            lblTotalSlot.Size = new Size(62, 38);
+            lblTotalSlot.Size = new Size(50, 31);
             lblTotalSlot.TabIndex = 2;
             lblTotalSlot.Text = "135";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(115, 29);
-            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Location = new Point(92, 23);
             label10.Name = "label10";
-            label10.Size = new Size(106, 25);
+            label10.Size = new Size(87, 20);
             label10.TabIndex = 1;
             label10.Text = "Slot Parking";
             // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(21, 29);
-            pictureBox4.Margin = new Padding(4);
+            pictureBox4.Location = new Point(17, 23);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(86, 78);
+            pictureBox4.Size = new Size(69, 62);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
@@ -1136,19 +1053,17 @@
             panel4.Controls.Add(lblTerisi);
             panel4.Controls.Add(label13);
             panel4.Controls.Add(pictureBox5);
-            panel4.Location = new Point(620, 4);
-            panel4.Margin = new Padding(4);
+            panel4.Location = new Point(495, 3);
             panel4.Name = "panel4";
-            panel4.Size = new Size(300, 150);
+            panel4.Size = new Size(240, 120);
             panel4.TabIndex = 4;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(115, 94);
-            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Location = new Point(92, 75);
             label11.Name = "label11";
-            label11.Size = new Size(153, 25);
+            label11.Size = new Size(131, 20);
             label11.TabIndex = 3;
             label11.Text = "Total Slot Tersedia";
             // 
@@ -1156,30 +1071,27 @@
             // 
             lblTerisi.AutoSize = true;
             lblTerisi.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTerisi.Location = new Point(120, 55);
-            lblTerisi.Margin = new Padding(4, 0, 4, 0);
+            lblTerisi.Location = new Point(96, 44);
             lblTerisi.Name = "lblTerisi";
-            lblTerisi.Size = new Size(47, 38);
+            lblTerisi.Size = new Size(38, 31);
             lblTerisi.TabIndex = 2;
             lblTerisi.Text = "50";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(115, 29);
-            label13.Margin = new Padding(4, 0, 4, 0);
+            label13.Location = new Point(92, 23);
             label13.Name = "label13";
-            label13.Size = new Size(75, 25);
+            label13.Size = new Size(64, 20);
             label13.TabIndex = 1;
             label13.Text = "Tersedia";
             // 
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(21, 29);
-            pictureBox5.Margin = new Padding(4);
+            pictureBox5.Location = new Point(17, 23);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(86, 78);
+            pictureBox5.Size = new Size(69, 62);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
@@ -1192,19 +1104,17 @@
             panel5.Controls.Add(lblTersedia);
             panel5.Controls.Add(label16);
             panel5.Controls.Add(pictureBox6);
-            panel5.Location = new Point(928, 4);
-            panel5.Margin = new Padding(4);
+            panel5.Location = new Point(741, 3);
             panel5.Name = "panel5";
-            panel5.Size = new Size(300, 150);
+            panel5.Size = new Size(240, 120);
             panel5.TabIndex = 4;
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(115, 94);
-            label14.Margin = new Padding(4, 0, 4, 0);
+            label14.Location = new Point(92, 75);
             label14.Name = "label14";
-            label14.Size = new Size(128, 25);
+            label14.Size = new Size(110, 20);
             label14.TabIndex = 3;
             label14.Text = "Total Slot Terisi";
             // 
@@ -1212,30 +1122,27 @@
             // 
             lblTersedia.AutoSize = true;
             lblTersedia.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTersedia.Location = new Point(120, 55);
-            lblTersedia.Margin = new Padding(4, 0, 4, 0);
+            lblTersedia.Location = new Point(96, 44);
             lblTersedia.Name = "lblTersedia";
-            lblTersedia.Size = new Size(47, 38);
+            lblTersedia.Size = new Size(38, 31);
             lblTersedia.TabIndex = 2;
             lblTersedia.Text = "90";
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(115, 29);
-            label16.Margin = new Padding(4, 0, 4, 0);
+            label16.Location = new Point(92, 23);
             label16.Name = "label16";
-            label16.Size = new Size(50, 25);
+            label16.Size = new Size(43, 20);
             label16.TabIndex = 1;
             label16.Text = "Terisi";
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(21, 29);
-            pictureBox6.Margin = new Padding(4);
+            pictureBox6.Location = new Point(17, 23);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(86, 78);
+            pictureBox6.Size = new Size(69, 62);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 0;
             pictureBox6.TabStop = false;
@@ -1244,10 +1151,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1274, 24);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(1019, 19);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(50, 46);
+            pictureBox1.Size = new Size(40, 37);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -1255,10 +1161,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(8, 65);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(6, 52);
             label2.Name = "label2";
-            label2.Size = new Size(308, 25);
+            label2.Size = new Size(257, 20);
             label2.TabIndex = 1;
             label2.Text = "Selamat Datang di Dasboard Petugas";
             // 
@@ -1266,22 +1171,20 @@
             // 
             lblDashboard.AutoSize = true;
             lblDashboard.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDashboard.Location = new Point(0, 15);
-            lblDashboard.Margin = new Padding(4, 0, 4, 0);
+            lblDashboard.Location = new Point(0, 12);
             lblDashboard.Name = "lblDashboard";
-            lblDashboard.Size = new Size(272, 54);
+            lblDashboard.Size = new Size(231, 46);
             lblDashboard.TabIndex = 0;
             lblDashboard.Text = "DASHBOARD";
             lblDashboard.Click += lblDashboard_Click;
             // 
             // DashboardPetugas
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1920, 801);
+            ClientSize = new Size(1536, 641);
             Controls.Add(panelContent);
             Controls.Add(panelSidebar);
-            Margin = new Padding(4);
             Name = "DashboardPetugas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";

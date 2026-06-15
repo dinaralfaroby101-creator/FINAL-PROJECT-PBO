@@ -171,7 +171,7 @@ namespace FINAL_PROJECT.forms
 
         }
 
-       
+
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -280,5 +280,9 @@ namespace FINAL_PROJECT.forms
                 areaC.Persentase + "%";
         }
 
+        private void panelContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
