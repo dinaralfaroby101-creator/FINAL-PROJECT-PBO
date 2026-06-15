@@ -313,12 +313,12 @@ namespace FINAL_PROJECT.forms
 
         private void btnEditUser_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dgvUser.SelectedRows.Count > 0)
             {
                 int id = Convert.ToInt32(
-                    dataGridView1.SelectedRows[0].Cells["ID"].Value);
+                    dgvUser.SelectedRows[0].Cells["ID"].Value);
 
-                FormEditUser frm = new FormEditUser(id);
+                InputUser_ frm = new InputUser_(id);
                 frm.ShowDialog();
 
                 LoadUserData(); // refresh data setelah edit
