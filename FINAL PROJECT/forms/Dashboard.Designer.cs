@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             panelSidebar = new Panel();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label15 = new Label();
+            label12 = new Label();
+            label9 = new Label();
+            label6 = new Label();
+            label3 = new Label();
             btnLogOut = new Button();
             btnFinanceReport = new Button();
             btnHistory = new Button();
@@ -167,6 +175,14 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label20);
+            panelSidebar.Controls.Add(label19);
+            panelSidebar.Controls.Add(label18);
+            panelSidebar.Controls.Add(label15);
+            panelSidebar.Controls.Add(label12);
+            panelSidebar.Controls.Add(label9);
+            panelSidebar.Controls.Add(label6);
+            panelSidebar.Controls.Add(label3);
             panelSidebar.Controls.Add(btnLogOut);
             panelSidebar.Controls.Add(btnFinanceReport);
             panelSidebar.Controls.Add(btnHistory);
@@ -183,74 +199,153 @@
             panelSidebar.Size = new Size(280, 641);
             panelSidebar.TabIndex = 0;
             // 
+            // label20
+            // 
+            label20.BackColor = Color.White;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(37, 488);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 20;
+            // 
+            // label19
+            // 
+            label19.BackColor = Color.White;
+            label19.Image = (Image)resources.GetObject("label19.Image");
+            label19.Location = new Point(37, 432);
+            label19.Name = "label19";
+            label19.Size = new Size(42, 38);
+            label19.TabIndex = 19;
+            // 
+            // label18
+            // 
+            label18.BackColor = Color.White;
+            label18.Image = (Image)resources.GetObject("label18.Image");
+            label18.Location = new Point(37, 376);
+            label18.Name = "label18";
+            label18.Size = new Size(42, 38);
+            label18.TabIndex = 18;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(37, 320);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 17;
+            // 
+            // label12
+            // 
+            label12.BackColor = Color.White;
+            label12.Image = (Image)resources.GetObject("label12.Image");
+            label12.Location = new Point(37, 264);
+            label12.Name = "label12";
+            label12.Size = new Size(42, 38);
+            label12.TabIndex = 16;
+            // 
+            // label9
+            // 
+            label9.BackColor = Color.White;
+            label9.Image = (Image)resources.GetObject("label9.Image");
+            label9.Location = new Point(37, 208);
+            label9.Name = "label9";
+            label9.Size = new Size(42, 38);
+            label9.TabIndex = 15;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.White;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(37, 152);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 14;
+            // 
+            // label3
+            // 
+            label3.BackColor = Color.DeepSkyBlue;
+            label3.Image = (Image)resources.GetObject("label3.Image");
+            label3.Location = new Point(37, 93);
+            label3.Name = "label3";
+            label3.Size = new Size(42, 38);
+            label3.TabIndex = 13;
+            // 
             // btnLogOut
             // 
+            btnLogOut.BackColor = Color.White;
             btnLogOut.Location = new Point(28, 482);
             btnLogOut.Name = "btnLogOut";
             btnLogOut.Size = new Size(220, 50);
             btnLogOut.TabIndex = 12;
             btnLogOut.Text = "Log Out";
-            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.UseVisualStyleBackColor = false;
             btnLogOut.Click += btnLogOut_Click;
             // 
             // btnFinanceReport
             // 
+            btnFinanceReport.BackColor = Color.White;
             btnFinanceReport.Location = new Point(28, 426);
             btnFinanceReport.Name = "btnFinanceReport";
             btnFinanceReport.Size = new Size(220, 50);
             btnFinanceReport.TabIndex = 11;
             btnFinanceReport.Text = "Finance Report";
-            btnFinanceReport.UseVisualStyleBackColor = true;
+            btnFinanceReport.UseVisualStyleBackColor = false;
             btnFinanceReport.Click += btnFinanceReport_Click;
             // 
             // btnHistory
             // 
+            btnHistory.BackColor = Color.White;
             btnHistory.Location = new Point(28, 370);
             btnHistory.Name = "btnHistory";
             btnHistory.Size = new Size(220, 50);
             btnHistory.TabIndex = 10;
             btnHistory.Text = "History";
-            btnHistory.UseVisualStyleBackColor = true;
+            btnHistory.UseVisualStyleBackColor = false;
             btnHistory.Click += btnHistory_Click;
             // 
             // btnMonitoring
             // 
+            btnMonitoring.BackColor = Color.White;
             btnMonitoring.Location = new Point(28, 314);
             btnMonitoring.Name = "btnMonitoring";
             btnMonitoring.Size = new Size(220, 50);
             btnMonitoring.TabIndex = 9;
             btnMonitoring.Text = "Monitoring";
-            btnMonitoring.UseVisualStyleBackColor = true;
+            btnMonitoring.UseVisualStyleBackColor = false;
             btnMonitoring.Click += btnMonitoring_Click;
             // 
             // btnBagStorage
             // 
+            btnBagStorage.BackColor = Color.White;
             btnBagStorage.Location = new Point(28, 258);
             btnBagStorage.Name = "btnBagStorage";
             btnBagStorage.Size = new Size(220, 50);
             btnBagStorage.TabIndex = 8;
             btnBagStorage.Text = "Bag Storage";
-            btnBagStorage.UseVisualStyleBackColor = true;
+            btnBagStorage.UseVisualStyleBackColor = false;
             btnBagStorage.Click += btnBagStorage_Click;
             // 
             // btnUserData
             // 
+            btnUserData.BackColor = Color.White;
             btnUserData.Location = new Point(28, 202);
             btnUserData.Name = "btnUserData";
             btnUserData.Size = new Size(220, 50);
             btnUserData.TabIndex = 7;
             btnUserData.Text = "User Data";
-            btnUserData.UseVisualStyleBackColor = true;
+            btnUserData.UseVisualStyleBackColor = false;
             btnUserData.Click += btnUserData_Click;
             // 
             // btnParkingData
             // 
+            btnParkingData.BackColor = Color.White;
             btnParkingData.Location = new Point(28, 146);
             btnParkingData.Name = "btnParkingData";
             btnParkingData.Size = new Size(220, 50);
             btnParkingData.TabIndex = 6;
             btnParkingData.Text = "Parking Data";
-            btnParkingData.UseVisualStyleBackColor = true;
+            btnParkingData.UseVisualStyleBackColor = false;
             btnParkingData.Click += btnParkingData_Click;
             // 
             // label1
@@ -315,7 +410,7 @@
             panel1.Controls.Add(label4);
             panel1.ImeMode = ImeMode.Off;
             panel1.Location = new Point(1093, 10);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(146, 62);
             panel1.TabIndex = 11;
@@ -324,7 +419,7 @@
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(2, 10);
-            pictureBox7.Margin = new Padding(2, 2, 2, 2);
+            pictureBox7.Margin = new Padding(2);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(50, 50);
             pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -1374,5 +1469,13 @@
         private Panel panel1;
         private Label label4;
         private PictureBox pictureBox7;
+        private Label label3;
+        private Label label6;
+        private Label label19;
+        private Label label18;
+        private Label label15;
+        private Label label12;
+        private Label label9;
+        private Label label20;
     }
 }

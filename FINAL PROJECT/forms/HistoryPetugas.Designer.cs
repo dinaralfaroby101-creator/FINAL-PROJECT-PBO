@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryPetugas));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryPetugas));
             panelSidebar = new Panel();
             btnVehicleData = new Button();
             button1 = new Button();
@@ -48,6 +48,11 @@
             cbPetugas = new ComboBox();
             dateTimePicker2 = new DateTimePicker();
             dtMasuk = new DateTimePicker();
+            label20 = new Label();
+            label12 = new Label();
+            label4 = new Label();
+            label13 = new Label();
+            label15 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelContent.SuspendLayout();
@@ -57,6 +62,11 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label15);
+            panelSidebar.Controls.Add(label13);
+            panelSidebar.Controls.Add(label4);
+            panelSidebar.Controls.Add(label12);
+            panelSidebar.Controls.Add(label20);
             panelSidebar.Controls.Add(btnVehicleData);
             panelSidebar.Controls.Add(button1);
             panelSidebar.Controls.Add(btnHistory);
@@ -121,7 +131,7 @@
             label2.Name = "label2";
             label2.Size = new Size(199, 62);
             label2.TabIndex = 0;
-            label2.Text = "SMART PARKING\r\nADMIN";
+            label2.Text = "SMART PARKING\r\nPETUGAS";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
             // pictureBox1
@@ -264,6 +274,51 @@
             dtMasuk.Size = new Size(160, 27);
             dtMasuk.TabIndex = 0;
             // 
+            // label20
+            // 
+            label20.BackColor = Color.White;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(38, 489);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 23;
+            // 
+            // label12
+            // 
+            label12.BackColor = Color.DeepSkyBlue;
+            label12.Image = (Image)resources.GetObject("label12.Image");
+            label12.Location = new Point(38, 320);
+            label12.Name = "label12";
+            label12.Size = new Size(42, 38);
+            label12.TabIndex = 24;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(38, 247);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 38);
+            label4.TabIndex = 25;
+            // 
+            // label13
+            // 
+            label13.BackColor = Color.White;
+            label13.Image = (Image)resources.GetObject("label13.Image");
+            label13.Location = new Point(38, 170);
+            label13.Name = "label13";
+            label13.Size = new Size(42, 38);
+            label13.TabIndex = 26;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(38, 96);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 27;
+            // 
             // HistoryPetugas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -303,5 +358,10 @@
         private ComboBox cbJenis;
         private DataGridView dgvHistory;
         private Button btnVehicleData;
+        private Label label20;
+        private Label label12;
+        private Label label4;
+        private Label label13;
+        private Label label15;
     }
 }

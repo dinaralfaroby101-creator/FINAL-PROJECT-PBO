@@ -148,6 +148,14 @@
             SlotBus2 = new Panel();
             SlotBus1 = new Panel();
             dgvMonitoring = new DataGridView();
+            label12 = new Label();
+            label13 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            label17 = new Label();
+            label22 = new Label();
+            label23 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -167,6 +175,14 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label23);
+            panelSidebar.Controls.Add(label22);
+            panelSidebar.Controls.Add(label17);
+            panelSidebar.Controls.Add(label16);
+            panelSidebar.Controls.Add(label15);
+            panelSidebar.Controls.Add(label14);
+            panelSidebar.Controls.Add(label13);
+            panelSidebar.Controls.Add(label12);
             panelSidebar.Controls.Add(button1);
             panelSidebar.Controls.Add(btnFinanceReport);
             panelSidebar.Controls.Add(btnHistory);
@@ -1281,6 +1297,78 @@
             dgvMonitoring.Size = new Size(986, 256);
             dgvMonitoring.TabIndex = 3;
             // 
+            // label12
+            // 
+            label12.BackColor = Color.White;
+            label12.Image = (Image)resources.GetObject("label12.Image");
+            label12.Location = new Point(33, 95);
+            label12.Name = "label12";
+            label12.Size = new Size(42, 38);
+            label12.TabIndex = 20;
+            // 
+            // label13
+            // 
+            label13.BackColor = Color.White;
+            label13.Image = (Image)resources.GetObject("label13.Image");
+            label13.Location = new Point(33, 151);
+            label13.Name = "label13";
+            label13.Size = new Size(42, 38);
+            label13.TabIndex = 21;
+            // 
+            // label14
+            // 
+            label14.BackColor = Color.White;
+            label14.Image = (Image)resources.GetObject("label14.Image");
+            label14.Location = new Point(33, 207);
+            label14.Name = "label14";
+            label14.Size = new Size(42, 38);
+            label14.TabIndex = 22;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(33, 263);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 23;
+            // 
+            // label16
+            // 
+            label16.BackColor = Color.DeepSkyBlue;
+            label16.Image = (Image)resources.GetObject("label16.Image");
+            label16.Location = new Point(33, 320);
+            label16.Name = "label16";
+            label16.Size = new Size(42, 38);
+            label16.TabIndex = 24;
+            // 
+            // label17
+            // 
+            label17.BackColor = Color.White;
+            label17.Image = (Image)resources.GetObject("label17.Image");
+            label17.Location = new Point(33, 376);
+            label17.Name = "label17";
+            label17.Size = new Size(42, 38);
+            label17.TabIndex = 25;
+            // 
+            // label22
+            // 
+            label22.BackColor = Color.White;
+            label22.Image = (Image)resources.GetObject("label22.Image");
+            label22.Location = new Point(33, 431);
+            label22.Name = "label22";
+            label22.Size = new Size(42, 38);
+            label22.TabIndex = 26;
+            // 
+            // label23
+            // 
+            label23.BackColor = Color.White;
+            label23.Image = (Image)resources.GetObject("label23.Image");
+            label23.Location = new Point(33, 487);
+            label23.Name = "label23";
+            label23.Size = new Size(42, 38);
+            label23.TabIndex = 27;
+            // 
             // Monitoring
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1433,5 +1521,13 @@
         private Label label19;
         private Label label21;
         private Label label20;
+        private Label label15;
+        private Label label14;
+        private Label label13;
+        private Label label12;
+        private Label label23;
+        private Label label22;
+        private Label label17;
+        private Label label16;
     }
 }

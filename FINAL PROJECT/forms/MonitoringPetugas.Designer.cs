@@ -144,6 +144,11 @@
             SlotBus2 = new Panel();
             SlotBus1 = new Panel();
             dgvMonitoring = new DataGridView();
+            label12 = new Label();
+            label13 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label16 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -162,6 +167,11 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label16);
+            panelSidebar.Controls.Add(label14);
+            panelSidebar.Controls.Add(label15);
+            panelSidebar.Controls.Add(label13);
+            panelSidebar.Controls.Add(label12);
             panelSidebar.Controls.Add(btnVehicleData);
             panelSidebar.Controls.Add(button1);
             panelSidebar.Controls.Add(btnHistory);
@@ -226,7 +236,7 @@
             label2.Name = "label2";
             label2.Size = new Size(199, 62);
             label2.TabIndex = 0;
-            label2.Text = "SMART PARKING\r\nADMIN";
+            label2.Text = "SMART PARKING\r\nPETUGAS";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
             // pictureBox1
@@ -1273,6 +1283,51 @@
             dgvMonitoring.Size = new Size(1232, 320);
             dgvMonitoring.TabIndex = 3;
             // 
+            // label12
+            // 
+            label12.BackColor = Color.DeepSkyBlue;
+            label12.Image = (Image)resources.GetObject("label12.Image");
+            label12.Location = new Point(38, 254);
+            label12.Name = "label12";
+            label12.Size = new Size(42, 38);
+            label12.TabIndex = 18;
+            // 
+            // label13
+            // 
+            label13.BackColor = Color.White;
+            label13.Image = (Image)resources.GetObject("label13.Image");
+            label13.Location = new Point(38, 175);
+            label13.Name = "label13";
+            label13.Size = new Size(42, 38);
+            label13.TabIndex = 23;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(38, 96);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 24;
+            // 
+            // label14
+            // 
+            label14.BackColor = Color.White;
+            label14.Image = (Image)resources.GetObject("label14.Image");
+            label14.Location = new Point(38, 332);
+            label14.Name = "label14";
+            label14.Size = new Size(42, 38);
+            label14.TabIndex = 25;
+            // 
+            // label16
+            // 
+            label16.BackColor = Color.White;
+            label16.Image = (Image)resources.GetObject("label16.Image");
+            label16.Location = new Point(38, 488);
+            label16.Name = "label16";
+            label16.Size = new Size(42, 38);
+            label16.TabIndex = 26;
+            // 
             // MonitoringPetugas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1419,5 +1474,10 @@
         private Label label21;
         private Label label20;
         private Button btnVehicleData;
+        private Label label12;
+        private Label label13;
+        private Label label15;
+        private Label label14;
+        private Label label16;
     }
 }

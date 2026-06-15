@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History));
             panelSidebar = new Panel();
             button1 = new Button();
             btnFinanceReport = new Button();
@@ -51,6 +51,14 @@
             cbPetugas = new ComboBox();
             dateTimePicker2 = new DateTimePicker();
             dtMasuk = new DateTimePicker();
+            label19 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelContent.SuspendLayout();
@@ -60,6 +68,14 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label10);
+            panelSidebar.Controls.Add(label9);
+            panelSidebar.Controls.Add(label8);
+            panelSidebar.Controls.Add(label7);
+            panelSidebar.Controls.Add(label6);
+            panelSidebar.Controls.Add(label5);
+            panelSidebar.Controls.Add(label4);
+            panelSidebar.Controls.Add(label19);
             panelSidebar.Controls.Add(button1);
             panelSidebar.Controls.Add(btnFinanceReport);
             panelSidebar.Controls.Add(btnHistory);
@@ -301,6 +317,78 @@
             dtMasuk.Size = new Size(160, 27);
             dtMasuk.TabIndex = 0;
             // 
+            // label19
+            // 
+            label19.BackColor = Color.White;
+            label19.Image = (Image)resources.GetObject("label19.Image");
+            label19.Location = new Point(33, 96);
+            label19.Name = "label19";
+            label19.Size = new Size(42, 38);
+            label19.TabIndex = 20;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(33, 152);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 38);
+            label4.TabIndex = 21;
+            // 
+            // label5
+            // 
+            label5.BackColor = Color.White;
+            label5.Image = (Image)resources.GetObject("label5.Image");
+            label5.Location = new Point(33, 208);
+            label5.Name = "label5";
+            label5.Size = new Size(42, 38);
+            label5.TabIndex = 22;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.White;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(33, 264);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 23;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.White;
+            label7.Image = (Image)resources.GetObject("label7.Image");
+            label7.Location = new Point(33, 320);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 38);
+            label7.TabIndex = 24;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.DeepSkyBlue;
+            label8.Image = (Image)resources.GetObject("label8.Image");
+            label8.Location = new Point(33, 376);
+            label8.Name = "label8";
+            label8.Size = new Size(42, 38);
+            label8.TabIndex = 25;
+            // 
+            // label9
+            // 
+            label9.BackColor = Color.White;
+            label9.Image = (Image)resources.GetObject("label9.Image");
+            label9.Location = new Point(33, 432);
+            label9.Name = "label9";
+            label9.Size = new Size(42, 38);
+            label9.TabIndex = 26;
+            // 
+            // label10
+            // 
+            label10.BackColor = Color.White;
+            label10.Image = (Image)resources.GetObject("label10.Image");
+            label10.Location = new Point(33, 488);
+            label10.Name = "label10";
+            label10.Size = new Size(42, 38);
+            label10.TabIndex = 27;
+            // 
             // History
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -343,5 +431,13 @@
         private TextBox txtSearch;
         private ComboBox cbJenis;
         private DataGridView dgvHistory;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label19;
     }
 }

@@ -113,6 +113,14 @@
             label30 = new Label();
             lblJumlahMotor = new Label();
             cboFilterDBatang = new ComboBox();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label11 = new Label();
+            label13 = new Label();
+            label15 = new Label();
+            label20 = new Label();
+            label21 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -142,6 +150,14 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label21);
+            panelSidebar.Controls.Add(label20);
+            panelSidebar.Controls.Add(label15);
+            panelSidebar.Controls.Add(label13);
+            panelSidebar.Controls.Add(label11);
+            panelSidebar.Controls.Add(label8);
+            panelSidebar.Controls.Add(label7);
+            panelSidebar.Controls.Add(label6);
             panelSidebar.Controls.Add(button1);
             panelSidebar.Controls.Add(btnFinanceReport);
             panelSidebar.Controls.Add(btnHistory);
@@ -665,7 +681,7 @@
             // panelChartPendapatan
             // 
             panelChartPendapatan.Location = new Point(312, 252);
-            panelChartPendapatan.Margin = new Padding(2, 2, 2, 2);
+            panelChartPendapatan.Margin = new Padding(2);
             panelChartPendapatan.Name = "panelChartPendapatan";
             panelChartPendapatan.Size = new Size(493, 262);
             panelChartPendapatan.TabIndex = 29;
@@ -674,7 +690,7 @@
             // panelChartMetode
             // 
             panelChartMetode.Location = new Point(831, 188);
-            panelChartMetode.Margin = new Padding(2, 2, 2, 2);
+            panelChartMetode.Margin = new Padding(2);
             panelChartMetode.Name = "panelChartMetode";
             panelChartMetode.Size = new Size(188, 175);
             panelChartMetode.TabIndex = 30;
@@ -731,7 +747,7 @@
             // panelChartKendaraan
             // 
             panelChartKendaraan.Location = new Point(831, 436);
-            panelChartKendaraan.Margin = new Padding(2, 2, 2, 2);
+            panelChartKendaraan.Margin = new Padding(2);
             panelChartKendaraan.Name = "panelChartKendaraan";
             panelChartKendaraan.Size = new Size(188, 175);
             panelChartKendaraan.TabIndex = 31;
@@ -753,7 +769,7 @@
             panel11.Controls.Add(label9);
             panel11.Controls.Add(lblJumlahEwallet);
             panel11.Location = new Point(1054, 188);
-            panel11.Margin = new Padding(2, 2, 2, 2);
+            panel11.Margin = new Padding(2);
             panel11.Name = "panel11";
             panel11.Size = new Size(334, 175);
             panel11.TabIndex = 32;
@@ -766,7 +782,6 @@
             cboFilterMetode.Name = "cboFilterMetode";
             cboFilterMetode.Size = new Size(151, 28);
             cboFilterMetode.TabIndex = 35;
-            cboFilterMetode.Text = "7 Hari";
             cboFilterMetode.SelectedIndexChanged += cboFilterMetode_SelectedIndexChanged_1;
             // 
             // label19
@@ -899,7 +914,7 @@
             panel12.Controls.Add(label30);
             panel12.Controls.Add(lblJumlahMotor);
             panel12.Location = new Point(1053, 436);
-            panel12.Margin = new Padding(2, 2, 2, 2);
+            panel12.Margin = new Padding(2);
             panel12.Name = "panel12";
             panel12.Size = new Size(334, 175);
             panel12.TabIndex = 33;
@@ -912,7 +927,6 @@
             cboFilterKendaraan.Name = "cboFilterKendaraan";
             cboFilterKendaraan.Size = new Size(151, 28);
             cboFilterKendaraan.TabIndex = 36;
-            cboFilterKendaraan.Text = "7 Hari";
             cboFilterKendaraan.SelectedIndexChanged += cboFilterKendaraan_SelectedIndexChanged_1;
             // 
             // lblTotalKendaraan
@@ -999,8 +1013,79 @@
             cboFilterDBatang.Name = "cboFilterDBatang";
             cboFilterDBatang.Size = new Size(151, 28);
             cboFilterDBatang.TabIndex = 34;
-            cboFilterDBatang.Text = "7 Hari";
             cboFilterDBatang.SelectedIndexChanged += cboFilterDBatang_SelectedIndexChanged_1;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.White;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(33, 96);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 20;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.White;
+            label7.Image = (Image)resources.GetObject("label7.Image");
+            label7.Location = new Point(33, 152);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 38);
+            label7.TabIndex = 21;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.White;
+            label8.Image = (Image)resources.GetObject("label8.Image");
+            label8.Location = new Point(33, 208);
+            label8.Name = "label8";
+            label8.Size = new Size(42, 38);
+            label8.TabIndex = 22;
+            // 
+            // label11
+            // 
+            label11.BackColor = Color.White;
+            label11.Image = (Image)resources.GetObject("label11.Image");
+            label11.Location = new Point(33, 264);
+            label11.Name = "label11";
+            label11.Size = new Size(42, 38);
+            label11.TabIndex = 23;
+            // 
+            // label13
+            // 
+            label13.BackColor = Color.White;
+            label13.Image = (Image)resources.GetObject("label13.Image");
+            label13.Location = new Point(33, 320);
+            label13.Name = "label13";
+            label13.Size = new Size(42, 38);
+            label13.TabIndex = 24;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(33, 376);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 25;
+            // 
+            // label20
+            // 
+            label20.BackColor = Color.DeepSkyBlue;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(33, 432);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 26;
+            // 
+            // label21
+            // 
+            label21.BackColor = Color.White;
+            label21.Image = (Image)resources.GetObject("label21.Image");
+            label21.Location = new Point(33, 488);
+            label21.Name = "label21";
+            label21.Size = new Size(42, 38);
+            label21.TabIndex = 27;
             // 
             // FinanceReport
             // 
@@ -1149,5 +1234,13 @@
         private ComboBox cboFilterKendaraan;
         private ComboBox cboFilterDBatang;
         private GroupBox groupBox1;
+        private Label label21;
+        private Label label20;
+        private Label label15;
+        private Label label13;
+        private Label label11;
+        private Label label8;
+        private Label label7;
+        private Label label6;
     }
 }

@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vechileentry));
             panelSidebar = new Panel();
+            label2 = new Label();
+            label1 = new Label();
+            label20 = new Label();
+            label18 = new Label();
+            label4 = new Label();
+            label6 = new Label();
+            label15 = new Label();
             btnVehicleEntry = new Button();
             btnVehicleExit = new Button();
             btnVehicleData = new Button();
@@ -60,6 +67,13 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label2);
+            panelSidebar.Controls.Add(label1);
+            panelSidebar.Controls.Add(label20);
+            panelSidebar.Controls.Add(label18);
+            panelSidebar.Controls.Add(label4);
+            panelSidebar.Controls.Add(label6);
+            panelSidebar.Controls.Add(label15);
             panelSidebar.Controls.Add(btnVehicleEntry);
             panelSidebar.Controls.Add(btnVehicleExit);
             panelSidebar.Controls.Add(btnVehicleData);
@@ -74,6 +88,69 @@
             panelSidebar.Name = "panelSidebar";
             panelSidebar.Size = new Size(280, 659);
             panelSidebar.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.White;
+            label2.Image = (Image)resources.GetObject("label2.Image");
+            label2.Location = new Point(75, 274);
+            label2.Name = "label2";
+            label2.Size = new Size(28, 28);
+            label2.TabIndex = 31;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.DeepSkyBlue;
+            label1.Image = (Image)resources.GetObject("label1.Image");
+            label1.Location = new Point(75, 223);
+            label1.Name = "label1";
+            label1.Size = new Size(28, 28);
+            label1.TabIndex = 30;
+            // 
+            // label20
+            // 
+            label20.BackColor = Color.White;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(38, 493);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 29;
+            // 
+            // label18
+            // 
+            label18.BackColor = Color.White;
+            label18.Image = (Image)resources.GetObject("label18.Image");
+            label18.Location = new Point(38, 405);
+            label18.Name = "label18";
+            label18.Size = new Size(42, 38);
+            label18.TabIndex = 28;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(38, 332);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 38);
+            label4.TabIndex = 27;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.White;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(38, 165);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 26;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(38, 96);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 25;
             // 
             // btnVehicleEntry
             // 
@@ -168,7 +245,7 @@
             // txtPlatNomor
             // 
             txtPlatNomor.Location = new Point(427, 154);
-            txtPlatNomor.Margin = new Padding(2, 2, 2, 2);
+            txtPlatNomor.Margin = new Padding(2);
             txtPlatNomor.Name = "txtPlatNomor";
             txtPlatNomor.Size = new Size(253, 27);
             txtPlatNomor.TabIndex = 3;
@@ -178,7 +255,7 @@
             // 
             cboJenisKendaraan.FormattingEnabled = true;
             cboJenisKendaraan.Location = new Point(427, 264);
-            cboJenisKendaraan.Margin = new Padding(2, 2, 2, 2);
+            cboJenisKendaraan.Margin = new Padding(2);
             cboJenisKendaraan.Name = "cboJenisKendaraan";
             cboJenisKendaraan.Size = new Size(253, 28);
             cboJenisKendaraan.TabIndex = 4;
@@ -187,7 +264,7 @@
             // txtMerkKendaraan
             // 
             txtMerkKendaraan.Location = new Point(427, 374);
-            txtMerkKendaraan.Margin = new Padding(2, 2, 2, 2);
+            txtMerkKendaraan.Margin = new Padding(2);
             txtMerkKendaraan.Name = "txtMerkKendaraan";
             txtMerkKendaraan.Size = new Size(253, 27);
             txtMerkKendaraan.TabIndex = 5;
@@ -196,7 +273,7 @@
             // 
             cboAreaParkir.FormattingEnabled = true;
             cboAreaParkir.Location = new Point(427, 483);
-            cboAreaParkir.Margin = new Padding(2, 2, 2, 2);
+            cboAreaParkir.Margin = new Padding(2);
             cboAreaParkir.Name = "cboAreaParkir";
             cboAreaParkir.Size = new Size(253, 28);
             cboAreaParkir.TabIndex = 6;
@@ -253,7 +330,7 @@
             // pictureBox1
             // 
             pictureBox1.Location = new Point(1012, 90);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(293, 427);
             pictureBox1.TabIndex = 44;
@@ -261,7 +338,7 @@
             // 
             // btnBatal
             // 
-            btnBatal.BackColor = Color.Red;
+            btnBatal.BackColor = Color.Brown;
             btnBatal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBatal.Location = new Point(1185, 558);
             btnBatal.Margin = new Padding(3, 4, 3, 4);
@@ -274,7 +351,7 @@
             // 
             // btnSimpan
             // 
-            btnSimpan.BackColor = Color.Chartreuse;
+            btnSimpan.BackColor = Color.LightGreen;
             btnSimpan.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSimpan.Location = new Point(1012, 558);
             btnSimpan.Margin = new Padding(3, 4, 3, 4);
@@ -317,7 +394,7 @@
             Controls.Add(txtPlatNomor);
             Controls.Add(panelSidebar);
             DoubleBuffered = true;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "vechileentry";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "vechileentry";
@@ -355,5 +432,12 @@
         private Button btnBatal;
         private Button btnSimpan;
         private PictureBox pictureBox2;
+        private Label label15;
+        private Label label6;
+        private Label label4;
+        private Label label18;
+        private Label label1;
+        private Label label20;
+        private Label label2;
     }
 }

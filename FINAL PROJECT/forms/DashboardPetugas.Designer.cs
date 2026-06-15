@@ -133,6 +133,11 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             lblDashboard = new Label();
+            label3 = new Label();
+            label15 = new Label();
+            label18 = new Label();
+            label20 = new Label();
+            label6 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panelContent.SuspendLayout();
@@ -164,6 +169,11 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label6);
+            panelSidebar.Controls.Add(label20);
+            panelSidebar.Controls.Add(label18);
+            panelSidebar.Controls.Add(label15);
+            panelSidebar.Controls.Add(label3);
             panelSidebar.Controls.Add(btnLogOut);
             panelSidebar.Controls.Add(btnHistoryPetugas);
             panelSidebar.Controls.Add(btnMonitoringPetugas);
@@ -279,7 +289,7 @@
             panel1.Controls.Add(label4);
             panel1.ImeMode = ImeMode.Off;
             panel1.Location = new Point(1093, 10);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(146, 62);
             panel1.TabIndex = 11;
@@ -288,7 +298,7 @@
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(2, 10);
-            pictureBox7.Margin = new Padding(2, 2, 2, 2);
+            pictureBox7.Margin = new Padding(2);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(50, 50);
             pictureBox7.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -1178,6 +1188,51 @@
             lblDashboard.Text = "DASHBOARD";
             lblDashboard.Click += lblDashboard_Click;
             // 
+            // label3
+            // 
+            label3.BackColor = Color.DeepSkyBlue;
+            label3.Image = (Image)resources.GetObject("label3.Image");
+            label3.Location = new Point(35, 95);
+            label3.Name = "label3";
+            label3.Size = new Size(42, 38);
+            label3.TabIndex = 17;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(34, 253);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 18;
+            // 
+            // label18
+            // 
+            label18.BackColor = Color.White;
+            label18.Image = (Image)resources.GetObject("label18.Image");
+            label18.Location = new Point(34, 330);
+            label18.Name = "label18";
+            label18.Size = new Size(42, 38);
+            label18.TabIndex = 19;
+            // 
+            // label20
+            // 
+            label20.BackColor = Color.White;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(35, 514);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 21;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.White;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(35, 170);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 22;
+            // 
             // DashboardPetugas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1334,5 +1389,10 @@
         private Button btnMonitoringPetugas;
         private Button btnHistoryPetugas;
         private Button btnLogOut;
+        private Label label3;
+        private Label label15;
+        private Label label18;
+        private Label label6;
+        private Label label20;
     }
 }

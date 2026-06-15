@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vehicleexit));
             panelSidebar = new Panel();
+            label20 = new Label();
+            label18 = new Label();
+            label4 = new Label();
+            label7 = new Label();
+            label2 = new Label();
+            label6 = new Label();
+            label15 = new Label();
             btnVehicleEntry = new Button();
             btnVehicleExit = new Button();
             btnVehicleData = new Button();
@@ -69,6 +76,13 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label20);
+            panelSidebar.Controls.Add(label18);
+            panelSidebar.Controls.Add(label4);
+            panelSidebar.Controls.Add(label7);
+            panelSidebar.Controls.Add(label2);
+            panelSidebar.Controls.Add(label6);
+            panelSidebar.Controls.Add(label15);
             panelSidebar.Controls.Add(btnVehicleEntry);
             panelSidebar.Controls.Add(btnVehicleExit);
             panelSidebar.Controls.Add(btnVehicleData);
@@ -83,6 +97,69 @@
             panelSidebar.Name = "panelSidebar";
             panelSidebar.Size = new Size(280, 659);
             panelSidebar.TabIndex = 3;
+            // 
+            // label20
+            // 
+            label20.BackColor = Color.White;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(39, 494);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 35;
+            // 
+            // label18
+            // 
+            label18.BackColor = Color.White;
+            label18.Image = (Image)resources.GetObject("label18.Image");
+            label18.Location = new Point(39, 405);
+            label18.Name = "label18";
+            label18.Size = new Size(42, 38);
+            label18.TabIndex = 34;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(39, 331);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 38);
+            label4.TabIndex = 33;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.White;
+            label7.Image = (Image)resources.GetObject("label7.Image");
+            label7.Location = new Point(77, 225);
+            label7.Name = "label7";
+            label7.Size = new Size(28, 28);
+            label7.TabIndex = 32;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.DeepSkyBlue;
+            label2.Image = (Image)resources.GetObject("label2.Image");
+            label2.Location = new Point(77, 273);
+            label2.Name = "label2";
+            label2.Size = new Size(28, 28);
+            label2.TabIndex = 31;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.White;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(39, 164);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 27;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(39, 95);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 26;
             // 
             // btnVehicleEntry
             // 
@@ -189,18 +266,19 @@
             // txtPlatNoKendaraan
             // 
             txtPlatNoKendaraan.Location = new Point(421, 117);
-            txtPlatNoKendaraan.Margin = new Padding(2, 2, 2, 2);
+            txtPlatNoKendaraan.Margin = new Padding(2);
             txtPlatNoKendaraan.Name = "txtPlatNoKendaraan";
             txtPlatNoKendaraan.Size = new Size(365, 27);
             txtPlatNoKendaraan.TabIndex = 5;
             // 
             // btnCari
             // 
-            btnCari.BackColor = Color.BlueViolet;
+            btnCari.BackColor = Color.DeepSkyBlue;
             btnCari.FlatStyle = FlatStyle.Flat;
+            btnCari.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCari.ForeColor = Color.White;
             btnCari.Location = new Point(811, 115);
-            btnCari.Margin = new Padding(2, 2, 2, 2);
+            btnCari.Margin = new Padding(2);
             btnCari.Name = "btnCari";
             btnCari.Size = new Size(96, 28);
             btnCari.TabIndex = 6;
@@ -228,7 +306,7 @@
             panel1.Controls.Add(lblPlatNomor);
             panel1.Controls.Add(lblArea);
             panel1.Location = new Point(390, 159);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(829, 378);
             panel1.TabIndex = 7;
@@ -248,7 +326,7 @@
             // 
             cboMetodePembayaran.FormattingEnabled = true;
             cboMetodePembayaran.Location = new Point(482, 336);
-            cboMetodePembayaran.Margin = new Padding(2, 2, 2, 2);
+            cboMetodePembayaran.Margin = new Padding(2);
             cboMetodePembayaran.Name = "cboMetodePembayaran";
             cboMetodePembayaran.Size = new Size(110, 28);
             cboMetodePembayaran.TabIndex = 9;
@@ -358,7 +436,7 @@
             // picKendaraan
             // 
             picKendaraan.Location = new Point(90, 141);
-            picKendaraan.Margin = new Padding(2, 2, 2, 2);
+            picKendaraan.Margin = new Padding(2);
             picKendaraan.Name = "picKendaraan";
             picKendaraan.Size = new Size(176, 112);
             picKendaraan.SizeMode = PictureBoxSizeMode.Zoom;
@@ -401,11 +479,12 @@
             // 
             // btnKonfirmasi
             // 
-            btnKonfirmasi.BackColor = Color.BlueViolet;
+            btnKonfirmasi.BackColor = Color.LightGreen;
             btnKonfirmasi.FlatStyle = FlatStyle.Flat;
-            btnKonfirmasi.ForeColor = Color.White;
+            btnKonfirmasi.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnKonfirmasi.ForeColor = Color.Black;
             btnKonfirmasi.Location = new Point(755, 542);
-            btnKonfirmasi.Margin = new Padding(2, 2, 2, 2);
+            btnKonfirmasi.Margin = new Padding(2);
             btnKonfirmasi.Name = "btnKonfirmasi";
             btnKonfirmasi.Size = new Size(200, 36);
             btnKonfirmasi.TabIndex = 8;
@@ -427,7 +506,7 @@
             Controls.Add(lblcariKendaraan);
             Controls.Add(panelSidebar);
             DoubleBuffered = true;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "vehicleexit";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "vehicleexit";
@@ -475,5 +554,12 @@
         private Button btnKonfirmasi;
         private Label label1;
         private ComboBox cboMetodePembayaran;
+        private Label label15;
+        private Label label6;
+        private Label label2;
+        private Label label7;
+        private Label label4;
+        private Label label18;
+        private Label label20;
     }
 }

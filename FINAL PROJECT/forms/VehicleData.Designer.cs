@@ -72,6 +72,13 @@
             textBox1 = new TextBox();
             btnEdit = new Button();
             label1 = new Label();
+            label15 = new Label();
+            label4 = new Label();
+            label18 = new Label();
+            label20 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panelSearch.SuspendLayout();
@@ -95,6 +102,13 @@
             // panelSidebar
             // 
             panelSidebar.BackColor = Color.Navy;
+            panelSidebar.Controls.Add(label8);
+            panelSidebar.Controls.Add(label7);
+            panelSidebar.Controls.Add(label6);
+            panelSidebar.Controls.Add(label20);
+            panelSidebar.Controls.Add(label18);
+            panelSidebar.Controls.Add(label4);
+            panelSidebar.Controls.Add(label15);
             panelSidebar.Controls.Add(btnVehicleEntry);
             panelSidebar.Controls.Add(btnVehicleExit);
             panelSidebar.Controls.Add(btnVehicleData);
@@ -545,6 +559,69 @@
             label1.TabIndex = 4;
             label1.Text = "Cari Plat Nomor";
             // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(38, 96);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 19;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(38, 332);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 38);
+            label4.TabIndex = 20;
+            // 
+            // label18
+            // 
+            label18.BackColor = Color.White;
+            label18.Image = (Image)resources.GetObject("label18.Image");
+            label18.Location = new Point(38, 405);
+            label18.Name = "label18";
+            label18.Size = new Size(42, 38);
+            label18.TabIndex = 21;
+            // 
+            // label20
+            // 
+            label20.BackColor = Color.White;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(38, 493);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 22;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.DeepSkyBlue;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(38, 164);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 23;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.White;
+            label7.Image = (Image)resources.GetObject("label7.Image");
+            label7.Location = new Point(74, 223);
+            label7.Name = "label7";
+            label7.Size = new Size(28, 28);
+            label7.TabIndex = 31;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.White;
+            label8.Image = (Image)resources.GetObject("label8.Image");
+            label8.Location = new Point(74, 273);
+            label8.Name = "label8";
+            label8.Size = new Size(28, 28);
+            label8.TabIndex = 32;
+            // 
             // VehicleData
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -621,7 +698,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel2;
         private Label label7;
-        private Label label6;
         private Label label5;
         private Label lblTotKendaraan;
         private PictureBox pictureBox3;
@@ -647,5 +723,11 @@
         private TextBox textBox1;
         private Button btnEdit;
         private Label label1;
+        private Label label4;
+        private Label label15;
+        private Label label18;
+        private Label label20;
+        private Label label6;
+        private Label label8;
     }
 }
