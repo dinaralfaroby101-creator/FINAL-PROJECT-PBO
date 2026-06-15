@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FINAL_PROJECT;
 
 namespace FINAL_PROJECT.forms
 {
@@ -110,7 +111,7 @@ namespace FINAL_PROJECT.forms
                         idMerk);
 
                 // sementara pakai ID petugas tetap
-                int idPetugas = 4;
+                int idPetugas = Session.IdUser;
 
                 controller.CreateTransaction(
                     txtPlatNomor.Text,

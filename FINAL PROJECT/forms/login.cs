@@ -2,6 +2,7 @@ using FINAL_PROJECT.Data;
 using Npgsql;
 using FINAL_PROJECT.Controllers;
 using FINAL_PROJECT.Models;
+using FINAL_PROJECT;
 
 namespace FINAL_PROJECT.forms
 {
@@ -78,19 +79,22 @@ namespace FINAL_PROJECT.forms
                     return;
                 }
 
+                // SIMPAN SESSION USER LOGIN
+                Session.IdUser = user.IdUser;
+                Session.Username = user.Username;
+                Session.NamaLengkap = user.NamaLengkap;
+                Session.Role = user.GetRole();
+
+                // PINDAH FORM SESUAI ROLE
                 if (user is Admin)
                 {
-                    Dashboard dashboard =
-                        new Dashboard();
-
+                    Dashboard dashboard = new Dashboard();
                     dashboard.Show();
                     this.Hide();
                 }
                 else if (user is Petugas)
                 {
-                    DashboardPetugas petugas =
-                        new DashboardPetugas();
-
+                    DashboardPetugas petugas = new DashboardPetugas();
                     petugas.Show();
                     this.Hide();
                 }
