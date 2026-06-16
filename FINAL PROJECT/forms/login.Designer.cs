@@ -56,7 +56,6 @@
             panelLeft.Name = "panelLeft";
             panelLeft.Size = new Size(507, 641);
             panelLeft.TabIndex = 0;
-            panelLeft.Paint += panel1_Paint;
             // 
             // pictureBox1
             // 
@@ -85,7 +84,6 @@
             panelRight.Name = "panelRight";
             panelRight.Size = new Size(1029, 641);
             panelRight.TabIndex = 1;
-            panelRight.Paint += panel2_Paint;
             // 
             // button1
             // 
@@ -117,7 +115,6 @@
             txtPassword.PlaceholderText = "Password";
             txtPassword.Size = new Size(141, 27);
             txtPassword.TabIndex = 4;
-            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // txtUsername
             // 
