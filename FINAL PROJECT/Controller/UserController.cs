@@ -21,7 +21,7 @@ namespace FINAL_PROJECT.Controller
 
 
         public List<UserModels>
-    Search(string keyword)
+        Search(string keyword)
         {
             return _service.Search(keyword);
         }

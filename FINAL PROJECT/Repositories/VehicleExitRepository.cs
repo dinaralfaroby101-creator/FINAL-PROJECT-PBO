@@ -70,8 +70,8 @@ namespace FINAL_PROJECT.Repositories
 
 
         public decimal ExitVehicle(
-    int idTransaksi,
-    int idMetodePembayaran)
+            int idTransaksi,
+            int idMetodePembayaran)
         {
             using var conn =
                 DatabaseHelper.Instance.GetConnection();

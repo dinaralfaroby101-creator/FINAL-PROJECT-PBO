@@ -35,15 +35,15 @@ namespace FINAL_PROJECT.Repositories
 
 
         public int GetOrCreateMerk(
-    string namaMerk)
+            string namaMerk)
         {
             using var conn =
                 DatabaseHelper.Instance.GetConnection();
 
             string cekSql = @"
-        SELECT id_merk_kendaraan
-        FROM merk_kendaraan
-        WHERE LOWER(nama_merk)
+            SELECT id_merk_kendaraan
+            FROM merk_kendaraan
+            WHERE LOWER(nama_merk)
               = LOWER(@merk)";
 
             using var cekCmd =
@@ -90,17 +90,17 @@ namespace FINAL_PROJECT.Repositories
 
 
         public int GetOrCreateVehicle(
-    string platNomor,
-    string jenisKendaraan,
-    int idMerk)
+            string platNomor,
+            string jenisKendaraan,
+            int idMerk)
         {
             using var conn =
                 DatabaseHelper.Instance.GetConnection();
 
             string cekSql = @"
-        SELECT id_kendaraan
-        FROM kendaraan
-        WHERE LOWER(plat_nomor)
+            SELECT id_kendaraan
+            FROM kendaraan
+            WHERE LOWER(plat_nomor)
               = LOWER(@plat)";
 
             using var cekCmd =
@@ -156,9 +156,9 @@ namespace FINAL_PROJECT.Repositories
 
 
         public void CreateTransaction(
-    string platNomor,
-    string kodeSlot,
-    int idPetugas)
+            string platNomor,
+            string kodeSlot,
+            int idPetugas)
         {
             using var conn =
                 DatabaseHelper.Instance.GetConnection();

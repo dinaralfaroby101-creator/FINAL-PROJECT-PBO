@@ -26,8 +26,8 @@ namespace FINAL_PROJECT.Controllers
 
 
         public decimal ExitVehicle(
-    int idTransaksi,
-    int idMetodePembayaran)
+            int idTransaksi,
+            int idMetodePembayaran)
         {
             return _service
                 .ExitVehicle(

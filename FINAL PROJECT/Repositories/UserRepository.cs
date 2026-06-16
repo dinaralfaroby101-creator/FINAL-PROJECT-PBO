@@ -181,13 +181,12 @@ namespace FINAL_PROJECT.Repositories
                 DatabaseHelper.Instance.GetConnection();
 
             string sql = @"
-        SELECT *
-        FROM users
-        WHERE username ILIKE @search
-        ORDER BY id_user";
+            SELECT *
+            FROM users
+            WHERE username ILIKE @search
+            ORDER BY id_user";
 
-            using var cmd =
-                new NpgsqlCommand(sql, conn);
+            using var cmd = new NpgsqlCommand(sql, conn);
 
             cmd.Parameters.AddWithValue(
                 "@search",

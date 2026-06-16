@@ -33,9 +33,9 @@ namespace FINAL_PROJECT.Services
 
 
         public int GetOrCreateVehicle(
-    string platNomor,
-    string jenisKendaraan,
-    int idMerk)
+            string platNomor,
+            string jenisKendaraan,
+            int idMerk)
         {
             return _repository
                 .GetOrCreateVehicle(
@@ -48,9 +48,9 @@ namespace FINAL_PROJECT.Services
 
 
         public void CreateTransaction(
-    string platNomor,
-    string kodeSlot,
-    int idPetugas)
+            string platNomor,
+            string kodeSlot,
+            int idPetugas)
         {
             _repository.CreateTransaction(
                 platNomor,

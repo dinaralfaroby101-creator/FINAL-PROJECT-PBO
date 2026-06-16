@@ -23,19 +23,6 @@ namespace FINAL_PROJECT.forms
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-        }
         bool showPassword = false;
         private void pictureBox2_Click(object sender, EventArgs e)
         {

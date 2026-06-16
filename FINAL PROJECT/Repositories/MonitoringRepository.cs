@@ -16,9 +16,9 @@ public class MonitoringRepository
                 DatabaseHelper.Instance.GetConnection();
 
             string sql = @"
-SELECT *
-FROM v_monitoring_slot
-ORDER BY kode_slot";
+            SELECT *
+            FROM v_monitoring_slot
+            ORDER BY kode_slot";
 
             using var cmd =
                 new NpgsqlCommand(sql, conn);
@@ -59,7 +59,7 @@ ORDER BY kode_slot";
 
 
         public MonitoringArea
-    GetAreaStatistic(string area)
+            GetAreaStatistic(string area)
         {
             MonitoringArea data =
                 new MonitoringArea();
@@ -68,13 +68,13 @@ ORDER BY kode_slot";
                 DatabaseHelper.Instance.GetConnection();
 
             string sql = @"
-SELECT
-COUNT(*) total,
-COUNT(*) FILTER
-(WHERE status_slot='terisi')
-terisi
-FROM slot_parkir
-WHERE kode_slot LIKE @area";
+            SELECT
+            COUNT(*) total,
+            COUNT(*) FILTER
+            (WHERE status_slot='terisi')
+            terisi
+            FROM slot_parkir
+            WHERE kode_slot LIKE @area";
 
             using var cmd =
                 new NpgsqlCommand(sql, conn);
@@ -98,7 +98,6 @@ WHERE kode_slot LIKE @area";
                     Convert.ToInt32(
                         rd["terisi"]);
             }
-
             return data;
         }
 
