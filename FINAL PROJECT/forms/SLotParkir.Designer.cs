@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SLotParkir));
             cmsJenisKendaraan = new ComboBox();
             lblArea = new Label();
             lblStatus = new Label();
@@ -173,6 +174,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1528, 659);
             Controls.Add(cmbStatus);
             Controls.Add(cmbArea);
@@ -185,7 +188,7 @@
             Controls.Add(lblKendaraan);
             Controls.Add(lblKodeSlot);
             Controls.Add(txtKode);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "SLotParkir";
             Text = "SLotParkir";
             Load += SLotParkir_Load;

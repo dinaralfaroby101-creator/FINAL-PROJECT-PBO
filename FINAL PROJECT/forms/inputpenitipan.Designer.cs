@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inputpenitipan));
             txtNamaPemilik = new TextBox();
             txtKategoriBarang = new TextBox();
             btnBatal = new Button();
@@ -39,34 +40,35 @@
             lbl = new Label();
             txtNamaBarang = new TextBox();
             txtJumlahBarang = new TextBox();
+            lblInputSLot = new Label();
             SuspendLayout();
             // 
             // txtNamaPemilik
             // 
             txtNamaPemilik.BackColor = SystemColors.Window;
-            txtNamaPemilik.Location = new Point(966, 250);
-            txtNamaPemilik.Margin = new Padding(4, 5, 4, 5);
+            txtNamaPemilik.Location = new Point(773, 290);
+            txtNamaPemilik.Margin = new Padding(3, 4, 3, 4);
             txtNamaPemilik.Name = "txtNamaPemilik";
-            txtNamaPemilik.Size = new Size(181, 31);
+            txtNamaPemilik.Size = new Size(146, 27);
             txtNamaPemilik.TabIndex = 69;
             // 
             // txtKategoriBarang
             // 
             txtKategoriBarang.BackColor = SystemColors.Window;
-            txtKategoriBarang.Location = new Point(966, 164);
-            txtKategoriBarang.Margin = new Padding(4, 5, 4, 5);
+            txtKategoriBarang.Location = new Point(773, 221);
+            txtKategoriBarang.Margin = new Padding(3, 4, 3, 4);
             txtKategoriBarang.Name = "txtKategoriBarang";
-            txtKategoriBarang.Size = new Size(181, 31);
+            txtKategoriBarang.Size = new Size(146, 27);
             txtKategoriBarang.TabIndex = 68;
             // 
             // btnBatal
             // 
             btnBatal.BackColor = Color.Red;
             btnBatal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBatal.Location = new Point(988, 662);
-            btnBatal.Margin = new Padding(4, 5, 4, 5);
+            btnBatal.Location = new Point(790, 530);
+            btnBatal.Margin = new Padding(3, 4, 3, 4);
             btnBatal.Name = "btnBatal";
-            btnBatal.Size = new Size(161, 55);
+            btnBatal.Size = new Size(129, 44);
             btnBatal.TabIndex = 66;
             btnBatal.Text = "Batal";
             btnBatal.UseVisualStyleBackColor = false;
@@ -75,14 +77,14 @@
             // 
             btnSimpan.BackColor = Color.Chartreuse;
             btnSimpan.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSimpan.Location = new Point(772, 662);
-            btnSimpan.Margin = new Padding(4, 5, 4, 5);
+            btnSimpan.Location = new Point(618, 530);
+            btnSimpan.Margin = new Padding(3, 4, 3, 4);
             btnSimpan.Name = "btnSimpan";
-            btnSimpan.Size = new Size(161, 55);
+            btnSimpan.Size = new Size(129, 44);
             btnSimpan.TabIndex = 65;
             btnSimpan.Text = "Simpan";
             btnSimpan.UseVisualStyleBackColor = false;
-            btnSimpan.Click += this.btnSimpan_Click;
+            btnSimpan.Click += btnSimpan_Click;
             // 
             // lblArea
             // 
@@ -90,10 +92,9 @@
             lblArea.BackColor = SystemColors.ActiveCaption;
             lblArea.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblArea.ForeColor = Color.Black;
-            lblArea.Location = new Point(773, 161);
-            lblArea.Margin = new Padding(4, 0, 4, 0);
+            lblArea.Location = new Point(618, 219);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(170, 39);
+            lblArea.Size = new Size(140, 32);
             lblArea.TabIndex = 64;
             lblArea.Text = "Kategori Barang";
             // 
@@ -103,10 +104,9 @@
             lblStatus.BackColor = SystemColors.ActiveCaption;
             lblStatus.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStatus.ForeColor = Color.Black;
-            lblStatus.Location = new Point(773, 326);
-            lblStatus.Margin = new Padding(4, 0, 4, 0);
+            lblStatus.Location = new Point(618, 351);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(158, 39);
+            lblStatus.Size = new Size(131, 32);
             lblStatus.TabIndex = 63;
             lblStatus.Text = "Jumlah Barang";
             // 
@@ -116,10 +116,9 @@
             lblKendaraan.BackColor = SystemColors.ActiveCaption;
             lblKendaraan.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblKendaraan.ForeColor = Color.Black;
-            lblKendaraan.Location = new Point(773, 246);
-            lblKendaraan.Margin = new Padding(4, 0, 4, 0);
+            lblKendaraan.Location = new Point(618, 287);
             lblKendaraan.Name = "lblKendaraan";
-            lblKendaraan.Size = new Size(147, 39);
+            lblKendaraan.Size = new Size(121, 32);
             lblKendaraan.TabIndex = 62;
             lblKendaraan.Text = "Nama Pemilik";
             // 
@@ -129,36 +128,48 @@
             lbl.BackColor = SystemColors.ActiveCaption;
             lbl.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbl.ForeColor = Color.Black;
-            lbl.Location = new Point(773, 84);
-            lbl.Margin = new Padding(4, 0, 4, 0);
+            lbl.Location = new Point(618, 157);
             lbl.Name = "lbl";
-            lbl.Size = new Size(146, 39);
+            lbl.Size = new Size(120, 32);
             lbl.TabIndex = 61;
             lbl.Text = "Nama Barang";
             // 
             // txtNamaBarang
             // 
             txtNamaBarang.BackColor = SystemColors.Window;
-            txtNamaBarang.Location = new Point(966, 84);
-            txtNamaBarang.Margin = new Padding(4, 5, 4, 5);
+            txtNamaBarang.Location = new Point(773, 157);
+            txtNamaBarang.Margin = new Padding(3, 4, 3, 4);
             txtNamaBarang.Name = "txtNamaBarang";
-            txtNamaBarang.Size = new Size(181, 31);
+            txtNamaBarang.Size = new Size(146, 27);
             txtNamaBarang.TabIndex = 60;
             // 
             // txtJumlahBarang
             // 
             txtJumlahBarang.BackColor = SystemColors.Window;
-            txtJumlahBarang.Location = new Point(966, 330);
-            txtJumlahBarang.Margin = new Padding(4, 5, 4, 5);
+            txtJumlahBarang.Location = new Point(773, 354);
+            txtJumlahBarang.Margin = new Padding(3, 4, 3, 4);
             txtJumlahBarang.Name = "txtJumlahBarang";
-            txtJumlahBarang.Size = new Size(181, 31);
+            txtJumlahBarang.Size = new Size(146, 27);
             txtJumlahBarang.TabIndex = 70;
+            // 
+            // lblInputSLot
+            // 
+            lblInputSLot.AutoSize = true;
+            lblInputSLot.Font = new Font("Palatino Linotype", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblInputSLot.Location = new Point(618, 37);
+            lblInputSLot.Name = "lblInputSLot";
+            lblInputSLot.Size = new Size(265, 46);
+            lblInputSLot.TabIndex = 71;
+            lblInputSLot.Text = "Input Penitipan\r\n";
             // 
             // inputpenitipan
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1920, 801);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1536, 641);
+            Controls.Add(lblInputSLot);
             Controls.Add(txtJumlahBarang);
             Controls.Add(txtNamaPemilik);
             Controls.Add(txtKategoriBarang);
@@ -169,6 +180,7 @@
             Controls.Add(lblKendaraan);
             Controls.Add(lbl);
             Controls.Add(txtNamaBarang);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "inputpenitipan";
             Text = "inputpenitipan";
             ResumeLayout(false);
@@ -187,5 +199,6 @@
         private Label lbl;
         private TextBox txtNamaBarang;
         private TextBox txtJumlahBarang;
+        private Label lblInputSLot;
     }
 }

@@ -33,6 +33,14 @@ namespace FINAL_PROJECT.forms
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserData));
             panelSidebar = new Panel();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label1 = new Label();
+            label19 = new Label();
             button1 = new Button();
             btnFinanceReport = new Button();
             btnHistory = new Button();
@@ -74,14 +82,6 @@ namespace FINAL_PROJECT.forms
             txtCariUsername = new TextBox();
             panel1 = new Panel();
             btnEditUser = new Button();
-            label19 = new Label();
-            label1 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel5.SuspendLayout();
@@ -127,6 +127,78 @@ namespace FINAL_PROJECT.forms
             panelSidebar.Name = "panelSidebar";
             panelSidebar.Size = new Size(280, 641);
             panelSidebar.TabIndex = 23;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.White;
+            label8.Image = (Image)resources.GetObject("label8.Image");
+            label8.Location = new Point(35, 487);
+            label8.Name = "label8";
+            label8.Size = new Size(42, 38);
+            label8.TabIndex = 27;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.White;
+            label7.Image = (Image)resources.GetObject("label7.Image");
+            label7.Location = new Point(35, 431);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 38);
+            label7.TabIndex = 26;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.White;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(35, 375);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 25;
+            // 
+            // label5
+            // 
+            label5.BackColor = Color.White;
+            label5.Image = (Image)resources.GetObject("label5.Image");
+            label5.Location = new Point(35, 319);
+            label5.Name = "label5";
+            label5.Size = new Size(42, 38);
+            label5.TabIndex = 24;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(35, 263);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 38);
+            label4.TabIndex = 23;
+            // 
+            // label3
+            // 
+            label3.BackColor = Color.DeepSkyBlue;
+            label3.Image = (Image)resources.GetObject("label3.Image");
+            label3.Location = new Point(35, 208);
+            label3.Name = "label3";
+            label3.Size = new Size(42, 38);
+            label3.TabIndex = 22;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.White;
+            label1.Image = (Image)resources.GetObject("label1.Image");
+            label1.Location = new Point(35, 152);
+            label1.Name = "label1";
+            label1.Size = new Size(42, 38);
+            label1.TabIndex = 21;
+            // 
+            // label19
+            // 
+            label19.BackColor = Color.White;
+            label19.Image = (Image)resources.GetObject("label19.Image");
+            label19.Location = new Point(35, 97);
+            label19.Name = "label19";
+            label19.Size = new Size(42, 38);
+            label19.TabIndex = 20;
             // 
             // button1
             // 
@@ -556,78 +628,6 @@ namespace FINAL_PROJECT.forms
             btnEditUser.Text = "Edit User";
             btnEditUser.UseVisualStyleBackColor = false;
             btnEditUser.Click += btnEditUser_Click;
-            // 
-            // label19
-            // 
-            label19.BackColor = Color.White;
-            label19.Image = (Image)resources.GetObject("label19.Image");
-            label19.Location = new Point(35, 97);
-            label19.Name = "label19";
-            label19.Size = new Size(42, 38);
-            label19.TabIndex = 20;
-            // 
-            // label1
-            // 
-            label1.BackColor = Color.White;
-            label1.Image = (Image)resources.GetObject("label1.Image");
-            label1.Location = new Point(35, 152);
-            label1.Name = "label1";
-            label1.Size = new Size(42, 38);
-            label1.TabIndex = 21;
-            // 
-            // label3
-            // 
-            label3.BackColor = Color.DeepSkyBlue;
-            label3.Image = (Image)resources.GetObject("label3.Image");
-            label3.Location = new Point(35, 208);
-            label3.Name = "label3";
-            label3.Size = new Size(42, 38);
-            label3.TabIndex = 22;
-            // 
-            // label4
-            // 
-            label4.BackColor = Color.White;
-            label4.Image = (Image)resources.GetObject("label4.Image");
-            label4.Location = new Point(35, 263);
-            label4.Name = "label4";
-            label4.Size = new Size(42, 38);
-            label4.TabIndex = 23;
-            // 
-            // label5
-            // 
-            label5.BackColor = Color.White;
-            label5.Image = (Image)resources.GetObject("label5.Image");
-            label5.Location = new Point(35, 319);
-            label5.Name = "label5";
-            label5.Size = new Size(42, 38);
-            label5.TabIndex = 24;
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.White;
-            label6.Image = (Image)resources.GetObject("label6.Image");
-            label6.Location = new Point(35, 375);
-            label6.Name = "label6";
-            label6.Size = new Size(42, 38);
-            label6.TabIndex = 25;
-            // 
-            // label7
-            // 
-            label7.BackColor = Color.White;
-            label7.Image = (Image)resources.GetObject("label7.Image");
-            label7.Location = new Point(35, 431);
-            label7.Name = "label7";
-            label7.Size = new Size(42, 38);
-            label7.TabIndex = 26;
-            // 
-            // label8
-            // 
-            label8.BackColor = Color.White;
-            label8.Image = (Image)resources.GetObject("label8.Image");
-            label8.Location = new Point(35, 487);
-            label8.Name = "label8";
-            label8.Size = new Size(42, 38);
-            label8.TabIndex = 27;
             // 
             // UserData
             // 

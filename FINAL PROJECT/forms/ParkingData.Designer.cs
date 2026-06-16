@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParkingData));
             panelSidebar = new Panel();
+            label24 = new Label();
+            label23 = new Label();
+            label22 = new Label();
+            label21 = new Label();
+            label20 = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            label19 = new Label();
             btnLogOut = new Button();
             btnFinanceReport = new Button();
             btnHistory = new Button();
@@ -77,14 +85,6 @@
             label13 = new Label();
             pictureBox5 = new PictureBox();
             npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
-            label19 = new Label();
-            label17 = new Label();
-            label18 = new Label();
-            label20 = new Label();
-            label21 = new Label();
-            label22 = new Label();
-            label23 = new Label();
-            label24 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panel1.SuspendLayout();
@@ -134,6 +134,78 @@
             panelSidebar.Size = new Size(289, 659);
             panelSidebar.TabIndex = 0;
             panelSidebar.Paint += panelSidebar_Paint;
+            // 
+            // label24
+            // 
+            label24.BackColor = Color.White;
+            label24.Image = (Image)resources.GetObject("label24.Image");
+            label24.Location = new Point(48, 484);
+            label24.Name = "label24";
+            label24.Size = new Size(42, 38);
+            label24.TabIndex = 30;
+            // 
+            // label23
+            // 
+            label23.BackColor = Color.White;
+            label23.Image = (Image)resources.GetObject("label23.Image");
+            label23.Location = new Point(48, 428);
+            label23.Name = "label23";
+            label23.Size = new Size(42, 38);
+            label23.TabIndex = 29;
+            // 
+            // label22
+            // 
+            label22.BackColor = Color.White;
+            label22.Image = (Image)resources.GetObject("label22.Image");
+            label22.Location = new Point(48, 372);
+            label22.Name = "label22";
+            label22.Size = new Size(42, 38);
+            label22.TabIndex = 28;
+            // 
+            // label21
+            // 
+            label21.BackColor = Color.White;
+            label21.Image = (Image)resources.GetObject("label21.Image");
+            label21.Location = new Point(48, 316);
+            label21.Name = "label21";
+            label21.Size = new Size(42, 38);
+            label21.TabIndex = 27;
+            // 
+            // label20
+            // 
+            label20.BackColor = Color.White;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(48, 260);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 26;
+            // 
+            // label18
+            // 
+            label18.BackColor = Color.White;
+            label18.Image = (Image)resources.GetObject("label18.Image");
+            label18.Location = new Point(48, 204);
+            label18.Name = "label18";
+            label18.Size = new Size(42, 38);
+            label18.TabIndex = 25;
+            // 
+            // label17
+            // 
+            label17.BackColor = Color.DeepSkyBlue;
+            label17.Image = (Image)resources.GetObject("label17.Image");
+            label17.Location = new Point(48, 149);
+            label17.Name = "label17";
+            label17.Size = new Size(42, 38);
+            label17.TabIndex = 24;
+            // 
+            // label19
+            // 
+            label19.BackColor = Color.White;
+            label19.Image = (Image)resources.GetObject("label19.Image");
+            label19.Location = new Point(48, 92);
+            label19.Name = "label19";
+            label19.Size = new Size(42, 38);
+            label19.TabIndex = 23;
             // 
             // btnLogOut
             // 
@@ -635,78 +707,6 @@
             npgsqlDataAdapter1.InsertCommand = null;
             npgsqlDataAdapter1.SelectCommand = null;
             npgsqlDataAdapter1.UpdateCommand = null;
-            // 
-            // label19
-            // 
-            label19.BackColor = Color.White;
-            label19.Image = (Image)resources.GetObject("label19.Image");
-            label19.Location = new Point(48, 92);
-            label19.Name = "label19";
-            label19.Size = new Size(42, 38);
-            label19.TabIndex = 23;
-            // 
-            // label17
-            // 
-            label17.BackColor = Color.DeepSkyBlue;
-            label17.Image = (Image)resources.GetObject("label17.Image");
-            label17.Location = new Point(48, 149);
-            label17.Name = "label17";
-            label17.Size = new Size(42, 38);
-            label17.TabIndex = 24;
-            // 
-            // label18
-            // 
-            label18.BackColor = Color.White;
-            label18.Image = (Image)resources.GetObject("label18.Image");
-            label18.Location = new Point(48, 204);
-            label18.Name = "label18";
-            label18.Size = new Size(42, 38);
-            label18.TabIndex = 25;
-            // 
-            // label20
-            // 
-            label20.BackColor = Color.White;
-            label20.Image = (Image)resources.GetObject("label20.Image");
-            label20.Location = new Point(48, 260);
-            label20.Name = "label20";
-            label20.Size = new Size(42, 38);
-            label20.TabIndex = 26;
-            // 
-            // label21
-            // 
-            label21.BackColor = Color.White;
-            label21.Image = (Image)resources.GetObject("label21.Image");
-            label21.Location = new Point(48, 316);
-            label21.Name = "label21";
-            label21.Size = new Size(42, 38);
-            label21.TabIndex = 27;
-            // 
-            // label22
-            // 
-            label22.BackColor = Color.White;
-            label22.Image = (Image)resources.GetObject("label22.Image");
-            label22.Location = new Point(48, 372);
-            label22.Name = "label22";
-            label22.Size = new Size(42, 38);
-            label22.TabIndex = 28;
-            // 
-            // label23
-            // 
-            label23.BackColor = Color.White;
-            label23.Image = (Image)resources.GetObject("label23.Image");
-            label23.Location = new Point(48, 428);
-            label23.Name = "label23";
-            label23.Size = new Size(42, 38);
-            label23.TabIndex = 29;
-            // 
-            // label24
-            // 
-            label24.BackColor = Color.White;
-            label24.Image = (Image)resources.GetObject("label24.Image");
-            label24.Location = new Point(48, 484);
-            label24.Name = "label24";
-            label24.Size = new Size(42, 38);
-            label24.TabIndex = 30;
             // 
             // ParkingData
             // 
