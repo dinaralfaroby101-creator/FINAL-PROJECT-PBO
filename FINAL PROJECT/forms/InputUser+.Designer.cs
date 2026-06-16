@@ -39,6 +39,7 @@
             txtNamaUser = new TextBox();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
+            lblInputSLot = new Label();
             SuspendLayout();
             // 
             // cmbRole
@@ -158,6 +159,16 @@
             txtPassword.TabIndex = 59;
             txtPassword.TextChanged += txtPassword_TextChanged;
             // 
+            // lblInputSLot
+            // 
+            lblInputSLot.AutoSize = true;
+            lblInputSLot.Font = new Font("Palatino Linotype", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblInputSLot.Location = new Point(670, 22);
+            lblInputSLot.Name = "lblInputSLot";
+            lblInputSLot.Size = new Size(186, 46);
+            lblInputSLot.TabIndex = 60;
+            lblInputSLot.Text = "Input User\r\n";
+            // 
             // InputUser_
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -165,6 +176,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1536, 641);
+            Controls.Add(lblInputSLot);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Controls.Add(cmbRole);
@@ -176,7 +188,7 @@
             Controls.Add(lbl);
             Controls.Add(txtNamaUser);
             DoubleBuffered = true;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "InputUser_";
             Text = "InputUser_";
             ResumeLayout(false);
@@ -202,5 +214,6 @@
         private TextBox txtNamaUser;
         private TextBox txtUsername;
         private TextBox txtPassword;
+        private Label lblInputSLot;
     }
 }
