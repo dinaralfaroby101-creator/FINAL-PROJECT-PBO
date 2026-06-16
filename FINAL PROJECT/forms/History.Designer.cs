@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History));
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panelSidebar = new Panel();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label19 = new Label();
             button1 = new Button();
             btnFinanceReport = new Button();
             btnHistory = new Button();
@@ -46,19 +54,6 @@
             label3 = new Label();
             panelContent = new Panel();
             dgvHistory = new DataGridView();
-            txtSearch = new TextBox();
-            cbJenis = new ComboBox();
-            cbPetugas = new ComboBox();
-            dateTimePicker2 = new DateTimePicker();
-            dtMasuk = new DateTimePicker();
-            label19 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelContent.SuspendLayout();
@@ -91,6 +86,78 @@
             panelSidebar.Name = "panelSidebar";
             panelSidebar.Size = new Size(280, 641);
             panelSidebar.TabIndex = 25;
+            // 
+            // label10
+            // 
+            label10.BackColor = Color.White;
+            label10.Image = (Image)resources.GetObject("label10.Image");
+            label10.Location = new Point(33, 488);
+            label10.Name = "label10";
+            label10.Size = new Size(42, 38);
+            label10.TabIndex = 27;
+            // 
+            // label9
+            // 
+            label9.BackColor = Color.White;
+            label9.Image = (Image)resources.GetObject("label9.Image");
+            label9.Location = new Point(33, 432);
+            label9.Name = "label9";
+            label9.Size = new Size(42, 38);
+            label9.TabIndex = 26;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.DeepSkyBlue;
+            label8.Image = (Image)resources.GetObject("label8.Image");
+            label8.Location = new Point(33, 376);
+            label8.Name = "label8";
+            label8.Size = new Size(42, 38);
+            label8.TabIndex = 25;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.White;
+            label7.Image = (Image)resources.GetObject("label7.Image");
+            label7.Location = new Point(33, 320);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 38);
+            label7.TabIndex = 24;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.White;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(33, 264);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 23;
+            // 
+            // label5
+            // 
+            label5.BackColor = Color.White;
+            label5.Image = (Image)resources.GetObject("label5.Image");
+            label5.Location = new Point(33, 208);
+            label5.Name = "label5";
+            label5.Size = new Size(42, 38);
+            label5.TabIndex = 22;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(33, 152);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 38);
+            label4.TabIndex = 21;
+            // 
+            // label19
+            // 
+            label19.BackColor = Color.White;
+            label19.Image = (Image)resources.GetObject("label19.Image");
+            label19.Location = new Point(33, 96);
+            label19.Name = "label19";
+            label19.Size = new Size(42, 38);
+            label19.TabIndex = 20;
             // 
             // button1
             // 
@@ -227,12 +294,7 @@
             panelContent.BackgroundImageLayout = ImageLayout.Stretch;
             panelContent.Controls.Add(dgvHistory);
             panelContent.Controls.Add(label3);
-            panelContent.Controls.Add(txtSearch);
             panelContent.Controls.Add(label1);
-            panelContent.Controls.Add(cbJenis);
-            panelContent.Controls.Add(cbPetugas);
-            panelContent.Controls.Add(dateTimePicker2);
-            panelContent.Controls.Add(dtMasuk);
             panelContent.Location = new Point(280, 0);
             panelContent.Margin = new Padding(240, 110, 3, 3);
             panelContent.Name = "panelContent";
@@ -245,23 +307,23 @@
             dgvHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvHistory.BackgroundColor = Color.White;
             dgvHistory.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.LightGray;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvHistory.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvHistory.DefaultCellStyle = dataGridViewCellStyle4;
             dgvHistory.Location = new Point(17, 165);
             dgvHistory.Name = "dgvHistory";
             dgvHistory.RowHeadersVisible = false;
@@ -270,124 +332,6 @@
             dgvHistory.Size = new Size(1227, 383);
             dgvHistory.TabIndex = 5;
             dgvHistory.CellContentClick += dgvHistory_CellContentClick;
-            // 
-            // txtSearch
-            // 
-            txtSearch.Location = new Point(677, 121);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderText = "Cari Kode Transaksi";
-            txtSearch.Size = new Size(250, 27);
-            txtSearch.TabIndex = 4;
-            // 
-            // cbJenis
-            // 
-            cbJenis.FormattingEnabled = true;
-            cbJenis.Items.AddRange(new object[] { "Semua Jenis", "Motor", "Mobil", "Bus" });
-            cbJenis.Location = new Point(396, 123);
-            cbJenis.Name = "cbJenis";
-            cbJenis.Size = new Size(180, 28);
-            cbJenis.TabIndex = 3;
-            cbJenis.SelectedIndexChanged += cbJenis_SelectedIndexChanged;
-            // 
-            // cbPetugas
-            // 
-            cbPetugas.FormattingEnabled = true;
-            cbPetugas.Items.AddRange(new object[] { "Semua Petugas", "Admin", "Petugas 1", "Petugas 2" });
-            cbPetugas.Location = new Point(210, 123);
-            cbPetugas.Name = "cbPetugas";
-            cbPetugas.Size = new Size(180, 28);
-            cbPetugas.TabIndex = 2;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(20, 121);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(160, 27);
-            dateTimePicker2.TabIndex = 1;
-            // 
-            // dtMasuk
-            // 
-            dtMasuk.AccessibleDescription = "waktu";
-            dtMasuk.AccessibleName = "waktu masuk";
-            dtMasuk.CustomFormat = "";
-            dtMasuk.Format = DateTimePickerFormat.Short;
-            dtMasuk.Location = new Point(20, 90);
-            dtMasuk.Name = "dtMasuk";
-            dtMasuk.Size = new Size(160, 27);
-            dtMasuk.TabIndex = 0;
-            // 
-            // label19
-            // 
-            label19.BackColor = Color.White;
-            label19.Image = (Image)resources.GetObject("label19.Image");
-            label19.Location = new Point(33, 96);
-            label19.Name = "label19";
-            label19.Size = new Size(42, 38);
-            label19.TabIndex = 20;
-            // 
-            // label4
-            // 
-            label4.BackColor = Color.White;
-            label4.Image = (Image)resources.GetObject("label4.Image");
-            label4.Location = new Point(33, 152);
-            label4.Name = "label4";
-            label4.Size = new Size(42, 38);
-            label4.TabIndex = 21;
-            // 
-            // label5
-            // 
-            label5.BackColor = Color.White;
-            label5.Image = (Image)resources.GetObject("label5.Image");
-            label5.Location = new Point(33, 208);
-            label5.Name = "label5";
-            label5.Size = new Size(42, 38);
-            label5.TabIndex = 22;
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.White;
-            label6.Image = (Image)resources.GetObject("label6.Image");
-            label6.Location = new Point(33, 264);
-            label6.Name = "label6";
-            label6.Size = new Size(42, 38);
-            label6.TabIndex = 23;
-            // 
-            // label7
-            // 
-            label7.BackColor = Color.White;
-            label7.Image = (Image)resources.GetObject("label7.Image");
-            label7.Location = new Point(33, 320);
-            label7.Name = "label7";
-            label7.Size = new Size(42, 38);
-            label7.TabIndex = 24;
-            // 
-            // label8
-            // 
-            label8.BackColor = Color.DeepSkyBlue;
-            label8.Image = (Image)resources.GetObject("label8.Image");
-            label8.Location = new Point(33, 376);
-            label8.Name = "label8";
-            label8.Size = new Size(42, 38);
-            label8.TabIndex = 25;
-            // 
-            // label9
-            // 
-            label9.BackColor = Color.White;
-            label9.Image = (Image)resources.GetObject("label9.Image");
-            label9.Location = new Point(33, 432);
-            label9.Name = "label9";
-            label9.Size = new Size(42, 38);
-            label9.TabIndex = 26;
-            // 
-            // label10
-            // 
-            label10.BackColor = Color.White;
-            label10.Image = (Image)resources.GetObject("label10.Image");
-            label10.Location = new Point(33, 488);
-            label10.Name = "label10";
-            label10.Size = new Size(42, 38);
-            label10.TabIndex = 27;
             // 
             // History
             // 
@@ -425,11 +369,6 @@
         private Label label1;
         private Label label3;
         private Panel panelContent;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dtMasuk;
-        private ComboBox cbPetugas;
-        private TextBox txtSearch;
-        private ComboBox cbJenis;
         private DataGridView dgvHistory;
         private Label label10;
         private Label label9;

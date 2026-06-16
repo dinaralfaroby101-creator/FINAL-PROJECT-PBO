@@ -30,6 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehicleData));
             panelSidebar = new Panel();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label20 = new Label();
+            label18 = new Label();
+            label4 = new Label();
+            label15 = new Label();
             btnVehicleEntry = new Button();
             btnVehicleExit = new Button();
             btnVehicleData = new Button();
@@ -63,22 +70,13 @@
             label13 = new Label();
             pictureBox5 = new PictureBox();
             pictureBox1 = new PictureBox();
-            label2 = new Label();
             lblVehicleData = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
             gdvVehicleData = new DataGridView();
             panel1 = new Panel();
             pictureBox7 = new PictureBox();
             textBox1 = new TextBox();
-            btnEdit = new Button();
             label1 = new Label();
-            label15 = new Label();
-            label4 = new Label();
-            label18 = new Label();
-            label20 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             panelSearch.SuspendLayout();
@@ -124,6 +122,69 @@
             panelSidebar.Size = new Size(280, 641);
             panelSidebar.TabIndex = 1;
             panelSidebar.Paint += panelSidebar_Paint;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.White;
+            label8.Image = (Image)resources.GetObject("label8.Image");
+            label8.Location = new Point(74, 273);
+            label8.Name = "label8";
+            label8.Size = new Size(28, 28);
+            label8.TabIndex = 32;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.White;
+            label7.Image = (Image)resources.GetObject("label7.Image");
+            label7.Location = new Point(74, 223);
+            label7.Name = "label7";
+            label7.Size = new Size(28, 28);
+            label7.TabIndex = 31;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.DeepSkyBlue;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(38, 164);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 38);
+            label6.TabIndex = 23;
+            // 
+            // label20
+            // 
+            label20.BackColor = Color.White;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(38, 493);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 22;
+            // 
+            // label18
+            // 
+            label18.BackColor = Color.White;
+            label18.Image = (Image)resources.GetObject("label18.Image");
+            label18.Location = new Point(38, 405);
+            label18.Name = "label18";
+            label18.Size = new Size(42, 38);
+            label18.TabIndex = 21;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(38, 332);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 38);
+            label4.TabIndex = 20;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(38, 96);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 19;
             // 
             // btnVehicleEntry
             // 
@@ -463,25 +524,17 @@
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(289, 51);
-            label2.Name = "label2";
-            label2.Size = new Size(257, 20);
-            label2.TabIndex = 12;
-            label2.Text = "Selamat Datang di Dasboard Petugas";
-            label2.Click += label2_Click;
-            // 
             // lblVehicleData
             // 
             lblVehicleData.AutoSize = true;
+            lblVehicleData.BackColor = Color.Transparent;
             lblVehicleData.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblVehicleData.Location = new Point(282, 11);
             lblVehicleData.Name = "lblVehicleData";
             lblVehicleData.Size = new Size(216, 46);
             lblVehicleData.TabIndex = 11;
             lblVehicleData.Text = "Vehicle Data";
+            lblVehicleData.Click += lblVehicleData_Click;
             // 
             // flowLayoutPanel2
             // 
@@ -538,89 +591,16 @@
             textBox1.Text = "Cari Plat Nomer";
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // btnEdit
-            // 
-            btnEdit.BackColor = Color.DarkOrange;
-            btnEdit.Location = new Point(1306, 242);
-            btnEdit.Margin = new Padding(2);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(153, 38);
-            btnEdit.TabIndex = 21;
-            btnEdit.Text = "EDIT";
-            btnEdit.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(345, 243);
+            label1.Location = new Point(336, 246);
             label1.Name = "label1";
             label1.Size = new Size(176, 31);
             label1.TabIndex = 4;
             label1.Text = "Cari Plat Nomor";
-            // 
-            // label15
-            // 
-            label15.BackColor = Color.White;
-            label15.Image = (Image)resources.GetObject("label15.Image");
-            label15.Location = new Point(38, 96);
-            label15.Name = "label15";
-            label15.Size = new Size(42, 38);
-            label15.TabIndex = 19;
-            // 
-            // label4
-            // 
-            label4.BackColor = Color.White;
-            label4.Image = (Image)resources.GetObject("label4.Image");
-            label4.Location = new Point(38, 332);
-            label4.Name = "label4";
-            label4.Size = new Size(42, 38);
-            label4.TabIndex = 20;
-            // 
-            // label18
-            // 
-            label18.BackColor = Color.White;
-            label18.Image = (Image)resources.GetObject("label18.Image");
-            label18.Location = new Point(38, 405);
-            label18.Name = "label18";
-            label18.Size = new Size(42, 38);
-            label18.TabIndex = 21;
-            // 
-            // label20
-            // 
-            label20.BackColor = Color.White;
-            label20.Image = (Image)resources.GetObject("label20.Image");
-            label20.Location = new Point(38, 493);
-            label20.Name = "label20";
-            label20.Size = new Size(42, 38);
-            label20.TabIndex = 22;
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.DeepSkyBlue;
-            label6.Image = (Image)resources.GetObject("label6.Image");
-            label6.Location = new Point(38, 164);
-            label6.Name = "label6";
-            label6.Size = new Size(42, 38);
-            label6.TabIndex = 23;
-            // 
-            // label7
-            // 
-            label7.BackColor = Color.White;
-            label7.Image = (Image)resources.GetObject("label7.Image");
-            label7.Location = new Point(74, 223);
-            label7.Name = "label7";
-            label7.Size = new Size(28, 28);
-            label7.TabIndex = 31;
-            // 
-            // label8
-            // 
-            label8.BackColor = Color.White;
-            label8.Image = (Image)resources.GetObject("label8.Image");
-            label8.Location = new Point(74, 273);
-            label8.Name = "label8";
-            label8.Size = new Size(28, 28);
-            label8.TabIndex = 32;
             // 
             // VehicleData
             // 
@@ -630,7 +610,6 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1536, 641);
             Controls.Add(label1);
-            Controls.Add(btnEdit);
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel2);
             Controls.Add(label32);
@@ -639,7 +618,6 @@
             Controls.Add(label3);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(pictureBox1);
-            Controls.Add(label2);
             Controls.Add(lblVehicleData);
             Controls.Add(panelSidebar);
             DoubleBuffered = true;
@@ -714,14 +692,12 @@
         private Label label16;
         private PictureBox pictureBox6;
         private PictureBox pictureBox1;
-        private Label label2;
         private Label lblVehicleData;
         private FlowLayoutPanel flowLayoutPanel2;
         private DataGridView gdvVehicleData;
         private Panel panel1;
         private PictureBox pictureBox7;
         private TextBox textBox1;
-        private Button btnEdit;
         private Label label1;
         private Label label4;
         private Label label15;

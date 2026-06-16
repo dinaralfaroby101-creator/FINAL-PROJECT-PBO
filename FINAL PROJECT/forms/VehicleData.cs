@@ -151,5 +151,15 @@ namespace FINAL_PROJECT.forms
         {
 
         }
+
+        private void lblVehicleData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

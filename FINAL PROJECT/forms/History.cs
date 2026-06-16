@@ -105,5 +105,10 @@ namespace FINAL_PROJECT.forms
         {
 
         }
+
+        private void dtMasuk_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

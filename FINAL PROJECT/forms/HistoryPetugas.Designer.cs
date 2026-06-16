@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryPetugas));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryPetugas));
             panelSidebar = new Panel();
+            label15 = new Label();
+            label13 = new Label();
+            label4 = new Label();
+            label12 = new Label();
+            label20 = new Label();
             btnVehicleData = new Button();
             button1 = new Button();
             btnHistory = new Button();
@@ -43,16 +48,6 @@
             label3 = new Label();
             panelContent = new Panel();
             dgvHistory = new DataGridView();
-            txtSearch = new TextBox();
-            cbJenis = new ComboBox();
-            cbPetugas = new ComboBox();
-            dateTimePicker2 = new DateTimePicker();
-            dtMasuk = new DateTimePicker();
-            label20 = new Label();
-            label12 = new Label();
-            label4 = new Label();
-            label13 = new Label();
-            label15 = new Label();
             panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelContent.SuspendLayout();
@@ -79,6 +74,51 @@
             panelSidebar.Name = "panelSidebar";
             panelSidebar.Size = new Size(280, 641);
             panelSidebar.TabIndex = 25;
+            // 
+            // label15
+            // 
+            label15.BackColor = Color.White;
+            label15.Image = (Image)resources.GetObject("label15.Image");
+            label15.Location = new Point(38, 96);
+            label15.Name = "label15";
+            label15.Size = new Size(42, 38);
+            label15.TabIndex = 27;
+            // 
+            // label13
+            // 
+            label13.BackColor = Color.White;
+            label13.Image = (Image)resources.GetObject("label13.Image");
+            label13.Location = new Point(38, 170);
+            label13.Name = "label13";
+            label13.Size = new Size(42, 38);
+            label13.TabIndex = 26;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(38, 247);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 38);
+            label4.TabIndex = 25;
+            // 
+            // label12
+            // 
+            label12.BackColor = Color.DeepSkyBlue;
+            label12.Image = (Image)resources.GetObject("label12.Image");
+            label12.Location = new Point(38, 320);
+            label12.Name = "label12";
+            label12.Size = new Size(42, 38);
+            label12.TabIndex = 24;
+            // 
+            // label20
+            // 
+            label20.BackColor = Color.White;
+            label20.Image = (Image)resources.GetObject("label20.Image");
+            label20.Location = new Point(38, 489);
+            label20.Name = "label20";
+            label20.Size = new Size(42, 38);
+            label20.TabIndex = 23;
             // 
             // btnVehicleData
             // 
@@ -185,12 +225,7 @@
             panelContent.BackgroundImageLayout = ImageLayout.Stretch;
             panelContent.Controls.Add(dgvHistory);
             panelContent.Controls.Add(label3);
-            panelContent.Controls.Add(txtSearch);
             panelContent.Controls.Add(label1);
-            panelContent.Controls.Add(cbJenis);
-            panelContent.Controls.Add(cbPetugas);
-            panelContent.Controls.Add(dateTimePicker2);
-            panelContent.Controls.Add(dtMasuk);
             panelContent.Location = new Point(280, 0);
             panelContent.Margin = new Padding(240, 110, 3, 3);
             panelContent.Name = "panelContent";
@@ -229,96 +264,6 @@
             dgvHistory.TabIndex = 5;
             dgvHistory.CellContentClick += dgvHistory_CellContentClick;
             // 
-            // txtSearch
-            // 
-            txtSearch.Location = new Point(994, 102);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderText = "Cari Kode Transaksi";
-            txtSearch.Size = new Size(250, 27);
-            txtSearch.TabIndex = 4;
-            // 
-            // cbJenis
-            // 
-            cbJenis.FormattingEnabled = true;
-            cbJenis.Items.AddRange(new object[] { "Semua Jenis", "Motor", "Mobil", "Bus" });
-            cbJenis.Location = new Point(396, 110);
-            cbJenis.Name = "cbJenis";
-            cbJenis.Size = new Size(180, 28);
-            cbJenis.TabIndex = 3;
-            // 
-            // cbPetugas
-            // 
-            cbPetugas.FormattingEnabled = true;
-            cbPetugas.Items.AddRange(new object[] { "Semua Petugas", "Admin", "Petugas 1", "Petugas 2" });
-            cbPetugas.Location = new Point(210, 110);
-            cbPetugas.Name = "cbPetugas";
-            cbPetugas.Size = new Size(180, 28);
-            cbPetugas.TabIndex = 2;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(17, 120);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(160, 27);
-            dateTimePicker2.TabIndex = 1;
-            // 
-            // dtMasuk
-            // 
-            dtMasuk.AccessibleDescription = "waktu";
-            dtMasuk.AccessibleName = "waktu masuk";
-            dtMasuk.CustomFormat = "";
-            dtMasuk.Format = DateTimePickerFormat.Short;
-            dtMasuk.Location = new Point(17, 86);
-            dtMasuk.Name = "dtMasuk";
-            dtMasuk.Size = new Size(160, 27);
-            dtMasuk.TabIndex = 0;
-            // 
-            // label20
-            // 
-            label20.BackColor = Color.White;
-            label20.Image = (Image)resources.GetObject("label20.Image");
-            label20.Location = new Point(38, 489);
-            label20.Name = "label20";
-            label20.Size = new Size(42, 38);
-            label20.TabIndex = 23;
-            // 
-            // label12
-            // 
-            label12.BackColor = Color.DeepSkyBlue;
-            label12.Image = (Image)resources.GetObject("label12.Image");
-            label12.Location = new Point(38, 320);
-            label12.Name = "label12";
-            label12.Size = new Size(42, 38);
-            label12.TabIndex = 24;
-            // 
-            // label4
-            // 
-            label4.BackColor = Color.White;
-            label4.Image = (Image)resources.GetObject("label4.Image");
-            label4.Location = new Point(38, 247);
-            label4.Name = "label4";
-            label4.Size = new Size(42, 38);
-            label4.TabIndex = 25;
-            // 
-            // label13
-            // 
-            label13.BackColor = Color.White;
-            label13.Image = (Image)resources.GetObject("label13.Image");
-            label13.Location = new Point(38, 170);
-            label13.Name = "label13";
-            label13.Size = new Size(42, 38);
-            label13.TabIndex = 26;
-            // 
-            // label15
-            // 
-            label15.BackColor = Color.White;
-            label15.Image = (Image)resources.GetObject("label15.Image");
-            label15.Location = new Point(38, 96);
-            label15.Name = "label15";
-            label15.Size = new Size(42, 38);
-            label15.TabIndex = 27;
-            // 
             // HistoryPetugas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -351,11 +296,6 @@
         private Label label1;
         private Label label3;
         private Panel panelContent;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dtMasuk;
-        private ComboBox cbPetugas;
-        private TextBox txtSearch;
-        private ComboBox cbJenis;
         private DataGridView dgvHistory;
         private Button btnVehicleData;
         private Label label20;

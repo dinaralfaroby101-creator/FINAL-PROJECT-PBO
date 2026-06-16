@@ -53,9 +53,8 @@
             panelLeft.Controls.Add(pictureBox1);
             panelLeft.Dock = DockStyle.Left;
             panelLeft.Location = new Point(0, 0);
-            panelLeft.Margin = new Padding(4);
             panelLeft.Name = "panelLeft";
-            panelLeft.Size = new Size(634, 801);
+            panelLeft.Size = new Size(507, 641);
             panelLeft.TabIndex = 0;
             panelLeft.Paint += panel1_Paint;
             // 
@@ -64,10 +63,9 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = Properties.Resources.logoSP;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(241, 322);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(193, 258);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(151, 160);
+            pictureBox1.Size = new Size(121, 128);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -83,10 +81,9 @@
             panelRight.Controls.Add(label1);
             panelRight.Controls.Add(logoSpark);
             panelRight.Dock = DockStyle.Fill;
-            panelRight.Location = new Point(634, 0);
-            panelRight.Margin = new Padding(4);
+            panelRight.Location = new Point(507, 0);
             panelRight.Name = "panelRight";
-            panelRight.Size = new Size(1286, 801);
+            panelRight.Size = new Size(1029, 641);
             panelRight.TabIndex = 1;
             panelRight.Paint += panel2_Paint;
             // 
@@ -94,10 +91,9 @@
             // 
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(664, 582);
-            button1.Margin = new Padding(4);
+            button1.Location = new Point(531, 466);
             button1.Name = "button1";
-            button1.Size = new Size(118, 36);
+            button1.Size = new Size(94, 29);
             button1.TabIndex = 6;
             button1.Text = "login";
             button1.UseVisualStyleBackColor = true;
@@ -107,54 +103,50 @@
             // 
             icon_Mata.BackgroundImage = Properties.Resources.eye_close;
             icon_Mata.BackgroundImageLayout = ImageLayout.Zoom;
-            icon_Mata.Location = new Point(811, 531);
-            icon_Mata.Margin = new Padding(4);
+            icon_Mata.Location = new Point(649, 425);
             icon_Mata.Name = "icon_Mata";
-            icon_Mata.Size = new Size(35, 29);
+            icon_Mata.Size = new Size(28, 23);
             icon_Mata.TabIndex = 5;
             icon_Mata.TabStop = false;
             icon_Mata.Click += pictureBox2_Click;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(635, 526);
-            txtPassword.Margin = new Padding(4);
+            txtPassword.Location = new Point(508, 421);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Password";
-            txtPassword.Size = new Size(175, 31);
+            txtPassword.Size = new Size(141, 27);
             txtPassword.TabIndex = 4;
             txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(635, 462);
-            txtUsername.Margin = new Padding(4);
+            txtUsername.Location = new Point(508, 370);
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderText = "Username";
-            txtUsername.Size = new Size(175, 31);
+            txtUsername.Size = new Size(141, 27);
             txtUsername.TabIndex = 3;
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(548, 405);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(438, 324);
             label2.Name = "label2";
-            label2.Size = new Size(350, 25);
+            label2.Size = new Size(312, 20);
             label2.TabIndex = 2;
-            label2.Text = "Smart Parking Allocation & Revenue Kontrol ";
+            label2.Text = "Smart Parking Allocation  Revenue Kontrol ";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 11F);
+            label1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(680, 375);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(544, 292);
             label1.Name = "label1";
-            label1.Size = new Size(88, 26);
+            label1.Size = new Size(76, 22);
             label1.TabIndex = 1;
             label1.Text = "SPARK";
             // 
@@ -162,18 +154,17 @@
             // 
             logoSpark.BackgroundImage = Properties.Resources.logo;
             logoSpark.BackgroundImageLayout = ImageLayout.Zoom;
-            logoSpark.Location = new Point(635, 211);
-            logoSpark.Margin = new Padding(4);
+            logoSpark.Location = new Point(508, 148);
             logoSpark.Name = "logoSpark";
-            logoSpark.Size = new Size(176, 160);
+            logoSpark.Size = new Size(141, 128);
             logoSpark.TabIndex = 0;
             logoSpark.TabStop = false;
             // 
             // login
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1920, 801);
+            ClientSize = new Size(1536, 641);
             Controls.Add(panelRight);
             Controls.Add(panelLeft);
             Margin = new Padding(2);
