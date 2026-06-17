@@ -316,16 +316,20 @@ namespace FINAL_PROJECT.forms
             if (dgvUser.SelectedRows.Count > 0)
             {
                 int id = Convert.ToInt32(
-                    dgvUser.SelectedRows[0].Cells["ID"].Value);
+                    dgvUser.SelectedRows[0].Cells["id_user"].Value);
 
                 InputUser_ frm = new InputUser_(id);
-                frm.ShowDialog();
 
-                LoadUserData(); // refresh data setelah edit
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadUserData();
+                    UpdateStatistic();
+                }
             }
             else
             {
-                MessageBox.Show("Pilih user yang ingin diedit!");
+                MessageBox.Show(
+                    "Pilih user yang ingin diedit!");
             }
         }
     }

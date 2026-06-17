@@ -73,7 +73,6 @@ namespace FINAL_PROJECT.forms
             panel2 = new Panel();
             btnTambahUser = new Button();
             cbxUser = new ComboBox();
-            cbxStatus = new ComboBox();
             panel7 = new Panel();
             dgvUser = new DataGridView();
             databaseHelperBindingSource = new BindingSource(components);
@@ -124,96 +123,107 @@ namespace FINAL_PROJECT.forms
             panelSidebar.Controls.Add(btnDashboard);
             panelSidebar.Dock = DockStyle.Left;
             panelSidebar.Location = new Point(0, 0);
+            panelSidebar.Margin = new Padding(4, 4, 4, 4);
             panelSidebar.Name = "panelSidebar";
-            panelSidebar.Size = new Size(280, 641);
+            panelSidebar.Size = new Size(350, 801);
             panelSidebar.TabIndex = 23;
             // 
             // label8
             // 
             label8.BackColor = Color.White;
             label8.Image = (Image)resources.GetObject("label8.Image");
-            label8.Location = new Point(35, 487);
+            label8.Location = new Point(44, 609);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(42, 38);
+            label8.Size = new Size(52, 48);
             label8.TabIndex = 27;
             // 
             // label7
             // 
             label7.BackColor = Color.White;
             label7.Image = (Image)resources.GetObject("label7.Image");
-            label7.Location = new Point(35, 431);
+            label7.Location = new Point(44, 539);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(42, 38);
+            label7.Size = new Size(52, 48);
             label7.TabIndex = 26;
             // 
             // label6
             // 
             label6.BackColor = Color.White;
             label6.Image = (Image)resources.GetObject("label6.Image");
-            label6.Location = new Point(35, 375);
+            label6.Location = new Point(44, 469);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(42, 38);
+            label6.Size = new Size(52, 48);
             label6.TabIndex = 25;
             // 
             // label5
             // 
             label5.BackColor = Color.White;
             label5.Image = (Image)resources.GetObject("label5.Image");
-            label5.Location = new Point(35, 319);
+            label5.Location = new Point(44, 399);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(42, 38);
+            label5.Size = new Size(52, 48);
             label5.TabIndex = 24;
             // 
             // label4
             // 
             label4.BackColor = Color.White;
             label4.Image = (Image)resources.GetObject("label4.Image");
-            label4.Location = new Point(35, 263);
+            label4.Location = new Point(44, 329);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(42, 38);
+            label4.Size = new Size(52, 48);
             label4.TabIndex = 23;
             // 
             // label3
             // 
             label3.BackColor = Color.DeepSkyBlue;
             label3.Image = (Image)resources.GetObject("label3.Image");
-            label3.Location = new Point(35, 208);
+            label3.Location = new Point(44, 260);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(42, 38);
+            label3.Size = new Size(52, 48);
             label3.TabIndex = 22;
             // 
             // label1
             // 
             label1.BackColor = Color.White;
             label1.Image = (Image)resources.GetObject("label1.Image");
-            label1.Location = new Point(35, 152);
+            label1.Location = new Point(44, 190);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(42, 38);
+            label1.Size = new Size(52, 48);
             label1.TabIndex = 21;
             // 
             // label19
             // 
             label19.BackColor = Color.White;
             label19.Image = (Image)resources.GetObject("label19.Image");
-            label19.Location = new Point(35, 97);
+            label19.Location = new Point(44, 121);
+            label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
-            label19.Size = new Size(42, 38);
+            label19.Size = new Size(52, 48);
             label19.TabIndex = 20;
             // 
             // button1
             // 
-            button1.Location = new Point(28, 482);
+            button1.Location = new Point(35, 602);
+            button1.Margin = new Padding(4, 4, 4, 4);
             button1.Name = "button1";
-            button1.Size = new Size(220, 50);
+            button1.Size = new Size(275, 62);
             button1.TabIndex = 12;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
             // 
             // btnFinanceReport
             // 
-            btnFinanceReport.Location = new Point(28, 426);
+            btnFinanceReport.Location = new Point(35, 532);
+            btnFinanceReport.Margin = new Padding(4, 4, 4, 4);
             btnFinanceReport.Name = "btnFinanceReport";
-            btnFinanceReport.Size = new Size(220, 50);
+            btnFinanceReport.Size = new Size(275, 62);
             btnFinanceReport.TabIndex = 11;
             btnFinanceReport.Text = "Finance Report";
             btnFinanceReport.UseVisualStyleBackColor = true;
@@ -221,9 +231,10 @@ namespace FINAL_PROJECT.forms
             // 
             // btnHistory
             // 
-            btnHistory.Location = new Point(28, 370);
+            btnHistory.Location = new Point(35, 462);
+            btnHistory.Margin = new Padding(4, 4, 4, 4);
             btnHistory.Name = "btnHistory";
-            btnHistory.Size = new Size(220, 50);
+            btnHistory.Size = new Size(275, 62);
             btnHistory.TabIndex = 10;
             btnHistory.Text = "History";
             btnHistory.UseVisualStyleBackColor = true;
@@ -231,9 +242,10 @@ namespace FINAL_PROJECT.forms
             // 
             // btnMonitoring
             // 
-            btnMonitoring.Location = new Point(28, 314);
+            btnMonitoring.Location = new Point(35, 392);
+            btnMonitoring.Margin = new Padding(4, 4, 4, 4);
             btnMonitoring.Name = "btnMonitoring";
-            btnMonitoring.Size = new Size(220, 50);
+            btnMonitoring.Size = new Size(275, 62);
             btnMonitoring.TabIndex = 9;
             btnMonitoring.Text = "Monitoring";
             btnMonitoring.UseVisualStyleBackColor = true;
@@ -241,9 +253,10 @@ namespace FINAL_PROJECT.forms
             // 
             // btnBagStorage
             // 
-            btnBagStorage.Location = new Point(28, 258);
+            btnBagStorage.Location = new Point(35, 322);
+            btnBagStorage.Margin = new Padding(4, 4, 4, 4);
             btnBagStorage.Name = "btnBagStorage";
-            btnBagStorage.Size = new Size(220, 50);
+            btnBagStorage.Size = new Size(275, 62);
             btnBagStorage.TabIndex = 8;
             btnBagStorage.Text = "Bag Storage";
             btnBagStorage.UseVisualStyleBackColor = true;
@@ -252,9 +265,10 @@ namespace FINAL_PROJECT.forms
             // btnUserData
             // 
             btnUserData.BackColor = Color.DeepSkyBlue;
-            btnUserData.Location = new Point(28, 202);
+            btnUserData.Location = new Point(35, 252);
+            btnUserData.Margin = new Padding(4, 4, 4, 4);
             btnUserData.Name = "btnUserData";
-            btnUserData.Size = new Size(220, 50);
+            btnUserData.Size = new Size(275, 62);
             btnUserData.TabIndex = 7;
             btnUserData.Text = "User Data";
             btnUserData.UseVisualStyleBackColor = false;
@@ -262,9 +276,10 @@ namespace FINAL_PROJECT.forms
             // 
             // btnParkingData
             // 
-            btnParkingData.Location = new Point(28, 146);
+            btnParkingData.Location = new Point(35, 182);
+            btnParkingData.Margin = new Padding(4, 4, 4, 4);
             btnParkingData.Name = "btnParkingData";
-            btnParkingData.Size = new Size(220, 50);
+            btnParkingData.Size = new Size(275, 62);
             btnParkingData.TabIndex = 6;
             btnParkingData.Text = "Parking Data";
             btnParkingData.UseVisualStyleBackColor = true;
@@ -275,9 +290,10 @@ namespace FINAL_PROJECT.forms
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(65, 12);
+            label2.Location = new Point(81, 15);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(199, 62);
+            label2.Size = new Size(243, 76);
             label2.TabIndex = 0;
             label2.Text = "SMART PARKING\r\nADMIN";
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -285,9 +301,10 @@ namespace FINAL_PROJECT.forms
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo;
-            pictureBox1.Location = new Point(5, 12);
+            pictureBox1.Location = new Point(6, 15);
+            pictureBox1.Margin = new Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(64, 62);
+            pictureBox1.Size = new Size(80, 78);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -295,9 +312,10 @@ namespace FINAL_PROJECT.forms
             // btnDashboard
             // 
             btnDashboard.BackColor = Color.White;
-            btnDashboard.Location = new Point(28, 90);
+            btnDashboard.Location = new Point(35, 112);
+            btnDashboard.Margin = new Padding(4, 4, 4, 4);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(220, 50);
+            btnDashboard.Size = new Size(275, 62);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
@@ -308,9 +326,10 @@ namespace FINAL_PROJECT.forms
             lblUserData.AutoSize = true;
             lblUserData.BackColor = Color.Transparent;
             lblUserData.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUserData.Location = new Point(19, 12);
+            lblUserData.Location = new Point(24, 15);
+            lblUserData.Margin = new Padding(4, 0, 4, 0);
             lblUserData.Name = "lblUserData";
-            lblUserData.Size = new Size(175, 46);
+            lblUserData.Size = new Size(209, 54);
             lblUserData.TabIndex = 24;
             lblUserData.Text = "User Data";
             // 
@@ -320,27 +339,30 @@ namespace FINAL_PROJECT.forms
             panel5.Controls.Add(lblJumlahPetugas);
             panel5.Controls.Add(lblTotalPetugas);
             panel5.Controls.Add(pictureBox5);
-            panel5.Location = new Point(493, 3);
+            panel5.Location = new Point(616, 4);
+            panel5.Margin = new Padding(4, 4, 4, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(240, 120);
+            panel5.Size = new Size(300, 150);
             panel5.TabIndex = 7;
             // 
             // lblJumlahPetugas
             // 
             lblJumlahPetugas.AutoSize = true;
             lblJumlahPetugas.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahPetugas.Location = new Point(96, 44);
+            lblJumlahPetugas.Location = new Point(120, 55);
+            lblJumlahPetugas.Margin = new Padding(4, 0, 4, 0);
             lblJumlahPetugas.Name = "lblJumlahPetugas";
-            lblJumlahPetugas.Size = new Size(38, 31);
+            lblJumlahPetugas.Size = new Size(47, 38);
             lblJumlahPetugas.TabIndex = 2;
             lblJumlahPetugas.Text = "85";
             // 
             // lblTotalPetugas
             // 
             lblTotalPetugas.AutoSize = true;
-            lblTotalPetugas.Location = new Point(92, 23);
+            lblTotalPetugas.Location = new Point(115, 29);
+            lblTotalPetugas.Margin = new Padding(4, 0, 4, 0);
             lblTotalPetugas.Name = "lblTotalPetugas";
-            lblTotalPetugas.Size = new Size(60, 20);
+            lblTotalPetugas.Size = new Size(74, 25);
             lblTotalPetugas.TabIndex = 1;
             lblTotalPetugas.Text = "Petugas";
             lblTotalPetugas.Click += label13_Click;
@@ -348,9 +370,10 @@ namespace FINAL_PROJECT.forms
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(17, 23);
+            pictureBox5.Location = new Point(21, 29);
+            pictureBox5.Margin = new Padding(4, 4, 4, 4);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(69, 62);
+            pictureBox5.Size = new Size(86, 78);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
@@ -361,36 +384,40 @@ namespace FINAL_PROJECT.forms
             panel6.Controls.Add(lblJumlahUserAktif);
             panel6.Controls.Add(lblUserAktif);
             panel6.Controls.Add(pictureBox6);
-            panel6.Location = new Point(739, 3);
+            panel6.Location = new Point(924, 4);
+            panel6.Margin = new Padding(4, 4, 4, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(240, 120);
+            panel6.Size = new Size(300, 150);
             panel6.TabIndex = 8;
             // 
             // lblJumlahUserAktif
             // 
             lblJumlahUserAktif.AutoSize = true;
             lblJumlahUserAktif.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahUserAktif.Location = new Point(96, 44);
+            lblJumlahUserAktif.Location = new Point(120, 55);
+            lblJumlahUserAktif.Margin = new Padding(4, 0, 4, 0);
             lblJumlahUserAktif.Name = "lblJumlahUserAktif";
-            lblJumlahUserAktif.Size = new Size(26, 31);
+            lblJumlahUserAktif.Size = new Size(32, 38);
             lblJumlahUserAktif.TabIndex = 2;
             lblJumlahUserAktif.Text = "3";
             // 
             // lblUserAktif
             // 
             lblUserAktif.AutoSize = true;
-            lblUserAktif.Location = new Point(92, 23);
+            lblUserAktif.Location = new Point(115, 29);
+            lblUserAktif.Margin = new Padding(4, 0, 4, 0);
             lblUserAktif.Name = "lblUserAktif";
-            lblUserAktif.Size = new Size(73, 20);
+            lblUserAktif.Size = new Size(89, 25);
             lblUserAktif.TabIndex = 1;
             lblUserAktif.Text = "User Aktif";
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(17, 23);
+            pictureBox6.Location = new Point(21, 29);
+            pictureBox6.Margin = new Padding(4, 4, 4, 4);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(69, 62);
+            pictureBox6.Size = new Size(86, 78);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 0;
             pictureBox6.TabStop = false;
@@ -402,35 +429,39 @@ namespace FINAL_PROJECT.forms
             panel4.Controls.Add(lblJumlahAdmin);
             panel4.Controls.Add(lblTotalAdmin);
             panel4.Controls.Add(pictureBox4);
-            panel4.Location = new Point(247, 3);
+            panel4.Location = new Point(309, 4);
+            panel4.Margin = new Padding(4, 4, 4, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(240, 120);
+            panel4.Size = new Size(300, 150);
             panel4.TabIndex = 6;
             // 
             // lblSemuaAdmin
             // 
             lblSemuaAdmin.AutoSize = true;
-            lblSemuaAdmin.Location = new Point(92, 75);
+            lblSemuaAdmin.Location = new Point(115, 94);
+            lblSemuaAdmin.Margin = new Padding(4, 0, 4, 0);
             lblSemuaAdmin.Name = "lblSemuaAdmin";
-            lblSemuaAdmin.Size = new Size(0, 20);
+            lblSemuaAdmin.Size = new Size(0, 25);
             lblSemuaAdmin.TabIndex = 3;
             // 
             // lblJumlahAdmin
             // 
             lblJumlahAdmin.AutoSize = true;
             lblJumlahAdmin.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahAdmin.Location = new Point(96, 44);
+            lblJumlahAdmin.Location = new Point(120, 55);
+            lblJumlahAdmin.Margin = new Padding(4, 0, 4, 0);
             lblJumlahAdmin.Name = "lblJumlahAdmin";
-            lblJumlahAdmin.Size = new Size(26, 31);
+            lblJumlahAdmin.Size = new Size(32, 38);
             lblJumlahAdmin.TabIndex = 2;
             lblJumlahAdmin.Text = "4";
             // 
             // lblTotalAdmin
             // 
             lblTotalAdmin.AutoSize = true;
-            lblTotalAdmin.Location = new Point(92, 23);
+            lblTotalAdmin.Location = new Point(115, 29);
+            lblTotalAdmin.Margin = new Padding(4, 0, 4, 0);
             lblTotalAdmin.Name = "lblTotalAdmin";
-            lblTotalAdmin.Size = new Size(53, 20);
+            lblTotalAdmin.Size = new Size(65, 25);
             lblTotalAdmin.TabIndex = 1;
             lblTotalAdmin.Text = "Admin";
             lblTotalAdmin.Click += label10_Click;
@@ -438,9 +469,10 @@ namespace FINAL_PROJECT.forms
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(17, 23);
+            pictureBox4.Location = new Point(21, 29);
+            pictureBox4.Margin = new Padding(4, 4, 4, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(69, 62);
+            pictureBox4.Size = new Size(86, 78);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
@@ -452,18 +484,20 @@ namespace FINAL_PROJECT.forms
             panel3.Controls.Add(lblJumlahUser);
             panel3.Controls.Add(lblTotalUser);
             panel3.Controls.Add(pictureBox3);
-            panel3.Location = new Point(3, 3);
+            panel3.Location = new Point(4, 4);
+            panel3.Margin = new Padding(4, 4, 4, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(240, 120);
+            panel3.Size = new Size(300, 150);
             panel3.TabIndex = 5;
             panel3.Paint += panel3_Paint;
             // 
             // lblSemuaUser
             // 
             lblSemuaUser.AutoSize = true;
-            lblSemuaUser.Location = new Point(92, 75);
+            lblSemuaUser.Location = new Point(115, 94);
+            lblSemuaUser.Margin = new Padding(4, 0, 4, 0);
             lblSemuaUser.Name = "lblSemuaUser";
-            lblSemuaUser.Size = new Size(87, 20);
+            lblSemuaUser.Size = new Size(106, 25);
             lblSemuaUser.TabIndex = 3;
             lblSemuaUser.Text = "Semua User";
             // 
@@ -471,18 +505,20 @@ namespace FINAL_PROJECT.forms
             // 
             lblJumlahUser.AutoSize = true;
             lblJumlahUser.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblJumlahUser.Location = new Point(96, 44);
+            lblJumlahUser.Location = new Point(120, 55);
+            lblJumlahUser.Margin = new Padding(4, 0, 4, 0);
             lblJumlahUser.Name = "lblJumlahUser";
-            lblJumlahUser.Size = new Size(50, 31);
+            lblJumlahUser.Size = new Size(62, 38);
             lblJumlahUser.TabIndex = 2;
             lblJumlahUser.Text = "135";
             // 
             // lblTotalUser
             // 
             lblTotalUser.AutoSize = true;
-            lblTotalUser.Location = new Point(92, 23);
+            lblTotalUser.Location = new Point(115, 29);
+            lblTotalUser.Margin = new Padding(4, 0, 4, 0);
             lblTotalUser.Name = "lblTotalUser";
-            lblTotalUser.Size = new Size(75, 20);
+            lblTotalUser.Size = new Size(89, 25);
             lblTotalUser.TabIndex = 1;
             lblTotalUser.Text = "Total User";
             lblTotalUser.Click += label5_Click;
@@ -490,9 +526,10 @@ namespace FINAL_PROJECT.forms
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(17, 23);
+            pictureBox3.Location = new Point(21, 29);
+            pictureBox3.Margin = new Padding(4, 4, 4, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(69, 62);
+            pictureBox3.Size = new Size(86, 78);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
@@ -504,9 +541,10 @@ namespace FINAL_PROJECT.forms
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(panel6);
             panel2.Controls.Add(panel5);
-            panel2.Location = new Point(121, 70);
+            panel2.Location = new Point(151, 88);
+            panel2.Margin = new Padding(4, 4, 4, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(987, 127);
+            panel2.Size = new Size(1233, 158);
             panel2.TabIndex = 25;
             // 
             // btnTambahUser
@@ -514,9 +552,10 @@ namespace FINAL_PROJECT.forms
             btnTambahUser.BackColor = Color.DodgerBlue;
             btnTambahUser.FlatStyle = FlatStyle.Flat;
             btnTambahUser.ForeColor = Color.White;
-            btnTambahUser.Location = new Point(125, 223);
+            btnTambahUser.Location = new Point(156, 279);
+            btnTambahUser.Margin = new Padding(4, 4, 4, 4);
             btnTambahUser.Name = "btnTambahUser";
-            btnTambahUser.Size = new Size(148, 29);
+            btnTambahUser.Size = new Size(185, 36);
             btnTambahUser.TabIndex = 26;
             btnTambahUser.Text = "+ Tambah User";
             btnTambahUser.UseVisualStyleBackColor = false;
@@ -526,29 +565,21 @@ namespace FINAL_PROJECT.forms
             // 
             cbxUser.FormattingEnabled = true;
             cbxUser.Items.AddRange(new object[] { "Semua User", "admin", "petugas" });
-            cbxUser.Location = new Point(447, 224);
+            cbxUser.Location = new Point(559, 280);
+            cbxUser.Margin = new Padding(4, 4, 4, 4);
             cbxUser.Name = "cbxUser";
-            cbxUser.Size = new Size(151, 28);
+            cbxUser.Size = new Size(188, 33);
             cbxUser.TabIndex = 27;
             cbxUser.Text = "Semua User";
             cbxUser.SelectedIndexChanged += cbxUser_SelectedIndexChanged;
             // 
-            // cbxStatus
-            // 
-            cbxStatus.FormattingEnabled = true;
-            cbxStatus.Items.AddRange(new object[] { "Semua Status", "Online", "Offline" });
-            cbxStatus.Location = new Point(604, 225);
-            cbxStatus.Name = "cbxStatus";
-            cbxStatus.Size = new Size(151, 28);
-            cbxStatus.TabIndex = 28;
-            cbxStatus.Text = "Semua Status";
-            // 
             // panel7
             // 
             panel7.Controls.Add(dgvUser);
-            panel7.Location = new Point(121, 269);
+            panel7.Location = new Point(151, 336);
+            panel7.Margin = new Padding(4, 4, 4, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(989, 336);
+            panel7.Size = new Size(1236, 420);
             panel7.TabIndex = 29;
             // 
             // dgvUser
@@ -557,10 +588,11 @@ namespace FINAL_PROJECT.forms
             dgvUser.BackgroundColor = SystemColors.ControlLightLight;
             dgvUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUser.DataSource = databaseHelperBindingSource;
-            dgvUser.Location = new Point(3, 3);
+            dgvUser.Location = new Point(4, 4);
+            dgvUser.Margin = new Padding(4, 4, 4, 4);
             dgvUser.Name = "dgvUser";
             dgvUser.RowHeadersWidth = 51;
-            dgvUser.Size = new Size(982, 436);
+            dgvUser.Size = new Size(1228, 545);
             dgvUser.TabIndex = 0;
             dgvUser.CellContentClick += dgvUser_CellContentClick;
             // 
@@ -575,17 +607,19 @@ namespace FINAL_PROJECT.forms
             panelUSername.BorderStyle = BorderStyle.FixedSingle;
             panelUSername.Controls.Add(pictureBox2);
             panelUSername.Controls.Add(txtCariUsername);
-            panelUSername.Location = new Point(858, 217);
+            panelUSername.Location = new Point(1072, 271);
+            panelUSername.Margin = new Padding(4, 4, 4, 4);
             panelUSername.Name = "panelUSername";
-            panelUSername.Size = new Size(250, 40);
+            panelUSername.Size = new Size(312, 50);
             panelUSername.TabIndex = 13;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(3, 3);
+            pictureBox2.Location = new Point(4, 4);
+            pictureBox2.Margin = new Padding(4, 4, 4, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(32, 30);
+            pictureBox2.Size = new Size(40, 38);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -595,9 +629,10 @@ namespace FINAL_PROJECT.forms
             txtCariUsername.BorderStyle = BorderStyle.None;
             txtCariUsername.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCariUsername.ForeColor = Color.Gray;
-            txtCariUsername.Location = new Point(73, 7);
+            txtCariUsername.Location = new Point(91, 9);
+            txtCariUsername.Margin = new Padding(4, 4, 4, 4);
             txtCariUsername.Name = "txtCariUsername";
-            txtCariUsername.Size = new Size(180, 23);
+            txtCariUsername.Size = new Size(225, 28);
             txtCariUsername.TabIndex = 3;
             txtCariUsername.Text = "Cari Username";
             // 
@@ -608,22 +643,23 @@ namespace FINAL_PROJECT.forms
             panel1.Controls.Add(btnEditUser);
             panel1.Controls.Add(panelUSername);
             panel1.Controls.Add(panel7);
-            panel1.Controls.Add(cbxStatus);
             panel1.Controls.Add(cbxUser);
             panel1.Controls.Add(btnTambahUser);
             panel1.Controls.Add(lblUserData);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(283, 0);
+            panel1.Location = new Point(354, 0);
+            panel1.Margin = new Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1253, 641);
+            panel1.Size = new Size(1566, 801);
             panel1.TabIndex = 30;
             // 
             // btnEditUser
             // 
             btnEditUser.BackColor = Color.DarkOrange;
-            btnEditUser.Location = new Point(762, 225);
+            btnEditUser.Location = new Point(952, 281);
+            btnEditUser.Margin = new Padding(4, 4, 4, 4);
             btnEditUser.Name = "btnEditUser";
-            btnEditUser.Size = new Size(94, 29);
+            btnEditUser.Size = new Size(118, 36);
             btnEditUser.TabIndex = 4;
             btnEditUser.Text = "Edit User";
             btnEditUser.UseVisualStyleBackColor = false;
@@ -631,11 +667,12 @@ namespace FINAL_PROJECT.forms
             // 
             // UserData
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1536, 641);
+            ClientSize = new Size(1920, 801);
             Controls.Add(panelSidebar);
             Controls.Add(panel1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "UserData";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UserData";
@@ -702,7 +739,6 @@ namespace FINAL_PROJECT.forms
         private Panel panel2;
         private Button btnTambahUser;
         private ComboBox cbxUser;
-        private ComboBox cbxStatus;
         private Panel panel7;
         private DataGridView dgvUser;
         private BindingSource databaseHelperBindingSource;
