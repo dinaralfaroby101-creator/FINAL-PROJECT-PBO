@@ -429,12 +429,13 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(52, 10);
+            label4.Location = new Point(56, 22);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(92, 40);
+            label4.Size = new Size(53, 20);
             label4.TabIndex = 8;
-            label4.Text = "Admin\r\nAhmad Dani\r\n";
+            label4.Text = "Admin";
+            label4.Click += label4_Click_1;
             // 
             // panelSearch
             // 

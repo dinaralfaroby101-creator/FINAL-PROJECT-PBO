@@ -20,8 +20,6 @@ namespace FINAL_PROJECT.forms
             InitializeComponent();
         }
 
-
-
         private void LoadMonitoring()
         {
             MonitoringController controller =

@@ -347,7 +347,6 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(989, 288);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // panelHeader
             // 
@@ -381,7 +380,7 @@
             // 
             pictureBox7.BackColor = Color.Transparent;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(2, 10);
+            pictureBox7.Location = new Point(13, 7);
             pictureBox7.Margin = new Padding(2);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(50, 50);
@@ -393,12 +392,12 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Location = new Point(47, 10);
+            label4.Location = new Point(67, 16);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(92, 40);
+            label4.Size = new Size(53, 60);
             label4.TabIndex = 8;
-            label4.Text = "Admin\r\nAhmad Dani\r\n";
+            label4.Text = "Admin\r\n\r\n\r\n";
             // 
             // pictureBox2
             // 
@@ -465,13 +464,13 @@
             // 
             // cmbArea
             // 
+            cmbArea.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbArea.FormattingEnabled = true;
             cmbArea.Items.AddRange(new object[] { "Area A", "Area B", "Area C" });
             cmbArea.Location = new Point(363, 255);
             cmbArea.Name = "cmbArea";
             cmbArea.Size = new Size(151, 28);
             cmbArea.TabIndex = 4;
-            cmbArea.Text = "Semua Area";
             cmbArea.SelectedIndexChanged += cmbArea_SelectedIndexChanged;
             // 
             // button1

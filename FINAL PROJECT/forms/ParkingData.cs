@@ -90,61 +90,6 @@ namespace FINAL_PROJECT.forms
         }
 
         // ==========================
-        // BUTTON EDIT & DELETE
-        // ==========================
-        private void dataGridView1_CellContentClick(
-            object sender,
-            DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0)
-                return;
-
-            int id =
-                Convert.ToInt32(
-                dataGridView1.Rows[e.RowIndex]
-                .Cells["id_slot"].Value);
-
-            string namaKolom =
-                dataGridView1.Columns[e.ColumnIndex].Name;
-
-            if (namaKolom == "Delete")
-            {
-                DeleteData(id);
-            }
-
-            if (namaKolom == "Edit")
-            {
-                EditData(id);
-            }
-        }
-
-        // ==========================
-        // DELETE DATA
-        // ==========================
-        private void DeleteData(int id)
-        {
-            DialogResult result =
-                MessageBox.Show(
-                "Yakin hapus data?",
-                "Konfirmasi",
-                MessageBoxButtons.YesNo);
-
-            if (result == DialogResult.No)
-                return;
-
-            ParkingDataController controller =
-    new ParkingDataController();
-
-            controller.Delete(id);
-
-            LoadParkingData();
-            UpdateStatistic();
-
-            LoadParkingData();
-            UpdateStatistic();
-        }
-
-        // ==========================
         // EDIT DATA
         // ==========================
         private void EditData(int id)
