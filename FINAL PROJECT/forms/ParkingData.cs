@@ -155,8 +155,7 @@ namespace FINAL_PROJECT.forms
 
         }
 
-        private void ParkingData_Load(
-        object sender,
+        private void ParkingData_Load( object sender,
         EventArgs e)
         {
             LoadParkingData();
@@ -179,8 +178,7 @@ namespace FINAL_PROJECT.forms
             cmbArea.SelectedIndex = 0;
         }
 
-        private void cmbArea_SelectedIndexChanged(
-        object sender,
+        private void cmbArea_SelectedIndexChanged( object sender,
         EventArgs e)
         {
             ParkingDataController controller =
