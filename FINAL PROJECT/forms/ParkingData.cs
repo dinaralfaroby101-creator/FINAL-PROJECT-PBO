@@ -70,42 +70,6 @@ namespace FINAL_PROJECT.forms
         }
 
         // ==========================
-        // SEARCH
-        // ==========================
-        private void txtSearch_TextChanged(
-            object sender,
-            EventArgs e)
-        {
-            SearchData();
-        }
-
-        private void SearchData()
-        {
-            ParkingDataController controller =
-                new ParkingDataController();
-
-            dataGridView1.DataSource =
-                controller.Search(
-                    txtSearch.Text);
-        }
-
-        // ==========================
-        // EDIT DATA
-        // ==========================
-        private void EditData(int id)
-        {
-            SLotParkir form =
-                new SLotParkir(id);
-
-            if (form.ShowDialog()
-                == DialogResult.OK)
-            {
-                LoadParkingData();
-                UpdateStatistic();
-            }
-        }
-
-        // ==========================
         // LOGOUT
         // ==========================
         private void btnLogOut_Click(
@@ -192,8 +156,8 @@ namespace FINAL_PROJECT.forms
         }
 
         private void ParkingData_Load(
-    object sender,
-    EventArgs e)
+        object sender,
+        EventArgs e)
         {
             LoadParkingData();
             UpdateStatistic();
@@ -216,8 +180,8 @@ namespace FINAL_PROJECT.forms
         }
 
         private void cmbArea_SelectedIndexChanged(
-    object sender,
-    EventArgs e)
+        object sender,
+        EventArgs e)
         {
             ParkingDataController controller =
                 new ParkingDataController();

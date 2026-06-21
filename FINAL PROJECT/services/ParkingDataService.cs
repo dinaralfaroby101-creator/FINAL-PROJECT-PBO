@@ -30,13 +30,6 @@ namespace FINAL_PROJECT.Services
         }
 
         public List<ParkingSlotModels>
-        Search(string keyword)
-        {
-            return _repository
-                .Search(keyword);
-        }
-
-        public List<ParkingSlotModels>
         GetByArea(string area)
         {
             return _repository

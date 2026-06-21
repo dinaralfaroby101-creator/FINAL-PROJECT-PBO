@@ -92,58 +92,6 @@ namespace FINAL_PROJECT.Repositories
             return data;
         }
 
-
-
-
-
-        public List<ParkingSlotModels>
-        Search(string keyword)
-        {
-            List<ParkingSlotModels> list =
-                new();
-
-            using var conn =
-                DatabaseHelper.Instance.GetConnection();
-
-            string sql = @"
-            SELECT *
-            FROM slot_parkir
-            WHERE kode_slot
-            ILIKE @search
-            ORDER BY id_slot";
-
-            using var cmd =
-                new NpgsqlCommand(sql, conn);
-
-            cmd.Parameters.AddWithValue(
-                "@search",
-                "%" + keyword + "%");
-
-            using var rd =
-                cmd.ExecuteReader();
-
-            while (rd.Read())
-            {
-                list.Add(
-                    new ParkingSlotModels
-                    {
-                        IdSlot =
-                            Convert.ToInt32(
-                                rd["id_slot"]),
-
-                        KodeSlot =
-                            rd["kode_slot"]
-                            .ToString(),
-
-                        StatusSlot =
-                            rd["status_slot"]
-                            .ToString()
-                    });
-            }
-
-            return list;
-        }
-
         public List<ParkingSlotModels>
         GetByArea(string area)
         {

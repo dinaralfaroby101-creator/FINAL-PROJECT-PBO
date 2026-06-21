@@ -31,15 +31,6 @@ namespace FINAL_PROJECT.Controllers
                 .GetStatistic();
         }
 
-
-
-        public List<ParkingSlotModels>
-        Search(string keyword)
-        {
-            return _service
-                .Search(keyword);
-        }
-
         public List<ParkingSlotModels>
         GetByArea(string area)
         {
