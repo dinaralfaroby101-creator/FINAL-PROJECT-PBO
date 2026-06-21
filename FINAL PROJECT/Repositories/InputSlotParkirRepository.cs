@@ -4,7 +4,7 @@ using Npgsql;
 
 namespace FINAL_PROJECT.Repositories
 {
-    public class SlotParkirRepository
+    public class InputSlotParkirRepository
     {
         public bool Insert(
             string kode,

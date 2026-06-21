@@ -5,12 +5,12 @@ namespace FINAL_PROJECT.Services
     public class SlotParkirService
     {
         private readonly
-            SlotParkirRepository _repository;
+            InputSlotParkirRepository _repository;
 
         public SlotParkirService()
         {
             _repository = 
-                new SlotParkirRepository();
+                new InputSlotParkirRepository();
         }
 
         public bool Insert(

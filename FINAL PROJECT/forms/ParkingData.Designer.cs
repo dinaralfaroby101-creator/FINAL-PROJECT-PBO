@@ -277,7 +277,6 @@
             btnParkingData.TabIndex = 16;
             btnParkingData.Text = "Parking Data";
             btnParkingData.UseVisualStyleBackColor = false;
-            btnParkingData.Click += btnParkingData_Click;
             // 
             // label1
             // 
@@ -509,7 +508,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(240, 120);
             panel3.TabIndex = 5;
-            panel3.Paint += panel3_Paint;
             // 
             // label7
             // 
@@ -529,7 +527,6 @@
             label6.Size = new Size(50, 31);
             label6.TabIndex = 2;
             label6.Text = "135";
-            label6.Click += label6_Click;
             // 
             // label5
             // 
