@@ -16,9 +16,9 @@ namespace FINAL_PROJECT.Repositories
                 DatabaseHelper.Instance.GetConnection();
 
             string sql = @"
-SELECT *
-FROM v_riwayat_transaksi
-ORDER BY waktu_keluar DESC";
+            SELECT *
+            FROM v_riwayat_transaksi
+            ORDER BY waktu_keluar DESC";
 
             using var cmd =
                 new NpgsqlCommand(sql, conn);

@@ -25,7 +25,7 @@ namespace FINAL_PROJECT.Controllers
 
 
         public ParkingStatisticModel
-    GetStatistic()
+        GetStatistic()
         {
             return _service
                 .GetStatistic();
@@ -34,22 +34,14 @@ namespace FINAL_PROJECT.Controllers
 
 
         public List<ParkingSlotModels>
-    Search(string keyword)
+        Search(string keyword)
         {
             return _service
                 .Search(keyword);
         }
 
-
-
-        public void Delete(int id)
-        {
-            _service.Delete(id);
-        }
-
-
         public List<ParkingSlotModels>
-    GetByArea(string area)
+        GetByArea(string area)
         {
             return _service
                 .GetByArea(area);

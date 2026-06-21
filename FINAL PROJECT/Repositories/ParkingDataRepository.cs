@@ -53,7 +53,7 @@ namespace FINAL_PROJECT.Repositories
 
 
         public ParkingStatisticModel
-    GetStatistic()
+        GetStatistic()
         {
             ParkingStatisticModel data =
                 new();
@@ -97,7 +97,7 @@ namespace FINAL_PROJECT.Repositories
 
 
         public List<ParkingSlotModels>
-    Search(string keyword)
+        Search(string keyword)
         {
             List<ParkingSlotModels> list =
                 new();
@@ -106,11 +106,11 @@ namespace FINAL_PROJECT.Repositories
                 DatabaseHelper.Instance.GetConnection();
 
             string sql = @"
-        SELECT *
-        FROM slot_parkir
-        WHERE kode_slot
-        ILIKE @search
-        ORDER BY id_slot";
+            SELECT *
+            FROM slot_parkir
+            WHERE kode_slot
+            ILIKE @search
+            ORDER BY id_slot";
 
             using var cmd =
                 new NpgsqlCommand(sql, conn);
@@ -144,34 +144,8 @@ namespace FINAL_PROJECT.Repositories
             return list;
         }
 
-
-
-
-
-        public void Delete(int id)
-        {
-            using var conn =
-                DatabaseHelper.Instance.GetConnection();
-
-            string sql = @"
-        DELETE FROM slot_parkir
-        WHERE id_slot=@id";
-
-            using var cmd =
-                new NpgsqlCommand(sql, conn);
-
-            cmd.Parameters.AddWithValue(
-                "@id",
-                id);
-
-            cmd.ExecuteNonQuery();
-        }
-
-
-
-
         public List<ParkingSlotModels>
-    GetByArea(string area)
+        GetByArea(string area)
         {
             List<ParkingSlotModels> list =
                 new();
@@ -180,10 +154,10 @@ namespace FINAL_PROJECT.Repositories
                 DatabaseHelper.Instance.GetConnection();
 
             string sql = @"
-        SELECT *
-        FROM slot_parkir
-        WHERE kode_slot LIKE @area
-        ORDER BY id_slot";
+            SELECT *
+            FROM slot_parkir
+            WHERE kode_slot LIKE @area
+            ORDER BY id_slot";
 
             using var cmd =
                 new NpgsqlCommand(sql, conn);
