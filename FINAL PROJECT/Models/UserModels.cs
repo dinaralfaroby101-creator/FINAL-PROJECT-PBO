@@ -10,7 +10,20 @@ namespace FINAL_PROJECT.Models
     {
         public int IdUser { get; set; }
 
-        public string Username { get; set; }
+        private string _username;
+
+        public string Username
+        {
+            get => _username;
+
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    _username = value;
+                }
+            }
+        }
 
         public string NamaLengkap { get; set; }
 

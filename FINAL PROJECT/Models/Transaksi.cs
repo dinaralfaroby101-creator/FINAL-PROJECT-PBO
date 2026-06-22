@@ -24,8 +24,29 @@ namespace FINAL_PROJECT.Models
 
         public DateTime? WaktuKeluar { get; set; }
 
-        public decimal? TotalBiaya { get; set; }
+        private decimal _totalBiaya;
+
+        public decimal TotalBiaya
+        {
+            get => _totalBiaya;
+
+            private set
+            {
+                if (value >= 0)
+                {
+                    _totalBiaya = value;
+                }
+            }
+        }
 
         public string StatusTransaksi { get; set; }
+
+        public void HitungBiaya(
+        decimal tarifPerJam,
+        int durasiJam)
+        {
+            TotalBiaya =
+                tarifPerJam * durasiJam;
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace FINAL_PROJECT.Controller
 
 
         public List<UserModels>
-    GetByRole(string role)
+            GetByRole(string role)
         {
             return _service
                 .GetByRole(role);
@@ -40,10 +40,13 @@ namespace FINAL_PROJECT.Controller
 
 
         public UserStatisticModel
-    GetStatistic()
+            GetStatistic()
         {
             return _service
                 .GetStatistic();
         }
+
+
+        
     }
 }

@@ -10,7 +10,21 @@ namespace FINAL_PROJECT.Models
     {
         public int IdKendaraan { get; set; }
 
-        public string PlatNomor { get; set; }
+        private string _platNomor;
+
+        public string PlatNomor
+        {
+            get => _platNomor;
+
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    _platNomor =
+                        value.ToUpper();
+                }
+            }
+        }
 
         public string JenisKendaraan { get; set; }
 

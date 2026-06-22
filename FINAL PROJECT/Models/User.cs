@@ -10,9 +10,43 @@ namespace FINAL_PROJECT.Models
     {
         public int IdUser { get; set; }
 
-        public string Username { get; set; }
+        private string _username;
 
-        public string PasswordAkun { get; set; }
+        public string Username
+        {
+            get => _username;
+
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    _username = value;
+                }
+            }
+        }
+
+        private string _passwordAkun;
+
+        public string PasswordAkun
+        {
+            get
+            {
+                return "********";
+            }
+            private set
+            {
+                _passwordAkun = value;
+            }
+        }
+
+        public void ChangePassword(
+            string passwordBaru)
+        {
+            if (passwordBaru.Length >= 8)
+            {
+                _passwordAkun = passwordBaru;
+            }
+        }
 
         public string NamaLengkap { get; set; }
 
@@ -21,5 +55,7 @@ namespace FINAL_PROJECT.Models
         public DateTime? LastLogin { get; set; }
 
         public abstract string GetRole();
+
+
     }
 }

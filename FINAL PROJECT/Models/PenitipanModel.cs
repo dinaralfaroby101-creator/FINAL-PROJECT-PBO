@@ -18,6 +18,17 @@ namespace FINAL_PROJECT.Models
 
         public DateTime WaktuMasuk { get; set; }
 
-        public string StatusPenitipan { get; set; }
+        private string _statusPenitipan;
+
+        public string StatusPenitipan
+        {
+            get;
+            set;
+        }
+
+        public void AmbilBarang()
+        {
+            _statusPenitipan = "diambil";
+        }
     }
 }

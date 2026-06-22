@@ -8,10 +8,37 @@ namespace FINAL_PROJECT.Models
 {
     public class ParkingSlotModels
     {
+        private string _kodeSlot;
+        private string _statusSlot;
+
         public int IdSlot { get; set; }
 
-        public string KodeSlot { get; set; }
+        public string KodeSlot
+        {
+            get => _kodeSlot;
 
-        public string StatusSlot { get; set; }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    _kodeSlot = value.ToUpper();
+                }
+            }
+        }
+
+        public string StatusSlot
+        {
+            get => _statusSlot;
+
+            set
+            {
+                if (value == "kosong" ||
+                    value == "terisi" ||
+                    value == "maintenance")
+                {
+                    _statusSlot = value;
+                }
+            }
+        }
     }
 }
